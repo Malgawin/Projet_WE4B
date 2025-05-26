@@ -1,0 +1,31 @@
+
+    <div class="container-cours">
+        <div class="container-cours-top">
+            <div class = "container-cours-titre">
+                <h1 >Mes Cours</h1>
+                <h4 >Vue d’ensemble des cours</h4>
+            </div>
+
+            <div class="container-cours-btn">
+                    <div class="deroulant-box">
+                             <button class="btn-deroulant" (click)="showMenu()">
+                                {{ currentView }} ▼
+                            </button>
+                            <div class="menu-deroulant" [class.show]="menuOpen">
+                                <a (click)="selectView('Carte')">Carte</a>
+                                <a (click)="selectView('Liste')">Liste</a>
+                                <a (click)="selectView('Activité')">Activité</a>
+                            </div>
+                    </div>
+            </div>
+        </div>
+        <hr>
+
+       <ng-container [ngSwitch]="currentView">
+            <app-liste-cours-carte *ngSwitchCase="'Carte'"></app-liste-cours-carte>
+            <app-liste-cours-etendue *ngSwitchCase="'Liste'"></app-liste-cours-etendue>
+            <app-activite *ngSwitchCase="'Activité'"></app-activite>
+        </ng-container>
+        
+
+    </div>

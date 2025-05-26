@@ -1,0 +1,155 @@
+
+
+.container-cours-carte {
+    padding: 3rem 1rem 10rem 1rem;
+    padding-bottom: 4rem;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24%, 1fr)); 
+    gap: 2rem;
+  
+    width: 90%;
+  
+    margin-left: auto;
+    margin-right: auto;
+    align-items: start;
+  
+    min-height: 50vh;
+
+
+  }
+  
+
+    .carte-cours {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 2rem;
+    }
+
+  .carte-cours{
+      display: flex;
+      align-items: stretch;
+      background-color: transparent;
+      width: 100%;
+      height: 20rem;
+      perspective: 1000px;
+      
+    }
+    
+    
+    .carte-cours-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 2.2s;
+      transform-style: preserve-3d;
+    }
+    
+    
+    .carte-cours-inner.flipped {
+      transform: rotateY(180deg);
+    }
+  
+    .carte-cours-front, .carte-cours-back {
+      box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      
+      border-radius: 3px;
+    }
+    
+    .carte-cours-front {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      border: solid 1px #c9c9c9;
+    }
+  
+    .carte-cours-front:hover {
+      border: solid 1.5px #c9c9c9;
+    }
+  
+    .carte-cours-back {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background: rgb(179, 179, 179);
+      color: white;
+      transform: rotateY(180deg);
+    }
+  
+    .carte-cours-front img {
+      width: 100%;
+      height: 75%;
+      
+      object-fit: cover;
+      border-radius: 3px 3px 0 0;
+    }
+  
+    .carte-cours-front h3 {
+      font-size: 1.6rem;
+      font-family: Arial, sans-serif;
+      padding: 1vh 1vw;
+    }
+  
+  
+    .bouton-rotation {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+  }
+
+  .bouton-etoile {
+    position: absolute;
+    font-size: 1.2rem;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color:#bebebe; 
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .etoile-active {
+    color: rgb(255, 255, 0);
+    
+  }
+  
+  .bouton-carte-add-cours{
+    height: 100%;
+    border: none;
+    font-size: 6rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #c9c9c9;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    box-shadow: none;
+  }
+  
+  .bouton-carte-add-cours:hover {
+    border: 2px solid #c9c9c9;
+    font-size: 7rem;
+  }
+  
+  
+  
+  
