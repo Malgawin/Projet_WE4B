@@ -1,0 +1,29 @@
+<div class="container-form-create-text">
+    <div>
+        <label class="title-form">Créer un texte</label>
+    </div>
+    <form [formGroup]="textForm">
+        <div>
+            Titre:
+            <input type="text" formControlName="title" class="form-control" aria-describedby="passwordHelpBlock">
+        </div>
+        <div>
+            Date de publication:
+            <input type="datetime-local" formControlName="publishDate" class="form-control" aria-describedby="passwordHelpBlock">
+        </div>
+        <div>
+            Type de message:
+            <select type="text" formControlName="type" class="form-control" aria-describedby="passwordHelpBlock">
+                <option value="important">Important</option>
+                <option value="annonce">Annonce</option>
+            </select>
+        </div>
+        <div>
+            Message:
+            <textarea type="textarea" formControlName="message" class="form-control" aria-describedby="passwordHelpBlock"></textarea>  
+        </div>
+        <div class="container-button-form">
+            <button type='submit' [disabled]='!textForm.valid'>Validé</button>
+        </div>
+    </form>
+</div>

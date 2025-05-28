@@ -1,0 +1,15 @@
+<div class="carte-cours">
+  <div class="carte-cours-inner" [class.flipped]="flipped">
+    <div class="carte-cours-front">
+      <button class="bouton-etoile"><span class="etoile">&#9733;</span></button>
+      <button class="bouton-rotation" (click)="turnCard()">↺</button>
+      <img src="******" alt="Image du cours">
+      <h3><a [routerLink]="['/cours', cours._id]">{{ cours.name }}</a></h3>
+    </div>
+    <div class="carte-cours-back">
+      <button class="bouton-rotation" (click)="turnCard()">↺</button>
+      <h3>{{ cours.code }}</h3>
+      <p>{{ cours.description }}</p>
+    </div>
+  </div>
+</div>
