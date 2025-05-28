@@ -8,14 +8,29 @@ label{
     
 }
 
-form input{
+form input, select, textarea{
     margin-bottom: 2em;
+}
+
+form button {
+    width: 6em;
+    padding: 0.9rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #007BC0;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.75rem;
 }
 
 .container-form-create-text {
     
     width: 55%;
     margin-top: 15em;
+    margin-left: auto;
+    margin-right: auto;
     background-color: white;
     border-radius: 10px;
     border-color: black;
@@ -39,3 +54,11 @@ form input{
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
+.container-button-form{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
