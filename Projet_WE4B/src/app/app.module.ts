@@ -10,6 +10,7 @@
   import { ListeCoursEtendueComponent } from './liste-cours-etendue/liste-cours-etendue.component';
 import { ActiviteComponent } from './activite/activite.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormCreateRepositoryComponent } from './form-create-repository/form-create-repository.component';
 
 
 
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
       ListeCoursCarteComponent,
       ListeCoursEtendueComponent,
       ActiviteComponent,
+      FormCreateRepositoryComponent,
 
     ],
     imports: [
