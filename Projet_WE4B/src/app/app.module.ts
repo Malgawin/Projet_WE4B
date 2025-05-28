@@ -9,6 +9,7 @@
   import { ListeCoursCarteComponent } from './liste-cours-carte/liste-cours-carte.component';
   import { ListeCoursEtendueComponent } from './liste-cours-etendue/liste-cours-etendue.component';
 import { ActiviteComponent } from './activite/activite.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -25,7 +26,8 @@ import { ActiviteComponent } from './activite/activite.component';
     ],
     imports: [
       BrowserModule,
-      AppRoutingModule
+      AppRoutingModule,
+      ReactiveFormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
