@@ -87,3 +87,7 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+
+app-liste-forums-cours{
+  width: 100%;
+}

@@ -1,0 +1,59 @@
+<div *ngIf="!selectedForum">
+  <table *ngIf="forums.length > 0" class="table-forum">
+    <thead>
+      <tr>
+        <th>Titre</th>
+        <th>Auteur</th>
+        <th>Dernier message</th>
+        <th>Nombre de messages</th>
+        <th>Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let forum of forums" (click)="selectForum(forum)">
+        <td>{{ forum.title }}</td>
+        <td>
+          'Inconnu' 
+          <br>
+          <small>
+            {{ forum.createdAt | date:'dd/MM/yyyy' }}
+          </small>
+        </td>
+        <td>
+          {{ forum.messages.length > 0 ? (forum.messages[forum.messages.length - 1].content || '...') : 'Aucun message' }}
+          <br>
+          <small *ngIf="forum.messages.length > 0">
+            {{ forum.messages[forum.messages.length - 1].createdAt | date:'dd/MM/yyyy HH:mm' }}
+          </small>
+        </td>
+        <td>{{ forum.messages.length }}</td>
+        <td>
+          <button class="btn-delete-forum" (click)="dltForum(forum._id); $event.stopPropagation()">X</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="forums.length === 0">
+    Pas de forum pour le moment.
+  </p>
+  <form (ngSubmit)="addForum()" #formAjout="ngForm" class="form-ajout-forum">
+  <input
+    type="text"
+    name="title"
+    [(ngModel)]="nouveauTitre"
+    required
+    placeholder="Titre du forum"
+    class="input-ajout-forum"
+  />
+  <button type="submit" [disabled]="formAjout.invalid" class="btn-ajout-forum">Ajouter un forum</button>
+</form>
+</div>
+
+
+
+<div *ngIf="selectedForum" class="forum-conteneur">
+  <button class="button-retour" (click)="backToList()">Retour</button>
+  <app-forum [forum]="selectedForum"></app-forum>
+</div>
+

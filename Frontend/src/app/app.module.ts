@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormCreateTextComponent } from './form-create-text/form-create-text.component';
@@ -17,7 +18,8 @@ import { CarteCoursComponent } from './tableau-de-bord/liste-cours-carte/carte-c
 import { CarteCoursEtendueComponent } from './tableau-de-bord/liste-cours-etendue/carte-cours-etendue/carte-cours-etendue.component';
 import { PageCoursComponent } from './page-cours/page-cours.component';
 import { ParticipantsCoursComponent } from './page-cours/participants-cours/participants-cours.component';
-import { ForumCoursComponent } from './page-cours/forum-cours/forum-cours.component';
+import { ForumCoursComponent } from './page-cours/liste-forums-cours/liste-forums-cours.component';
+import { ForumComponent } from './page-cours/liste-forums-cours/forum/forum.component';
 
 
 
@@ -36,6 +38,7 @@ import { ForumCoursComponent } from './page-cours/forum-cours/forum-cours.compon
       PageCoursComponent,
       ParticipantsCoursComponent,
       ForumCoursComponent,
+      ForumComponent,
 
 
     ],
@@ -43,7 +46,8 @@ import { ForumCoursComponent } from './page-cours/forum-cours/forum-cours.compon
       BrowserModule,
       AppRoutingModule,
       ReactiveFormsModule,
-      HttpClientModule
+      HttpClientModule,
+      FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

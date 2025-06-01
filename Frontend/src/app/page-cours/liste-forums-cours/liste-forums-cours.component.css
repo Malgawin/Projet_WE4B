@@ -1,0 +1,111 @@
+table {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+th, td {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #c9c9c9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+ cursor: pointer;
+ background-color: #aaaaaa!important;
+}
+
+.button-retour {
+  position: absolute;
+  top: 1.5rem;
+  right: 7%;
+  background-color: #007BC0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.forum-conteneur {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.btn-delete-forum {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-delete-forum:hover {
+  background-color: #c0392b;
+}
+
+
+
+
+
+
+.form-ajout-forum {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 1.2rem 2rem;
+  background: #f7f7f7;
+  width: 100%;
+
+}
+
+.input-ajout-forum {
+  width: 25rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+  
+}
+
+.input-ajout-forum:focus {
+  border: 1.5px solid #007BC0;
+  outline: none;
+}
+
+
+.btn-ajout-forum {
+  background-color: #007BC0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-right: 4.5rem;
+}
+
+
+.btn-ajout-forum:hover {
+    background-color: #005a8c;
+}
+

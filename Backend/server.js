@@ -15,6 +15,8 @@ mongoose.connect('mongodb://localhost:27017/projet_moodle')
 try {
 const coursRoutes = require('./routes/cours');
 app.use('/api/cours', coursRoutes);
+const forumRoutes = require('./routes/forum')
+app.use('/api/forums', forumRoutes)
 } catch (error) {
     console.error('Erreur lors du chargement des routes', error);
 }

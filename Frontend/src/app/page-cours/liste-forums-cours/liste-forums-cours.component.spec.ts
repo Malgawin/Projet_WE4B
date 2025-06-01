@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ForumCoursComponent } from './forum-cours.component';
+import { ForumCoursComponent } from './liste-forums-cours.component';
 
 describe('ForumCoursComponent', () => {
   let component: ForumCoursComponent;

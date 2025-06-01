@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Cours = require('../models/cours');
 
-// get all courses
+// get all cours
 router.get('/', async (req, res) => {
     const cours = await Cours.find();
     res.json(cours);
@@ -14,7 +14,6 @@ router.get('/:id', async (req, res) => {
     res.json(cours);
 
 });
-
 
 
 module.exports = router;

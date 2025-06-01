@@ -1,0 +1,30 @@
+
+<div class="forum" *ngIf="forum">
+
+    <div class="forum-titre">
+        <h2>Sujet : {{ forum.title }}</h2>
+        <p>par 'Inconnu', {{ forum.createdAt |  date:'dd/MM/yyyy' }}</p>
+    </div>
+    
+    <hr>
+
+    <div *ngIf="forum.messages.length === 0">
+        <p>Le forum ne possede pas de messages pour le moment </p>
+    </div>
+
+    <div  *ngIf="forum.messages.length > 0">
+        <div  class="message" *ngFor="let msg of forum.messages">
+            <h3><strong>{{ msg.authorId || 'Anonyme' }}, </strong><small>{{ msg.createdAt |  date:'dd/MM/yyyy HH:mm' }}</small> : </h3>
+            <p>{{ msg.content }}</p>
+            <button class="btn-delete" (click)="dltMessage(forum._id, msg._id); $event.stopPropagation()">X</button>
+            
+        </div>
+    </div>
+
+    <hr>
+
+    <form (ngSubmit)="sendMessage()" *ngIf="forum" class="form-forum">
+        <textarea class="textarea-message" [(ngModel)]="nouveauMessage" name="message"  placeholder="Votre message..." required></textarea>
+        <button  class="btn-submit" type="submit">Envoyer</button>
+    </form>
+</div>
