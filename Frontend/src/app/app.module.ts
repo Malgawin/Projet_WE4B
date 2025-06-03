@@ -20,6 +20,7 @@ import { PageCoursComponent } from './page-cours/page-cours.component';
 import { ParticipantsCoursComponent } from './page-cours/participants-cours/participants-cours.component';
 import { ForumCoursComponent } from './page-cours/liste-forums-cours/liste-forums-cours.component';
 import { ForumComponent } from './page-cours/liste-forums-cours/forum/forum.component';
+import { PostCreationComponent } from './post-creation/post-creation.component';
 
 
 
@@ -39,6 +40,7 @@ import { ForumComponent } from './page-cours/liste-forums-cours/forum/forum.comp
       ParticipantsCoursComponent,
       ForumCoursComponent,
       ForumComponent,
+      PostCreationComponent,
 
 
     ],
