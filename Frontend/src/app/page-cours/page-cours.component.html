@@ -18,7 +18,7 @@
         <hr>
 
         <ng-container [ngSwitch]="currentView">
-            
+            <app-course *ngSwitchCase="'Cours'"></app-course>
             <app-participants-cours *ngSwitchCase="'Participants'"></app-participants-cours>
             <app-liste-forums-cours *ngSwitchCase="'Forum'"></app-liste-forums-cours>
         </ng-container>

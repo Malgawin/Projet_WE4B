@@ -21,6 +21,9 @@ import { ParticipantsCoursComponent } from './page-cours/participants-cours/part
 import { ForumCoursComponent } from './page-cours/liste-forums-cours/liste-forums-cours.component';
 import { ForumComponent } from './page-cours/liste-forums-cours/forum/forum.component';
 import { PostCreationComponent } from './post-creation/post-creation.component';
+import { CourseComponent } from './page-cours/course/course.component';
+import { ListPostsComponent } from './page-cours/course/list-posts/list-posts.component';
+import { PostComponent } from './page-cours/course/list-posts/post/post.component';
 
 
 
@@ -41,6 +44,9 @@ import { PostCreationComponent } from './post-creation/post-creation.component';
       ForumCoursComponent,
       ForumComponent,
       PostCreationComponent,
+      CourseComponent,
+      ListPostsComponent,
+      PostComponent,
 
 
     ],
