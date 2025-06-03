@@ -1,1 +1,17 @@
-<p>post-creation works!</p>
+<div class="container-creation-post">
+    <div class="container-button">
+         <button class="btn btn-info" type="button" (click)="isTextCreation()">Texte</button>
+         <button class="btn btn-info" type="button" (click)="isRepoCreation()">Dépôt</button>
+    </div>
+    <div class="container-form" *ngIf="this.isText == true; else repoBlock">
+        <app-form-create-text></app-form-create-text>
+    </div>
+    <ng-template #repoBlock>
+        <div class="container-form">
+            <app-form-create-repository></app-form-create-repository>
+        </div>
+        
+    </ng-template>
+</div>
+
+

@@ -4,7 +4,9 @@ form{
 }
 
 label{
+    width: 8em;
     font-size: 1.8em;
+    text-align: center;
     
 }
 
@@ -25,24 +27,7 @@ form button {
     margin-top: 0.75rem;
 }
 
-.container-form-create-text {
-    
-    width: 55%;
-    margin-top: 15em;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    border-radius: 5px;
-    border-color: #c9c9c9;
-    border-width: 1px;
-    border-style: solid;
-    padding-left: 15em;
-    padding-right: 15em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
+
 
 .title-form{
     border: 0.075rem solid #ccc;    
@@ -61,4 +46,11 @@ form button {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
+.container-creation-repo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 

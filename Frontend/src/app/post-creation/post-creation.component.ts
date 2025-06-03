@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostCreationComponent implements OnInit {
 
+  public isText: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  isTextCreation(): void {
+    this.isText = true;
+  }
+
+  isRepoCreation(): void {
+    this.isText = false;
+  }
 }
