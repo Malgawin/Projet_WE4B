@@ -21,4 +21,8 @@ export class FormCreateTextComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submitForm(): void {
+    console.log(this.textForm.get('title')?.value);
+  }
+
 }

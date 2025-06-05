@@ -2,7 +2,7 @@
     <div>
         <label class="title-form">Créer un texte</label>
     </div>
-    <form [formGroup]="textForm">
+    <form [formGroup]="textForm" (ngSubmit)="submitForm()">
         <div>
             Titre :
             <input type="text" formControlName="title" class="form-control" aria-describedby="passwordHelpBlock">
@@ -23,7 +23,7 @@
             <textarea type="textarea" formControlName="message" class="form-control" aria-describedby="passwordHelpBlock"></textarea>  
         </div>
         <div class="container-button-form">
-            <button type='submit' [disabled]='!textForm.valid'>Validé</button>
+            <button type='submit' [disabled]='!textForm.valid'>Valider</button>
         </div>
     </form>
 </div>
