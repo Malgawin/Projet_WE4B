@@ -1,0 +1,30 @@
+button {
+    width: 90%;
+    height: 1.2em;
+    background-color: #007BC0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.3em;
+}
+
+button:hover {
+    background-color: #1daae2fd;
+}
+
+
+.container-course{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    width: 90%;
+    margin-left: 3em;
+    margin-right: 3em;
+}

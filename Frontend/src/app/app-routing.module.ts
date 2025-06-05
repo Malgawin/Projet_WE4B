@@ -7,7 +7,8 @@ import { PostCreationComponent } from './post-creation/post-creation.component';
 const routes: Routes = [
   { path: 'tableau-de-bord', component: TableauDeBordComponent },
   { path : 'cours/:id', component: PageCoursComponent},
-  { path : 'creation-cours', component: PostCreationComponent }
+  { path : 'creation-cours/:id', component: PostCreationComponent },
+  
 ];
 
 @NgModule({
