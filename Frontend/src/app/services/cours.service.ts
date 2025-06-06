@@ -10,10 +10,13 @@ export interface Cours {
 
   image : string
   
+  Inscrits?: string[];
+}
 
-  enseignantId?: string[];   
-  moduleIds?: string[];
-  étudiantsInscrits?: string[];
+export interface Inscrit {
+  id: number;
+  name: string;
+  familyName: string;
 }
 
 @Injectable({
@@ -32,4 +35,9 @@ export class CoursService {
   getCoursbyId(id: string): Observable<Cours> {
     return this.http.get<Cours>(`${this.apiUrl}/${id}`);
   }
+
+  getInscrits(id: number): Observable<Inscrit[]> {
+    return this.http.get<Inscrit[]>(`${this.apiUrl}/${id}/inscrits`);
+  }
+
 }

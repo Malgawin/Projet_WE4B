@@ -26,4 +26,21 @@ router.get('/:id', async (req, res) => {
 });
 
 
+router.get('/:id/inscrits', async (req, res) => {
+    try {
+        const { rows } = await pool.query(
+            `SELECT u.id, u.name, u.family_name
+             FROM enrollment e
+             JOIN users u ON e.users_id = u.id
+             WHERE e.ue_id = $1;`,
+            [req.params.id]
+        );
+        res.json(rows);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Erreur lors de la récupération des inscrits à l\'UE' });
+    }
+});
+
+
 module.exports = router;

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CoursService, Inscrit } from '../../services/cours.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-participants-cours',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParticipantsCoursComponent implements OnInit {
 
-  constructor() { }
+  inscrits: Inscrit[] = [];
+
+  constructor( private coursService: CoursService, private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
+    const coursId = Number(this.route.snapshot.paramMap.get('id'));
+    this.coursService.getInscrits(coursId).subscribe(data => {
+  this.inscrits = data;
+  });
   }
 
 }
