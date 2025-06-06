@@ -36,7 +36,7 @@
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       border-radius: 3px;
-      padding-top: 2rem; ;
+      padding-top: 0; ;
     }
     
     .carte-cours-front {
@@ -64,6 +64,7 @@
     .carte-cours-front img {
       width: 100%;
       height: 75%;
+
       
       object-fit: cover;
       border-radius: 3px 3px 0 0;

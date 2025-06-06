@@ -3,7 +3,7 @@
     <div class="carte-cours-front">
       <button class="bouton-etoile"><span class="etoile">&#9733;</span></button>
       <button class="bouton-rotation" (click)="turnCard()">↺</button>
-      <img src="******" alt="Image du cours">
+      <img [src]="'http://localhost:3000/api/files/images/' + cours.image" alt="Image du cours">
       <h3><a [routerLink]="['/cours', cours.id]">{{ cours.name }}</a></h3>
     </div>
     <div class="carte-cours-back">
