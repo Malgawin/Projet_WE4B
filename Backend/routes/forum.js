@@ -4,8 +4,8 @@ const router = express.Router();
 const Forum = require('../models/forum');
 
 router.get('/cours/:coursId', async (req, res) => {
-    const coursObjectId = new mongoose.Types.ObjectId(req.params.coursId);
-    const forums = await Forum.find({ coursId: coursObjectId }).sort({ createdAt: -1 });;
+    const coursId = Number(req.params.coursId);
+    const forums = await Forum.find({ coursId }).sort({ createdAt: -1 });
     res.json(forums);
 });
 

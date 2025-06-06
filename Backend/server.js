@@ -29,20 +29,20 @@ pool.connect()
 
 // routes mongoDB:
 try {
-const coursRoutes = require('./routes/cours');
-app.use('/api/cours', coursRoutes);
-const forumRoutes = require('./routes/forum')
-app.use('/api/forums', forumRoutes)
+  const forumRoutes = require('./routes/forum')
+  app.use('/api/forums', forumRoutes)
 } catch (error) {
-    console.error('Erreur lors du chargement des routes', error);
+  console.error('Erreur lors du chargement des routes mongodb', error);
 }
 
 //route PostgreSQL:
 try {
+  const ueRoutes = require('./routes/ue');
+  app.use('/api/ue', ueRoutes);
   const usersRoutes = require('./routes/users');
   app.use('/api/users', usersRoutes);
 } catch (error) {
-    console.error('Erreur lors du chargement des routes', error);
+  console.error('Erreur lors du chargement des routes pgsql', error);
 }
 
 

@@ -12,7 +12,7 @@ const messageSchema = new mongoose.Schema({
 
 
 const forumSchema = new mongoose.Schema({
-  coursId: { type: mongoose.Schema.Types.ObjectId, ref: 'Cours', required: true },
+  coursId: { type: Number, required: true },
   title: { type: String, required: true },
 
   createdAt: { type: Date, required: true, default: Date.now },
