@@ -13,7 +13,7 @@ export interface Message {
 
 export interface Forum {
   _id: string;
-  coursId: string;
+  coursId: number;
   title: string;
   createdAt: string;
   messages: Message[];
@@ -32,7 +32,7 @@ export class ForumService {
 
   constructor(private http: HttpClient) {}
 
-  getForumsByCours(coursId: string): Observable<Forum[]> {
+  getForumsByCours(coursId: number): Observable<Forum[]> {
     return this.http.get<Forum[]>(`${this.apiUrl}/cours/${coursId}`);
   }
 
@@ -44,7 +44,7 @@ export class ForumService {
     return this.http.post<Message>(`${this.apiUrl}/${forumId}/messages`, { content, authorId});
   }
 
-  addForum(coursId: string, title: string): Observable<Forum> {
+  addForum(coursId: number, title: string): Observable<Forum> {
     return this.http.post<Forum>(`${this.apiUrl}/cours/${coursId}`, { coursId, title });
   }
   

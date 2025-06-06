@@ -3,19 +3,17 @@ import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 export interface Cours {
-  _id: string;
-  name: string;
+  id: number;
   code: string;
+  name: string;
   description: string;
+
+  image : string
+  
 
   enseignantId?: string[];   
   moduleIds?: string[];
   étudiantsInscrits?: string[];
-
-  image?: {
-    name: string;
-    url: string;
-  };
 }
 
 @Injectable({
@@ -23,7 +21,7 @@ export interface Cours {
 })
 export class CoursService {
 
-  private apiUrl = 'http://localhost:3000/api/cours';
+  private apiUrl = 'http://localhost:3000/api/ue';
 
   constructor(private http: HttpClient) { }
 
