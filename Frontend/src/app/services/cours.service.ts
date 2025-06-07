@@ -1,23 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-export interface Cours {
-  id: number;
-  code: string;
-  name: string;
-  description: string;
+import { Cours, Inscrit } from '../class/cours';
 
-  image : string
-  
-  Inscrits?: string[];
-}
 
-export interface Inscrit {
-  id: number;
-  name: string;
-  familyName: string;
-}
 
 @Injectable({
   providedIn: 'root'
@@ -29,11 +16,19 @@ export class CoursService {
   constructor(private http: HttpClient) { }
 
   getCours(): Observable<Cours[]> {
-    return this.http.get<Cours[]>(this.apiUrl);
+    return this.http.get<any[]>(this.apiUrl).pipe(
+      map(coursArray => coursArray.map(c => new Cours(
+        c.id, c.code, c.name, c.description, c.image
+      )))
+    );
   }
 
   getCoursbyId(id: string): Observable<Cours> {
-    return this.http.get<Cours>(`${this.apiUrl}/${id}`);
+    return this.http.get<any>(`${this.apiUrl}/${id}`).pipe(
+      map(c => new Cours(
+        c.id, c.code, c.name, c.description, c.image
+      ))
+    );
   }
 
   getInscrits(id: number): Observable<Inscrit[]> {

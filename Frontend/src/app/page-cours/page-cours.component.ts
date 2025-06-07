@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Cours, CoursService } from '../services/cours.service';
+import { CoursService } from '../services/cours.service';
+import { Cours, Inscrit } from '../class/cours';
 
 
 @Component({
@@ -19,6 +20,9 @@ export class PageCoursComponent implements OnInit {
     if (id) {
       this.coursService.getCoursbyId(id).subscribe(data => {
       this.cours = data;
+      this.coursService.getInscrits(Number(id)).subscribe(inscrits => {
+          this.cours.inscrits = inscrits;
+        });
     });
     }
   }
