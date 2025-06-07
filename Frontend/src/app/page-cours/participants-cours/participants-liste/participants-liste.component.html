@@ -1,0 +1,28 @@
+<div class="container-participants-liste">
+    <table class="liste" *ngIf="inscrits.length > 0; else inscritsEmpty">
+        <thead class="liste-titre">
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Rôle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let inscrit of inscritsSlice">
+                <td>{{ inscrit.familyName }}</td>
+                <td>{{ inscrit.name }}</td>
+                <td>{{ inscrit.mail }}</td>
+                <td><a href="mailto:{{ inscrit.mail }}">{{ inscrit.mail }}</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pagination-container" >
+        <button (click)="prevPage()" [disabled]="page === 1">&#8592;</button>
+        <p>{{ page }} / {{ pageMax }}</p>
+        <button (click)="nextPage()" [disabled]="page === pageMax">&#8594;</button>
+    </div>
+    <ng-template #inscritsEmpty>
+        <p>Aucun inscrit pour ce cours.</p>
+    </ng-template>
+</div>

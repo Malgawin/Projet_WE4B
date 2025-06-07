@@ -24,6 +24,8 @@ import { PostCreationComponent } from './post-creation/post-creation.component';
 import { CourseComponent } from './page-cours/course/course.component';
 import { ListPostsComponent } from './page-cours/course/list-posts/list-posts.component';
 import { PostComponent } from './page-cours/course/list-posts/post/post.component';
+import { ParticipantsFiltreComponent } from './page-cours/participants-cours/participants-filtre/participants-filtre.component';
+import { ParticipantsListeComponent } from './page-cours/participants-cours/participants-liste/participants-liste.component';
 
 
 
@@ -47,6 +49,8 @@ import { PostComponent } from './page-cours/course/list-posts/post/post.componen
       CourseComponent,
       ListPostsComponent,
       PostComponent,
+      ParticipantsFiltreComponent,
+      ParticipantsListeComponent,
 
 
     ],

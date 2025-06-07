@@ -1,3 +1,21 @@
+app-participants-cours{
+  width: 100%;
+  height: 100%;
+}
+
+app-liste-forums-cours{
+  width: 100%;
+}
+
+app-course{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} 
+
+
 body {
     background-color: #1f5182;
 }
@@ -88,14 +106,3 @@ body {
   margin: 0 auto;
 }
 
-app-liste-forums-cours{
-  width: 100%;
-}
-
-app-course{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-} 

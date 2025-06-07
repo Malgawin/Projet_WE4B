@@ -20,4 +20,6 @@ export interface Inscrit {
   id: number;
   name: string;
   familyName: string;
+  mail: string;
+  role : string;
 }

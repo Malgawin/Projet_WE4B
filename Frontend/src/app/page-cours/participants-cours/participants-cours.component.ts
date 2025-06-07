@@ -10,7 +10,7 @@ import { Inscrit } from '../../class/cours';
 export class ParticipantsCoursComponent implements OnInit {
 
   @Input() inscrits: Inscrit[] = [];
-
+  
   constructor( ) { }
 
   ngOnInit(): void {

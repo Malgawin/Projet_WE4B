@@ -32,7 +32,16 @@ export class CoursService {
   }
 
   getInscrits(id: number): Observable<Inscrit[]> {
-    return this.http.get<Inscrit[]>(`${this.apiUrl}/${id}/inscrits`);
+    return this.http.get<any[]>(`${this.apiUrl}/${id}/inscrits`).pipe(
+      map(inscritsArray => inscritsArray.map(i => ({
+        id: i.id,
+        name: i.name,
+        familyName: i.family_name,
+        mail: i.mail,
+        role: i.role
+      })))
+    )
+    ;
   }
 
 }
