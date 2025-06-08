@@ -1,1 +1,2 @@
-<app-participants-liste [inscrits]="inscrits"></app-participants-liste>
+<app-participants-filtre (filtreChange)="filtre = $event"></app-participants-filtre>
+<app-participants-liste [inscrits]="inscrits" [filterPrenom]="filtre.prenom" [filterNom]="filtre.nom" [filterRole]="filtre.role" [filterSearch]="filtre.search"></app-participants-liste>

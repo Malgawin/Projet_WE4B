@@ -16,5 +16,6 @@ export class ParticipantsCoursComponent implements OnInit {
   ngOnInit(): void {
     
   }
-
+  
+  filtre = { prenom: '', nom: '', role: '', search: '' };
 }

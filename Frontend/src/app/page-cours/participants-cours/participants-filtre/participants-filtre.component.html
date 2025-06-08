@@ -1,1 +1,28 @@
-<p>participants-filtre works!</p>
+<div>
+     <div class="container-participants-recherche">
+        <div class = "participants-recherche">
+            <p>Recherche : </p>
+            <input type="text" placeholder="Rechercher un participant..." [(ngModel)]="search" (ngModelChange)="Search()" >
+        </div>
+     </div>
+     <hr>
+     <div class="container-participants-recherche-lettre">
+        <div class="filtre-lettre-nom">
+            <p>Nom de famille :</p>
+            <button (click)="filter('nom', '')" [ngClass]="{'select': filterNom === ''}">Tout</button>
+            <button *ngFor="let lettre of ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']" (click)="filter('nom', lettre)" [ngClass]="{'select': filterNom === lettre }">{{lettre}}</button> 
+        </div>
+        <div class="filtre-lettre-prenom">
+            <p>Prénom :</p>
+            <button (click)="filter('prenom', '')" [ngClass]="{'select': filterPrenom === ''}">Tout</button>
+            <button *ngFor="let lettre of ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']" (click)="filter('prenom', lettre)" [ngClass]="{'select': filterPrenom === lettre}">{{lettre}}</button> 
+        </div>
+        <div class="filtre-lettre-role">
+            <p> Role :</p>
+            <button (click)="filter('role', '')" [ngClass]="{'select': filterRole === ''}">Tout</button>
+            <button (click)="filter('role', 'etudiant')" [ngClass]="{'select': filterRole === 'etudiant'}">Etudiant</button>
+            <button (click)="filter('role', 'prof')" [ngClass]="{'select': filterRole === 'prof'}">Prof</button>
+        </div>
+     </div>
+     <hr>
+</div>

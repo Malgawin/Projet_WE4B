@@ -4,15 +4,15 @@
             <tr>
                 <th>Nom</th>
                 <th>Prénom</th>
-                <th>Email</th>
                 <th>Rôle</th>
+                <th>Email</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let inscrit of inscritsSlice">
                 <td>{{ inscrit.familyName }}</td>
                 <td>{{ inscrit.name }}</td>
-                <td>{{ inscrit.mail }}</td>
+                <td>{{ inscrit.role }}</td>
                 <td><a href="mailto:{{ inscrit.mail }}">{{ inscrit.mail }}</a></td>
             </tr>
         </tbody>

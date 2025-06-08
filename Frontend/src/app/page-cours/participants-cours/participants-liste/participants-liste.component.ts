@@ -10,6 +10,23 @@ import { Inscrit } from '../../../class/cours';
 export class ParticipantsListeComponent implements OnInit {
 
   @Input() inscrits: Inscrit[] = [];
+  @Input() filterPrenom = '';
+  @Input() filterNom = '';
+  @Input() filterRole = '';
+  @Input() filterSearch = '';
+
+  get inscritsFiltres(): Inscrit[] {
+  return this.inscrits
+    .filter(i => !this.filterRole || i.role === this.filterRole)
+    .filter(i => !this.filterPrenom || i.name.toUpperCase().startsWith(this.filterPrenom))
+    .filter(i => !this.filterNom || i.familyName.toUpperCase().startsWith(this.filterNom))
+    .filter(i =>
+      !this.filterSearch ||
+      i.name.toLowerCase().includes(this.filterSearch.toLowerCase()) ||
+      i.familyName.toLowerCase().includes(this.filterSearch.toLowerCase()) ||
+      i.mail.toLowerCase().includes(this.filterSearch.toLowerCase())
+    );
+  }
 
   constructor() { }
 
@@ -20,11 +37,11 @@ export class ParticipantsListeComponent implements OnInit {
   slice: number = 10; //defini nombre de participants afficher par page
 
   get inscritsSlice(): Inscrit[] {
-    return this.inscrits.slice(((this.page -1) * this.slice), ((this.page -1) * this.slice) + this.slice);
+    return this.inscritsFiltres.slice(((this.page -1) * this.slice), ((this.page -1) * this.slice) + this.slice);
   }
 
   get pageMax(): number {
-    return Math.ceil(this.inscrits.length / this.slice); //calcule le nombre de pages necesaire a l'affichage en arondosant a l'entier superieur;
+    return Math.ceil(this.inscritsFiltres.length / this.slice); //calcule le nombre de pages necesaire a l'affichage en arondosant a l'entier superieur;
   }
   
   prevPage() {
