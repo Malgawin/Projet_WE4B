@@ -74,6 +74,9 @@ th {
   cursor: pointer;
 }
 
+.pagination-container button:hover {
+  background: #006593;
+}
 
 .pagination-container button:disabled {
   background: #d6d6d6;
