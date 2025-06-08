@@ -1,8 +1,8 @@
 <app-participants-filtre (filtreChange)="filtre = $event"></app-participants-filtre>
 <app-participants-liste [inscrits]="inscrits" [filterPrenom]="filtre.prenom" [filterNom]="filtre.nom" [filterRole]="filtre.role" [filterSearch]="filtre.search"></app-participants-liste>
 
-<button class="btn-ajt-etudiant" (click)="showWindowAdd = true">Ajouter un étudiant</button>
+<button class="btn-ajt-etudiant" (click)="showWindowAdd = true">Ajouter un participant</button>
 
 <div class="Window-ajt-etudiant" *ngIf="showWindowAdd">
-    <app-participants-add-user (close)="closeWindowAdd()"></app-participants-add-user>
+    <app-participants-add-user [coursId]="cours.id" (close)="closeWindowAdd()"></app-participants-add-user>
 </div>

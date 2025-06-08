@@ -80,6 +80,16 @@ app-filtre-search{
     flex: 2;
 }
 
+.ligne-user.selected {
+    background-color: #007BC0;
+    color: #ffffff;
+}
+
+
+
+
+
+
 
 
 .ajt-btn {

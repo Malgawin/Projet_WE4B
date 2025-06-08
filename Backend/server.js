@@ -37,6 +37,8 @@ try {
   app.use('/api/files', filesRoutes);
   const forumRoutes = require('./routes/forum')
   app.use('/api/forums', forumRoutes)
+  const enrollmentRoutes = require('./routes/enrollment');
+  app.use('/api/enrollment', enrollmentRoutes);
 } catch (error) {
   console.error('Erreur lors du chargement des routes mongodb', error);
 }

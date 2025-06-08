@@ -21,7 +21,7 @@
     
     <div class="pagination-container" >
         <button (click)="prevPage()" [disabled]="page === 1">&#8592;</button>
-        <p>{{ page }} / {{ pageMax }}</p>
+        <p>{{ page }} / {{ pageMax }} - {{  inscritsFiltres.length }} resultats</p>
         <button (click)="nextPage()" [disabled]="page === pageMax">&#8594;</button>
     </div>
 

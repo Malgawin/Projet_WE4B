@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Inscrit } from '../../class/cours';
+import { Inscrit,Cours } from '../../class/cours';
 
 
 @Component({
@@ -9,8 +9,9 @@ import { Inscrit } from '../../class/cours';
 })
 export class ParticipantsCoursComponent implements OnInit {
 
-  @Input() inscrits: Inscrit[] = [];
   
+  @Input() cours!: Cours;
+
   constructor( ) { }
 
   ngOnInit(): void {
@@ -19,6 +20,10 @@ export class ParticipantsCoursComponent implements OnInit {
 
   showWindowAdd: boolean = false;
   filtre = { prenom: '', nom: '', role: '', search: '' };
+
+  get inscrits(): Inscrit[] {
+    return this.cours.inscrits || [];
+  }
 
   closeWindowAdd() {
     this.showWindowAdd = false;

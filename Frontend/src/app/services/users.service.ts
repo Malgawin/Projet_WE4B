@@ -2,12 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-export interface User {
-  id: number;
-  name: string;
-  familyName: string;
-  mail: string;
-}
+import { User } from '../class/user';
 
 @Injectable({
   providedIn: 'root'
@@ -19,12 +14,9 @@ export class UsersService {
 
   getAllUsers(): Observable<User[]> {
     return this.http.get<any[]>(this.apiUrl).pipe(
-      map( usersArray => usersArray.map(u => ({
-        id: u.id,
-        name: u.name,
-        familyName: u.family_name,
-        mail: u.mail,
-      })))
+      map( usersArray => usersArray.map(u => 
+        new User(u.id, u.name, u.family_name, u.mail)
+      ))
     );
   }
 

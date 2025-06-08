@@ -44,4 +44,11 @@ export class CoursService {
     ;
   }
 
+  addInscrit(userId: number, coursId: number): Observable<any> {
+    return this.http.post('http://localhost:3000/api/enrollment/add', {
+      user_id: userId,
+      ue_id: coursId
+    });
+  }
+
 }
