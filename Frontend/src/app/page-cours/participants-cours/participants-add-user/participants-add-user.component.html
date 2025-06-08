@@ -1,0 +1,20 @@
+<div class="window-ajt-etudiant-content">
+    <button class="close-btn" (click)="close.emit()">X</button>
+
+    <app-filtre-search [search]="search"  (searchChange)="search = $event">
+    </app-filtre-search>
+
+    <div class="liste-users">
+        <div *ngFor="let user of UsersFiltres">
+            <div class="ligne-user">
+                <span>{{ user.name }}</span>
+                <p>|</p>
+                <span>{{ user.familyName }}</span>
+                <p>|</p>
+                <span class="mail">{{ user.mail }}</span>
+            </div>
+        </div>
+    </div>
+    
+    <button class="ajt-btn">Ajouter</button>
+</div>

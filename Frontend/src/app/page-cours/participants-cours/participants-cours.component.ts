@@ -16,6 +16,11 @@ export class ParticipantsCoursComponent implements OnInit {
   ngOnInit(): void {
     
   }
+
   showWindowAdd: boolean = false;
   filtre = { prenom: '', nom: '', role: '', search: '' };
+
+  closeWindowAdd() {
+    this.showWindowAdd = false;
+  }
 }

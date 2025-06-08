@@ -38,11 +38,3 @@ app-participants-liste {
     justify-content: center;
     z-index: 999;
 }
-
-.Window-ajt-etudiant-content{
-    background: #ffffff;
-    padding: 10rem 20rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-}

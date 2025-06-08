@@ -1,0 +1,103 @@
+.window-ajt-etudiant-content{
+    background: #ffffff;
+    padding: 3rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: red;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    border: 1px solid #7c1010;
+    color: #7c1010;
+    
+}
+
+
+
+app-filtre-search{
+    display: flex;
+    ;
+}
+
+.liste-users{
+    margin-top: 2rem;
+    height: 11rem;
+    width: 100%;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    overflow-y: auto;
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+
+    scrollbar-width:inherit;
+    scrollbar-color: #007BC0 #c9c9c9;
+}
+
+.ligne-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.2rem 0rem;
+    border-bottom: 1px solid #ececec;
+    cursor: pointer;
+}
+
+.ligne-user:hover {
+    background-color: #c9c9c9;
+}
+
+.ligne-user span {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
+
+}
+
+
+.ligne-user .mail {
+    flex: 2;
+}
+
+
+
+.ajt-btn {
+
+    margin: 2rem auto 0rem auto;
+    display: block;
+
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    background: #007BC0;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.ajt-btn:hover {
+    background: #006593;
+}
+
+

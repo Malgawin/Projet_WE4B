@@ -26,6 +26,8 @@ import { ListPostsComponent } from './page-cours/course/list-posts/list-posts.co
 import { PostComponent } from './page-cours/course/list-posts/post/post.component';
 import { ParticipantsFiltreComponent } from './page-cours/participants-cours/participants-filtre/participants-filtre.component';
 import { ParticipantsListeComponent } from './page-cours/participants-cours/participants-liste/participants-liste.component';
+import { ParticipantsAddUserComponent } from './page-cours/participants-cours/participants-add-user/participants-add-user.component';
+import { FiltreSearchComponent } from './page-cours/participants-cours/participants-filtre/filtre-search/filtre-search.component';
 
 
 
@@ -51,6 +53,8 @@ import { ParticipantsListeComponent } from './page-cours/participants-cours/part
       PostComponent,
       ParticipantsFiltreComponent,
       ParticipantsListeComponent,
+      ParticipantsAddUserComponent,
+      FiltreSearchComponent,
 
 
     ],

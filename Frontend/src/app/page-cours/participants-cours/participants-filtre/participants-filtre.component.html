@@ -1,9 +1,6 @@
 <div>
      <div class="container-participants-recherche">
-        <div class = "participants-recherche">
-            <p>Recherche : </p>
-            <input type="text" placeholder="Rechercher un participant..." [(ngModel)]="search" (ngModelChange)="Search()" >
-        </div>
+        <app-filtre-search [search]="search" (searchChange)="search = $event; Search()"></app-filtre-search>
      </div>
      <hr>
      <div class="container-participants-recherche-lettre">

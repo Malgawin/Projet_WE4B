@@ -47,11 +47,11 @@ export class ParticipantsFiltreComponent implements OnInit {
   }
 
   Search() {
-  this.filtreChange.emit({
-    prenom: this.filterPrenom,
-    nom: this.filterNom,
-    role: this.filterRole,
-    search: this.search
-  });
-}
+    this.filtreChange.emit({
+      prenom: this.filterPrenom,
+      nom: this.filterNom,
+      role: this.filterRole,
+      search: this.search
+    });
+  }
 }
