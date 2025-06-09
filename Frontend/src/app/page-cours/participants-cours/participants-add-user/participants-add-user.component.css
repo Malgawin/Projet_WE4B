@@ -86,7 +86,11 @@ app-filtre-search{
 }
 
 
-
+.ligne-user.disabled {
+    background-color: #afafaf;
+    color: #e4e4e4;
+    cursor : not-allowed;
+}
 
 
 
@@ -109,5 +113,12 @@ app-filtre-search{
 .ajt-btn:hover {
     background: #006593;
 }
+
+
+
+
+
+
+
 
 

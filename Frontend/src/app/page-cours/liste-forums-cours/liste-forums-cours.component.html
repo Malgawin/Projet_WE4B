@@ -34,9 +34,10 @@
     </tbody>
   </table>
 
-  <p *ngIf="forums.length === 0">
+  <p class="no-forum" *ngIf="forums.length === 0">
     Pas de forum pour le moment.
   </p>
+
   <form (ngSubmit)="addForum()" #formAjout="ngForm" class="form-ajout-forum">
   <input
     type="text"

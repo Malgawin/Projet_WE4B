@@ -81,3 +81,13 @@ th {
 .pagination-container button:disabled {
   background: #d6d6d6;
 }
+
+
+.no-inscrits{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: red;
+  margin: 2rem 0 2rem 0;
+}

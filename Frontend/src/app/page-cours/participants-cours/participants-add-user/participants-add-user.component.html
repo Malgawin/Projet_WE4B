@@ -6,8 +6,8 @@
 
     <div class="liste-users">
         <div *ngFor="let user of UsersFiltres">
-            <div class="ligne-user" (click)="selectUser(user.id)" [ngClass]="{'selected': selectedUsers.includes(user.id)}">
-                <span>{{ user.id }}</span>
+            <div class="ligne-user" (click)="!isInscrit(user.id) && selectUser(user.id)" [ngClass]="{'selected': selectedUsers.includes(user.id), 'disabled': isInscrit(user.id)}">
+                <span>{{ user.name }}</span>
                 <p>|</p>
                 <span>{{ user.familyName }}</span>
                 <p>|</p>

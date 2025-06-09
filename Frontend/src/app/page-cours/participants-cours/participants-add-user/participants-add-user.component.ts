@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ChangeDetectorRef, Output, EventEmitter } fro
 import { UsersService } from '../../../services/users.service';
 import { CoursService} from '../../../services/cours.service';
 import { User } from '../../../class/user';
+import { Inscrit } from '../../../class/cours';
 
 @Component({
   selector: 'app-participants-add-user',
@@ -16,6 +17,8 @@ export class ParticipantsAddUserComponent implements OnInit {
   selectedUsers: number[] = []; // tableau des id des utilisateurs selectionnés
   @Output() close = new EventEmitter<void>();
   @Input() coursId!: number;
+  @Input() inscrits: Inscrit[] = [];
+
 
   constructor(private usersService: UsersService, private coursService: CoursService ,private cdr: ChangeDetectorRef) { }
 
@@ -40,6 +43,11 @@ export class ParticipantsAddUserComponent implements OnInit {
 
 
   selectUser(userId: number): void {
+    if (this.isInscrit(userId)) {
+      console.warn(`Utilisateur ${userId} est déjà inscrit`);
+      return;
+    }
+
     if (this.selectedUsers.includes(userId)) {
       this.selectedUsers = this.selectedUsers.filter(id => id !== userId);
     } else {
@@ -63,6 +71,8 @@ export class ParticipantsAddUserComponent implements OnInit {
     this.close.emit();
   }
 
-
+  isInscrit(userId: number): boolean {
+    return this.inscrits.some(inscrit => inscrit.id === userId);
+  }
 
 }
