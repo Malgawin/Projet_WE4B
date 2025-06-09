@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Cours } from '../../../class/cours';
+import { FilesService } from 'src/app/services/files.service';
 
 @Component({
   selector: 'app-carte-cours',
@@ -10,7 +11,7 @@ export class CarteCoursComponent implements OnInit {
   
   @Input() cours!: Cours;
 
-  constructor() { }
+  constructor(private filesService: FilesService) { }
 
   ngOnInit(): void {
   }
@@ -21,4 +22,7 @@ export class CarteCoursComponent implements OnInit {
     this.flipped = !this.flipped;
   }
 
+  getImageUrl(): string {
+    return this.filesService.getImage(this.cours.image);
+  }
 }

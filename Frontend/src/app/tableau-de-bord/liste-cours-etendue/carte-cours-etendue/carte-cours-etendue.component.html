@@ -3,7 +3,7 @@
     <div class="carte-cours-front-etendue">
       <button class="bouton-etoile-etendue "><span class="etoile-etendue ">&#9733;</span></button>
       <button class="bouton-rotation-etendue " (click)="turnCard()">↺</button>
-      <img src="******" alt="Image du cours">
+      <img [src]="getImageUrl()" alt="Image du cours">
       <h3><a [routerLink]="['/cours', cours.id]">{{ cours.name }}</a></h3>
     </div>
     <div class="carte-cours-back-etendue">

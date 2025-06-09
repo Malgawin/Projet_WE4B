@@ -18,6 +18,8 @@ router.post('/upload/image', upload.single('image'), (req, res) => {
 
   uploadStream.end(req.file.buffer);
 
+  
+
 });
 
 
