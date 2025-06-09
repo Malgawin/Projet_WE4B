@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Cours} from '../../../class/cours';
 import { FilesService } from '../../../services/files.service';
+import { CoursService } from '../../../services/cours.service';
 
 @Component({
   selector: 'app-modif-image-cours',
@@ -12,7 +13,7 @@ export class ModifImageCoursComponent implements OnInit {
   @Input() cours!: Cours;
   newImageId?: string;
 
-  constructor( private filesService: FilesService) { }
+  constructor( private filesService: FilesService, private coursService: CoursService) { }
 
   ngOnInit(): void {
   }
@@ -33,6 +34,17 @@ export class ModifImageCoursComponent implements OnInit {
         });
     } else {
       return;
+    }
+  }
+
+  changeImage(): void{
+    if (this.newImageId) {
+      this.coursService.updateImage(this.cours.id, this.newImageId).subscribe(
+        ()=> {
+          this.cours.image = this.newImageId!;
+          this.newImageId = undefined;
+        }
+      )
     }
   }
   

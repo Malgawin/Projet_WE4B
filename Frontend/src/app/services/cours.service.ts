@@ -51,4 +51,10 @@ export class CoursService {
     });
   }
 
+  updateImage(coursId: number, image: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/updateImage`, {
+      id: coursId,
+      image: image
+    });
+  }
 }

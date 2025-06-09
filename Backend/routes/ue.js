@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-
+// get inscrtits at ue by id with role
 router.get('/:id/inscrits', async (req, res) => {
     try {
         const { rows } = await pool.query(
@@ -42,9 +42,22 @@ router.get('/:id/inscrits', async (req, res) => {
         res.json(rows);
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: 'Erreur lors de la récupération des inscrits à l\'UE' });
+        res.status(500).json({ error: 'Erreur lors de la récupération des inscrits à l ue' });
     }
 });
+
+router.post('/updateImage', async (req, res) => {
+    try {
+        const { id, image} = req.body;
+        const {rows} = await pool.query(
+            'UPDATE ue SET image = $1 WHERE id = $2;', [image, id]
+        );
+        res.json(rows);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Erreur lors du changement d id de l image' });
+    }
+})
 
 
 module.exports = router;
