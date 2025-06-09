@@ -16,8 +16,13 @@ router.post('/upload/image', upload.single('image'), (req, res) => {
     contentType: req.file.mimetype,
   });
 
+  const fileId = uploadStream.id;
+
   uploadStream.end(req.file.buffer);
 
+  uploadStream.on('finish', (file) => {
+    res.status(201).json({ message: 'Image upload', _id: fileId });
+  });
   
 
 });

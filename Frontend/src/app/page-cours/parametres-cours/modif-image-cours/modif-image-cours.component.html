@@ -1,9 +1,21 @@
 <div>
-    <h2>Modifier l'image du cours :</h2>
-    <div>
-        <p>Image actuelle :</p>
-        <img [src]="getImagerUrl()" alt="Image du cours">
-        <p>Charger nouvelle image :</p>
-    </div>
-    <button>Valider le changement</button>
+  <h2>Modifier l'image du cours :</h2>
+
+  <div>
+    <p>Image actuelle :</p>
+    <img [src]="getImagerUrl(this.cours.image)" alt="Image du cours actuel" width="200">
+  </div>
+
+  <div>
+    <p>Charger nouvelle image :</p>
+    <input type="file" (change)="uploadNewImage($event)">
+  </div>
+
+
+  <div *ngIf="newImageId">
+    <p>id: {{ newImageId }}</p>
+    <img [src]="getImagerUrl(newImageId)" alt="Nouvelle image">
+  </div>
+
+  <button>Valider le changement</button>
 </div>

@@ -15,5 +15,11 @@ export class FilesService {
     return `${this.apiUrl}/images/${id}`;
   }
 
-  uploadImage(file: File): Observable<any> {}
+  uploadImage(file: File): Observable<string> {
+    const formData = new FormData();
+    formData.append('image', file);
+    return this.http.post<{_id: string}>(`${this.apiUrl}/upload/image`, formData,) 
+      .pipe(map(res => res._id));
+  }
+  
 }

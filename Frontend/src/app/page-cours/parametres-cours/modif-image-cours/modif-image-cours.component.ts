@@ -10,14 +10,30 @@ import { FilesService } from '../../../services/files.service';
 export class ModifImageCoursComponent implements OnInit {
 
   @Input() cours!: Cours;
+  newImageId?: string;
 
   constructor( private filesService: FilesService) { }
 
   ngOnInit(): void {
   }
 
-  getImagerUrl(): string {
-    return this.filesService.getImage(this.cours.image);
+  getImagerUrl(id: string): string {
+    return this.filesService.getImage(id);
   }
 
+  uploadNewImage(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files?.length) {
+      
+      const file = input.files[0];
+ 
+      this.filesService.uploadImage(file).subscribe(
+        (id) => {
+          this.newImageId = id; //id nouvelle image
+        });
+    } else {
+      return;
+    }
+  }
+  
 }
