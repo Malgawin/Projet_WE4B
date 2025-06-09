@@ -83,3 +83,7 @@
 .modif-image-cours-container button:hover {
     background: #006593;
 }
+
+.modif-image-cours-container button.disabled {
+    background: #acacac;
+}

@@ -9,7 +9,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let inscrit of inscritsSlice">
+            <tr *ngFor="let inscrit of inscritsSlice" class="ligne-participants" (click)="clickParticipant(inscrit)">
                 <td>{{ inscrit.familyName }}</td>
                 <td>{{ inscrit.name }}</td>
                 <td>{{ inscrit.role }}</td>

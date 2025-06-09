@@ -1,8 +1,18 @@
-<app-participants-filtre (filtreChange)="filtre = $event"></app-participants-filtre>
-<app-participants-liste [inscrits]="inscrits" [filterPrenom]="filtre.prenom" [filterNom]="filtre.nom" [filterRole]="filtre.role" [filterSearch]="filtre.search"></app-participants-liste>
+<ng-container *ngIf="!selectedParticipant; else showDetails">
 
-<button class="btn-ajt-etudiant" (click)="showWindowAdd = true">Ajouter un participant</button>
+    <app-participants-filtre (filtreChange)="filtre = $event"></app-participants-filtre>
+    <app-participants-liste [inscrits]="inscrits" [filterPrenom]="filtre.prenom" [filterNom]="filtre.nom" [filterRole]="filtre.role" [filterSearch]="filtre.search" (particpantClick)="participantSelected($event)"></app-participants-liste>
 
-<div class="Window-ajt-etudiant" *ngIf="showWindowAdd">
-    <app-participants-add-user [inscrits]="inscrits" [coursId]="cours.id" (close)="closeWindowAdd()"></app-participants-add-user>
-</div>
+    <button class="btn-ajt-etudiant" (click)="showWindowAdd = true">Ajouter un participant</button>
+
+    <div class="Window-ajt-etudiant" *ngIf="showWindowAdd">
+        <app-participants-add-user [inscrits]="inscrits" [coursId]="cours.id" (close)="closeWindowAdd()"></app-participants-add-user>
+    </div>
+
+</ng-container>
+
+
+
+<ng-template #showDetails>
+  <app-participants-details [inscrit]="selectedParticipant" (close)="selectedParticipant = undefined"></app-participants-details>
+</ng-template>

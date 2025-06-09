@@ -38,11 +38,14 @@ td a:hover {
   vertical-align: middle;
 }
 
-th {
+.ligne-participants:hover{
+  background-color: rgb(165, 165, 165);
+  color: #007BC0;
+}
 
+th {
   font-weight: bold;
   font-size: 1.4rem;
-
 }
   
 .pagination-container {

@@ -11,6 +11,7 @@ export class ParticipantsCoursComponent implements OnInit {
 
   
   @Input() cours!: Cours;
+  selectedParticipant?: any;
 
   constructor( ) { }
 
@@ -27,5 +28,9 @@ export class ParticipantsCoursComponent implements OnInit {
 
   closeWindowAdd() {
     this.showWindowAdd = false;
+  }
+
+  participantSelected(inscrit: any): void {
+    this.selectedParticipant = inscrit;
   }
 }

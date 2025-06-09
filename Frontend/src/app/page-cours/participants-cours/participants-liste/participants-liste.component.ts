@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Inscrit } from '../../../class/cours';
 
 
@@ -8,6 +8,8 @@ import { Inscrit } from '../../../class/cours';
   styleUrls: ['./participants-liste.component.css']
 })
 export class ParticipantsListeComponent implements OnInit {
+
+  @Output() particpantClick = new EventEmitter<any>();
 
   @Input() inscrits: Inscrit[] = [];
   @Input() filterPrenom = '';
@@ -54,5 +56,9 @@ export class ParticipantsListeComponent implements OnInit {
     if (this.page < this.pageMax ){ 
       this.page++;
     }
+  }
+
+  clickParticipant(inscrit: any): void {
+  this.particpantClick.emit(inscrit);
   }
 }
