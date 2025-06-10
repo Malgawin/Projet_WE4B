@@ -30,7 +30,7 @@ import { ParticipantsAddUserComponent } from './page-cours/participants-cours/pa
 import { FiltreSearchComponent } from './page-cours/participants-cours/participants-filtre/filtre-search/filtre-search.component';
 import { ParametresCoursComponent } from './page-cours/parametres-cours/parametres-cours.component';
 import { ModifImageCoursComponent } from './page-cours/parametres-cours/modif-image-cours/modif-image-cours.component';
-import { ParticipantsDetailsComponent } from './page-cours/participants-cours/participants-details/participants-details.component';
+import { ParticipantsDetailsComponent } from './page-cours/participants-details/participants-details.component';
 
 
 
