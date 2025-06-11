@@ -159,20 +159,25 @@
   height: 4%;
   background-color: #e6e6e6;
   border-radius: 0px 0px 3px 3px;
-  margin: 0 auto 0 0;
+  margin: 0 0 0 0;
   overflow: hidden;
   position: relative;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   font-weight: bold;
   color: rgb(154, 154, 154);
   color: white;
 }
 
-.progression-bar {
+.progression-barre {
   height: 100%;
   background-color: #007bc0;
 }
+
+.progression-container p{
+  font-size: 0.5em;
+}
+
 

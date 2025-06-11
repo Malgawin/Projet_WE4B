@@ -16,7 +16,8 @@ export class CarteCoursComponent implements OnInit {
   flipped: boolean = false;
 
   progresion: number = 6;
-  progresionObjectif : number = 14
+  progresionObjectif: number = 14
+  pourcentageProgesion: number = Math.floor((this.progresion / this.progresionObjectif) * 100)
 
   constructor(private filesService: FilesService, private coursService: CoursService, private router: Router) { }
 
@@ -40,18 +41,5 @@ export class CarteCoursComponent implements OnInit {
   toCours(){
     this.router.navigate(['/cours', this.cours.id]);
   }
-
-
-
-
-
-
-  getProgressionPourcentage(): number {
-    if (!this.progresionObjectif || this.progresionObjectif === 0) return 0;
-      return (this.progresion / this.progresionObjectif) * 100;
-  }
-
-
-
 
 }
