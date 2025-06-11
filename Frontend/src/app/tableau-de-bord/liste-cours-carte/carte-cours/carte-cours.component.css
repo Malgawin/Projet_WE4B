@@ -48,13 +48,7 @@
       border: solid 1px #c9c9c9;
     }
 
-    .carte-cours-front h3{
-      font-size: 1em;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      margin-top: 1rem;
-      color: #818181;
-    }
+
   
     .carte-cours-front:hover {
       border: solid 0.05rem #007BC0;
@@ -62,7 +56,7 @@
 
     .nombre-inscrits {
       position: absolute;
-      bottom: -0.7rem;
+      bottom: -0.2rem;
       right: 0.3rem;
       font-size: 0.7em;
       color: #aaaaaa;
@@ -93,9 +87,12 @@
       font-size: 1.6rem;
       font-family: Arial, sans-serif;
       padding: 1vh 1vw;
+      font-weight: bold;
+      margin-top: 1rem;
+      color: #818181;
     }
   
-  
+
     .bouton-rotation {
       position: absolute;
       top: 10px;
@@ -144,3 +141,38 @@
   
   
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+.progression-container {
+  width: 100%;
+  height: 4%;
+  background-color: #e6e6e6;
+  border-radius: 0px 0px 3px 3px;
+  margin: 0 auto 0 0;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: rgb(154, 154, 154);
+  color: white;
+}
+
+.progression-bar {
+  height: 100%;
+  background-color: #007bc0;
+}
+

@@ -14,10 +14,10 @@ export class PageCoursComponent implements OnInit {
 
   cours!: Cours;
 
-  constructor(private router: Router, private route: ActivatedRoute, private coursService: CoursService) { }
+  constructor(private router: Router, private activatedroute: ActivatedRoute, private coursService: CoursService) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id') || '0';
+    const id = this.activatedroute.snapshot.paramMap.get('id') || '0';
     if (id) {
       this.coursService.getCoursbyId(id).subscribe(data => {
       this.cours = data;

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Cours, Inscrit } from '../../../class/cours';
+import { Cours } from '../../../class/cours';
 import { FilesService } from 'src/app/services/files.service';
 import { CoursService } from 'src/app/services/cours.service';
 import { Router } from '@angular/router';
@@ -13,6 +13,10 @@ export class CarteCoursComponent implements OnInit {
   
   @Input() cours!: Cours;
   nbInscrits: number = 0;
+  flipped: boolean = false;
+
+  progresion: number = 6;
+  progresionObjectif : number = 14
 
   constructor(private filesService: FilesService, private coursService: CoursService, private router: Router) { }
 
@@ -23,7 +27,7 @@ export class CarteCoursComponent implements OnInit {
     });
   }
 
-  flipped: boolean = false;
+  
 
   turnCard(): void {
     this.flipped = !this.flipped;
@@ -34,7 +38,20 @@ export class CarteCoursComponent implements OnInit {
   }
 
   toCours(){
-    
     this.router.navigate(['/cours', this.cours.id]);
   }
+
+
+
+
+
+
+  getProgressionPourcentage(): number {
+    if (!this.progresionObjectif || this.progresionObjectif === 0) return 0;
+      return (this.progresion / this.progresionObjectif) * 100;
+  }
+
+
+
+
 }

@@ -51,6 +51,17 @@
     }
   
 
+
+  
+    .nombre-inscrits {
+      position: absolute;
+      bottom: -0.7rem;
+      right: 0.3rem;
+      font-size: 1em;
+      color: #aaaaaa;
+      font-style: italic;
+    }
+
   
     .carte-cours-back-etendue  {
       display: flex;
@@ -63,22 +74,24 @@
   
     .carte-cours-front-etendue  img {
       width: 100%;
-      height: 50%;
+      height: 60%;
       
       object-fit: cover;
       border-radius: 3px 3px 0 0;
     }
   
-    .carte-cours-front-etendue  h3 {
+    .carte-cours-front-etendue h3 {
       font-size: 1.6rem;
       font-family: Arial, sans-serif;
       padding: 1vh 1vw;
       padding-top: 0vh;
+      font-weight: bold;
+      margin-top: 0.9rem;
+      color: #818181;
       height: 80%;
   
     }
-  
-  
+
     .bouton-rotation-etendue  {
       position: absolute;
       top: 10px;

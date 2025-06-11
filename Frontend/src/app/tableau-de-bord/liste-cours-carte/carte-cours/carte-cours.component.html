@@ -5,6 +5,16 @@
       <button class="bouton-rotation" (click)="turnCard(); $event.stopPropagation()">↺</button>
       <img [src]="getImageUrl()" alt="Image du cours">
       <h3>{{ cours.name }}</h3>
+
+
+      <div class="progression-container">
+        <div class="progression-bar" [style.width.%]="getProgressionPourcentage()">
+          <p class="progression-text">{{ progresion }} / {{ progresionObjectif }}</p>
+        </div>
+      </div>
+
+
+
       <p class="nombre-inscrits">{{ cours.inscrits.length }} inscrits</p>
     </div>
     <div class="carte-cours-back">

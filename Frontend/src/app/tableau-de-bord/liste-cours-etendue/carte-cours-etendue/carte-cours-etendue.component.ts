@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Cours } from '../../../class/cours';
 import { FilesService } from 'src/app/services/files.service';
+import { Router } from '@angular/router';
+import { CoursService } from 'src/app/services/cours.service';
 
 
 @Component({
@@ -12,19 +14,29 @@ export class CarteCoursEtendueComponent implements OnInit {
 
   @Input() cours!: Cours;
 
-    constructor(private filesService: FilesService) { }
-
-  ngOnInit(): void {
-  }
-
+  nbInscrits: number = 0;
   flipped: boolean = false;
 
+  constructor(private filesService: FilesService, private coursService: CoursService, private router: Router) { }
+
+  ngOnInit(): void {
+    this.coursService.getInscrits(this.cours.id).subscribe(inscrits => {
+      this.nbInscrits = inscrits.length;
+      this.cours.inscrits = inscrits;
+    });
+  }
+
+  
   turnCard(): void {
     this.flipped = !this.flipped;
   }
 
   getImageUrl(): string {
     return this.filesService.getImage(this.cours.image);
+  }
+
+  toCours(){
+    this.router.navigate(['/cours', this.cours.id]);
   }
 
 }
