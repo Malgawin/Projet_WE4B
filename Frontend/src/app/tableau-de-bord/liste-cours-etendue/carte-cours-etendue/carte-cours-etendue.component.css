@@ -4,11 +4,11 @@
       align-items: stretch;
       background-color: transparent;
       width: 100%;
-      height: 10rem;
+      height: 12rem;
       perspective: 10000000000000000px;
       position: relative;
       cursor: pointer;
-
+      padding-bottom: 1rem;
     }
     
     
@@ -48,6 +48,7 @@
       background: rgb(255, 255, 255);
       color: rgb(0, 0, 0);
       border: solid 1px #c9c9c9;
+
     }
   
 
@@ -55,7 +56,7 @@
   
     .nombre-inscrits {
       position: absolute;
-      bottom: -0.7rem;
+      bottom: -0.1rem;
       right: 0.3rem;
       font-size: 1em;
       color: #aaaaaa;
@@ -78,6 +79,7 @@
       
       object-fit: cover;
       border-radius: 3px 3px 0 0;
+
     }
   
     .carte-cours-front-etendue h3 {
@@ -86,9 +88,11 @@
       padding: 1vh 1vw;
       padding-top: 0vh;
       font-weight: bold;
-      margin-top: 0.9rem;
+      margin-top: 1.1rem;
       color: #818181;
-      height: 80%;
+      
+      height: auto;
+  
   
     }
 
@@ -141,3 +145,35 @@
   
   
   
+
+
+  
+  
+  
+  
+.progression-container {
+  width: 100%;
+  height: 7%;
+  background-color: #e6e6e6;
+  border-radius: 0px 0px 3px 3px;
+  margin: 0 0 0 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  font-weight: bold;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+
+.progression-barre {
+  height: 100%;
+  background-color: #007bc0;
+}
+
+.progression-container p{
+  color: #FFFFFF;
+  font-size: 0.5em;
+}

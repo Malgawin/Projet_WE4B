@@ -17,6 +17,10 @@ export class CarteCoursEtendueComponent implements OnInit {
   nbInscrits: number = 0;
   flipped: boolean = false;
 
+  progresion: number = 6;
+  progresionObjectif: number = 14
+  pourcentageProgesion: number = Math.floor((this.progresion / this.progresionObjectif) * 100)
+
   constructor(private filesService: FilesService, private coursService: CoursService, private router: Router) { }
 
   ngOnInit(): void {
