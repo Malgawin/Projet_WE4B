@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Inscrit, Cours} from 'src/app/class/cours'
 import { CoursService } from 'src/app/services/cours.service';
-import { JournalLogsService, UserLog } from 'src/app/services/journal-logs.service';
+import { JournalLogsService, UserLog, CourseLog } from 'src/app/services/journal-logs.service';
 
 
 @Component({
@@ -14,9 +14,9 @@ export class ParticipantsDetailsComponent implements OnInit {
 
   inscrit!: Inscrit;
   coursId!: number;
-
-  userLog?: UserLog;
   
+  userLog?: UserLog;
+  courseLog?: CourseLog;
 
   constructor(  private router: Router, private activatedroute: ActivatedRoute, private coursService: CoursService, private journalLogsService: JournalLogsService) { }
 
@@ -30,6 +30,9 @@ export class ParticipantsDetailsComponent implements OnInit {
        if (this.inscrit) {
         this.journalLogsService.getLogByUserId(this.inscrit.id).subscribe( log => {
             this.userLog = log;
+            if (log.courses) {
+              this.courseLog = log.courses.find(c => c.courseId === this.coursId);
+            }
         });
         }
     });
@@ -38,16 +41,6 @@ export class ParticipantsDetailsComponent implements OnInit {
   return() {
     this.router.navigate(['/cours', this.coursId, 'participants']);
   }
-  
-
-
-
-
-
-
-
-
-
 
   DateToPhrase(dateStr?: string): string { //fonction pour passer d'une date a une phrase formater
 
@@ -79,27 +72,44 @@ export class ParticipantsDetailsComponent implements OnInit {
   }
 
   //fonction pour recuper le temps ecouler formater depuis la date passer en parametre
-timePast( dateStr?: string ): string { 
-  if (!dateStr) return '';
-  const now = new Date(); //date actuelle
-  const past = new Date(dateStr); //date recuperer transformer en format date
+  timePast( dateStr?: string ): string { 
+    if (!dateStr) return '';
+    const now = new Date(); //date actuelle
+    const past = new Date(dateStr); //date recuperer transformer en format date
 
-  let diff = Math.floor((now.getTime() - past.getTime()) / 1000); //calcul de la diferance en seconde entre les 2 dates
+    let diff = Math.floor((now.getTime() - past.getTime()) / 1000); //calcul de la diferance en seconde entre les 2 dates
 
-  const days = Math.floor(diff / (3600 * 24));  //calcul du nombre de jour entier passer a partir des secondes  
-  diff -= days * 3600 * 24;
-  const hours = Math.floor(diff / 3600); //calcul du nombre d'heure entier passer 
-  diff -= hours * 3600;
-  const minutes = Math.floor(diff / 60); //calcul du nombre de seconde entier passer 
+    const days = Math.floor(diff / (3600 * 24));  //calcul du nombre de jour entier passer a partir des secondes  
+    diff -= days * 3600 * 24;
+    const hours = Math.floor(diff / 3600); //calcul du nombre d'heure entier passer 
+    diff -= hours * 3600;
+    const minutes = Math.floor(diff / 60); //calcul du nombre de seconde entier passer 
 
-  let result = 'il y a ';
-  if (days > 0) result += `${days}J `;
-  if (hours > 0) result += `${hours}h `;
-  if (minutes > 0) result += `${minutes}min`;
+    let result = 'il y a ';
+    if (days > 0) result += `${days}J `;
+    if (hours > 0) result += `${hours}h `;
+    if (minutes > 0) result += `${minutes}min`;
 
-  return result.trim();
+    return result.trim();
+  }
+
+
+  getActivityByType(activity: any): string {
+  switch (activity.type) {
+    case 'forum':
+      return 'a créé un forum';
+    case 'forum-message':
+      return 'a posté un message dans un forum';
+    case 'post':
+      return 'a consulté un post';
+    case 'devoir-rendu':
+      return 'a rendu un devoir';
+    case 'check-post':
+      return 'a posté un post';
+    default:
+      return 'a fait quelque chose';
+  }
 }
-
 
 
 

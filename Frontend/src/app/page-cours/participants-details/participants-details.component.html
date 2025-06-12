@@ -5,30 +5,64 @@
     
 
 
-    <h2>Details : </h2>
+    <h2>Details Participants</h2>
 
-    <h3>Info general : </h3>
-    <p> prenom : {{inscrit.name}}</p>
-    <p> nom : {{inscrit.familyName}}</p>
-    <p> mail : {{inscrit.mail}}</p>
-    <p> role : {{inscrit.role}}</p>
+    <hr>
 
+    <div class ="container-info">
+        <h3>Info general : </h3>
+        <div class ="contenu">
+            <p> Prenom :<b> {{inscrit.name}}</b></p>
+            <p> Nom : <b>{{inscrit.familyName}}</b></p>
+            <p> Mail : <b>{{inscrit.mail}}</b></p>
+            <p> Role : <b>{{inscrit.role}}</b></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class ="container-info">
+         <h3>Activité general : </h3>
+        <div class ="contenu" *ngIf="userLog; else noUserLog">
+                <p>Dernière connexion : <b>{{ DateToPhrase(userLog.lastLogin) }} ( {{ timePast(userLog.lastLogin) }} )</b></p>
+                <p>Dernière déconnexion : <b>{{ DateToPhrase(userLog.lastLogout) }} ( {{ timePast(userLog.lastLogout) }} )</b></p>
+                <p>Nombre de login : <b>{{ userLog.loginCount }}</b></p>
+        </div>
+        <ng-template #noUserLog>
+            <p class="noData">Aucune donnée d'activité générale pour le moment.</p>
+        </ng-template>
+    </div>
+   
+    <hr>
     
+    <div class ="container-info">
+        <h3>Activité dans ce cours :</h3>
+        <div class ="contenu" *ngIf="courseLog; else noCourseLog">
+            <p >Dernière consultation : <b>{{ DateToPhrase(courseLog.lastViewed) }} ({{ timePast(courseLog.lastViewed) }})</b></p>
+            <p>Nombre de consultation du cours : <b>{{ courseLog.viewsCount }}</b></p>
+            <p>Progression :<b> {{ courseLog.progressCount }}</b></p>
+        </div>
+        <ng-template #noCourseLog>
+            <p class="noData">Aucune donnée d'activité dans ce cours pour le moment..</p>
+        </ng-template>
+    </div>
 
-    <h3>Activité general : </h3>
-    <p>Dernière connexion : {{ DateToPhrase(userLog?.lastLogin) }} ( {{ timePast(userLog?.lastLogin) }} )</p>
-    <p>Dernière déconnexion : {{ DateToPhrase(userLog?.lastLogout) }} ( {{ timePast(userLog?.lastLogout) }} )</p>
-    <p>Nombre de login : {{ userLog?.loginCount }}</p>
-    
-    
+    <hr>
 
+    <div class="container-info">
+    <h3>Journal d'activité dans ce cours :</h3>
+    <div class="contenu" *ngIf="courseLog?.activity?.length; else noActivity">
+        <ul class="journal-activite">
+            <li *ngFor="let activity of courseLog?.activity">
+                {{ DateToPhrase(activity.date) }} - <b>{{ getActivityByType(activity) }}</b>
+            </li>
+        </ul>
+    </div>
 
-
-    <ul>
-    <li *ngFor="let course of userLog?.courses">
-      Cours ID: {{ course.courseId }} - Vues: {{ course.viewsCount || 0 }} - Progression: {{ course.progresionNbr || 0 }} - Dernière consultation : {{ course.lastViewed | date:'medium' }}
-    </li>
-  </ul>
+    <ng-template #noActivity>
+        <p class="noData">Pas d'activité dans ce cours pour le moment.</p>
+    </ng-template>
+</div>
 
 </div>
 
