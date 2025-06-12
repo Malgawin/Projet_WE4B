@@ -21,7 +21,8 @@
           <ul class="list-group">
             <app-registered-list-element
               *ngFor="let reg of registered"
-              [registered]="reg">
+              [registered]="reg"
+              (delete)="handleEvent($event)">
             </app-registered-list-element>
           </ul>
         </ng-template>

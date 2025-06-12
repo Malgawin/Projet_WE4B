@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {User} from "../../../class/user";
 
 @Component({
@@ -7,11 +7,17 @@ import {User} from "../../../class/user";
   styleUrls: ['./registered-list-element.component.css']
 })
 export class RegisteredListElementComponent implements OnInit {
+
   @Input() registered!: User;
+
+  @Output() delete = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onDelete() {
+    this.delete.emit(this.registered.id);
+  }
 }
