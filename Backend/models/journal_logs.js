@@ -11,6 +11,7 @@ const userLogs = new mongoose.Schema({
   userId: { type: Number, required: true, unique: true },
   lastLogin: { type: Date },
   lastLogout: { type: Date },
+  loginCount: { type: Number },
   courses: [courseUserLogs]
 });
 
