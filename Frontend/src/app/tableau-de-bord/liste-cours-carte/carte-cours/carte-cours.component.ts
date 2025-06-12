@@ -53,4 +53,14 @@ export class CarteCoursComponent implements OnInit {
     this.router.navigate(['/cours', this.cours.id]);
   }
 
+  pinCours(event: Event): void {
+    event.stopPropagation();
+    this.coursService.pinCours(this.idLogin, this.cours.id).subscribe(
+      result => {
+        this.cours.isPinned = result.is_pinned;
+        window.location.reload();
+      }
+    );
+  }
+
 }

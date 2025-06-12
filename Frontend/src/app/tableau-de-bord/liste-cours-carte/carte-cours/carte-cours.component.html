@@ -1,7 +1,7 @@
 <div class="carte-cours">
   <div class="carte-cours-inner" [class.flipped]="flipped">
     <div (click)="toCours()" class="carte-cours-front">
-      <button class="bouton-etoile"><span class="etoile">&#9733;</span></button>
+      <button class="bouton-etoile" (click)="pinCours($event)"><span class="etoile" [class.pinned]="cours.isPinned">&#9733;</span></button>
       <button class="bouton-rotation" (click)="turnCard(); $event.stopPropagation()">↺</button>
       <img [src]="getImageUrl()" alt="Image du cours">
       <h3>{{ cours.name }}</h3>

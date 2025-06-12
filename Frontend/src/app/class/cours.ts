@@ -5,14 +5,16 @@ export class Cours {
   description: string;
   image: string;
   inscrits: Inscrit[];
+  isPinned: boolean;
 
-  constructor(id: number, code: string, name: string, description: string, image: string, inscrits: Inscrit[] = []) {
+  constructor(id: number, code: string, name: string, description: string, image: string, inscrits: Inscrit[] = [], ispinned: boolean = false) {
     this.id = id;
     this.code = code;
     this.name = name;
     this.description = description;
     this.image = image;
     this.inscrits = inscrits;
+    this.isPinned = ispinned;
   }
 }
 
