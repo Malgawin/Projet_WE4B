@@ -7,6 +7,8 @@ import { UeListElementComponent } from './ue-list-element/ue-list-element.compon
 import { ModalCreateUeComponent } from './modal-create-ue/modal-create-ue.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ModalModifyUeComponent } from './modal-modify-ue/modal-modify-ue.component';
+import { ModalDisplayRegisteredComponent } from './modal-display-registered/modal-display-registered.component';
+import { RegisteredListElementComponent } from './registered-list-element/registered-list-element.component';
 
 
 
@@ -16,7 +18,9 @@ import { ModalModifyUeComponent } from './modal-modify-ue/modal-modify-ue.compon
     UeListComponent,
     UeListElementComponent,
     ModalCreateUeComponent,
-    ModalModifyUeComponent
+    ModalModifyUeComponent,
+    ModalDisplayRegisteredComponent,
+    RegisteredListElementComponent
   ],
   imports: [
     CommonModule,

@@ -7,10 +7,17 @@
 </div>
 
 <ul class="list-group">
-  <app-user-list-element
-    *ngFor="let user of users"
-    [user]="user"
-    (delete)="handleDelete($event)">
-  </app-user-list-element>
+
+  <div *ngIf="users.length === 0; else elseBlock" class="container bg-light text-center py-5 rounded shadow-sm">
+    Il n'existe aucun utilisateur.
+  </div>
+
+  <ng-template #elseBlock>
+    <app-user-list-element
+      *ngFor="let user of users"
+      [user]="user"
+      (delete)="handleDelete($event)">
+    </app-user-list-element>
+  </ng-template>
 </ul>
 

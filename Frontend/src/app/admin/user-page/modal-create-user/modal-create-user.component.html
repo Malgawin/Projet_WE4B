@@ -20,6 +20,16 @@
             <input id="name" type="text" class="form-control" name="name" [(ngModel)]="formData.name" required />
           </div>
 
+          <!-- Inscription aux UE -->
+          <button
+            type="button"
+            class="btn btn-sm btn-dark"
+            (click)="openNestedModal()">
+            &plus; Inscrire
+          </button>
+
+          <app-modal-register></app-modal-register>
+
         </div>
 
         <div class="modal-footer">

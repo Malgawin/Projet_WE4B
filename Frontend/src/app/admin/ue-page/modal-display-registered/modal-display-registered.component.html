@@ -1,0 +1,38 @@
+<button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#registeredToUe">
+  Inscrits
+</button>
+
+<div class="modal fade" id="registeredToUe" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Inscrits en --nom--</h5> <!-- todo nom -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body overflow-auto">
+
+        <div *ngIf="registered.length === 0; else elseBlock">
+          Aucun inscrit dans ce cours.
+        </div>
+
+        <ng-template #elseBlock>
+          <ul class="list-group">
+            <app-registered-list-element
+              *ngFor="let reg of registered"
+              [registered]="reg">
+            </app-registered-list-element>
+          </ul>
+        </ng-template>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+

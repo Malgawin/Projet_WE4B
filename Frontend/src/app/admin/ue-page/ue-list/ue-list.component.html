@@ -7,10 +7,18 @@
   </div>
 </div>
 
-<ul class="list-group overflow-auto">
-  <app-ue-list-element
-    *ngFor="let ue of ues"
-    [ue]="ue"
-    (delete)="handleEvent($event)">
-  </app-ue-list-element>
-</ul>
+
+<div *ngIf="ues.length === 0; else elseBlock" class="container bg-light text-center py-5 rounded shadow-sm">
+  Il n'existe aucun cours.
+</div>
+
+
+<ng-template #elseBlock>
+  <ul class="list-group overflow-auto">
+    <app-ue-list-element
+      *ngFor="let ue of ues"
+      [ue]="ue"
+      (delete)="handleEvent($event)">
+    </app-ue-list-element>
+  </ul>
+</ng-template>

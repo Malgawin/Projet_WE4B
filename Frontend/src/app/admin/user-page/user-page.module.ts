@@ -7,6 +7,7 @@ import { UserPageRoutingModule } from './user-page-routing.module';
 import { ModalCreateUserComponent } from './modal-create-user/modal-create-user.component';
 import { FormsModule } from '@angular/forms';
 import { ModalModifyUserComponent } from './modal-modify-user/modal-modify-user.component';
+import { ModalRegisterComponent } from './modal-register/modal-register.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ModalModifyUserComponent } from './modal-modify-user/modal-modify-user.
     UserListElementComponent,
     UserPageComponent,
     ModalCreateUserComponent,
-    ModalModifyUserComponent
+    ModalModifyUserComponent,
+    ModalRegisterComponent
   ],
   imports: [
     CommonModule,

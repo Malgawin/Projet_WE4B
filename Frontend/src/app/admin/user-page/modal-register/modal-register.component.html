@@ -1,0 +1,59 @@
+<div class="modal mt-5 ms-5" id="registerToUeModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Inscrire --nom-- aux cours</h5> <!-- todo nom -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form #userForm="ngForm" (ngSubmit)="submitRegistration()" novalidate>
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Rechercher un cours..."
+              [(ngModel)]="searchTerm"
+              name="searchTerm"
+            />
+          </div>
+
+          <div class="overflow-auto" style="max-height: 300px;">
+            <div *ngFor="let ue of filteredUes()" class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                [id]="'ue_' + ue.id"
+                [value]="ue.id"
+                (change)="toggleUeSelection(ue.id, $event)"
+              />
+              <label class="form-check-label" [for]="'ue_' + ue.id">
+                {{ ue.code }} ({{ ue.name }})
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            data-bs-dismiss="modal">
+            Valider
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal">
+            Annuler
+          </button>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+</div>

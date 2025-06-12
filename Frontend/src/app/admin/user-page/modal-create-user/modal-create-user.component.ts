@@ -11,6 +11,18 @@ export class ModalCreateUserComponent {
     name: '',
     familyName: ''
   };
+  registerModal!: Modal;
+
+  ngAfterViewInit() {
+    const modalEl = document.getElementById('registerToUeModal');
+    if (modalEl) {
+      this.registerModal = new Modal(modalEl);
+    }
+  }
+
+  openNestedModal() {
+    this.registerModal?.show();
+  }
 
   submitForm() {
     console.log('Submitted:', this.formData);
