@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+// @ts-ignore
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-modal-create-ue',
   templateUrl: './modal-create-ue.component.html',
-  styleUrls: ['./modal-create-ue.component.css']
 })
-export class ModalCreateUeComponent implements OnInit {
+export class ModalCreateUeComponent {
+  formData = {
+    code: '',
+    name: '',
+    description: ''
+  };
 
-  constructor() { }
+  submitForm() {
+    console.log('Submitted:', this.formData);
 
-  ngOnInit(): void {
+    const modalEl = document.getElementById('createUeModal');
+    const modalInstance = Modal.getOrCreateInstance(modalEl!);
+    modalInstance.hide();
+
+    this.formData = {code:'', name: '', description: '' };
   }
-
 }
+

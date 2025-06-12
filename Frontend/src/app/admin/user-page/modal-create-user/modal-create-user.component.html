@@ -3,20 +3,23 @@
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title">Create User</h5>
+        <h5 class="modal-title">Créer un utilisateur</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
       <form #userForm="ngForm" (ngSubmit)="submitForm()" novalidate>
         <div class="modal-body">
+
+          <div class="mb-3">
+            <label for="familyName">Nom</label>
+            <input id="familyName" type="text" class="form-control" name="familyName" [(ngModel)]="formData.familyName" required />
+          </div>
+
           <div class="mb-3">
             <label for="name">Prénom</label>
             <input id="name" type="text" class="form-control" name="name" [(ngModel)]="formData.name" required />
           </div>
-          <div class="mb-3">
-            <label for="familyName">Nom de famille</label>
-            <input id="familyName" type="text" class="form-control" name="familyName" [(ngModel)]="formData.familyName" required />
-          </div>
+
         </div>
 
         <div class="modal-footer">

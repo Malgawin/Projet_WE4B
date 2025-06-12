@@ -1,1 +1,39 @@
-<p>modal-create-ue works!</p>
+<div class="modal fade" id="createUeModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Créer un cours</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form #ueForm="ngForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label for="code">Code</label>
+            <input id="code" type="text" class="form-control" name="code" [(ngModel)]="formData.code" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="name">Nom</label>
+            <input id="name" type="text" class="form-control" name="name" [(ngModel)]="formData.name" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="desc">Description</label>
+            <input id="desc" type="text" class="form-control" name="desc" [(ngModel)]="formData.description" required />
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" [disabled]="!ueForm.form.valid" data-bs-dismiss="modal">Créer</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+

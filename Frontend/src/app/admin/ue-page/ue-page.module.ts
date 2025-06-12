@@ -5,6 +5,7 @@ import { UePageComponent } from './ue-page.component';
 import { UeListComponent } from './ue-list/ue-list.component';
 import { UeListElementComponent } from './ue-list-element/ue-list-element.component';
 import { ModalCreateUeComponent } from './modal-create-ue/modal-create-ue.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -17,7 +18,9 @@ import { ModalCreateUeComponent } from './modal-create-ue/modal-create-ue.compon
   ],
   imports: [
     CommonModule,
-    UePageRoutingModule
+    UePageRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class UePageModule { }
