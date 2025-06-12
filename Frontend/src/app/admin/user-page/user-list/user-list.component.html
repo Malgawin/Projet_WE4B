@@ -1,0 +1,16 @@
+<div class="list-group-item list-group-item-secondary fw-bold">
+  <div class="row">
+    <div class="col-sm">Nom Prénom</div>
+    <div class="col-sm">E-Mail</div>
+    <div class="col-sm">Actions</div>
+  </div>
+</div>
+
+<ul class="list-group">
+  <app-user-list-element
+    *ngFor="let user of users"
+    [user]="user"
+    (delete)="handleDelete($event)">
+  </app-user-list-element>
+</ul>
+

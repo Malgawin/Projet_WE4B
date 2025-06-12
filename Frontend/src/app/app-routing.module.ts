@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: 'tableau-de-bord', component: TableauDeBordComponent },
   { path : 'cours/:id', component: PageCoursComponent},
   { path : 'creation-cours/:id', component: PostCreationComponent },
-  
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+  { path: '', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
