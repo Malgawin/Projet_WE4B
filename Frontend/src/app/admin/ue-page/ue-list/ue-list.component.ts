@@ -16,6 +16,8 @@ export class UeListComponent implements OnInit {
   }
 
   handleEvent(ueId: number) {
-    //todo : suppression
+    if (confirm("Voulez-vous vraiment supprimer ce cours ?")){
+      this.ues = this.ues.filter(ue => ue.id !== ueId);
+    }
   }
 }

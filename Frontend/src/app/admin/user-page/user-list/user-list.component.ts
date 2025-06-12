@@ -13,8 +13,9 @@ export class UserListComponent implements OnInit {
   constructor() { }
 
   handleDelete(userId: number){
-    console.log("user deleted")
-    //todo : suppression
+    if (confirm("Voulez-vous vraiment supprimer cet utilisateur ?")){
+      this.users = this.users.filter(user => user.id !== userId);
+    }
   }
 
   ngOnInit(): void {
