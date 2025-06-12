@@ -11,11 +11,12 @@ export class ListeCoursCarteComponent implements OnInit {
 
   cours: Cours[] = [];
   
+  idLog = 40; // id temporaire
 
   constructor(private coursService: CoursService) { }
 
    ngOnInit(): void {
-    this.coursService.getCours().subscribe(data => {
+    this.coursService.getCoursByIdLog(this.idLog).subscribe(data => {
       this.cours = data;
     });
   }

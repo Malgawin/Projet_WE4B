@@ -58,4 +58,13 @@ export class CoursService {
       image: image
     });
   }
+
+
+  getCoursByIdLog(userId: number): Observable<Cours[]> {
+    return this.http.get<any[]>(`http://localhost:3000/api/enrollment/user/${userId}/cours`).pipe(
+      map(coursArray => coursArray.map(c => new Cours(
+        c.id, c.code, c.name, c.description, c.image
+      )))
+    );
+  }
 }

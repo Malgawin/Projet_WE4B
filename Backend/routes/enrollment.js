@@ -14,7 +14,21 @@ router.post('/add', async (req, res) => {
         console.error(err);
         return res.status(500).json({ error: 'Erreur lors de l inscription'});
     }
-    });
+});
+
+
+router.get('/user/:id/cours', async (req, res) => {
+  const userId = req.params.id;
+  try {
+    const { rows } = await pool.query(
+      'SELECT ue.* FROM ue INNER JOIN enrollment e ON ue.id = e.ue_id WHERE e.users_id = $1', [userId]
+    );
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erreur lors de la récupération des cours pour cet id' });
+  }
+});
 
 
 module.exports = router;
