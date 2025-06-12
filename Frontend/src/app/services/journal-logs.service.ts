@@ -2,33 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-export interface ActivityLog {
-  type: string; 
-  date: string;
-  postId?: string;
-  forumId?: string;
-  messageId?: string;
-  devoirId?: string;
-}
-
-
-export interface CourseLog {
-  courseId: number;
-  lastViewed?: string; 
-  viewsCount?: number;
-  progressCount?: number;
-  forumMsg?: number;
-  activity?: ActivityLog[];
-}
-
-export interface UserLog {
-  _id?: string;
-  userId: number;
-  lastLogin?: string;
-  lastLogout?: string;
-  loginCount?: number;
-  courses?: CourseLog[];
-}
+import { UserLog } from '../class/journal_logs';
 
 @Injectable({
   providedIn: 'root'

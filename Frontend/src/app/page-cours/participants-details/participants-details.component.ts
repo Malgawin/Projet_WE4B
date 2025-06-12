@@ -2,8 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Inscrit, Cours} from 'src/app/class/cours'
 import { CoursService } from 'src/app/services/cours.service';
-import { JournalLogsService, UserLog, CourseLog } from 'src/app/services/journal-logs.service';
-
+import { JournalLogsService } from 'src/app/services/journal-logs.service';
+import {UserLog, CourseLog } from 'src/app/class/journal_logs'
 
 @Component({
   selector: 'app-participants-details',
