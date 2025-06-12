@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from 'src/app/class/cours';
 
 @Component({
   selector: 'app-list-posts',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPostsComponent implements OnInit {
 
-  constructor() { }
+  PostArray : Post[] = []
 
+  constructor() { }
+  
   ngOnInit(): void {
   }
 

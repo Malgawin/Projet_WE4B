@@ -1,1 +1,5 @@
-<p>list-posts works!</p>
+<div class="col">
+    <div *ngFor="let postVar of PostArray" class="row">
+        <app-post [post]="postVar"></app-post>
+    </div>
+</div>

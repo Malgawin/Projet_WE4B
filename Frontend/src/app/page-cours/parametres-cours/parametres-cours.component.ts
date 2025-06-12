@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Cours } from '../../class/cours';
+import { ActivatedRoute } from '@angular/router';
+import { CoursService } from 'src/app/services/cours.service';
 
 @Component({
   selector: 'app-parametres-cours',
@@ -8,11 +10,17 @@ import { Cours } from '../../class/cours';
 })
 export class ParametresCoursComponent implements OnInit {
 
-  @Input() cours!: Cours;
+  cours!: Cours;
 
-  constructor() { }
+  constructor( private activatedroute: ActivatedRoute, private coursService: CoursService) { }
 
   ngOnInit(): void {
+    const id = this.activatedroute.parent?.snapshot.paramMap.get('id') || '0';
+    if (id) {
+      this.coursService.getCoursbyId(id).subscribe(cours => {
+        this.cours = cours;
+      });
+    }
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Inscrit } from '../../../class/cours';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Inscrit } from '../../../class/cours';
 export class ParticipantsListeComponent implements OnInit {
 
   @Output() particpantClick = new EventEmitter<any>();
-
+  @Input() coursId!: number;
   @Input() inscrits: Inscrit[] = [];
   @Input() filterPrenom = '';
   @Input() filterNom = '';
@@ -30,7 +31,7 @@ export class ParticipantsListeComponent implements OnInit {
     );
   }
 
-  constructor() { }
+  constructor(private router: Router, private activatedroute: ActivatedRoute) {}
 
   ngOnInit(): void {
   }
@@ -59,6 +60,6 @@ export class ParticipantsListeComponent implements OnInit {
   }
 
   clickParticipant(inscrit: any): void {
-  this.particpantClick.emit(inscrit);
+    this.router.navigate(['../participants', inscrit.id, 'details'], { relativeTo: this.activatedroute });
   }
 }

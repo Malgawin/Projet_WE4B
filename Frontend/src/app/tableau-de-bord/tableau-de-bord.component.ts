@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableauDeBordComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private acrivatedroute: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -23,11 +25,18 @@ export class TableauDeBordComponent implements OnInit {
     this.menuOpen = !this.menuOpen;
   }
 
-  selectView(view: string): void {
+   selectView(view: string): void {
     this.currentView = view;
     this.menuOpen = false;
-  }
 
+    if (view === 'Carte') {
+      this.router.navigate(['carte'], { relativeTo: this.acrivatedroute });
+    } else if (view === 'Liste') {
+      this.router.navigate(['carte-etendue'], { relativeTo: this.acrivatedroute });
+    } else if (view === 'Activité') {
+      this.router.navigate(['activite'], { relativeTo: this.acrivatedroute });
+    }
+  }
   
 
 }

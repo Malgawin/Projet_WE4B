@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CoursService } from '../services/cours.service';
 import { Cours, Inscrit } from '../class/cours';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,10 +14,10 @@ export class PageCoursComponent implements OnInit {
 
   cours!: Cours;
 
-  constructor(private route: ActivatedRoute, private coursService: CoursService) { }
+  constructor(private router: Router, private activatedroute: ActivatedRoute, private coursService: CoursService) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
+    const id = this.activatedroute.snapshot.paramMap.get('id') || '0';
     if (id) {
       this.coursService.getCoursbyId(id).subscribe(data => {
       this.cours = data;
@@ -28,9 +29,24 @@ export class PageCoursComponent implements OnInit {
   }
 
   currentView: string = 'Cours';
-  selectView(view: string): void {
-    this.currentView = view;
-  }
-  
 
+  selectCours() {
+    this.currentView = 'Cours'
+    this.router.navigate(['/cours', this.cours.id ,'course'])
+  }
+
+  selectParticipants() {
+    this.currentView = 'Participants'
+    this.router.navigate(['/cours', this.cours.id ,'participants']);
+  }
+
+  selectParametres() {
+    this.currentView = 'Parametres'
+    this.router.navigate(['/cours', this.cours.id ,'parametres'])
+  }
+
+  selectForum() {
+    this.currentView = 'Forum'
+    this.router.navigate(['/cours', this.cours.id ,'forum'])
+  }
 }

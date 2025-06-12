@@ -3,16 +3,16 @@
             <div class = "container-cours-titre">
                 <h1 >{{ cours.name }}</h1>
                 <div class="container-cours-sous-titre">
-                    <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Cours' }" (click)="selectView('Cours')">
+                    <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Cours' }" (click)="selectCours()">
                         Cours
                     </h2>
-                     <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Participants' }" (click)="selectView('Participants')">
+                     <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Participants' }" (click)="selectParticipants()">
                         Participants
                     </h2>
-                    <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Forum' }" (click)="selectView('Forum')">
+                    <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Forum' }" (click)="selectForum()">
                         Forum
                     </h2>
-                    <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Parametres' }" (click)="selectView('Parametres')">
+                    <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Parametres' }" (click)="selectParametres()">
                         Parametres
                     </h2>
                 </div>
@@ -20,10 +20,8 @@
         </div>
         <hr>
 
-        <ng-container [ngSwitch]="currentView">
-            <app-course *ngSwitchCase="'Cours'"></app-course>
-            <app-participants-cours  [cours]="cours" *ngSwitchCase="'Participants'"></app-participants-cours>
-            <app-liste-forums-cours *ngSwitchCase="'Forum'"></app-liste-forums-cours>
-            <app-parametres-cours [cours]="cours" *ngSwitchCase="'Parametres'"></app-parametres-cours>
-        </ng-container>
+        <div class="router-outlet">
+            <router-outlet></router-outlet>
+        </div>
+        
 </div>

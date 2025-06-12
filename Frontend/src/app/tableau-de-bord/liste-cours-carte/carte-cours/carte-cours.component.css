@@ -47,10 +47,23 @@
       color: rgb(0, 0, 0);
       border: solid 1px #c9c9c9;
     }
+
+
   
     .carte-cours-front:hover {
-      border: solid 1.5px #c9c9c9;
+      border: solid 0.05rem #007BC0;
     }
+
+    .nombre-inscrits {
+      position: absolute;
+      bottom: -0.2rem;
+      right: 0.3rem;
+      font-size: 0.7em;
+      color: #aaaaaa;
+      font-style: italic;
+    }
+
+
   
     .carte-cours-back {
       display: flex;
@@ -74,9 +87,12 @@
       font-size: 1.6rem;
       font-family: Arial, sans-serif;
       padding: 1vh 1vw;
+      font-weight: bold;
+      margin-top: 1rem;
+      color: #818181;
     }
   
-  
+
     .bouton-rotation {
       position: absolute;
       top: 10px;
@@ -125,4 +141,43 @@
   
   
   
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+.progression-container {
+  width: 100%;
+  height: 4%;
+  background-color: #e6e6e6;
+  border-radius: 0px 0px 3px 3px;
+  margin: 0 0 0 0;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  font-weight: bold;
+  color: rgb(154, 154, 154);
+  color: white;
+}
+
+.progression-barre {
+  height: 100%;
+  background-color: #007bc0;
+}
+
+.progression-container p{
+  font-size: 0.5em;
+}
+
+

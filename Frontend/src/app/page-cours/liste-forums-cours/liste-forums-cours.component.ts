@@ -20,11 +20,11 @@ export class ForumCoursComponent implements OnInit {
 
   
   ngOnInit(): void {
-      const coursId = Number(this.route.snapshot.paramMap.get('id'));
+      const coursId = Number(this.route.snapshot.paramMap.get('id') || 0 );
       if (coursId){
         this.selectedCoursId = coursId;
-        this.forumService.getForumsByCours(coursId).subscribe(data => {
-        this.forums = data
+        this.forumService.getForumsByCours(coursId).subscribe(forum => {
+        this.forums = forum
         })
       }
   }

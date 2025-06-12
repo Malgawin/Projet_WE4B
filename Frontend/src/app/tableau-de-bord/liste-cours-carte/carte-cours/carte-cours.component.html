@@ -1,13 +1,19 @@
 <div class="carte-cours">
   <div class="carte-cours-inner" [class.flipped]="flipped">
-    <div class="carte-cours-front">
+    <div (click)="toCours()" class="carte-cours-front">
       <button class="bouton-etoile"><span class="etoile">&#9733;</span></button>
-      <button class="bouton-rotation" (click)="turnCard()">↺</button>
+      <button class="bouton-rotation" (click)="turnCard(); $event.stopPropagation()">↺</button>
       <img [src]="getImageUrl()" alt="Image du cours">
-      <h3><a [routerLink]="['/cours', cours.id]">{{ cours.name }}</a></h3>
+      <h3>{{ cours.name }}</h3>
+      <div class="progression-container">
+        <div class="progression-barre" [style.width.%]="pourcentageProgesion">
+          <p>Progresion : {{ pourcentageProgesion }} %</p>
+        </div>
+      </div>
+      <p class="nombre-inscrits">{{ cours.inscrits.length }} inscrits</p>
     </div>
     <div class="carte-cours-back">
-      <button class="bouton-rotation" (click)="turnCard()">↺</button>
+      <button class="bouton-rotation" (click)="turnCard(); $event.stopPropagation()">↺</button>
       <h3>{{ cours.code }}</h3>
       <p>{{ cours.description }}</p>
     </div>

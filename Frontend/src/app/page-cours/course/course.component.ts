@@ -16,7 +16,7 @@ export class CourseComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this._id = this.route.snapshot.paramMap.get('id')!;
+    this._id = this.route.parent?.snapshot.paramMap.get('id')!;
   }
 
   addPost() {

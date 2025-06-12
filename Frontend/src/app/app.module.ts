@@ -32,6 +32,7 @@ import { ParametresCoursComponent } from './page-cours/parametres-cours/parametr
 import { ModifImageCoursComponent } from './page-cours/parametres-cours/modif-image-cours/modif-image-cours.component';
 import { ParticipantsDetailsComponent } from './page-cours/participants-cours/participants-details/participants-details.component';
 import { UserPageModule } from './admin/user-page/user-page.module';
+import { ParticipantsDetailsComponent } from './page-cours/participants-details/participants-details.component';
 
 
 
