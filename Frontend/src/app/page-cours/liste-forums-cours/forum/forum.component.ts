@@ -25,6 +25,7 @@ export class ForumComponent implements OnInit {
   sendMessage() {
   if (!this.nouveauMessage.trim() || !this.forum) return;
   this.forumService.addMessage(this.forum._id, this.nouveauMessage).subscribe((msg) => {
+    console.log('Message reçu après ajout :', msg);
     this.forum!.messages.push(msg);
     this.nouveauMessage = '';
   });

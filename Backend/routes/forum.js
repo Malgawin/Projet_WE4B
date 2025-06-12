@@ -50,6 +50,7 @@ router.post('/:forumId/messages', async (req, res) => {
     forum.messages.push(newMessage);
     await forum.save();
 
+    
     res.json(newMessage);
  
 });
@@ -66,7 +67,6 @@ router.delete('/:forumId/messages/:messageId', async (req, res) => {
   const { forumId, messageId } = req.params;
   await Forum.updateOne( { _id: forumId }, { $pull: { messages: { _id: messageId } } });
   res.json({ message: 'Message supprimé avec succès' });
-  
 });
 
 module.exports = router;

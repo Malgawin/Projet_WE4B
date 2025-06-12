@@ -1,0 +1,25 @@
+.bouton-container{
+    position: relative;
+    width: 100%;
+    background-color: red;
+}
+
+.bouton-container button{
+    color: #ffffff;
+    background: #007BC0;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: block;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
+.bouton-container button:hover {
+    background: #006593;
+}
+
