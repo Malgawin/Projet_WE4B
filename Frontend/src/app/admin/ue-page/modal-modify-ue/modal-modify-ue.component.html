@@ -1,9 +1,13 @@
-<div class="modal fade" id="createUeModal" tabindex="-1" aria-hidden="true">
+<button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modifyUeModal">
+  Modifier
+</button>
+
+<div class="modal fade" id="modifyUeModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title">Créer un cours</h5>
+        <h5 class="modal-title">Modifier le cours --nom--</h5> <!--todo le nom-->
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
@@ -28,7 +32,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary" [disabled]="!ueForm.form.valid" data-bs-dismiss="modal">Créer
+          <button type="submit" class="btn btn-primary" [disabled]="!ueForm.form.valid" data-bs-dismiss="modal">Valider
           </button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         </div>

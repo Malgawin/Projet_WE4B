@@ -16,15 +16,7 @@ export class UeListElementComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onModify(){
-    //Todo : modifier
-  }
-
   onDelete(){
     this.delete.emit(this.ue.id);
-  }
-
-  onRegistered(){
-
   }
 }

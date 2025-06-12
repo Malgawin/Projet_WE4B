@@ -1,0 +1,37 @@
+<button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modifyUserModal">
+  Modifier
+</button>
+
+<div class="modal fade" id="modifyUserModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Modifier l'utilisateur --nom--</h5> <!--todo nom-->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form #userForm="ngForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label for="familyName">Nom</label>
+            <input id="familyName" type="text" class="form-control" name="familyName" [(ngModel)]="formData.familyName" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="name">Prénom</label>
+            <input id="name" type="text" class="form-control" name="name" [(ngModel)]="formData.name" required />
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" [disabled]="!userForm.form.valid" data-bs-dismiss="modal">Valider</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       { path: 'user', loadChildren: () => import('./user-page/user-page.module').then(m => m.UserPageModule) },
       { path: 'ue', loadChildren: () => import('./ue-page/ue-page.module').then(m => m.UePageModule) },
-      { path: '', redirectTo: '', pathMatch: 'full' }
+      { path: '', redirectTo: 'user', pathMatch: 'full' }
     ]
   }
 ];
