@@ -50,6 +50,8 @@ try {
   app.use('/api/enrollment', enrollmentRoutes);
   const ueRoutes = require('./routes/ue');
   app.use('/api/ue', ueRoutes);
+  const activitesRoutes = require('./routes/activites');
+  app.use('/api/activites', activitesRoutes);
   const usersRoutes = require('./routes/users');
   app.use('/api/users', usersRoutes);
 } catch (error) {
