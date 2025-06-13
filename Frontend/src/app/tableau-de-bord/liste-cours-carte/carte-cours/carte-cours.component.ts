@@ -21,7 +21,7 @@ export class CarteCoursComponent implements OnInit {
   flipped: boolean = false;
 
   progresion: number = 0;
-  progresionObjectif: number = 10;
+  progresionObjectif: number = 0;
   pourcentageProgesion: number = Math.floor((this.progresion / this.progresionObjectif) * 100)
 
   idLogin: number = 40;  // en antendant login 
@@ -37,6 +37,9 @@ export class CarteCoursComponent implements OnInit {
     this.journalService.getLogByUserId(this.idLogin).subscribe(log => {
       const courseLog = log.courses?.find((log: CourseLog) => log.courseId === this.cours.id);
       this.progresion = courseLog?.progressCount || 0;
+      if(this.cours.nbPostsTotal) {
+        this.progresionObjectif = this.cours.nbPostsTotal;
+      }
       this.pourcentageProgesion = Math.floor((this.progresion / this.progresionObjectif) * 100);
     });
   }

@@ -5,7 +5,7 @@
       <button class="bouton-rotation" (click)="turnCard(); $event.stopPropagation()">↺</button>
       <img [src]="getImageUrl()" alt="Image du cours">
       <h3>{{ cours.name }}</h3>
-      <div class="progression-container">
+      <div class="progression-container" *ngIf="progresionObjectif !== -1">
         <div class="progression-barre" [style.width.%]="pourcentageProgesion">
           <p>Progresion : {{ pourcentageProgesion }} %</p>
         </div>

@@ -30,6 +30,10 @@ import { ParametresCoursComponent } from './page-cours/parametres-cours/parametr
 import { ModifImageCoursComponent } from './page-cours/parametres-cours/modif-image-cours/modif-image-cours.component';
 import { UserPageModule } from './admin/user-page/user-page.module';
 import { ParticipantsDetailsComponent } from './page-cours/participants-details/participants-details.component';
+import { InfoGeneralComponent } from './page-cours/participants-details/participants-details/info-general/info-general.component';
+import { ActiviteGeneralComponent } from './page-cours/participants-details/participants-details/activite-general/activite-general.component';
+import { ActiviteCoursComponent } from './page-cours/participants-details/participants-details/activite-cours/activite-cours.component';
+import { JournalActiviteCoursComponent } from './page-cours/participants-details/participants-details/journal-activite-cours/journal-activite-cours.component';
 
 
 
@@ -57,7 +61,12 @@ import { ParticipantsDetailsComponent } from './page-cours/participants-details/
       FiltreSearchComponent,
       ParametresCoursComponent,
       ModifImageCoursComponent,
-      ParticipantsDetailsComponent
+      ParticipantsDetailsComponent,
+      ParticipantsDetailsComponent,
+      InfoGeneralComponent,
+      ActiviteGeneralComponent,
+      ActiviteCoursComponent,
+      JournalActiviteCoursComponent
 
 
     ],

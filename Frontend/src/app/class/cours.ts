@@ -6,6 +6,7 @@ export class Cours {
   image: string;
   inscrits: Inscrit[];
   isPinned: boolean;
+  nbPostsTotal?: number = -1 ;
 
   constructor(id: number, code: string, name: string, description: string, image: string, inscrits: Inscrit[] = [], ispinned: boolean = false) {
     this.id = id;
