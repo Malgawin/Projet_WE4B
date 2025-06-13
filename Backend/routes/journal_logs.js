@@ -22,7 +22,7 @@ router.get('/:userId', async (req, res) => { //recuper les logs d'un utilisateur
 router.patch('/:userId', async (req, res) => {
   try {
     const userId = parseInt(req.params.userId);
-    const update = req.body; // ex: { lastLogin: new Date(), loginCount: 4 }
+    const update = req.body;
     const log = await Log.findOneAndUpdate({ userId }, update, { new: true });
     res.json(log);
   } catch (err) {
@@ -78,7 +78,7 @@ router.patch('/:userId/course/:courseId', async (req, res) => {
     await log.save(); 
     res.json(log);
   }
-  
+
   } catch (err) {
   res.status(500).json({ error: err.message });
   }
