@@ -9,60 +9,20 @@
 
     <hr>
 
-    <div class ="container-info">
-        <h3>Info general : </h3>
-        <div class ="contenu">
-            <p> Prenom :<b> {{inscrit.name}}</b></p>
-            <p> Nom : <b>{{inscrit.familyName}}</b></p>
-            <p> Mail : <b>{{inscrit.mail}}</b></p>
-            <p> Role : <b>{{inscrit.role}}</b></p>
-        </div>
-    </div>
+    <app-info-general [inscrit]="inscrit"></app-info-general>
+    
 
     <hr>
 
-    <div class ="container-info">
-         <h3>Activité general : </h3>
-        <div class ="contenu" *ngIf="userLog; else noUserLog">
-                <p>Dernière connexion : <b>{{ DateToPhrase(userLog.lastLogin) }} ( {{ timePast(userLog.lastLogin) }} )</b></p>
-                <p>Dernière déconnexion : <b>{{ DateToPhrase(userLog.lastLogout) }} ( {{ timePast(userLog.lastLogout) }} )</b></p>
-                <p>Nombre de login : <b>{{ userLog.loginCount }}</b></p>
-        </div>
-        <ng-template #noUserLog>
-            <p class="noData">Aucune donnée d'activité générale pour le moment.</p>
-        </ng-template>
-    </div>
+    <app-activite-general [userLog]="userLog" [DateToPhrase]="DateToPhrase.bind(this)"[timePast]="timePast.bind(this)"></app-activite-general>
    
     <hr>
     
-    <div class ="container-info">
-        <h3>Activité dans ce cours :</h3>
-        <div class ="contenu" *ngIf="courseLog; else noCourseLog">
-            <p >Dernière consultation : <b>{{ DateToPhrase(courseLog.lastViewed) }} ({{ timePast(courseLog.lastViewed) }})</b></p>
-            <p>Nombre de consultation du cours : <b>{{ courseLog.viewsCount }}</b></p>
-            <p>Progression :<b> {{ courseLog.progressCount }}</b></p>
-        </div>
-        <ng-template #noCourseLog>
-            <p class="noData">Aucune donnée d'activité dans ce cours pour le moment..</p>
-        </ng-template>
-    </div>
+    <app-activite-cours [courseLog]="courseLog" [DateToPhrase]="DateToPhrase.bind(this)" [timePast]="timePast.bind(this)"></app-activite-cours>
 
     <hr>
 
-    <div class="container-info">
-    <h3>Journal d'activité dans ce cours :</h3>
-    <div class="contenu" *ngIf="courseLog?.activity?.length; else noActivity">
-        <ul class="journal-activite">
-            <li *ngFor="let activity of courseLog?.activity">
-                {{ DateToPhrase(activity.date) }} - <b>{{ getActivityByType(activity) }}</b>
-            </li>
-        </ul>
-    </div>
-
-    <ng-template #noActivity>
-        <p class="noData">Pas d'activité dans ce cours pour le moment.</p>
-    </ng-template>
-</div>
+    <app-journal-activite-cours [courseLog]="courseLog" [DateToPhrase]="DateToPhrase.bind(this)"[getActivityByType]="getActivityByType.bind(this)"></app-journal-activite-cours>
 
 </div>
 

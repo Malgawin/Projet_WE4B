@@ -1,49 +1,3 @@
-.bouton-container{
-    position: relative;
-    width: 100%;
-    background-color: red;
-}
-
-.bouton-container button{
-    color: #ffffff;
-    background: #007BC0;
-    position: absolute;
-    top: 0rem;
-    right: 4rem;
-    display: block;
-    padding: 0.3rem 0.8rem;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
-
-
-.bouton-container button:hover {
-    background: #006593;
-}
-
-.details-container{
-    margin-top: 4rem;
-    margin-left: 2rem;
-}
-
-h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 2.1em;
-    margin-bottom: 5rem;
-}
-
-.details-container hr {
-
-    width: 90%;
-    margin: 1rem 2rem;
-    height: 0.2rem;
-    background-color: #007BC0;
-    border-radius: 5px;
-    padding: 0;
-}
 
 .container-info {
     margin-left: 4rem;
@@ -76,6 +30,7 @@ h2 {
 }
 
 
+
 .journal-activite {
     max-height: 7rem;
     overflow-y: scroll;
@@ -105,4 +60,3 @@ h2 {
   font-size: 1.3em;
   margin-left: 2rem;   
 }
-
