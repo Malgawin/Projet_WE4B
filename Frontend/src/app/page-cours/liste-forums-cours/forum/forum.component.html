@@ -16,7 +16,7 @@
         <div  class="message" *ngFor="let msg of forum.messages">
             <h3><strong>{{ getUserName(msg.authorId) || '....' }}, </strong><small>{{ msg.createdAt |  date:'dd/MM/yyyy HH:mm' }}</small> : </h3>
             <p>{{ msg.content }}</p>
-            <button class="btn-delete" (click)="dltMessage(forum._id, msg._id); $event.stopPropagation()">X</button>
+            <button *ngIf="canDelete(msg.authorId)" class="btn-delete" (click)="dltMessage(forum._id, msg._id); $event.stopPropagation()">X</button>
             
         </div>
     </div>

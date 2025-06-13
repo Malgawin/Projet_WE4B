@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ForumService, Forum } from '../../../services/forum.service';
 import { UsersService } from '../../../services/users.service';
-import { ChangeDetectorRef } from '@angular/core';
+
 
 
 @Component({
@@ -20,7 +20,7 @@ export class ForumComponent implements OnInit {
   userNames: { [key: number]: string } = {};
 
 
-  constructor(private forumService: ForumService, private usersService: UsersService, private cdr: ChangeDetectorRef) {}
+  constructor(private forumService: ForumService, private usersService: UsersService ) {}
 
   ngOnInit(): void {
       if (this.forum && this.forum.messages) {
@@ -48,7 +48,11 @@ export class ForumComponent implements OnInit {
     this.forumService.addMessage(this.forum._id, this.nouveauMessage, this.idLogin).subscribe((msg) => {
       this.forum!.messages.push(msg);
       this.nouveauMessage = '';
-      this.cdr.detectChanges();
+      if (!this.userNames[Number(msg.authorId)]) {
+      this.usersService.getUserById(Number(msg.authorId)).subscribe(user => {
+        this.userNames[Number(msg.authorId)] = `${user.name} ${user.familyName}`;
+      });
+    }
     });
     
   }
@@ -62,5 +66,9 @@ export class ForumComponent implements OnInit {
         }
           );
       }
-    }
+  }
+
+  canDelete(authorId: string | number | undefined): boolean {
+    return Number(authorId) === this.idLogin;
+  }
 }

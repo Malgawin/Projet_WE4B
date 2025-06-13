@@ -51,8 +51,10 @@ router.post('/:forumId/messages', async (req, res) => {
     forum.messages.push(newMessage);
     await forum.save();
 
+    const addedMessage = forum.messages[forum.messages.length - 1];
+
     
-    res.json(newMessage);
+    res.json(addedMessage);
  
 });
 

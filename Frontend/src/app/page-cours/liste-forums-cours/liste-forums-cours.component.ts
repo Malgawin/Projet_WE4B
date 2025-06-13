@@ -65,6 +65,11 @@ export class ForumCoursComponent implements OnInit {
       forum => {
         this.forums.unshift(forum);
         this.nouveauTitre = '';
+        if (!this.userNames[forum.authorId]) {
+        this.usersService.getUserById(forum.authorId).subscribe(user => {
+          this.userNames[forum.authorId] = `${user.name} ${user.familyName}`;
+        });
+        }
       }
     );
   }
