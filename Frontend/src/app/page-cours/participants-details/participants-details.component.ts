@@ -102,12 +102,19 @@ export class ParticipantsDetailsComponent implements OnInit {
       return 'a créé un forum';
     case 'forum-message':
       return 'a posté un message dans un forum';
+    case 'forum-message-delete':
+      return 'a suprimer un message dans un forum';
+    case 'view':
+      return 'a consulté ce cours';
+
+
+      // a ajouter
     case 'devoir-rendu':
       return 'a rendu un devoir';
     case 'check-post':
-      return 'a posté un post';
-    case 'view':
-      return 'a consulté ce cours';
+      return 'a valide un post';
+    case 'post':
+      return 'a creer un post';
     default:
       return 'a fait quelque chose';
   }

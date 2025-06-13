@@ -48,6 +48,16 @@ router.patch('/:userId/course/:courseId', async (req, res) => {
         date: new Date()
     };
 
+    if (type === "forum-message") {
+      if (req.body.activity.forumId) newActivity.forumId = req.body.activity.forumId;
+      if (req.body.activity.messageId) newActivity.messageId = req.body.activity.messageId;
+    }
+
+    if (type === "forum-message-delete") {
+      if (req.body.activity.forumId) newActivity.forumId = req.body.activity.forumId;
+      if (req.body.activity.messageId) newActivity.messageId = req.body.activity.messageId;
+    }
+
     if (type === "create-forum" && req.body.activity.forumId) {
         newActivity.forumId = req.body.activity.forumId;
     }
@@ -56,8 +66,17 @@ router.patch('/:userId/course/:courseId', async (req, res) => {
       if (!course.activity) course.activity = [];
         course.activity.push(newActivity);
 
+      if (type === "forum-message") {
+        course.forumMsgCount = (course.forumMsgCount) + 1;
+      }
+
+      if (type === "forum-message-delete") {
+        course.forumMsgCount = (course.forumMsgCount) - 1;
+      }
+
+
       if (type === "view") {
-        course.viewsCount = (course.viewsCount || 0);
+        course.viewsCount = (course.viewsCount || 0) +1 ;
         course.lastViewed = new Date();
       }
     
@@ -68,7 +87,7 @@ router.patch('/:userId/course/:courseId', async (req, res) => {
         viewsCount: type === "view" ? 1 : 0,
         lastViewed: type === "view" ? new Date() : null,
         progressCount: 0,
-        forumMsgCount: 0,
+        forumMsgCount: type === "forum-message" ? 1 : 0,
         activity: [newActivity]
 
       });

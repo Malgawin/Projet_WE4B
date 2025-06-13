@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ForumService, Forum } from '../../../services/forum.service';
 import { UsersService } from '../../../services/users.service';
-
+import { JournalLogsService } from '../../../services/journal-logs.service';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class ForumComponent implements OnInit {
   userNames: { [key: number]: string } = {};
 
 
-  constructor(private forumService: ForumService, private usersService: UsersService ) {}
+  constructor(private forumService: ForumService, private usersService: UsersService, private journalLogsService: JournalLogsService ) {}
 
   ngOnInit(): void {
       if (this.forum && this.forum.messages) {
@@ -53,6 +53,11 @@ export class ForumComponent implements OnInit {
         this.userNames[Number(msg.authorId)] = `${user.name} ${user.familyName}`;
       });
     }
+    this.journalLogsService.updateCourseLog(
+      this.idLogin,
+      this.forum.coursId,
+      { activity: { type: "forum-message", forumId: this.forum._id, messageId: msg._id } }
+    ).subscribe();
     });
     
   }
@@ -63,8 +68,14 @@ export class ForumComponent implements OnInit {
       this.forumService.deleteMessage(forumId, messageId).subscribe(
         () => {
           this.forum.messages = this.forum.messages.filter(m => m._id !== messageId);
+          this.journalLogsService.updateCourseLog(
+            this.idLogin,
+            this.forum.coursId,
+            { activity: { type: "forum-message-delete", forumId: forumId, messageId: messageId } }
+          ).subscribe();
+
         }
-          );
+        );
       }
   }
 

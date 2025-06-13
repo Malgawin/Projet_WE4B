@@ -16,7 +16,7 @@ const courseUserLogs = new mongoose.Schema({
   lastViewed: { type: Date },
   viewsCount: { type: Number },
   progressCount: { type: Number, default: 0 },
-   forumMsg: { type: Number, default: 0 },
+  forumMsgCount: { type: Number, default: 0 },
   activity: [activitySchema]
 });
 
