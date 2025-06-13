@@ -11,10 +11,10 @@ export class ListPostsComponent implements OnInit {
 
   PostArray : Post[] = []
 
-  constructor( private cours: Cours) { }
+  constructor( ) { }
   
   ngOnInit(): void {
-    this.cours.nbPostsTotal = this.PostArray.length; // ###### a adatper et changer d'endroit si necesaire pour la progression stocker dans cours le nombre de posts total
+    // this.cours.nbPostsTotal = this.PostArray.length; // ###### a adatper et changer d'endroit si necesaire pour la progression stocker dans cours le nombre de posts total
   }
 
 }

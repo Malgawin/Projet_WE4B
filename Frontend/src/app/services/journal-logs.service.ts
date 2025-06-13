@@ -17,4 +17,8 @@ export class JournalLogsService {
     return this.http.get<UserLog>(`${this.apiUrl}/${userId}`);
   }
 
+  updateCourseLog(userId: number, courseId: number, data: any) {
+    return this.http.patch(`${this.apiUrl}/${userId}/course/${courseId}`, data);
+  }
+
 }
