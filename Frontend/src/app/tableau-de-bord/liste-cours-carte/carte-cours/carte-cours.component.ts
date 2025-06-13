@@ -15,6 +15,8 @@ import { CourseLog } from 'src/app/class/journal_logs';
 export class CarteCoursComponent implements OnInit {
   
   @Input() cours!: Cours;
+  @Input() isExtended: boolean = false;
+
   nbInscrits: number = 0;
   flipped: boolean = false;
 

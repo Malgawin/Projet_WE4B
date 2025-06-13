@@ -1,4 +1,4 @@
-<div class="carte-cours">
+<div class="carte-cours" [class.carte-cours-extended]="isExtended">
   <div class="carte-cours-inner" [class.flipped]="flipped">
     <div (click)="toCours()" class="carte-cours-front">
       <button class="bouton-etoile" (click)="pinCours($event)"><span class="etoile" [class.pinned]="cours.isPinned">&#9733;</span></button>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursService } from '../../services/cours.service';
 import { Cours } from '../../class/cours';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-liste-cours-carte',
@@ -10,15 +11,23 @@ import { Cours } from '../../class/cours';
 export class ListeCoursCarteComponent implements OnInit {
 
   cours: Cours[] = [];
-  
-  idLog = 40; // id temporaire
+  userId: number = 40; // id temporaire
+  viewType: string = 'carte';
 
-  constructor(private coursService: CoursService) { }
+  constructor(private coursService: CoursService, private router: Router) { }
 
-   ngOnInit(): void {
-    this.coursService.getCoursByIdLog(this.idLog).subscribe(data => {
+  ngOnInit(): void {
+
+    this.viewType = this.router.url.includes('carte-etendue') ? 'carte-etendue' : 'carte';
+
+    this.coursService.getCoursByIdLog(this.userId).subscribe(data => {
       this.cours = data;
     });
+  }
+
+
+  get isExtended(): boolean {
+    return this.viewType === 'carte-etendue';
   }
 
 
