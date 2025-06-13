@@ -98,7 +98,7 @@ export class ParticipantsDetailsComponent implements OnInit {
 
   getActivityByType(activity: any): string {
   switch (activity.type) {
-    case 'forum':
+    case 'create-forum':
       return 'a créé un forum';
     case 'forum-message':
       return 'a posté un message dans un forum';

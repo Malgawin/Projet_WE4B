@@ -25,10 +25,15 @@
     color: #717171;
 }
 
-.contenu b {
-    color: #007BC0;
+.activity-view {
+  color: #007BC0;
+  font-weight: bold;
 }
 
+.activity {
+  color: #bc3222;
+  font-weight: bold;
+}
 
 
 .journal-activite {

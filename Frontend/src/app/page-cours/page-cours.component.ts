@@ -29,9 +29,9 @@ export class PageCoursComponent implements OnInit {
       this.journalLogsService.updateCourseLog(
           this.idLogin,
           this.cours.id,
-          { lastViewed: new Date() }
+          { activity: { type: "view" } }
         ).subscribe();
-    });
+      });
     }
   }
 

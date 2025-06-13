@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ForumService, Forum } from '../../services/forum.service';
 import { UsersService } from '../../services/users.service';
+import { JournalLogsService } from '../../services/journal-logs.service';
+
+
 
 
 
@@ -18,7 +21,7 @@ export class ForumCoursComponent implements OnInit {
   selectedCoursId: number = 0;
   nouveauTitre: string = '';
   
-  constructor(private forumService: ForumService, private activatedroute: ActivatedRoute, private usersService: UsersService) {}
+  constructor(private forumService: ForumService, private activatedroute: ActivatedRoute, private usersService: UsersService, private journalLogsService: JournalLogsService) {}
 
   idLogin: number = 40; // id temporaire
   userNames: { [key: number]: string } = {};
@@ -70,6 +73,11 @@ export class ForumCoursComponent implements OnInit {
           this.userNames[forum.authorId] = `${user.name} ${user.familyName}`;
         });
         }
+        this.journalLogsService.updateCourseLog(
+          this.idLogin,
+          this.selectedCoursId,
+          { activity: { type: "create-forum", forumId: forum._id } }
+        ).subscribe();
       }
     );
   }
