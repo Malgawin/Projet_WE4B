@@ -19,12 +19,13 @@ router.get('/:forumId/messages', async (req, res) => {
 
 router.post('/cours/:coursId', async (req, res) => {
  
-    const { title } = req.body;
+    const { title, authorId } = req.body;
     const coursId = req.params.coursId;
 
     const nouveauForum = new Forum({
       coursId,
       title,
+      authorId,
       createdAt: new Date(),
       messages: []
     });
@@ -43,7 +44,7 @@ router.post('/:forumId/messages', async (req, res) => {
 
     const newMessage = {
       content: req.body.content,
-      authorId: req.body.authorId || 'Anonyme',
+      authorId: req.body.authorId,
       createdAt: new Date()
     };
 

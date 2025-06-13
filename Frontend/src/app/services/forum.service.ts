@@ -8,7 +8,7 @@ export interface Message {
   _id: string;  
   content: string;
   createdAt: string;
-  authorId?: string;
+  authorId: string;
 }
 
 export interface Forum {
@@ -16,6 +16,7 @@ export interface Forum {
   coursId: number;
   title: string;
   createdAt: string;
+  authorId: number;
   messages: Message[];
 }
 
@@ -40,12 +41,12 @@ export class ForumService {
     return this.http.get<Message[]>(`${this.apiUrl}/${forumId}/messages`);
   }
 
-  addMessage(forumId: string, content: string, authorId?: string): Observable<Message> {
-    return this.http.post<Message>(`${this.apiUrl}/${forumId}/messages`, { content, authorId});
+  addMessage(forumId: string, content: string, authorId: number): Observable<Message> {
+    return this.http.post<Message>(`${this.apiUrl}/${forumId}/messages`, { content, authorId });
   }
 
-  addForum(coursId: number, title: string): Observable<Forum> {
-    return this.http.post<Forum>(`${this.apiUrl}/cours/${coursId}`, { coursId, title });
+  addForum(coursId: number, title: string, authorId: number): Observable<Forum> {
+    return this.http.post<Forum>(`${this.apiUrl}/cours/${coursId}`, { coursId, title, authorId });
   }
   
   deleteForum(forumId: string): Observable<Forum> {
