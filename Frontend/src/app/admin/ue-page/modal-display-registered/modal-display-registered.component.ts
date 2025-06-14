@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {User} from "../../../class/user";
+import {CoursService} from "../../../services/cours.service";
+import {Inscrit} from "../../../class/cours";
 
 @Component({
   selector: 'app-modal-display-registered',
@@ -8,18 +10,18 @@ import {User} from "../../../class/user";
 })
 export class ModalDisplayRegisteredComponent implements OnInit {
 
-  registered: User[] = [
-    new User(0, "Joshua", "Plouzennec", "aaaa"),
-    new User(1, "Joshua", "Plouzennec", "aaaa"),
-    new User(2, "Joshua", "Plouzennec", "aaaa"),
-    new User(3, "Joshua", "Plouzennec", "aaaa"),
-    new User(4, "Joshua", "Plouzennec", "aaaa"),
-    new User(5, "Joshua", "Plouzennec", "aaaa")
-  ];
+  @Input() courseId!: number;
+  @Input() courseName!: string;
 
-  constructor() { }
+  registered: User[] = [];
+
+  constructor(private coursesServices: CoursService) { }
 
   ngOnInit(): void {
+    this.coursesServices.getInscrits(this.courseId).subscribe({
+      next: (data) => this.convertInscritToUser(data),
+      error: (err) => console.error('Erreur lors de la récupération des inscrits', err)
+    });
   }
 
   handleEvent(regId: number) {
@@ -28,4 +30,14 @@ export class ModalDisplayRegisteredComponent implements OnInit {
     }
   }
 
+  private convertInscritToUser(data: Inscrit[]) {
+    for (let inscrit of data){
+      this.registered.push(new User(
+        inscrit.id,
+        inscrit.name,
+        inscrit.familyName,
+        inscrit.mail
+      ))
+    }
+  }
 }
