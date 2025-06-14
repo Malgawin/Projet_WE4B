@@ -5,26 +5,24 @@
     
 
 
-    <h2>Details : </h2>
+    <h2>Details Participants</h2>
 
-    <h3>Info general : </h3>
-    <p> prenom : {{inscrit.name}}</p>
-    <p> nom : {{inscrit.familyName}}</p>
-    <p> mail : {{inscrit.mail}}</p>
-    <p> role : {{inscrit.role}}</p>
+    <hr>
 
+    <app-info-general [inscrit]="inscrit"></app-info-general>
+    
 
-    <h3>Activité : (marche pas vrmt a faire quand page connexion) </h3>
-    <p> dernier connexion : 09/10/2025-17h06 (il y'a 6 min)</p>
-    <p> dernier consultation cours : 09/10/2025-17h09 (il y'a 3 min) </p>
-    <p> temps total passer : 80min</p>
+    <hr>
 
-    <h3>Progesion: (marche pas vrmt a faire quand page connexion + devoir) </h3>
-    <p> cours valider : 50% </p>
+    <app-activite-general [userLog]="userLog" [DateToPhrase]="DateToPhrase.bind(this)"[timePast]="timePast.bind(this)"></app-activite-general>
+   
+    <hr>
+    
+    <app-activite-cours [courseLog]="courseLog" [DateToPhrase]="DateToPhrase.bind(this)" [timePast]="timePast.bind(this)"></app-activite-cours>
 
-    <h3>Resultats: (marche pas vrmt a faire quand page connexion + devoir) </h3>
-    <p> moyenne : 12.5/20</p>
+    <hr>
 
+    <app-journal-activite-cours [courseLog]="courseLog" [DateToPhrase]="DateToPhrase.bind(this)"[getActivityByType]="getActivityByType.bind(this)"></app-journal-activite-cours>
 
 </div>
 

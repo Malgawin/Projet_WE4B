@@ -10,12 +10,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormCreateTextComponent } from './form-create-text/form-create-text.component';
 import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component';
 import { ListeCoursCarteComponent } from './tableau-de-bord/liste-cours-carte/liste-cours-carte.component';
-import { ListeCoursEtendueComponent } from './tableau-de-bord/liste-cours-etendue/liste-cours-etendue.component';
 import { ActiviteComponent } from './tableau-de-bord/activite/activite.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormCreateRepositoryComponent } from './form-create-repository/form-create-repository.component';
 import { CarteCoursComponent } from './tableau-de-bord/liste-cours-carte/carte-cours/carte-cours.component';
-import { CarteCoursEtendueComponent } from './tableau-de-bord/liste-cours-etendue/carte-cours-etendue/carte-cours-etendue.component';
 import { PageCoursComponent } from './page-cours/page-cours.component';
 import { ParticipantsCoursComponent } from './page-cours/participants-cours/participants-cours.component';
 import { ForumCoursComponent } from './page-cours/liste-forums-cours/liste-forums-cours.component';
@@ -32,6 +30,10 @@ import { ParametresCoursComponent } from './page-cours/parametres-cours/parametr
 import { ModifImageCoursComponent } from './page-cours/parametres-cours/modif-image-cours/modif-image-cours.component';
 import { UserPageModule } from './admin/user-page/user-page.module';
 import { ParticipantsDetailsComponent } from './page-cours/participants-details/participants-details.component';
+import { InfoGeneralComponent } from './page-cours/participants-details/participants-details/info-general/info-general.component';
+import { ActiviteGeneralComponent } from './page-cours/participants-details/participants-details/activite-general/activite-general.component';
+import { ActiviteCoursComponent } from './page-cours/participants-details/participants-details/activite-cours/activite-cours.component';
+import { JournalActiviteCoursComponent } from './page-cours/participants-details/participants-details/journal-activite-cours/journal-activite-cours.component';
 
 
 
@@ -42,11 +44,9 @@ import { ParticipantsDetailsComponent } from './page-cours/participants-details/
       FormCreateTextComponent,
       TableauDeBordComponent,
       ListeCoursCarteComponent,
-      ListeCoursEtendueComponent,
       ActiviteComponent,
       FormCreateRepositoryComponent,
       CarteCoursComponent,
-      CarteCoursEtendueComponent,
       PageCoursComponent,
       ParticipantsCoursComponent,
       ForumCoursComponent,
@@ -61,7 +61,12 @@ import { ParticipantsDetailsComponent } from './page-cours/participants-details/
       FiltreSearchComponent,
       ParametresCoursComponent,
       ModifImageCoursComponent,
-      ParticipantsDetailsComponent
+      ParticipantsDetailsComponent,
+      ParticipantsDetailsComponent,
+      InfoGeneralComponent,
+      ActiviteGeneralComponent,
+      ActiviteCoursComponent,
+      JournalActiviteCoursComponent
 
 
     ],

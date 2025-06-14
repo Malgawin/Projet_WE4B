@@ -19,12 +19,13 @@ router.get('/:forumId/messages', async (req, res) => {
 
 router.post('/cours/:coursId', async (req, res) => {
  
-    const { title } = req.body;
+    const { title, authorId } = req.body;
     const coursId = req.params.coursId;
 
     const nouveauForum = new Forum({
       coursId,
       title,
+      authorId,
       createdAt: new Date(),
       messages: []
     });
@@ -43,14 +44,17 @@ router.post('/:forumId/messages', async (req, res) => {
 
     const newMessage = {
       content: req.body.content,
-      authorId: req.body.authorId || 'Anonyme',
+      authorId: req.body.authorId,
       createdAt: new Date()
     };
 
     forum.messages.push(newMessage);
     await forum.save();
 
-    res.json(newMessage);
+    const addedMessage = forum.messages[forum.messages.length - 1];
+
+    
+    res.json(addedMessage);
  
 });
 
@@ -66,7 +70,6 @@ router.delete('/:forumId/messages/:messageId', async (req, res) => {
   const { forumId, messageId } = req.params;
   await Forum.updateOne( { _id: forumId }, { $pull: { messages: { _id: messageId } } });
   res.json({ message: 'Message supprimé avec succès' });
-  
 });
 
 module.exports = router;

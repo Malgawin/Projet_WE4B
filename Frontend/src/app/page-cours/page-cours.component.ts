@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CoursService } from '../services/cours.service';
 import { Cours, Inscrit } from '../class/cours';
 import { Router } from '@angular/router';
+import { JournalLogsService } from '../services/journal-logs.service';
 
 
 @Component({
@@ -13,8 +14,9 @@ import { Router } from '@angular/router';
 export class PageCoursComponent implements OnInit {
 
   cours!: Cours;
+  idLogin: number = 40; // id a changer avec le vrai
 
-  constructor(private router: Router, private activatedroute: ActivatedRoute, private coursService: CoursService) { }
+  constructor(private router: Router, private activatedroute: ActivatedRoute, private coursService: CoursService, private journalLogsService: JournalLogsService) { }
 
   ngOnInit(): void {
     const id = this.activatedroute.snapshot.paramMap.get('id') || '0';
@@ -24,7 +26,12 @@ export class PageCoursComponent implements OnInit {
       this.coursService.getInscrits(Number(id)).subscribe(inscrits => {
           this.cours.inscrits = inscrits;
         });
-    });
+      this.journalLogsService.updateCourseLog(
+          this.idLogin,
+          this.cours.id,
+          { activity: { type: "view" } }
+        ).subscribe();
+      });
     }
   }
 

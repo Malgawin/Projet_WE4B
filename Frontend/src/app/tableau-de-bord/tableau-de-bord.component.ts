@@ -10,16 +10,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TableauDeBordComponent implements OnInit {
 
+  userId: number = 40;
+  currentView: string = 'Carte';
+  menuOpen: boolean = false;
+
   constructor(private router: Router, private acrivatedroute: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
-
-
-
-  currentView: string = 'Carte';
-  menuOpen: boolean = false;
+  
 
   showMenu(): void {
     this.menuOpen = !this.menuOpen;

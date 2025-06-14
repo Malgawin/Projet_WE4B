@@ -1,0 +1,14 @@
+
+<div class="container-info">
+  <h3>Journal d'activité dans ce cours :</h3>
+  <div class="contenu" *ngIf="courseLog?.activity?.length; else noActivity">
+    <ul class="journal-activite">
+      <li *ngFor="let activity of courseLog?.activity?.reverse()">
+        {{ DateToPhrase(activity.date) }} -   <b [ngClass]="activity.type === 'view' ? 'activity-view' : 'activity'"> {{ getActivityByType(activity) }}</b>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noActivity>
+    <p class="noData">Pas d'activité dans ce cours pour le moment.</p>
+  </ng-template>
+</div>

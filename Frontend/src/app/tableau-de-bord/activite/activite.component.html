@@ -1,1 +1,12 @@
-<p>activite works!</p>
+
+<div class="container-activite">
+    <div class="container-item">
+        <p *ngFor="let post of activites; let i = index" [ngClass]="{'activite-item': true, 'gris': i % 2 === 0}">
+            {{ post.publish_date | date:'dd/MM/yyyy' }} à {{ post.publish_date | date:'HH:mm' }} | {{ post.author_name }} {{ post.author_familyName }} a posté dans {{ post.ue_name }} : {{ post.title }}
+        </p>
+    </div>
+
+    <div id="moreActivites" class="button-moreActivites" *ngIf="!end">
+        <button type="button" (click)="loadMore()">Plus d'activités</button>
+    </div>
+</div>

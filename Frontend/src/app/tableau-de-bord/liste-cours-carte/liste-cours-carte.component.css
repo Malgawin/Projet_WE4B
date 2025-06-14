@@ -19,3 +19,23 @@
 
   }
   
+
+
+.extended-view {
+    padding: 3rem 1rem 10rem 1rem;
+    padding-bottom: 4rem;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70%, 1fr)); 
+    gap: 2rem;
+  
+    width: 90%;
+  
+    margin-left: auto;
+    margin-right: auto;
+    align-items: start;
+  
+    min-height: 50vh;    
+    min-height: 3rem;
+
+}

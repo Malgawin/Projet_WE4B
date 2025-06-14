@@ -35,18 +35,23 @@ pool.connect()
 try {
   const filesRoutes = require('./routes/files');
   app.use('/api/files', filesRoutes);
-  const forumRoutes = require('./routes/forum')
-  app.use('/api/forums', forumRoutes)
-  const enrollmentRoutes = require('./routes/enrollment');
-  app.use('/api/enrollment', enrollmentRoutes);
+  const forumRoutes = require('./routes/forum');
+  app.use('/api/forums', forumRoutes);
+  const logsRoutes = require('./routes/journal_logs');
+  app.use('/api/logs', logsRoutes);
+
 } catch (error) {
   console.error('Erreur lors du chargement des routes mongodb', error);
 }
 
 //route PostgreSQL:
 try {
+  const enrollmentRoutes = require('./routes/enrollment');
+  app.use('/api/enrollment', enrollmentRoutes);
   const ueRoutes = require('./routes/ue');
   app.use('/api/ue', ueRoutes);
+  const activitesRoutes = require('./routes/activites');
+  app.use('/api/activites', activitesRoutes);
   const usersRoutes = require('./routes/users');
   app.use('/api/users', usersRoutes);
 } catch (error) {

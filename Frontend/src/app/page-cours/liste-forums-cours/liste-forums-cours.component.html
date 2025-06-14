@@ -13,7 +13,7 @@
       <tr *ngFor="let forum of forums" (click)="selectForum(forum)">
         <td>{{ forum.title }}</td>
         <td>
-          'Inconnu' 
+          {{ getUserName(forum.authorId) || '...' }}
           <br>
           <small>
             {{ forum.createdAt | date:'dd/MM/yyyy' }}

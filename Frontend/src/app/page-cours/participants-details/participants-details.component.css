@@ -1,0 +1,108 @@
+.bouton-container{
+    position: relative;
+    width: 100%;
+    background-color: red;
+}
+
+.bouton-container button{
+    color: #ffffff;
+    background: #007BC0;
+    position: absolute;
+    top: 0rem;
+    right: 4rem;
+    display: block;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
+.bouton-container button:hover {
+    background: #006593;
+}
+
+.details-container{
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.1em;
+    margin-bottom: 5rem;
+}
+
+.details-container hr {
+
+    width: 90%;
+    margin: 1rem 2rem;
+    height: 0.2rem;
+    background-color: #007BC0;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.container-info {
+    margin-left: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.container-info h3{
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #064c74;
+    border-left: 4px solid #007BC0;
+    padding-left: 0.6rem;
+}
+
+.contenu{
+    margin-left: 2rem;
+    margin-top: -0.2rem;
+}
+
+.contenu p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #717171;
+}
+
+.contenu b {
+    color: #007BC0;
+}
+
+
+.journal-activite {
+    max-height: 7rem;
+    overflow-y: scroll;
+    padding-left: 4rem;
+    padding-top: 1rem;
+    margin: 0;
+    border: 0.2rem solid #007BC0;
+    border-radius: 0.3rem;
+    background-color: #f9faff;
+    width: 55% ;
+}
+
+
+.journal-activite li {
+    line-height: 1.4em;
+    padding: 0.2rem 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #717171;
+}
+
+
+
+.noData{
+  color: rgb(156, 62, 62);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  margin-left: 2rem;   
+}
+

@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ForumService, Forum } from '../../services/forum.service';
+import { UsersService } from '../../services/users.service';
+import { JournalLogsService } from '../../services/journal-logs.service';
+
+
+
 
 
 
@@ -15,18 +20,37 @@ export class ForumCoursComponent implements OnInit {
   selectedForum: Forum | null = null;
   selectedCoursId: number = 0;
   nouveauTitre: string = '';
+  
+  constructor(private forumService: ForumService, private activatedroute: ActivatedRoute, private usersService: UsersService, private journalLogsService: JournalLogsService) {}
 
-  constructor(private forumService: ForumService, private route: ActivatedRoute) {}
-
+  idLogin: number = 40; // id temporaire
+  userNames: { [key: number]: string } = {};
   
   ngOnInit(): void {
-      const coursId = Number(this.route.snapshot.paramMap.get('id') || 0 );
+      const coursId = Number(this.activatedroute.parent?.snapshot.paramMap.get('id') || '0');
       if (coursId){
         this.selectedCoursId = coursId;
         this.forumService.getForumsByCours(coursId).subscribe(forum => {
-        this.forums = forum
+          this.forums = forum
+          const userIds = new Set<number>();
+          this.forums.forEach(forum => {
+            if (forum.authorId) userIds.add(Number(forum.authorId));
+          });
+          userIds.forEach(userId => {
+            if (!this.userNames[userId]) {
+              this.usersService.getUserById(userId).subscribe(user => {
+                this.userNames[userId] = `${user.name} ${user.familyName}`;
+              });
+            }
+          });
         })
       }
+  }
+
+  getUserName(userId: number | string | undefined): string {
+    if (!userId) return '';
+    const id = Number(userId);
+    return this.userNames[id] || '';
   }
 
   selectForum(forum: Forum) {
@@ -40,14 +64,23 @@ export class ForumCoursComponent implements OnInit {
 
   addForum() {
     const titre = this.nouveauTitre.trim();
-    
-    this.forumService.addForum(this.selectedCoursId, titre).subscribe(
-        forum => {
-          this.forums.unshift(forum);
-          this.nouveauTitre = '';
-        },
-      );
-    }
+    this.forumService.addForum(this.selectedCoursId, titre, this.idLogin).subscribe(
+      forum => {
+        this.forums.unshift(forum);
+        this.nouveauTitre = '';
+        if (!this.userNames[forum.authorId]) {
+        this.usersService.getUserById(forum.authorId).subscribe(user => {
+          this.userNames[forum.authorId] = `${user.name} ${user.familyName}`;
+        });
+        }
+        this.journalLogsService.updateCourseLog(
+          this.idLogin,
+          this.selectedCoursId,
+          { activity: { type: "create-forum", forumId: forum._id } }
+        ).subscribe();
+      }
+    );
+  }
 
   dltForum(forumId: string): void {
     if (confirm('Voulez-vous vraiment supprimer ce forum ?')) {
@@ -57,6 +90,22 @@ export class ForumCoursComponent implements OnInit {
         });
     }
   }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

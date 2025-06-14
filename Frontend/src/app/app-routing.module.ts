@@ -10,7 +10,6 @@ import { CourseComponent } from './page-cours/course/course.component'
 import { ParticipantsDetailsComponent } from './page-cours/participants-details/participants-details.component'
 import { ListeCoursCarteComponent } from './tableau-de-bord/liste-cours-carte/liste-cours-carte.component'
 import { ActiviteComponent } from './tableau-de-bord/activite/activite.component'
-import { ListeCoursEtendueComponent } from './tableau-de-bord/liste-cours-etendue/liste-cours-etendue.component'
 
 
 const routes: Routes = [
@@ -18,7 +17,7 @@ const routes: Routes = [
               [
                 { path : '', redirectTo: 'carte', pathMatch: 'full'},
                 { path : 'carte', component: ListeCoursCarteComponent},
-                { path : 'carte-etendue', component: ListeCoursEtendueComponent},
+                { path : 'carte-etendue', component: ListeCoursCarteComponent},
                 { path : 'activite', component: ActiviteComponent},
 
               ]
