@@ -8,6 +8,7 @@ import { ModalCreateUserComponent } from './modal-create-user/modal-create-user.
 import { FormsModule } from '@angular/forms';
 import { ModalModifyUserComponent } from './modal-modify-user/modal-modify-user.component';
 import { ModalRegisterComponent } from './modal-register/modal-register.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ModalRegisterComponent } from './modal-register/modal-register.componen
   imports: [
     CommonModule,
     UserPageRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class UserPageModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Cours} from "../../class/cours";
+import {CoursService} from "../../services/cours.service";
 
 export interface UeFormData {
   code: string;
@@ -16,9 +17,13 @@ export class UePageComponent implements OnInit {
 
   ues: Cours[] = [];
 
-  constructor() { }
+  constructor(private coursService: CoursService) { }
 
   ngOnInit(): void {
+    this.coursService.getCours().subscribe({
+      next: (data) => this.ues = data,
+      error: (err) => console.error('Erreur lors de la récupération des cours', err)
+    });
   }
 
   handleUeCreated(data: UeFormData) {

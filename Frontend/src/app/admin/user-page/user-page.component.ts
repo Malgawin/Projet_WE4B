@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from "../../class/user";
 import {Cours} from "../../class/cours";
+import {UsersService} from "../../services/users.service";
 
 export interface UserFormData {
   name: string;
@@ -18,9 +19,13 @@ export class UserPageComponent implements OnInit {
 
   users: User[] = [];
 
-  constructor() { }
+  constructor(private userService: UsersService) { }
 
   ngOnInit(): void {
+    this.userService.getAllUsers().subscribe({
+      next: (data) => this.users = data,
+      error: (err) => console.error('Erreur lors de la récupération des utilisateurs', err)
+    });
   }
 
   handleUserCreated(data: UserFormData) {

@@ -6,18 +6,21 @@
   </div>
 </div>
 
-<ul class="list-group">
+<div style="max-height: 23rem; overflow-y: auto;">
+  <ul class="list-group mb-0">
+    <div
+      *ngIf="users.length === 0; else elseBlock"
+      class="container bg-light text-center py-5 rounded shadow-sm">
+      Il n'existe aucun utilisateur.
+    </div>
 
-  <div *ngIf="users.length === 0; else elseBlock" class="container bg-light text-center py-5 rounded shadow-sm">
-    Il n'existe aucun utilisateur.
-  </div>
-
-  <ng-template #elseBlock>
-    <app-user-list-element
-      *ngFor="let user of users"
-      [user]="user"
-      (delete)="handleDelete($event)">
-    </app-user-list-element>
-  </ng-template>
-</ul>
+    <ng-template #elseBlock>
+      <app-user-list-element
+        *ngFor="let user of users"
+        [user]="user"
+        (delete)="handleDelete($event)">
+      </app-user-list-element>
+    </ng-template>
+  </ul>
+</div>
 

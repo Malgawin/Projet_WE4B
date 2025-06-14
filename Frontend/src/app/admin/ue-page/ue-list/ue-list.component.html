@@ -7,18 +7,19 @@
   </div>
 </div>
 
+<div style="max-height: 23rem; overflow-y: auto;">
+  <div *ngIf="ues.length === 0; else elseBlock" class="container bg-light text-center py-5 rounded shadow-sm">
+    Il n'existe aucun cours.
+  </div>
 
-<div *ngIf="ues.length === 0; else elseBlock" class="container bg-light text-center py-5 rounded shadow-sm">
-  Il n'existe aucun cours.
+
+  <ng-template #elseBlock>
+    <ul class="list-group list-group mb-0">
+      <app-ue-list-element
+        *ngFor="let ue of ues"
+        [ue]="ue"
+        (delete)="handleEvent($event)">
+      </app-ue-list-element>
+    </ul>
+  </ng-template>
 </div>
-
-
-<ng-template #elseBlock>
-  <ul class="list-group overflow-auto">
-    <app-ue-list-element
-      *ngFor="let ue of ues"
-      [ue]="ue"
-      (delete)="handleEvent($event)">
-    </app-ue-list-element>
-  </ul>
-</ng-template>
