@@ -1,15 +1,21 @@
-<div class="modal mt-5 ms-5" id="registerToUeModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" data-bs-backdrop="static">
+<div
+  #registerModal
+  class="modal fade"
+  id="registerToUeModal"
+  tabindex="-1"
+  aria-hidden="true"
+  data-bs-backdrop="static"
+>
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title">Inscrire --nom-- aux cours</h5> <!-- todo nom -->
+        <h5 class="modal-title">Inscrire —nom— aux cours</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <form #userForm="ngForm" (ngSubmit)="submitRegistration()" novalidate>
+      <form (ngSubmit)="submitRegistration()" novalidate>
         <div class="modal-body">
-
           <div class="mb-3">
             <input
               type="text"
@@ -26,34 +32,25 @@
                 type="checkbox"
                 class="form-check-input"
                 [id]="'ue_' + ue.id"
-                [value]="ue.id"
+                [checked]="isChecked(ue.id)"
                 (change)="toggleUeSelection(ue.id, $event)"
               />
               <label class="form-check-label" [for]="'ue_' + ue.id">
-                {{ ue.code }} ({{ ue.name }})
+                {{ ue.name }} ({{ ue.code }})
               </label>
             </div>
           </div>
-
         </div>
 
         <div class="modal-footer">
-          <button
-            type="submit"
-            class="btn btn-primary"
-            data-bs-dismiss="modal">
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">
             Valider
           </button>
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Annuler
           </button>
         </div>
       </form>
-
-
     </div>
   </div>
 </div>
