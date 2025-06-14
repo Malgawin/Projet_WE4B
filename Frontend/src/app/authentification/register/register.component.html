@@ -1,0 +1,37 @@
+<div class="login-container">
+  <img src="https://moodle.utbm.fr/pluginfile.php/1/theme_boost_union/logo/0x200/1748358793/225px-UTBM_Logo.jpg" alt="Logo UTBM">
+
+  <div *ngIf="registerError" class="error-message" style="display: block;">
+    {{ registerError }}
+  </div>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit()">
+    <!-- Username -->
+    <input formControlName="username" type="text" placeholder="Nom d’utilisateur">
+    <div *ngIf="username?.invalid && username?.touched" class="error-message" style="display: block;">
+      Le nom d’utilisateur est requis.
+    </div>
+
+    <!-- Email -->
+    <input formControlName="email" type="email" placeholder="Email">
+    <div *ngIf="email?.invalid && email?.touched" class="error-message" style="display: block;">
+      L’email est requis et valide.
+    </div>
+
+    <!-- Password avec visibilité -->
+    <div class="password-container">
+      <input [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="Mot de passe">
+      <button type="button" class="show_password" (click)="togglePasswordVisibility()">
+        {{ showPassword ? '👁' : '🗨' }}
+      </button>
+    </div>
+    <div *ngIf="password?.invalid && password?.touched" class="error-message" style="display: block;">
+      Le mot de passe est requis.
+    </div>
+
+    <!-- Submit -->
+    <button class="btn" type="submit" [disabled]="registerForm.invalid">Créer un compte</button>
+  </form>
+
+  <a routerLink="/login">Déjà inscrit ? Se connecter</a>
+</div>

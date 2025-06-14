@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+import { environment } from '../environments/environment';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+
+
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormCreateTextComponent } from './form-create-text/form-create-text.component';
 import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component';
@@ -34,6 +39,9 @@ import { InfoGeneralComponent } from './page-cours/participants-details/particip
 import { ActiviteGeneralComponent } from './page-cours/participants-details/participants-details/activite-general/activite-general.component';
 import { ActiviteCoursComponent } from './page-cours/participants-details/participants-details/activite-cours/activite-cours.component';
 import { JournalActiviteCoursComponent } from './page-cours/participants-details/participants-details/journal-activite-cours/journal-activite-cours.component';
+import { LoginComponent } from './authentification/login/login.component';
+import { RegisterComponent } from './authentification/register/register.component';
+import { ChangePasswordComponent } from './authentification/change-password/change-password.component';
 
 
 
@@ -66,7 +74,10 @@ import { JournalActiviteCoursComponent } from './page-cours/participants-details
       InfoGeneralComponent,
       ActiviteGeneralComponent,
       ActiviteCoursComponent,
-      JournalActiviteCoursComponent
+      JournalActiviteCoursComponent,
+      LoginComponent,
+      RegisterComponent,
+      ChangePasswordComponent
 
 
     ],
@@ -76,7 +87,10 @@ import { JournalActiviteCoursComponent } from './page-cours/participants-details
       ReactiveFormsModule,
       HttpClientModule,
       FormsModule,
-      UserPageModule
+      UserPageModule,
+      provideFirebaseApp(() => initializeApp(environment.firebase)),
+      provideAuth(() => getAuth())
+
     ],
     providers: [],
     bootstrap: [AppComponent]

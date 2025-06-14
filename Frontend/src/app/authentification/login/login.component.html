@@ -1,0 +1,32 @@
+<div class="login-container">
+  <img src="https://moodle.utbm.fr/pluginfile.php/1/theme_boost_union/logo/0x200/1748358793/225px-UTBM_Logo.jpg" alt="Logo UTBM">
+
+  <div *ngIf="loginError" class="error-message" style="display: block;">
+    {{ loginError }}
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+    <!-- Email -->
+    <input formControlName="email" type="email" placeholder="Nom d’utilisateur">
+    <div *ngIf="email?.invalid && email?.touched" class="error-message" style="display: block;">
+      Email requis et valide.
+    </div>
+
+    <!-- Password avec affichage/masquage -->
+    <div class="password-container">
+      <input [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="Mot de passe">
+      <button type="button" class="show_password" (click)="togglePasswordVisibility()">
+        {{ showPassword ? '👁' : '🗨' }}
+      </button>
+    </div>
+    <div *ngIf="password?.invalid && password?.touched" class="error-message" style="display: block;">
+      Mot de passe requis.
+    </div>
+
+    <!-- Submit -->
+    <button class="btn" type="submit" [disabled]="loginForm.invalid">Connexion</button>
+  </form>
+
+  <a routerLink="/register">Créer un compte</a>
+  <a routerLink="/change-password">Mot de passe oublié ?</a>
+</div>
