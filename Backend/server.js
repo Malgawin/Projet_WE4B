@@ -56,6 +56,8 @@ try {
   app.use('/api/users', usersRoutes);
   const postRoutes = require('./routes/post');
   app.use('/api/posts', postRoutes);
+  const courseContentRoutes = require('./routes/course_content');
+  app.use('/api/course_content', courseContentRoutes);
 } catch (error) {
   console.error('Erreur lors du chargement des routes pgsql', error);
 }
