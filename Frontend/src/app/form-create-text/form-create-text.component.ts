@@ -31,18 +31,18 @@ export class FormCreateTextComponent implements OnInit {
     
     let id_course : number = Number(this.route.snapshot.paramMap.get('id')!);
     let post : Post = {
-      post_id: 0,
+      id: 0,
       author_id: 1,
       title: this.textForm.value.title!,
       type: this.textForm.value.type!,
       message: this.textForm.value.message!,
-      date: this.textForm.value.publishDate!,
-      file: null,
+      publish_date: this.textForm.value.publishDate!,
+      files: null,
       sort_order: null,
-      id_course: id_course
     }
-    this.service.addPost(post)
-    
+    this.service.addPost().subscribe(result => {
+    console.log('Résultat de addPost :', result);
+    });
 
   }
 
