@@ -29,18 +29,19 @@ export class FormCreateTextComponent implements OnInit {
 
   submitForm(): void {
     
-    let id_course : number = Number(this.route.snapshot.paramMap.get('id')!);
+    let id_course : number = Number(this.route.snapshot.paramMap.get('id'));
     let post : Post = {
       id: 0,
-      author_id: 1,
       title: this.textForm.value.title!,
       type: this.textForm.value.type!,
       message: this.textForm.value.message!,
       publish_date: this.textForm.value.publishDate!,
-      files: null,
-      sort_order: null,
+      author_id: 77,
+      files: null,    
+      sort_order: 11
     }
-    this.service.addPost().subscribe(result => {
+    console.log('ID du cours :', id_course);
+    this.service.addPost({ post: post, ue_id: id_course }).subscribe(result => {
     console.log('Résultat de addPost :', result);
     });
 
