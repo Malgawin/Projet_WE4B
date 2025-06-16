@@ -2,7 +2,7 @@
     <div>
         <label class="title-form">Créer un depot</label>
     </div>
-    <form [formGroup]="repoForm">
+    <form [formGroup]="repoForm" (ngSubmit)="submitForm()">
         <div>
             Titre :
             <input type="text" formControlName="title" class="form-control" aria-describedby="passwordHelpBlock">
@@ -16,6 +16,7 @@
             <select type="text" formControlName="type" class="form-control" aria-describedby="passwordHelpBlock">
                 <option value="important">Important</option>
                 <option value="annonce">Annonce</option>
+                <option value="info">Information</option>
             </select>
         </div>
         <div>

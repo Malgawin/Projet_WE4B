@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PostService } from '../services/post.service';
 import { Post } from '../class/cours';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { checkDate } from '../validators/validator-check-date'; 
 
 @Component({
   selector: 'app-form-create-text',
@@ -12,16 +13,17 @@ import { ActivatedRoute } from '@angular/router';
 export class FormCreateTextComponent implements OnInit {
 
   textForm = new FormGroup({
-  title: new FormControl(''),
-  publishDate: new FormControl(''),
-  type: new FormControl(''),
-  message: new FormControl(''),
-    
+  title: new FormControl('', Validators.required),
+  publishDate: new FormControl('', [Validators.required, checkDate]),
+  type: new FormControl('', Validators.required),
+  message: new FormControl('', Validators.required),
+
   })
 
   constructor(
     private service : PostService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -45,6 +47,10 @@ export class FormCreateTextComponent implements OnInit {
     console.log('Résultat de addPost :', result);
     });
 
+    this.router.navigate(['cours/', id_course])
+
   }
 
 } 
+
+
