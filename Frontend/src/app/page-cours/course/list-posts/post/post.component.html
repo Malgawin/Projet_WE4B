@@ -1,1 +1,17 @@
-<p>{{ post.title }}</p>
+<div class="container-annonce" *ngIf="this.post.type == 'annonce'; else importantBlock">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.message }}</p>
+</div>
+<ng-template #importantBlock>
+    <div class="container-important" *ngIf="this.post.type == 'important'; else infoBlock">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.message }}</p>
+    </div>
+</ng-template>
+<ng-template #infoBlock>
+    <div class="container-info">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.message }}</p>
+    </div>
+</ng-template>
+
