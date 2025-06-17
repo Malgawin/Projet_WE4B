@@ -29,5 +29,22 @@ export class UePageComponent implements OnInit {
   handleUeCreated(data: UeFormData) {
     const newId = this.ues.length > 0 ? Math.max(...this.ues.map(u => u.id)) + 1 : 0;
     this.ues.push(new Cours(newId, data.code, data.name, data.description, "")); // todo les images
+    //todo lier a la bdd
+  }
+
+  handleUeDeleted(coursId: number){
+    if (confirm("Voulez-vous vraiment supprimer ce cours ?")){
+      this.ues = this.ues.filter(ue => ue.id !== coursId);
+      this.coursService.deleteCours(coursId).subscribe({
+        next: () => this.ues = this.ues.filter(c => c.id !== coursId),
+        error: (err) => console.error('Erreur lors de la suppression du cours : ' + coursId.toString(), err)
+      });
+    }
+  }
+
+  handleUeModified(id:number, data: UeFormData){
+    this.coursService.updateCours(id, data).subscribe({
+      error: (err) => console.error("Erreur lors de l'update du cours " + id.toString(), err)
+    });
   }
 }

@@ -1,13 +1,13 @@
-<button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modifyUeModal">
+<button class="btn btn-sm btn-primary" data-bs-toggle="modal" [attr.data-bs-target]="'#modifyUeModal_' + ue.id">
   Modifier
 </button>
 
-<div class="modal fade" id="modifyUeModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" [id]="'modifyUeModal_' + ue.id" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title">Modifier le cours --nom--</h5> <!--todo le nom-->
+        <h5 class="modal-title">Modifier le cours {{ ue.code }}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 

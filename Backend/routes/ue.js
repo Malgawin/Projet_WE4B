@@ -59,5 +59,30 @@ router.post('/updateImage', async (req, res) => {
     }
 })
 
+//Update a user with new information
+router.put('/update/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const {code, name, desc} = req.body;
+        const {rows} = await pool.query(
+            'UPDATE ue SET code = $1, name = $2, description = $3 WHERE id = $4', [code, name, desc, id]
+        );
+        res.status(200).json({ message: 'Cours mis à jour avec succès.' });
+    } catch (err){
+        console.error(err);
+        res.status(500).json({ error: 'Erreur lors de la modification du cours' });
+    }
+})
+
+//Delete a course by id
+router.delete('/delete/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        await pool.query('DELETE FROM ue WHERE id = $1', [id]);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Erreur lors de la suppression du cours' });
+    }
+});
 
 module.exports = router;

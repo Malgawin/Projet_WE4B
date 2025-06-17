@@ -18,7 +18,8 @@
       <app-ue-list-element
         *ngFor="let ue of ues"
         [ue]="ue"
-        (delete)="handleEvent($event)">
+        (delete)="handleDeletion($event)"
+        (modify)="handleModification(ue.id, $event)">
       </app-ue-list-element>
     </ul>
   </ng-template>

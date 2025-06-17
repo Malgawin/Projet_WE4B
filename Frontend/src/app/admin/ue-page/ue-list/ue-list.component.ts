@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Cours} from "../../../class/cours";
+import {UeFormData} from "../ue-page.component";
 
 @Component({
   selector: 'app-ue-list',
@@ -10,14 +11,20 @@ export class UeListComponent implements OnInit {
 
   @Input() ues!: Cours[];
 
+  @Output() deleteCours = new EventEmitter<number>()
+  @Output() modifyCours = new EventEmitter<[number,UeFormData]>()
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  handleEvent(ueId: number) {
-    if (confirm("Voulez-vous vraiment supprimer ce cours ?")){
-      this.ues = this.ues.filter(ue => ue.id !== ueId);
-    }
+  handleDeletion(ueId: number) {
+    this.deleteCours.emit(ueId);
   }
+
+  handleModification(id:number, data: UeFormData) {
+    this.modifyCours.emit([id, data]);
+  }
+
 }
