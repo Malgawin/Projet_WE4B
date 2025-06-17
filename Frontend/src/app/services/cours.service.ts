@@ -17,7 +17,7 @@ export class CoursService {
   constructor(private http: HttpClient) { }
 
   getCours(): Observable<Cours[]> {
-    return this.http.get<any[]>(this.apiUrl).pipe(
+    return this.http.get<any[]>(`${this.apiUrl}/ue`).pipe(
       map(coursArray => coursArray.map(c => new Cours(
         c.id, c.code, c.name, c.description, c.image
       )))

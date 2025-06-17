@@ -1,4 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import {User} from "../../class/user";
+import {Cours} from "../../class/cours";
+import {UsersService} from "../../services/users.service";
+
+export interface UserFormData {
+  name: string;
+  familyName: string;
+  email: string;
+  ues: Cours[];
+}
 
 @Component({
   selector: 'app-user-page',
@@ -7,9 +17,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserPageComponent implements OnInit {
 
-  constructor() { }
+  users: User[] = [];
+
+  constructor(private userService: UsersService) { }
 
   ngOnInit(): void {
+    this.userService.getAllUsers().subscribe({
+      next: (data) => this.users = data,
+      error: (err) => console.error('Erreur lors de la récupération des utilisateurs', err)
+    });
+  }
+
+  handleUserCreated(data: UserFormData) {
+    const newId = this.users.length > 0 ? Math.max(...this.users.map(u => u.id)) + 1 : 0;
+    this.users.push(new User(newId, data.name, data.familyName, data.email));
   }
 
 }

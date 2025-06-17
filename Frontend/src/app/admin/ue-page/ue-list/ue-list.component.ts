@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Cours} from "../../../class/cours";
 
 @Component({
@@ -8,7 +8,7 @@ import {Cours} from "../../../class/cours";
 })
 export class UeListComponent implements OnInit {
 
-  ues: Cours[] = [new Cours(0, "WE4B", "Web appliqué", "Dev Angular", "", [])];
+  @Input() ues!: Cours[];
 
   constructor() { }
 

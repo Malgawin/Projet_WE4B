@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PostService } from '../services/post.service';
 import { Post } from '../class/cours';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { checkDate } from '../validators/validator-check-date'; 
 
 @Component({
   selector: 'app-form-create-text',
@@ -12,16 +13,17 @@ import { ActivatedRoute } from '@angular/router';
 export class FormCreateTextComponent implements OnInit {
 
   textForm = new FormGroup({
-  title: new FormControl(''),
-  publishDate: new FormControl(''),
-  type: new FormControl(''),
-  message: new FormControl(''),
-    
+  title: new FormControl('', Validators.required),
+  publishDate: new FormControl('', [Validators.required, checkDate]),
+  type: new FormControl('', Validators.required),
+  message: new FormControl('', Validators.required),
+
   })
 
   constructor(
     private service : PostService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -29,21 +31,26 @@ export class FormCreateTextComponent implements OnInit {
 
   submitForm(): void {
     
-    let id_course : number = Number(this.route.snapshot.paramMap.get('id')!);
+    let id_course : number = Number(this.route.snapshot.paramMap.get('id'));
     let post : Post = {
-      post_id: 0,
-      author_id: 1,
+      id: 0,
       title: this.textForm.value.title!,
       type: this.textForm.value.type!,
       message: this.textForm.value.message!,
-      date: this.textForm.value.publishDate!,
-      file: null,
-      sort_order: null,
-      id_course: id_course
+      publish_date: this.textForm.value.publishDate!,
+      author_id: 77,
+      files: null,    
+      sort_order: 11
     }
-    this.service.addPost(post)
-    
+    console.log('ID du cours :', id_course);
+    this.service.addPost({ post: post, ue_id: id_course }).subscribe(result => {
+    console.log('Résultat de addPost :', result);
+    });
+
+    this.router.navigate(['cours/', id_course])
 
   }
 
 } 
+
+

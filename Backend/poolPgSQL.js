@@ -3,7 +3,7 @@ const { Pool } = require('pg');
 const pool = new Pool({
     user: 'admin',
     host: 'localhost',
-    database: 'moodle_tr',
+    database: 'projet_moodle_symfony_tr',
     password: 'admin',
     port: 5432,
 });

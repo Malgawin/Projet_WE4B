@@ -2,8 +2,8 @@
   Créer
 </button>
 
-<app-modal-create-ue></app-modal-create-ue>
+<app-modal-create-ue (ueCreated)="handleUeCreated($event)"></app-modal-create-ue>
 
 <div class="row">
-  <app-ue-list></app-ue-list>
+  <app-ue-list [ues]="ues"></app-ue-list>
 </div>

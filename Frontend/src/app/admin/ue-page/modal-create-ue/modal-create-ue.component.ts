@@ -1,20 +1,23 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 // @ts-ignore
 import { Modal } from 'bootstrap';
+import {UeFormData} from "../ue-page.component";
 
 @Component({
   selector: 'app-modal-create-ue',
   templateUrl: './modal-create-ue.component.html',
 })
 export class ModalCreateUeComponent {
-  formData = {
+  formData: UeFormData = {
     code: '',
     name: '',
     description: ''
   };
 
+  @Output() ueCreated = new EventEmitter<UeFormData>();
+
   submitForm() {
-    console.log('Submitted:', this.formData);
+    this.ueCreated.emit(this.formData);
 
     const modalEl = document.getElementById('createUeModal');
     const modalInstance = Modal.getOrCreateInstance(modalEl!);

@@ -8,7 +8,7 @@ import {User} from "../../../class/user";
 })
 export class UserListComponent implements OnInit {
 
-  users: User[] = [new User(0, "J", "P", "aa"), new User(1, "A", "b", "c")];
+  @Input() users: User[] = [];
 
   constructor() { }
 

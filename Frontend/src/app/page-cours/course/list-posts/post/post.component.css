@@ -1,0 +1,82 @@
+.container-annonce,
+.container-important,
+.container-info {
+    width: 83%;
+    margin-top: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 0.2rem 5rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 14rem;
+}
+
+.container-annonce img,
+.container-info img,
+.container-important img {
+    height: 2rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+}
+
+
+.container-annonce h3,
+.container-info h3,
+.container-important h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.container-annonce p,
+.container-info p,
+.container-important p {
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.5rem;
+    margin-left: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: justify;
+}
+
+.container-annonce a,
+.container-info a,
+.container-important a {
+    color: black;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.5rem;
+    margin-left: 5rem;
+    margin-bottom: 3rem;
+    text-align: justify;
+    background-color: rgb(181, 181, 181);
+    padding: 1rem 2rem;
+    border: solid 0.1rem #000000;
+}
+
+.container-important {
+    border: 2px solid #ccc;
+}
+
+.container-annonce h3 {
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+
+.container-info h3 {
+    color: rgb(0, 162, 8);
+}
+
+.container-important h3 {
+    color: rgb(227, 0, 0);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
