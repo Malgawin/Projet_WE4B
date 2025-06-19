@@ -25,7 +25,10 @@ button:hover {
     align-items: center;
     justify-content: center;
     margin-top: 1em;
-    width: 50%;
-    margin-left: 3em;
-    margin-right: 3em;
+    width: 100%;
+}
+
+app-list-posts {
+    width: 100%;
+    margin-top: 2em;
 }
