@@ -3,6 +3,7 @@ import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 import { Cours, Inscrit } from '../class/cours';
+import {UeFormData} from "../admin/ue-page/ue-page.component";
 
 
 
@@ -59,6 +60,13 @@ export class CoursService {
     });
   }
 
+  updateCours(coursId: number, newCours: UeFormData): Observable<any> {
+    return this.http.put(`${this.apiUrl}/ue/update/${coursId}`, {
+      code: newCours.code,
+      name: newCours.name,
+      desc: newCours.description
+    });
+  }
 
   getCoursByIdLog(userId: number): Observable<Cours[]> {
     return this.http.get<any[]>(`${this.apiUrl}/enrollment/user/${userId}/cours`).pipe(
@@ -77,5 +85,9 @@ export class CoursService {
     return this.http.put<{is_pinned: boolean}>(`${this.apiUrl}/enrollment/pin`, {
       user_id: userId, ue_id: coursId
     });
+  }
+
+  deleteCours(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/ue/delete/${id}`);
   }
 }

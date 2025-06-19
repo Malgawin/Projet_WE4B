@@ -5,5 +5,9 @@
 <app-modal-create-ue (ueCreated)="handleUeCreated($event)"></app-modal-create-ue>
 
 <div class="row">
-  <app-ue-list [ues]="ues"></app-ue-list>
+  <app-ue-list
+    [ues]="ues"
+    (deleteCours)="handleUeDeleted($event)"
+    (modifyCours)="handleUeModified($event[0], $event[1])">
+  </app-ue-list>
 </div>

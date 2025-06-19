@@ -16,7 +16,7 @@
 
     <div class="col-sm">
       <div class="d-flex gap-2">
-        <app-modal-modify-ue></app-modal-modify-ue>
+        <app-modal-modify-ue [ue]="ue" (modify)="onModify($event)"></app-modal-modify-ue> <!-- todo : modifier ue -->
         <app-modal-display-registered [courseName]="ue.code" [courseId]="ue.id"></app-modal-display-registered>
         <button type="button" class="btn btn-danger btn-sm" (click)="onDelete()">Supprimer</button>
       </div>
