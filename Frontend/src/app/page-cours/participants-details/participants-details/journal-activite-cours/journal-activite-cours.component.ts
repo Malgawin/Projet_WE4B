@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CourseLog } from 'src/app/class/journal_logs';
 
+
 @Component({
   selector: 'app-journal-activite-cours',
   templateUrl: './journal-activite-cours.component.html',
@@ -9,7 +10,6 @@ import { CourseLog } from 'src/app/class/journal_logs';
 export class JournalActiviteCoursComponent implements OnInit {
 
   @Input() courseLog?: CourseLog;
-  @Input() DateToPhrase!: (dateStr?: string) => string;
   @Input() getActivityByType!: (activity: any) => string;
 
 

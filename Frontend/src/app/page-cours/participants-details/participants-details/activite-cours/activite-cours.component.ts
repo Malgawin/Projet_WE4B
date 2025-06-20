@@ -10,8 +10,6 @@ import { CourseLog } from 'src/app/class/journal_logs';
 export class ActiviteCoursComponent implements OnInit {
 
   @Input() courseLog?: CourseLog;
-  @Input() DateToPhrase!: (dateStr?: string) => string;
-  @Input() timePast!: (dateStr?: string) => string;
 
   constructor() { }
 

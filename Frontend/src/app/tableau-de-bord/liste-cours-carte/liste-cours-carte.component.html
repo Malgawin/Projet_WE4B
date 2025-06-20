@@ -1,3 +1,3 @@
 <div class="container-cours-carte" [class.extended-view]="isExtended">
-    <app-carte-cours *ngFor="let item of cours" [cours]="item" [isExtended]="isExtended"></app-carte-cours>
+    <app-carte-cours *ngFor="let item of cours" [cours]="item" [isExtended]="isExtended" (refreshRequested)="reloadLists()"></app-carte-cours>
 </div>

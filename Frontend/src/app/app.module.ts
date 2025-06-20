@@ -42,6 +42,7 @@ import { JournalActiviteCoursComponent } from './page-cours/participants-details
 import { LoginComponent } from './authentification/login/login.component';
 import { RegisterComponent } from './authentification/register/register.component';
 import { ChangePasswordComponent } from './authentification/change-password/change-password.component';
+import { DateToPhrasePipe } from './pipes/date-to-phrase.pipe';
 
 
 
@@ -77,7 +78,8 @@ import { ChangePasswordComponent } from './authentification/change-password/chan
       JournalActiviteCoursComponent,
       LoginComponent,
       RegisterComponent,
-      ChangePasswordComponent
+      ChangePasswordComponent,
+      DateToPhrasePipe
 
 
     ],

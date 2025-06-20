@@ -4,7 +4,7 @@
   <div class="contenu" *ngIf="courseLog?.activity?.length; else noActivity">
     <ul class="journal-activite">
       <li *ngFor="let activity of courseLog?.activity?.reverse()">
-        {{ DateToPhrase(activity.date) }} -   <b [ngClass]="activity.type === 'view' ? 'activity-view' : 'activity'"> {{ getActivityByType(activity) }}</b>
+        {{ activity.date | dateToPhrase }} -   <b [ngClass]="activity.type === 'view' ? 'activity-view' : 'activity'"> {{ getActivityByType(activity) }}</b>
       </li>
     </ul>
   </div>

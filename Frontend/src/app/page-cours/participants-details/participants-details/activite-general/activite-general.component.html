@@ -2,8 +2,8 @@
 <div class="container-info">
   <h3>Activité générale :</h3>
   <div class="contenu" *ngIf="userLog; else noUserLog">
-    <p>Dernière connexion : <b>{{ DateToPhrase(userLog.lastLogin) }} ({{ timePast(userLog.lastLogin) }})</b></p>
-    <p>Dernière déconnexion : <b>{{ DateToPhrase(userLog.lastLogout) }} ({{ timePast(userLog.lastLogout) }})</b></p>
+    <p>Dernière connexion : <b>{{ userLog.lastLogin | dateToPhrase }}</b></p>
+    <p>Dernière déconnexion : <b>{{ userLog.lastLogout | dateToPhrase }}</b></p>
     <p>Nombre de login : <b>{{ userLog.loginCount }}</b></p>
   </div>
   <ng-template #noUserLog>

@@ -11,8 +11,6 @@ import { UserLog } from 'src/app/class/journal_logs';
 export class ActiviteGeneralComponent implements OnInit {
 
   @Input() userLog?: UserLog;
-  @Input() DateToPhrase!: (dateStr?: string) => string;
-  @Input() timePast!: (dateStr?: string) => string;
 
   constructor() { }
 

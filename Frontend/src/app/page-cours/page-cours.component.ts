@@ -13,30 +13,41 @@ import { JournalLogsService } from '../services/journal-logs.service';
 })
 export class PageCoursComponent implements OnInit {
 
-  cours!: Cours;
+  cours!: Cours; //recupere le cours selectione
   idLogin: number = 40; // id a changer avec le vrai
 
   constructor(private router: Router, private activatedroute: ActivatedRoute, private coursService: CoursService, private journalLogsService: JournalLogsService) { }
 
   ngOnInit(): void {
+    // Récupération de l'ID du cours depuis l'URL
     const id = this.activatedroute.snapshot.paramMap.get('id') || '0';
+    
     if (id) {
+      // Récupération des informations du cours via son id
       this.coursService.getCoursbyId(id).subscribe(data => {
       this.cours = data;
-      this.coursService.getInscrits(Number(id)).subscribe(inscrits => {
-          this.cours.inscrits = inscrits;
+        // Récupération des inscrits au cours
+        this.coursService.getInscrits(Number(id)).subscribe(inscrits => {
+            this.cours.inscrits = inscrits;
         });
-      this.journalLogsService.updateCourseLog(
-          this.idLogin,
-          this.cours.id,
-          { activity: { type: "view" } }
-        ).subscribe();
+      
+        // ajout du log de l'utilisateur pour indiquer qu'il a vu le cours
+        this.journalLogsService.updateCourseLog(
+            this.idLogin,
+            this.cours.id,
+            { activity: { type: "view" } }
+          ).subscribe();
       });
     }
   }
 
-  currentView: string = 'Cours';
 
+  //gestion de la vue : 
+
+  currentView: string = 'Cours'; // Vue actuelle, par défaut 'Cours'
+
+  // Méthodes pour changer la vue et naviguer vers les différentes sections du cours
+  
   selectCours() {
     this.currentView = 'Cours'
     this.router.navigate(['/cours', this.cours.id ,'course'])

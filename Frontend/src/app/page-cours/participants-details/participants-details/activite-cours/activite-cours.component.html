@@ -1,7 +1,7 @@
 <div class="container-info">
   <h3>Activité dans ce cours :</h3>
   <div class="contenu" *ngIf="courseLog; else noCourseLog">
-    <p>Dernière consultation : <b>{{ DateToPhrase(courseLog.lastViewed) }} ({{ timePast(courseLog.lastViewed) }})</b></p>
+    <p>Dernière consultation : <b>{{ courseLog.lastViewed | dateToPhrase }}</b></p>
     <p>Nombre de consultation du cours : <b>{{ courseLog.viewsCount }}</b></p>
     <p>Nombre de messages dans les forums : <b>{{ courseLog.forumMsgCount }}</b></p>
     <p>Progression : <b>{{ courseLog.progressCount }}</b></p>

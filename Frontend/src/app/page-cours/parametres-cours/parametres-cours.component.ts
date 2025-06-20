@@ -15,8 +15,11 @@ export class ParametresCoursComponent implements OnInit {
   constructor( private activatedroute: ActivatedRoute, private coursService: CoursService) { }
 
   ngOnInit(): void {
+    // Récupération de l'ID du cours depuis l'URL
     const id = this.activatedroute.parent?.snapshot.paramMap.get('id') || '0';
+    
     if (id) {
+      // Récupération des informations du cours via son id
       this.coursService.getCoursbyId(id).subscribe(cours => {
         this.cours = cours;
       });
