@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { ForumService, Forum } from '../../../services/forum.service';
+import { ForumService} from '../../../services/forum.service';
 import { UsersService } from '../../../services/users.service';
 import { JournalLogsService } from '../../../services/journal-logs.service';
-
+import { Forum } from '../../../class/forum'
 
 @Component({
   selector: 'app-forum',

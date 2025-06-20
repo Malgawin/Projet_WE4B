@@ -13,7 +13,8 @@ router.get('/cours/:coursId', async (req, res) => {
 
 //route pour recuperer touts les messages d'un forum donné
 router.get('/:forumId/messages', async (req, res) => {
-    const forum = await Forum.findById(req.params.forumId); 
+    const forum = await Forum.findById(req.params.forumId);
+    console.log(forum); 
     res.json(forum.messages);
 });
 
@@ -34,7 +35,7 @@ router.post('/cours/:coursId', async (req, res) => {
     });
 
     await nouveauForum.save(); // sauvegarde du nouveau forum dans la bdd
- 
+    res.json(nouveauForum);
 });
 
 

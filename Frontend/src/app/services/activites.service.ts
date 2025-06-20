@@ -1,16 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Activite } from '../class/activite';
 
-export interface Activite {
-  id: number;
-  title: string;
-  publish_date: string;
-  ue_name: string;
-  author_name: string;
-  author_familyname: string;
-  
-}
 
 @Injectable({
   providedIn: 'root'
@@ -21,9 +13,24 @@ export class ActivitesService {
 
   constructor(private http: HttpClient) { }
 
+  // methodes pour recupere les activites ayant eu lieu dans les cours d'un utilisateur donné avec une pagination
   getActivites(userId: number, offset: number, limit: number = 6): Observable<{ posts: Activite[], fin: boolean }> {
     return this.http.get<{ posts: Activite[], fin: boolean }>(
       `${this.apiUrl}/${userId}/${offset}/${limit}`
+     ).pipe(
+        map(res => ({
+          posts: res.posts.map(a =>
+            new Activite(
+              a.id,
+              a.title,
+              a.publish_date,
+              a.ue_name,
+              a.author_name,
+              a.author_familyname
+            )
+          ),
+          fin: res.fin
+        }))
     );
   }
 }

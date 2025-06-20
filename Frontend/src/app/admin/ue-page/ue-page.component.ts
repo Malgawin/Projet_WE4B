@@ -28,8 +28,12 @@ export class UePageComponent implements OnInit {
 
   handleUeCreated(data: UeFormData) {
     const newId = this.ues.length > 0 ? Math.max(...this.ues.map(u => u.id)) + 1 : 0;
-    this.ues.push(new Cours(newId, data.code, data.name, data.description, "")); // todo les images
-    //todo lier a la bdd
+    let newCours = new Cours(newId, data.code, data.name, data.description, "");
+     // todo les images
+    this.coursService.createCours(newCours).subscribe({
+      error: (err) => console.error("Erreur lors de la création du cours.", err)
+    });
+    this.ues.push(newCours);
   }
 
   handleUeDeleted(coursId: number){
