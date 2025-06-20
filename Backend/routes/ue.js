@@ -67,12 +67,26 @@ router.put('/update/:id', async (req, res) => {
         const id = req.params.id;
         const {code, name, desc} = req.body;
         const {rows} = await pool.query(
-            'UPDATE ue SET code = $1, name = $2, description = $3 WHERE id = $4', [code, name, desc, id]
+            'UPDATE ue SET code = $1, name = $2, description = $3 WHERE id = $4;', [code, name, desc, id]
         );
         res.status(200).json({ message: 'Cours mis à jour avec succès.' });
     } catch (err){
         console.error(err);
         res.status(500).json({ error: 'Erreur lors de la modification du cours' });
+    }
+})
+
+//Create a new user
+router.post('/create', async (req, res) => {
+    try {
+        const {code, name, desc} = req.body;
+        const {rows} = await pool.query(
+            'INSERT INTO ue (code, name, description) VALUES ($1, $2, $3);', [code, name, desc]
+        );
+        res.status(200).json({message: 'Cours créé avec succès.'})
+    } catch (err){
+        console.log(err);
+        res.status(500).json({error: 'Erreur lors de la création du cours'})
     }
 })
 

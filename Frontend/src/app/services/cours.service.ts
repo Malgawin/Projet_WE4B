@@ -90,4 +90,12 @@ export class CoursService {
   deleteCours(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/ue/delete/${id}`);
   }
+
+  createCours(ue: Cours): Observable<any> {
+    return this.http.post(`${this.apiUrl}/ue/create/`, {
+      name: ue.name,
+      code: ue.code,
+      desc: ue.description
+    });
+  }
 }
