@@ -82,6 +82,10 @@ router.patch('/:userId/course/:courseId', async (req, res) => {
           newActivity.forumId = req.body.activity.forumId;
       }
 
+      // si de type "check-post" on ajoute l'id du post
+      if (type === "check-post" && req.body.activity.postId) {
+        newActivity.postId = req.body.activity.postId;
+      }
 
       if (course) { //si le cours est deja existant on ajoute 1 au viewsCount et on maj la date de view
         
@@ -97,11 +101,21 @@ router.patch('/:userId/course/:courseId', async (req, res) => {
           course.forumMsgCount = (course.forumMsgCount) - 1;
         }
 
+        if (type === "check-post") { //si c'est un check post
+          course.progressCount = (course.progressCount || 0) + 1; // ajoute 1 au compteur de progression
+
+          if (!course.checkedPosts) course.checkedPosts = []; // si pas encore de tableau de posts checké on l'initialise
+          if (!course.checkedPosts.includes(req.body.activity.postId)) { // si le post n'est pas deja dans le tableau on l'ajoute
+            course.checkedPosts.push(req.body.activity.postId); // on ajoute l'id du post checké
+          }
+        }
+
 
         if (type === "view") { // si l'activité est de type view on ajoute 1 au compteur de vues et on maj la date de la derniere vue
           course.viewsCount = (course.viewsCount || 0) +1 ;
           course.lastViewed = new Date();
         }
+
     
       } else {  //sinon on creer un nouveau log de cours en intialisant les parametres
 
@@ -111,6 +125,7 @@ router.patch('/:userId/course/:courseId', async (req, res) => {
           lastViewed: type === "view" ? new Date() : null,
           progressCount: 0,
           forumMsgCount: type === "forum-message" ? 1 : 0,
+          checkedPosts: type === "check-post" && req.body.activity.postId ? [req.body.activity.postId] : [], // si c'est un check post on initialise le tableau avec l'id du post
           activity: [newActivity] // on ajoute la nouvelle activité dans le tableau des activités du cours
 
         });

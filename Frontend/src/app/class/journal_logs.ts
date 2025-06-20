@@ -16,6 +16,7 @@ export class CourseLog {
     public viewsCount?: number,
     public progressCount?: number,
     public forumMsgCount?: number,
+    public checkedPosts?: number[],
     public activity?: ActivityLog[]
   ) {}
 }

@@ -8,7 +8,7 @@ const activitySchema = new mongoose.Schema({ //schema pour les activités des ut
   date: { type: Date, required: true },
   forumId: { type: mongoose.Schema.Types.ObjectId, ref: 'forum', required: false }, // pour les forums
   messageId: { type: mongoose.Schema.Types.ObjectId, ref: 'message', required: false }, // pour les messages dans les forums
-
+  postId: { type: Number, required: false } // pour les posts checké
 
 });
 
@@ -21,6 +21,7 @@ const courseUserLogs = new mongoose.Schema({
   viewsCount: { type: Number }, // compteur de viste du cours
   progressCount: { type: Number, default: 0 }, // compteur de la progression ( combien de cours check)
   forumMsgCount: { type: Number, default: 0 }, // nombre de message poste dans les forums des cours
+  checkedPosts: [Number],
   activity: [activitySchema] // liste des activités realisées par l'utilisateur dans ce cours
    
 });

@@ -1,17 +1,21 @@
 <div class="container-annonce" *ngIf="this.post.type == 'annonce'; else importantBlock">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.message }}</p>
+    <button (click)="checkPost()" [disabled]="isChecked()" [ngClass]="{'btn-check-false': isChecked(), 'btn-check-true': !isChecked()}">{{ isChecked() ? 'Deja validé' : 'Marquer comme validé' }}</button><h3>{{ post.title }}</h3>
+    <p>{{ post.message | date:'dd/MM/yyyy HH:mm'}}</p>
+    <p class="date">{{post.publish_date}}</p>
 </div>
 <ng-template #importantBlock>
     <div class="container-important" *ngIf="this.post.type == 'important'; else infoBlock">
+        <button (click)="checkPost()" [disabled]="isChecked()" [ngClass]="{'btn-check-false': isChecked(), 'btn-check-true': !isChecked()}">{{ isChecked() ? 'Deja validé' : 'Marquer comme validé' }}</button>
         <h3>{{ post.title }}</h3>
         <p>{{ post.message }}</p>
+        <p class="date">{{post.publish_date | date:'dd/MM/yyyy HH:mm'}}</p>
     </div>
 </ng-template>
 <ng-template #infoBlock>
     <div class="container-info">
+        <button (click)="checkPost()" [disabled]="isChecked()" [ngClass]="{'btn-check-false': isChecked(), 'btn-check-true': !isChecked()}">{{ isChecked() ? 'Deja validé' : 'Marquer comme validé' }}</button>
         <h3>{{ post.title }}</h3>
         <p>{{ post.message }}</p>
+        <p class="date">{{post.publish_date | date:'dd/MM/yyyy HH:mm'}}</p>
     </div>
 </ng-template>
-
