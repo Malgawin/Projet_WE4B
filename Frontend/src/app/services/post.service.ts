@@ -13,10 +13,12 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
+  //methode pour ajouter un nouveau post
   addPost(newPost: { post: Post, ue_id: number }): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/posts/addPost`, newPost);
   }
 
+  //methode pour recuperer les posts d'une ue donné
   getPostsbyCourseId(id: number): Observable<Post[]> {
     return this.http.get<any[]>(`${this.apiUrl}/course_content/${id}`).pipe(
       map(postsArray => postsArray.map(p => new Post(
