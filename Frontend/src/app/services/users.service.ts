@@ -16,7 +16,7 @@ export class UsersService {
   // recupere tous les utilisateur depuis l'api et les transformes en objet user 
   getAllUsers(): Observable<User[]> {
     return this.http.get<any[]>(this.apiUrl).pipe(
-      map( usersArray => usersArray.map(u => 
+      map( usersArray => usersArray.map(u =>
         new User(u.id, u.name, u.family_name, u.mail)
       ))
     );
@@ -29,5 +29,8 @@ export class UsersService {
     );
   }
 
+  createUserFromFirebase(user: { id: string, name: string, family_name: string, email: string, password: string, birth_date: string, icon: string }): Observable<any> {
+  return this.http.post<any>(this.apiUrl, user);
+}
 
 }
