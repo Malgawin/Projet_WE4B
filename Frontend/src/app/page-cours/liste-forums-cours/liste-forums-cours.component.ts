@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ForumService, Forum } from '../../services/forum.service';
+import { ForumService } from '../../services/forum.service';
 import { UsersService } from '../../services/users.service';
 import { JournalLogsService } from '../../services/journal-logs.service';
-
-
-
+import { Forum } from '../../class/forum'
 
 
 

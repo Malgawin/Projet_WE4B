@@ -17,6 +17,7 @@ export class CoursService {
 
   constructor(private http: HttpClient) { }
 
+  //methode pour recupere tout les cours existant
   getCours(): Observable<Cours[]> {
     return this.http.get<any[]>(`${this.apiUrl}/ue`).pipe(
       map(coursArray => coursArray.map(c => new Cours(
@@ -25,6 +26,7 @@ export class CoursService {
     );
   }
 
+  // methode pour recuperer un cours a partir de son id
   getCoursbyId(id: string): Observable<Cours> {
     return this.http.get<any>(`${this.apiUrl}/ue/${id}`).pipe(
       map(c => new Cours(
@@ -33,6 +35,7 @@ export class CoursService {
     );
   }
 
+  //methodes pour recuperer tous les inscrits a un cours donné
   getInscrits(id: number): Observable<Inscrit[]> {
     return this.http.get<any[]>(`${this.apiUrl}/ue/${id}/inscrits`).pipe(
       map(inscritsArray => inscritsArray.map(i => ({
@@ -53,6 +56,7 @@ export class CoursService {
     });
   }
 
+  //methode pour mettre a jour l'id de l'image utilisé
   updateImage(coursId: number, image: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/ue/updateImage`, {
       id: coursId,
@@ -60,6 +64,7 @@ export class CoursService {
     });
   }
 
+  //methode pour mettre a jour les informations un cours
   updateCours(coursId: number, newCours: UeFormData): Observable<any> {
     return this.http.put(`${this.apiUrl}/ue/update/${coursId}`, {
       code: newCours.code,
@@ -68,6 +73,7 @@ export class CoursService {
     });
   }
 
+  //methode pour recuperer les cours ou un utilisateur est inscrit en le trient par les favoris d'abord
   getCoursByIdLog(userId: number): Observable<Cours[]> {
     return this.http.get<any[]>(`${this.apiUrl}/enrollment/user/${userId}/cours`).pipe(
       map(coursArray => coursArray.map(c => new Cours(
@@ -81,12 +87,14 @@ export class CoursService {
     );
   }
 
+  //methode pour mettre en favoris un cours
   pinCours(userId: number, coursId: number): Observable<{is_pinned: boolean}> {
     return this.http.put<{is_pinned: boolean}>(`${this.apiUrl}/enrollment/pin`, {
       user_id: userId, ue_id: coursId
     });
   }
 
+  //methode pours supprimer un cours
   deleteCours(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/ue/delete/${id}`);
   }

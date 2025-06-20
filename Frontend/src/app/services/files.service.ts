@@ -11,10 +11,12 @@ export class FilesService {
 
   constructor(private http: HttpClient) { }
 
+  //methode pour recuperer une image d'une UE 
   getImage(id: string): string {
     return `${this.apiUrl}/images/${id}`;
   }
 
+  //methode pour upload un image dans la bdd
   uploadImage(file: File): Observable<string> {
     const formData = new FormData();
     formData.append('image', file);
