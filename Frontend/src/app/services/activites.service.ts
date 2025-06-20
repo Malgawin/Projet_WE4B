@@ -14,7 +14,7 @@ export class ActivitesService {
   constructor(private http: HttpClient) { }
 
   // methodes pour recupere les activites ayant eu lieu dans les cours d'un utilisateur donné avec une pagination
-  getActivites(userId: number, offset: number, limit: number = 6): Observable<{ posts: Activite[], fin: boolean }> {
+  getActivites(userId: number, offset: number, limit: number ): Observable<{ posts: Activite[], fin: boolean }> {
     return this.http.get<{ posts: Activite[], fin: boolean }>(
       `${this.apiUrl}/${userId}/${offset}/${limit}`
      ).pipe(

@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ListeCoursCarteComponent implements OnInit {
 
-  cours: Cours[] = [];
+  cours: Cours[] = []; // initialisation de la liste des cours
   userId: number = 40; // id temporaire
   viewType: string = 'carte';
 
@@ -18,14 +18,15 @@ export class ListeCoursCarteComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.viewType = this.router.url.includes('carte-etendue') ? 'carte-etendue' : 'carte';
+    //recupere la vue du cours pour changer le css
+    this.viewType = this.router.url.includes('carte-etendue') ? 'carte-etendue' : 'carte'; 
 
     this.coursService.getCoursByIdLog(this.userId).subscribe(data => {
       this.cours = data;
     });
   }
 
-
+  
   get isExtended(): boolean {
     return this.viewType === 'carte-etendue';
   }

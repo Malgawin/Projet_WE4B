@@ -1,5 +1,5 @@
 export class ActivityLog {
-  constructor(
+  constructor( // syntaxe ts d'initialistion de classe avec constructeur avec parametre public
     public type: string,
     public date: string,
     public postId?: string,
@@ -10,7 +10,7 @@ export class ActivityLog {
 }
 
 export class CourseLog {
-  constructor(
+  constructor( 
     public courseId: number,
     public lastViewed?: string,
     public viewsCount?: number,
