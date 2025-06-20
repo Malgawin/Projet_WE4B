@@ -4,13 +4,13 @@
   <div class="affichage-image-container">
     <div class="image-container">
         <p>Image actuelle :</p>
-        <img [src]="getImagerUrl(this.cours.image)" alt="Image du cours actuel" width="200">
+        <img [src]="getImageShow(this.cours.image)" alt="Image du cours actuel" width="200">
     </div>
 
     <div class="image-container">
         <p>Nouvelle image :</p>
         <label *ngIf="!newImageId" class="input-new-image"><input type="file" (change)="uploadNewImage($event)"/>+</label>
-        <img *ngIf="newImageId" [src]="getImagerUrl(newImageId)" alt="Nouvelle image">
+        <img *ngIf="newImageId" [src]="getImageShow(newImageId)" alt="Nouvelle image">
     </div>
   </div>
 
