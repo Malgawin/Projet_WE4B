@@ -1,30 +1,40 @@
 const pool = require('./poolPgSQL');
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
-
-
-
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
+
+
+
+
 // Connexion a la base de données MongoDB : 
-mongoose.connect('mongodb://localhost:27017/projet_moodle')
-  .then(() => console.log('Connecté à MongoDB'))
-  .catch(err => console.error('Erreur de connexion MongoDB:', err));
+async function connectMongoDB() {
+  try {
+    await mongoose.connect('mongodb://localhost:27017/projet_moodle'); // tentative de connexion 
+    console.log('Connecté à MongoDB');
+  } catch (err) {
+    console.error('Erreur de connexion à MongoDB:', err);
+  }
+}
+connectMongoDB();
 
 
 
 // Connexion a la base de données PostgreSQL :
-pool.connect()
-  .then(client => {
-    console.log('Connecté à PostgreSQL');
+async function connectPgSql() { 
+  try {
+    const client = await pool.connect(); // tentative de connexion 
+    console.log('Connecté à PgSql');
     client.release();
-  })
-  .catch(err => console.error('Erreur de connexion PostgreSQL:', err));
+  } catch (err) {
+    console.error('Erreur de connexion à PgSql:', err);
+  }
+}
+connectPgSql();
 
 
 

@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../poolPgSQL');
 
 
-
+// Get all users
 router.get('/', async (req, res) => {
     try {
         const { rows } = await pool.query('SELECT * FROM users');
@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Get user by id
 router.get('/:id', async (req, res) => {
     try {
         const { rows } = await pool.query('SELECT id, name, family_name FROM users WHERE id = $1', [req.params.id]);

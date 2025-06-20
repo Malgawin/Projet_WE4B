@@ -8,8 +8,8 @@ export interface Activite {
   publish_date: string;
   ue_name: string;
   author_name: string;
-  author_familyName: string;
-  // Ajoute d'autres champs si besoin
+  author_familyname: string;
+  
 }
 
 @Injectable({
@@ -23,7 +23,7 @@ export class ActivitesService {
 
   getActivites(userId: number, offset: number, limit: number = 6): Observable<{ posts: Activite[], fin: boolean }> {
     return this.http.get<{ posts: Activite[], fin: boolean }>(
-      `${this.apiUrl}?userId=${userId}&offset=${offset}&limit=${limit}`
+      `${this.apiUrl}/${userId}/${offset}/${limit}`
     );
   }
 }

@@ -46,6 +46,8 @@ router.get('/:id/inscrits', async (req, res) => {
     }
 });
 
+
+// route Post pour mettre a jour l'id de l'image utilisée pour une UE
 router.post('/updateImage', async (req, res) => {
     try {
         const { id, image} = req.body;

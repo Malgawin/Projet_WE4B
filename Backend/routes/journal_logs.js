@@ -4,26 +4,36 @@ const router = express.Router();
 const Log = require('../models/journal_logs');
 
 
-router.get('/:userId', async (req, res) => { //recuper les logs d'un utilisateur et si existe pas en creer un
+//recuper les logs d'un utilisateur et si existe pas en creer un
+router.get('/:userId', async (req, res) => { 
   try {
     const userId = parseInt(req.params.userId);
+
+    // On cherche le log de l'utilisateur par son userId
     let log = await Log.findOne({ userId: userId });
+
+    // Si le log n'existe pas, on en crée un nouveau avec les valeurs par défaut
     if (!log) {
       log = new Log({ userId, loginCount: 0, courses: [] });
       await log.save();
     }
+
     res.json(log);
+
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+
 });
 
 
-router.patch('/:userId', async (req, res) => {
+// patch pourt mettre a jour seulement cetrains champs du log d'un utilisateur
+router.patch('/:userId', async (req, res) => { 
   try {
     const userId = parseInt(req.params.userId);
     const update = req.body;
-    const log = await Log.findOneAndUpdate({ userId }, update, { new: true });
+    // maj les log de l'utilisateur avec les champs envoyés dans le body et on renvoie le log mis a jour
+    const log = await Log.findOneAndUpdate({ userId }, update, { new: true }); // new: true pour renvoyer le log mis a jour
     res.json(log);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -31,70 +41,83 @@ router.patch('/:userId', async (req, res) => {
 });
 
 
-
+// patch qui maj ou crée le log d'activité pour un cours donné d'un utilisateur donne
 router.patch('/:userId/course/:courseId', async (req, res) => {
+
   try {
+
     const userId = parseInt(req.params.userId);
     const courseId = parseInt(req.params.courseId);
 
 
     let log = await Log.findOne({ userId }); //recupere le log de l'utilisateur avec l'id
     
-    let course = log.courses.find(c => c.courseId === courseId);// recupere le log du cours avec l'id si il existe
+    // recuperere les logs de ce cours de l'utilisateur dans la liste de tout les logs de cours
+    let course = log.courses.find(c => c.courseId === courseId);
+
+    // si une activité est envoyée dans le body de la requete
     if (req.body.activity && req.body.activity.type) {
-      const type = req.body.activity.type;
-      const newActivity = {
+
+      const type = req.body.activity.type; // recupere le type de l'activité
+      
+      const newActivity = { // creation d'un nouvel objet d'activité
         type,
         date: new Date()
-    };
+      };
 
-    if (type === "forum-message") {
-      if (req.body.activity.forumId) newActivity.forumId = req.body.activity.forumId;
-      if (req.body.activity.messageId) newActivity.messageId = req.body.activity.messageId;
-    }
-
-    if (type === "forum-message-delete") {
-      if (req.body.activity.forumId) newActivity.forumId = req.body.activity.forumId;
-      if (req.body.activity.messageId) newActivity.messageId = req.body.activity.messageId;
-    }
-
-    if (type === "create-forum" && req.body.activity.forumId) {
-        newActivity.forumId = req.body.activity.forumId;
-    }
-
-    if (course) { //si le cours est deja existant on ajoute 1 au viewsCount et on maj la date de view
-      if (!course.activity) course.activity = [];
-        course.activity.push(newActivity);
-
+      // si l'activité est de type "forum-message" on ajoute l'id du forum et du message
       if (type === "forum-message") {
-        course.forumMsgCount = (course.forumMsgCount) + 1;
+        if (req.body.activity.forumId) newActivity.forumId = req.body.activity.forumId;
+        if (req.body.activity.messageId) newActivity.messageId = req.body.activity.messageId;
       }
 
+      // si de type "forum-message-delete" on ajoute l'id du forum et du message
       if (type === "forum-message-delete") {
-        course.forumMsgCount = (course.forumMsgCount) - 1;
+        if (req.body.activity.forumId) newActivity.forumId = req.body.activity.forumId;
+        if (req.body.activity.messageId) newActivity.messageId = req.body.activity.messageId;
+      }
+
+      // si de type "create-forum" on ajoute l'id du forum
+      if (type === "create-forum" && req.body.activity.forumId) {
+          newActivity.forumId = req.body.activity.forumId;
       }
 
 
-      if (type === "view") {
-        course.viewsCount = (course.viewsCount || 0) +1 ;
-        course.lastViewed = new Date();
-      }
+      if (course) { //si le cours est deja existant on ajoute 1 au viewsCount et on maj la date de view
+        
+        if (!course.activity) course.activity = []; // si pas encore d'activité on initilise le tableau
+
+        course.activity.push(newActivity); // on ajoute la nouvelle activité dans le tableau des activités du cours
+
+        if (type === "forum-message") { // si l'activité est de type forum-message on ajoute 1 au compteur de messages du forum
+          course.forumMsgCount = (course.forumMsgCount) + 1;
+        }
+
+        if (type === "forum-message-delete") { // si l'activité est de type forum-message-delete on retire 1 au compteur de messages du forum
+          course.forumMsgCount = (course.forumMsgCount) - 1;
+        }
+
+
+        if (type === "view") { // si l'activité est de type view on ajoute 1 au compteur de vues et on maj la date de la derniere vue
+          course.viewsCount = (course.viewsCount || 0) +1 ;
+          course.lastViewed = new Date();
+        }
     
-    } else {  //sinon on creer un nouveau log de cours en intialisant les parametres
+      } else {  //sinon on creer un nouveau log de cours en intialisant les parametres
 
-      log.courses.push({
-        courseId,
-        viewsCount: type === "view" ? 1 : 0,
-        lastViewed: type === "view" ? new Date() : null,
-        progressCount: 0,
-        forumMsgCount: type === "forum-message" ? 1 : 0,
-        activity: [newActivity]
+        log.courses.push({
+          courseId,
+          viewsCount: type === "view" ? 1 : 0,
+          lastViewed: type === "view" ? new Date() : null,
+          progressCount: 0,
+          forumMsgCount: type === "forum-message" ? 1 : 0,
+          activity: [newActivity] // on ajoute la nouvelle activité dans le tableau des activités du cours
 
-      });
-      
-    }
+        });
+        
+      }
   
-    await log.save(); 
+    await log.save(); // on sauvegarde le log de l'utilisateur avec les nouvelles activités et le nouveau cours si il a été créé 
     res.json(log);
   }
 

@@ -8,8 +8,8 @@ import { ActivitesService, Activite } from '../../services/activites.service';
 })
 export class ActiviteComponent implements OnInit {
 
-  activites: Activite[] = [];
-  offset = 0;
+  activites: Activite[] = []; 
+  offset = 0; 
   end = false;
 
   userId = 40;
