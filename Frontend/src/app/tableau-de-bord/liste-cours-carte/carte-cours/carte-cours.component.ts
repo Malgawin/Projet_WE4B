@@ -5,6 +5,8 @@ import { CoursService } from 'src/app/services/cours.service';
 import { Router } from '@angular/router';
 import { JournalLogsService } from 'src/app/services/journal-logs.service';
 import { CourseLog } from 'src/app/class/journal_logs';
+import { PostService } from 'src/app/services/post.service';
+
 
 
 @Component({
@@ -26,7 +28,7 @@ export class CarteCoursComponent implements OnInit {
 
   idLogin: number = 40;  // en antendant login 
 
-  constructor(private filesService: FilesService, private coursService: CoursService, private router: Router, private journalService: JournalLogsService,) { }
+  constructor(private filesService: FilesService, private postService: PostService, private coursService: CoursService, private router: Router, private journalService: JournalLogsService,) { }
 
   ngOnInit(): void {
     this.coursService.getInscrits(this.cours.id).subscribe(inscrits => {
@@ -41,6 +43,23 @@ export class CarteCoursComponent implements OnInit {
         this.progresionObjectif = this.cours.nbPostsTotal;
       }
       this.pourcentageProgesion = Math.floor((this.progresion / this.progresionObjectif) * 100);
+    });
+
+
+     this.postService.getNbPostsByCourseId(this.cours.id).subscribe(nbPosts => {
+      this.cours.nbPostsTotal = nbPosts;
+      this.updateProgression();
+    });
+  }
+
+    updateProgression() {
+    this.journalService.getLogByUserId(this.idLogin).subscribe(log => {
+      const courseLog = log.courses?.find((log: CourseLog) => log.courseId === this.cours.id);
+      this.progresion = courseLog?.progressCount || 0;
+      this.progresionObjectif = this.cours.nbPostsTotal || 0;
+      this.pourcentageProgesion = this.progresionObjectif > 0
+        ? Math.floor((this.progresion / this.progresionObjectif) * 100)
+        : 0;
     });
   }
 

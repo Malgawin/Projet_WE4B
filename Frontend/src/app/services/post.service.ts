@@ -26,6 +26,13 @@ export class PostService {
       )))
     );
   }
+
+  
+  getNbPostsByCourseId(courseId: number): Observable<number> {
+    return this.http.get<any[]>(`${this.apiUrl}/course_content/${courseId}`).pipe(
+      map(postsArray => postsArray.length)
+    );
+  }
 }
 
 
