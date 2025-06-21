@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { PostService } from '../services/post.service';
-import { Post } from '../class/cours';
+import { PostService } from '../../services/post.service';
+import { Post } from '../../class/cours';
 import { ActivatedRoute, Router } from '@angular/router';
-import { checkDate } from '../validators/validator-check-date'; 
+import { checkDate } from '../../validators/validator-check-date'; 
 
 @Component({
   selector: 'app-form-create-text',

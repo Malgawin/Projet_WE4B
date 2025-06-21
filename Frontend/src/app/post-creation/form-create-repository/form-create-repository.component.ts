@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Post } from '../class/cours';
-import { PostService } from '../services/post.service';
+import { Post } from '../../class/cours';
+import { PostService } from '../../services/post.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { checkDate } from '../validators/validator-check-date';
-import { checkFileExtension } from '../validators/validator-check-extension';
+import { checkDate } from '../../validators/validator-check-date';
+import { checkFileExtension } from '../../validators/validator-check-extension';
 
 @Component({
   selector: 'app-form-create-repository',

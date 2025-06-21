@@ -1,17 +1,20 @@
 <div class="container-creation-post">
-    <div class="container-button">
+    <div class="container-button cols-3">
          <button class="btn btn-info" type="button" (click)="isTextCreation()">Texte</button>
          <button class="btn btn-info" type="button" (click)="isRepoCreation()">Dépôt</button>
+         <button class="btn btn-info" type="button" (click)="isAssignCreation()">Devoir</button>
     </div>
-    <div class="container-form" *ngIf="this.isText == true; else repoBlock">
+    <div class="container-form" *ngIf="this.postType == 0; else repoBlock">
         <app-form-create-text></app-form-create-text>
     </div>
     <ng-template #repoBlock>
-        <div class="container-form">
+        <div *ngIf="this.postType == 1; else assignBlock" class="container-form">
             <app-form-create-repository></app-form-create-repository>
         </div>
-        
+    </ng-template>
+    <ng-template #assignBlock>
+        <div class="container-form">
+            <app-form-create-assignment></app-form-create-assignment>
+        </div>
     </ng-template>
 </div>
-
-

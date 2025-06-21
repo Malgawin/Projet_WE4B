@@ -1,0 +1,34 @@
+<div class="container-creation-text">
+    <div>
+        <label class="title-form">Créer un devoir</label>
+    </div>
+    <form [formGroup]="assignForm" (ngSubmit)="submitForm()">
+        <div>
+            Titre :
+            <input type="text" formControlName="title" class="form-control" aria-describedby="passwordHelpBlock">
+        </div>
+        <div>
+            Date de publication :
+            <input type="datetime-local" formControlName="publishDate" class="form-control" aria-describedby="passwordHelpBlock">
+        </div>
+        <div>
+            Date de rendu :
+            <input type="datetime-local" formControlName="deadline" class="form-control" aria-describedby="passwordHelpBlock">
+        </div>
+        <div>
+            Type de message :
+            <select type="text" formControlName="type" class="form-control" aria-describedby="passwordHelpBlock">
+                <option value="important">Important</option>
+                <option value="annonce">Annonce</option>
+                <option value="info">Information</option>
+            </select>
+        </div>
+        <div>
+            Message :
+            <textarea type="textarea" formControlName="message" class="form-control" aria-describedby="passwordHelpBlock"></textarea>  
+        </div>
+        <div class="container-button-form">
+            <button type='submit' [disabled]='!assignForm.valid'>Valider</button>
+        </div>
+    </form>
+</div>

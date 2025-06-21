@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { typePost } from '../class/cours';
 
 @Component({
   selector: 'app-post-creation',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostCreationComponent implements OnInit {
 
-  public isText: boolean = true;
+  public postType : number = 0;
 
   constructor() { }
 
@@ -15,10 +16,14 @@ export class PostCreationComponent implements OnInit {
   }
 
   isTextCreation(): void {
-    this.isText = true;
+    this.postType = typePost.Text;
   }
 
   isRepoCreation(): void {
-    this.isText = false;
+    this.postType = typePost.Repository;
+  }
+
+  isAssignCreation(): void {
+    this.postType = typePost.Assignment;
   }
 }

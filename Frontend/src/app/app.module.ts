@@ -12,12 +12,12 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 
 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { FormCreateTextComponent } from './form-create-text/form-create-text.component';
+import { FormCreateTextComponent } from './post-creation/form-create-text/form-create-text.component';
 import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component';
 import { ListeCoursCarteComponent } from './tableau-de-bord/liste-cours-carte/liste-cours-carte.component';
 import { ActiviteComponent } from './tableau-de-bord/activite/activite.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormCreateRepositoryComponent } from './form-create-repository/form-create-repository.component';
+import { FormCreateRepositoryComponent } from './post-creation/form-create-repository/form-create-repository.component';
 import { CarteCoursComponent } from './tableau-de-bord/liste-cours-carte/carte-cours/carte-cours.component';
 import { PageCoursComponent } from './page-cours/page-cours.component';
 import { ParticipantsCoursComponent } from './page-cours/participants-cours/participants-cours.component';
@@ -43,6 +43,7 @@ import { LoginComponent } from './authentification/login/login.component';
 import { RegisterComponent } from './authentification/register/register.component';
 import { ChangePasswordComponent } from './authentification/change-password/change-password.component';
 import { DateToPhrasePipe } from './pipes/date-to-phrase.pipe';
+import { FormCreateAssignmentComponent } from './post-creation/form-create-assignment/form-create-assignment.component';
 
 
 
@@ -79,7 +80,8 @@ import { DateToPhrasePipe } from './pipes/date-to-phrase.pipe';
       LoginComponent,
       RegisterComponent,
       ChangePasswordComponent,
-      DateToPhrasePipe
+      DateToPhrasePipe,
+      FormCreateAssignmentComponent
 
 
     ],
