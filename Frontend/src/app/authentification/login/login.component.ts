@@ -2,7 +2,7 @@ import { inject, Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { signInWithEmailAndPassword, Auth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-
+import { JournalLogsService } from '../../services/journal-logs.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent {
 
   showPassword: boolean = false;
   loginError: string = '';
-  constructor(private auth: Auth, private router: Router) {}
+  constructor(private auth: Auth, private router: Router, private journalLogsService: JournalLogsService) {}
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
