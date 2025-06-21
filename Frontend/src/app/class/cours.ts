@@ -49,3 +49,9 @@ export class Post{
         this.sort_order = sort_order;
     }
 }
+
+export enum typePost {
+  Text = 0,
+  Repository = 1,
+  Assignment = 2
+}
