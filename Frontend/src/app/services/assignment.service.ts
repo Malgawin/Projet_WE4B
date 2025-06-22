@@ -19,5 +19,9 @@ export class AssignmentService {
   
   getAssignementsByCours(coursId: number): Observable<Assignment[]> {
       return this.http.get<Assignment[]>(`${this.apiUrl}/cours/${coursId}`);
+    }
+
+  getAssignementsById(assignId: any): Observable<Assignment> {
+      return this.http.get<Assignment>(`${this.apiUrl}/assignment/${assignId}`);
     } 
 }

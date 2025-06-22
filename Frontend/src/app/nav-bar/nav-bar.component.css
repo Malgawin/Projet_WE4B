@@ -1,11 +1,17 @@
 nav {
-    height: 6em;
+    height: 4em;
     background-color: #007BC0;
     padding: 0.7em;
 }
 
 .navbar-nav a{
     color: white;
-    font-size: 1.6em;
+    font-size: 1em;
     margin-left: 1em;
+}
+
+.navbar-brand img {
+    width: 5em;   /* ou la taille souhaitée */
+    height: 5em;
+    object-fit: contain;
 }

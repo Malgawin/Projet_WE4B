@@ -33,7 +33,7 @@ export class FormCreateAssignmentComponent implements OnInit {
   submitForm(): void {
     let id_course : number = Number(this.route.snapshot.paramMap.get('id'));
     let assignment : Assignment = {
-      id: 0,
+      _id: 0,
       id_course: id_course,
       title: this.assignForm.value.title!,
       type: this.assignForm.value.type!,

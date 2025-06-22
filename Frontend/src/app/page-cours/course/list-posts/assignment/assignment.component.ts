@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Assignment } from 'src/app/class/cours';
 
 @Component({
@@ -8,15 +9,18 @@ import { Assignment } from 'src/app/class/cours';
 })
 export class AssignmentComponent implements OnInit {
 
-  @Input() assignement!: Assignment;
+  @Input() assignment!: Assignment;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
+    console.log("test", this.assignment);
   }
 
   uploadFile(){
-    
+    this.router.navigate(['soumission-devoir/', this.assignment._id])
   }
 
 }

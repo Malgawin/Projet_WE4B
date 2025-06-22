@@ -14,6 +14,7 @@ import { ListeCoursCarteComponent } from './tableau-de-bord/liste-cours-carte/li
 import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component';
 import { ChangePasswordComponent } from './authentification/change-password/change-password.component';
 import { AuthGuard } from './auth.guard';
+import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
 
 const routes: Routes = [
   { path : 'tableau-de-bord', component: TableauDeBordComponent, canActivate: [AuthGuard], children :
@@ -33,7 +34,7 @@ const routes: Routes = [
                   { path : 'participants', component: ParticipantsCoursComponent},
                   { path : 'parametres', component: ParametresCoursComponent },
                   { path : 'forum' , component: ForumCoursComponent },
-                  { path : 'participants/:id/details', component: ParticipantsDetailsComponent}
+                  { path : 'participants/:id/details', component: ParticipantsDetailsComponent},
 
               ]
   },
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path : 'login', component: LoginComponent },
   { path : 'register', component: RegisterComponent },
   { path : 'change-password', component: ChangePasswordComponent },
+  { path : 'soumission-devoir/:id', component: SubmitAssignmentComponent}
   
 
 ];

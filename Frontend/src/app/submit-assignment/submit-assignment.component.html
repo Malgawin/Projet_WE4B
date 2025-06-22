@@ -1,0 +1,48 @@
+<div class="container container-submit-assignment">
+    <div class="container container-title">
+        <h1>{{ assignment.title }}</h1>
+    </div>
+    <div  class="container container-date">
+        <p>
+            <strong>Ouvert le :</strong> {{ assignment.publishDate | date:'dd/MM/yyyy HH:mm'}}
+            <br>
+            <strong>A rendre avant le :</strong>{{ assignment.deadline | date:'dd/MM/yyyy HH:mm'}}
+        </p>
+        
+    </div>
+    <div class="container container-state">
+        <h3 >Statut de remise</h3>
+        <div class="container container-table">
+            <table class="table table-striped table-hover table-bordered">
+                <tbody>
+                    <tr>
+                        <th>Statut des travaux remis</th>
+                        <td>Aucun devoir n'a encore été remis</td>
+                    </tr>
+                    <tr>
+                        <th>Statut de l'évaluation</th>
+                        <td>Non évalué</td>
+                    </tr>
+                    <tr>
+                        <th>Temps restant</th>
+                        <td>Oh purée t'es en retard</td>
+                    </tr>
+                    <tr>
+                        <th>Commentaires</th>
+                        <td>Voici un commentaire</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container container-form">
+        <form [formGroup]="assignForm" (ngSubmit)="submitForm()">
+            <div class="container">
+                <input type="file" formControlName="file" class="form-control" aria-describedby="passwordHelpBlock">
+            </div>
+            <div class="container container-button">
+                <button type='submit' class="btn btn-primary btn-lg" [disabled]='!assignForm.valid'>Valider</button>
+            </div>
+        </form>
+    </div>
+</div>

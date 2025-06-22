@@ -1,0 +1,64 @@
+.container-submit-assignment{
+    
+    background-color: #FFFFFF;
+    margin-top: 2vh;
+    width: 95%;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border : 1px solid #c9c9c9;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    max-width: none;
+  }
+
+th {
+    width: 20%;
+}
+
+.container-title{
+    margin-left: 0em;
+    margin-top: 1em;
+}
+
+.container-title h1{
+    font-weight: bold;
+}
+
+.container-date{
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.container-state{
+    margin-left: 0em;
+    margin-top: 1.5em;
+    max-width: none;
+}
+
+.container-state h3{
+    font-weight: bold;
+}
+
+.container-table{
+    margin-top: 1em;
+    padding-left: 0em;
+    max-width: none;
+}
+
+.container-form{
+    margin-top: 2em;
+    margin-bottom: 4em;
+    margin-left: 0em;
+    padding-left: 0em;
+    width: 20%;
+}
+
+.container-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+}

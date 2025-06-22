@@ -45,6 +45,7 @@ import { ChangePasswordComponent } from './authentification/change-password/chan
 import { DateToPhrasePipe } from './pipes/date-to-phrase.pipe';
 import { FormCreateAssignmentComponent } from './post-creation/form-create-assignment/form-create-assignment.component';
 import { AssignmentComponent } from './page-cours/course/list-posts/assignment/assignment.component';
+import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
 
 
 
@@ -83,7 +84,8 @@ import { AssignmentComponent } from './page-cours/course/list-posts/assignment/a
       ChangePasswordComponent,
       DateToPhrasePipe,
       FormCreateAssignmentComponent,
-      AssignmentComponent
+      AssignmentComponent,
+      SubmitAssignmentComponent
 
 
     ],

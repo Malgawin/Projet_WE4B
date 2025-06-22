@@ -38,4 +38,11 @@ router.get('/cours/:coursId', async (req, res) => {
 });
 
 
+router.get('/assignment/:assignId', async (req, res) => {
+    const assignId = req.params.assignId;
+    const assignment = await Assignment.findById( assignId );
+    res.json(assignment);
+});
+
+
 module.exports = router;

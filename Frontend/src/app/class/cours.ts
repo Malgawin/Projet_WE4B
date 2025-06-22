@@ -58,7 +58,7 @@ export enum typePost {
 
 export class Assignment{
     constructor(
-        public id : number,
+        public _id : number,
         public id_course : number,
         public title : string,
         public type : string,
@@ -68,7 +68,7 @@ export class Assignment{
         public author_id : number | null = null,
         public sort_order : number | null = null,
     ) {
-        this.id = id;
+        this._id = _id;
         this.id_course = id_course;
         this.author_id = author_id;
         this.title = title;
