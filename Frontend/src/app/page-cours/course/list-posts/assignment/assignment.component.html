@@ -1,0 +1,6 @@
+<div class="container">
+    <h3>{{ assignement.title }}</h3>
+    <p>{{ assignement.messages }}</p>
+    <p class="date">{{assignement.publishDate | date:'dd/MM/yyyy HH:mm'}}</p>
+    <button class="btn btn-primary" (click)="uploadFile()">Ajouter un travail</button>
+</div>

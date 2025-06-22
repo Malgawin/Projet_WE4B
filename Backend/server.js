@@ -49,6 +49,8 @@ try {
   app.use('/api/forums', forumRoutes);
   const logsRoutes = require('./routes/journal_logs');
   app.use('/api/logs', logsRoutes);
+  const assignmentsRoutes = require('./routes/assignments');
+  app.use('/api/assignments', assignmentsRoutes);
 
 } catch (error) {
   console.error('Erreur lors du chargement des routes mongodb', error);

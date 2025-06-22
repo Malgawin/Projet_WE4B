@@ -55,3 +55,28 @@ export enum typePost {
   Repository = 1,
   Assignment = 2
 }
+
+export class Assignment{
+    constructor(
+        public id : number,
+        public id_course : number,
+        public title : string,
+        public type : string,
+        public messages : string,
+        public publishDate : string,
+        public deadline : string,
+        public author_id : number | null = null,
+        public sort_order : number | null = null,
+    ) {
+        this.id = id;
+        this.id_course = id_course;
+        this.author_id = author_id;
+        this.title = title;
+        this.type = type;
+        this.messages = messages;
+        this.publishDate = publishDate;
+        this.deadline = deadline;
+        this.type = type;
+        this.sort_order = sort_order;
+    }
+}
