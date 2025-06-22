@@ -18,12 +18,12 @@ router.post('/addAssignment', async (req, res) => {
       coursId: assign.id_course,
       title: assign.title,
       authorId: assign.author_id,
-      publishDate: assign.publish_date,
+      publishDate: assign.publishDate,
       deadline: assign.deadline,
       type: assign.type, // type de l'assignement (ex : devoir, projet, etc.)
       sort_order: assign.sort_order, // ordre de tri des assignments
       submit: [], // liste des notes des étudiants pour cet assignment
-      messages: assign.message // liste des messages du forum
+      messages: assign.messages // liste des messages du forum
     });
 
     await newAssignment.save(); // sauvegarde du nouveau forum dans la bdd
