@@ -1,10 +1,8 @@
-# Projet_WE4B
-Implémentation d'une application WEB à l'image de Moodle via Angular
-# Moodle Simplifié - Projet WE4A
+# Moodle Simplifié - Projet WE4B
 
 ## 📝 Présentation
 
-Ce projet est une version simplifiée de Moodle développée dans le cadre de l'UE WE4A en collaboration avec l'UE SI40 durant le 2ème semestre d'école d'ingénieur à l'UTBM. L'objectif est de fournir un espace en ligne permettant aux administrateurs de gérer les utilisateurs et les UE, aux professeurs de poster des contenus pédagogiques, et aux étudiants de consulter ces contenus.
+Ce projet est une version simplifiée de Moodle développée dans le cadre de l'UE WE4B en collaboration avec l'UE SI40 durant le 2ème semestre d'école d'ingénieur à l'UTBM. L'objectif est de fournir un espace en ligne permettant aux administrateurs de gérer les utilisateurs et les UE, aux professeurs de poster des contenus pédagogiques, et aux étudiants de consulter ces contenus.
 
 ## 👨‍💻 Équipe de développement
 
@@ -12,12 +10,13 @@ Matthieu DIEBOLT, Pierre GUEROUT, Joshua PLOUZENNEC, Mateo CHARTIER, Dave JONATH
 
 ## 🚀 Technologies utilisées
 
-- **Symfony 7**
-- **PHP 8**
-- **MySQL** (via PhpMyAdmin)
-- **PosgeSQL** (via PgAdmin4)
+- **ANGULAR 13**
+- **NODEJS** (API REST) 
+- **PostrgeSQL** (via PgAdmin4)
+- **MongoDB**
+- **FireBase**
 - **Apache** (via XAMPP ou équivalent)
-- **HTML / CSS / JavaScript**
+- **HTML / CSS / TypeScript**
 
 ------
 ## ⚙️ Installation
