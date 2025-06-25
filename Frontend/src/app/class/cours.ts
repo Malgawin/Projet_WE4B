@@ -80,3 +80,21 @@ export class Assignment{
         this.sort_order = sort_order;
     }
 }
+
+export class Submit{
+    constructor(
+        public _id : number,
+        public userId : number,
+        public fileId : number,
+        public grade : number | null = null,
+        public comment : string | null = null,
+        public state : string,
+    ) {
+        this._id = _id;
+        this.userId = userId;
+        this.fileId = fileId;
+        this.grade = grade;
+        this.comment = comment;
+        this.state = state;
+    }
+}
