@@ -71,5 +71,11 @@ router.get('/assignment/:assignId', async (req, res) => {
     res.json(assignment);
 });
 
+router.get('/submit/:assignId', async (req, res) => {
+    const assignId = req.params.assignId;
+    const assignment = await Assignment.findById( assignId );
+    res.json(assignment.submit);
+});
+
 
 module.exports = router;
