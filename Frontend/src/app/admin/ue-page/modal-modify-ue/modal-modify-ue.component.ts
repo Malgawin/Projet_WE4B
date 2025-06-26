@@ -37,10 +37,9 @@ export class ModalModifyUeComponent implements OnInit {
 
   submitForm() {
     this.updateCourseDynamically()
-
     this.modify.emit(this.formData);
 
-    const modalEl = document.getElementById('createUeModal');
+    const modalEl = document.getElementById('modifyUeModal_');
     const modalInstance = Modal.getOrCreateInstance(modalEl!);
     modalInstance.hide();
 

@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {User} from "../../../class/user";
+import {UserFormData} from "../user-page.component";
 
 @Component({
   selector: 'app-user-list-element',
@@ -7,18 +8,16 @@ import {User} from "../../../class/user";
   styleUrls: ['./user-list-element.component.css']
 })
 export class UserListElementComponent implements OnInit {
+
   @Input() user!: User;
 
   @Output() delete = new EventEmitter<number>();
+  @Output() modify = new EventEmitter<UserFormData>();
 
-  constructor() {
-    this.user = new User(0, "Joshua", "Plouzennec", "joshua.plouzennec@gmail.com")
-    //TODO : changer ici pour avoir les entrées de la bdd
-  }
+  constructor() {}
 
-  onModify(){
-    console.log('Modify user:', this.user.id);
-    //todo : les modales
+  onModify(event: UserFormData){
+    this.modify.emit(event);
   }
 
   onDelete(){

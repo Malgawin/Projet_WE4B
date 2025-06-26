@@ -7,7 +7,6 @@ export interface UeFormData {
   name: string;
   description: string;
 }
-
 @Component({
   selector: 'app-ue-page',
   templateUrl: './ue-page.component.html',
@@ -38,7 +37,6 @@ export class UePageComponent implements OnInit {
 
   handleUeDeleted(coursId: number){
     if (confirm("Voulez-vous vraiment supprimer ce cours ?")){
-      this.ues = this.ues.filter(ue => ue.id !== coursId);
       this.coursService.deleteCours(coursId).subscribe({
         next: () => this.ues = this.ues.filter(c => c.id !== coursId),
         error: (err) => console.error('Erreur lors de la suppression du cours : ' + coursId.toString(), err)

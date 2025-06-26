@@ -45,5 +45,30 @@ router.post('/', async (req, res) => {
   }
 });
 
+//Modify a user given their id
+router.put('/update/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const {name, familyName, email} = req.body;
+        const {rows} = await pool.query(
+            'UPDATE users SET name = $1, familyName = $2, mail = $3 WHERE id = $4;', [name, familyName, email, id]
+        );
+        res.status(200).json({ message: 'Utilisateur mis à jour avec succès.' });
+    } catch (err){
+        console.error(err);
+        res.status(500).json({ error: 'Erreur lors de la modification de l\'utilisateur.' });
+    }
+})
+
+//Delete a user by id
+router.delete('/delete/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        await pool.query('DELETE FROM users WHERE id = $1', [id]);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Erreur lors de la suppression de l\'utilisateur' });
+    }
+});
 
 module.exports = router;

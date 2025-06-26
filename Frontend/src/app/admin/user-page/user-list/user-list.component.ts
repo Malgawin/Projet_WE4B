@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {User} from "../../../class/user";
+import {UserFormData} from "../user-page.component";
 
 @Component({
   selector: 'app-user-list',
@@ -10,12 +11,17 @@ export class UserListComponent implements OnInit {
 
   @Input() users: User[] = [];
 
+  @Output() modify = new EventEmitter<[number, UserFormData]>();
+  @Output() delete = new EventEmitter<number>();
+
   constructor() { }
 
-  handleDelete(userId: number){
-    if (confirm("Voulez-vous vraiment supprimer cet utilisateur ?")){
-      this.users = this.users.filter(user => user.id !== userId);
-    }
+  handleDeletion(userId: number){
+    this.delete.emit(userId);
+  }
+
+  handleModification(id: number, data: UserFormData){
+    this.modify.emit([id, data]);
   }
 
   ngOnInit(): void {

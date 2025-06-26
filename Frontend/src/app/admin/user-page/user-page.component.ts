@@ -33,4 +33,19 @@ export class UserPageComponent implements OnInit {
     this.users.push(new User(newId, data.name, data.familyName, data.email));
   }
 
+  handleUserModified(id:number, data: UserFormData){
+    this.userService.updateUser(id, data).subscribe({
+      error: (err) => console.error("Erreur lors de la modification de l'utilisateur d'id: " + id.toString(), err)
+    })
+  }
+
+  handleUserDeleted(userId: number){
+    if (confirm("Voulez-vous vraiment supprimer cet utilisateur ?")){
+      this.userService.deleteCours(userId).subscribe({
+        next: () => this.users = this.users.filter(c => c.id !== userId),
+        error: (err) => console.error('Erreur lors de la suppression du cours : ' + userId.toString(), err)
+      });
+    }
+  }
+
 }
