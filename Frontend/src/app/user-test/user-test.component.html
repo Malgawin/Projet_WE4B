@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h2>Test des rôles</h2>
+
+  <p>UID: {{ uid }}</p>
+
+  <div *ngIf="roles$ | async as roles">
+    <p>Rôles :</p>
+    <ul>
+      <li *ngFor="let role of roles">{{ role }}</li>
+    </ul>
+  </div>
+
+  <ng-template #noRoles>
+    <p>Aucun rôle trouvé ou utilisateur non connecté.</p>
+  </ng-template>
+
+
+</div>
+
+<br>
+<br>
+<br>
+<p>test</p>

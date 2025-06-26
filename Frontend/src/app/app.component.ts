@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { UserAuthService } from './services/user-auth.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -8,3 +12,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Projet_WE4B';
 }
+

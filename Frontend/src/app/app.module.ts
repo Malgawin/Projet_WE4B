@@ -11,6 +11,8 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 
 
+
+
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormCreateTextComponent } from './post-creation/form-create-text/form-create-text.component';
 import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component';
@@ -46,7 +48,8 @@ import { DateToPhrasePipe } from './pipes/date-to-phrase.pipe';
 import { FormCreateAssignmentComponent } from './post-creation/form-create-assignment/form-create-assignment.component';
 import { AssignmentComponent } from './page-cours/course/list-posts/assignment/assignment.component';
 import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
-
+import { UserTestComponent } from './user-test/user-test.component';
+import { UnauthorizedComponent } from './authentification/unauthorized/unauthorized.component';
 
 
   @NgModule({
@@ -85,7 +88,9 @@ import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment
       DateToPhrasePipe,
       FormCreateAssignmentComponent,
       AssignmentComponent,
-      SubmitAssignmentComponent
+      SubmitAssignmentComponent,
+      UserTestComponent,
+      UnauthorizedComponent
 
 
     ],
@@ -98,7 +103,6 @@ import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment
       UserPageModule,
       provideFirebaseApp(() => initializeApp(environment.firebase)),
       provideAuth(() => getAuth())
-
     ],
     providers: [],
     bootstrap: [AppComponent]

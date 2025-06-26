@@ -2,6 +2,28 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../poolPgSQL');
 
+router.get('/roles/:firebaseUid', async (req, res) => {
+  const { firebaseUid } = req.params;
+  console.log('Requête pour UID :', firebaseUid);
+  
+  try {
+    const query = `
+      SELECT r.type
+      FROM users u
+      JOIN user_roles ur ON u.id = ur.users_id
+      JOIN roles r ON ur.roles_id = r.id
+      WHERE u.id_firebase = $1;
+    `;
+    const values = [firebaseUid];
+    const { rows } = await pool.query(query, values);
+    const roles = rows.map(r => r.type);
+
+    res.json({ roles });
+  } catch (err) {
+    console.error('Erreur récupération des rôles :', err);
+    res.status(500).json({ error: 'Erreur serveur' });
+  }
+});
 
 // Get all users
 router.get('/', async (req, res) => {
