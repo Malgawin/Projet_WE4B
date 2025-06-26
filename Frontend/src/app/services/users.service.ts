@@ -34,6 +34,18 @@ export class UsersService {
     return this.http.post<any>(this.apiUrl, user);
   }
 
+  createUser(newId: number, data: UserFormData): Observable<any>{
+    return this.http.post(`${this.apiUrl}/create`, {
+      id: "",
+      name: data.name,
+      email: data.email,
+      password: "",
+      family_name: data.familyName,
+      birth_date: "2000-01-01",
+      icon: ""
+    })
+  }
+
   updateUser(userId: number, newUser: UserFormData): Observable<any> {
     return this.http.put(`${this.apiUrl}/update/${userId}`, {
       name: newUser.name,
@@ -42,7 +54,8 @@ export class UsersService {
     })
   }
 
-  deleteCours(userId: number): Observable<any> {
+  deleteUser(userId: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/delete/${userId}`)
   }
+
 }

@@ -30,6 +30,9 @@ export class UserPageComponent implements OnInit {
 
   handleUserCreated(data: UserFormData) {
     const newId = this.users.length > 0 ? Math.max(...this.users.map(u => u.id)) + 1 : 0;
+    this.userService.createUser(newId, data).subscribe({
+      error:(err)=>console.error("Erreur de création d'utilisateur", err)
+    });
     this.users.push(new User(newId, data.name, data.familyName, data.email));
   }
 
@@ -41,9 +44,9 @@ export class UserPageComponent implements OnInit {
 
   handleUserDeleted(userId: number){
     if (confirm("Voulez-vous vraiment supprimer cet utilisateur ?")){
-      this.userService.deleteCours(userId).subscribe({
+      this.userService.deleteUser(userId).subscribe({
         next: () => this.users = this.users.filter(c => c.id !== userId),
-        error: (err) => console.error('Erreur lors de la suppression du cours : ' + userId.toString(), err)
+        error: (err) => console.error('Erreur lors de la suppression de l\'utilisateur : ' + userId.toString(), err)
       });
     }
   }
