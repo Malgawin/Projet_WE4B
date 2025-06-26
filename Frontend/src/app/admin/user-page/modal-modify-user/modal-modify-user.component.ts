@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Modal} from "bootstrap";
+import {UserFormData} from "../user-page.component";
+import {User} from "../../../class/user";
 
 @Component({
   selector: 'app-modal-modify-user',
@@ -7,23 +9,48 @@ import {Modal} from "bootstrap";
   styleUrls: ['./modal-modify-user.component.css']
 })
 export class ModalModifyUserComponent implements OnInit {
-  formData = {
-    name: 'Placeholder',
-    familyName: 'For now'
-  };
+
+  @Input() user! : User;
+  @Output() modify = new EventEmitter<UserFormData>();
+
+  formData : UserFormData = {
+    name: "",
+    familyName: "",
+    email: "",
+    ues: []
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+    this.formData = {
+      name: this.user.name,
+      familyName: this.user.familyName,
+      email: this.user.mail,
+      ues: [] //Todo
+    }
+  }
+
+  updateUserDynamically(){
+    this.user.name = this.formData.name;
+    this.user.familyName = this.formData.familyName;
+    this.user.mail = this.formData.email;
   }
 
   submitForm() {
-    console.log('Submitted:', this.formData);
+    this.updateUserDynamically();
+    this.modify.emit(this.formData);
 
-    const modalEl = document.getElementById('createUserModal');
+    const modalEl = document.getElementById('modifyUserModal');
     const modalInstance = Modal.getOrCreateInstance(modalEl!);
     modalInstance.hide();
 
-    this.formData = { name: '', familyName: '' };
+    this.formData = {
+      name: this.user.name,
+      familyName: this.user.familyName,
+      email: this.user.mail,
+      ues: [] //Todo
+    }
   }
 
 }

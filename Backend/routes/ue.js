@@ -61,7 +61,7 @@ router.post('/updateImage', async (req, res) => {
     }
 })
 
-//Update a user with new information
+//Update a course with new information
 router.put('/update/:id', async (req, res) => {
     try {
         const id = req.params.id;
@@ -76,7 +76,7 @@ router.put('/update/:id', async (req, res) => {
     }
 })
 
-//Create a new user
+//Create a new course
 router.post('/create', async (req, res) => {
     try {
         const {code, name, desc} = req.body;

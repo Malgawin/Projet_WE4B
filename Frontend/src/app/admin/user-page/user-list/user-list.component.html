@@ -18,7 +18,8 @@
       <app-user-list-element
         *ngFor="let user of users"
         [user]="user"
-        (delete)="handleDelete($event)">
+        (delete)="handleDeletion($event)"
+        (modify)="handleModification(user.id, $event)">
       </app-user-list-element>
     </ng-template>
   </ul>
