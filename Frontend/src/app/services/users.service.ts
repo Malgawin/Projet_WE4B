@@ -38,6 +38,7 @@ export class UsersService {
     return this.http.get<{ roles: string[] }>(`${this.apiUrl}/roles/${firebaseUid}`)
       .pipe(map(response => response.roles));
   }
+
   createUser(newId: number, data: UserFormData): Observable<any>{
     return this.http.post(`${this.apiUrl}/create`, {
       id: "",
@@ -60,6 +61,10 @@ export class UsersService {
 
   deleteUser(userId: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/delete/${userId}`)
+  }
+
+  getUserByUid(uid: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/by-uid/${uid}`);
   }
 
 }

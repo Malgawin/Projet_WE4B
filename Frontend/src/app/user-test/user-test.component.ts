@@ -13,6 +13,7 @@ import { UsersService } from '../services/users.service';
 })
 export class UserTestComponent implements OnInit {
   uid: string | null = null;
+  userFromDb: any = null;
   roles$: Observable<string[]> = of([]);
 
   constructor(private auth: Auth, private usersService: UsersService) {}
@@ -20,11 +21,25 @@ export class UserTestComponent implements OnInit {
 
   ngOnInit() {
     onAuthStateChanged(this.auth, user => {
-      this.uid = user?.uid ?? null;
-      console.log('UID:', this.uid);
+      this.uid = user?.uid ?? null; //Récupere l'id firebase actuellement connecté
+      console.log('UID Firebase:', this.uid);
+
       if (this.uid) {
+        // Récupère les rôles
         this.roles$ = this.usersService.getUserRoles(this.uid);
+
+        // Récupère le user complet depuis la base SQL
+        this.usersService.getUserByUid(this.uid).subscribe({
+          next: user => {
+            this.userFromDb = user;
+            console.log('User from DB:', user);
+          },
+          error: err => {
+            console.error('Erreur lors de la récupération du user SQL', err);
+          }
+        });
       }
     });
   }
+
 }
