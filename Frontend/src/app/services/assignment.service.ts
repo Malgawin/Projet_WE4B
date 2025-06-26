@@ -27,5 +27,11 @@ export class AssignmentService {
 
   getAssignementsById(assignId: any): Observable<Assignment> {
       return this.http.get<Assignment>(`${this.apiUrl}/assignment/${assignId}`);
-    } 
+    }
+
+  getSubmitsByAssignment(assignId: any): Observable<Submit[]> {
+      return this.http.get<Submit[]>(`${this.apiUrl}/assignment/submit/${assignId}`);
+    }
+  
+  
 }
