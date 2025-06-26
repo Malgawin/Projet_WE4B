@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
-const Assignment = require('../models/assignments');
+const { Assignment } = require('../models/assignments');
 
 
 router.get('/', async (req, res) => {
@@ -28,6 +28,33 @@ router.post('/addAssignment', async (req, res) => {
 
     await newAssignment.save(); // sauvegarde du nouveau forum dans la bdd
     res.json(newAssignment);
+});
+
+router.post('/addSubmit', async (req, res) => {
+ 
+    const submit = req.body.submit; // recuperation de l'id du cours
+    const id_assignment = req.body.id_assignment;
+    console.log("id assignemnt :", submit);
+
+    try {
+        // 1. Trouver l'assignment par son id
+        const assignment = await Assignment.findById(id_assignment);
+        
+        if (!assignment) {
+            return res.status(404).json({ error: "Assignment not found" });
+        }
+
+        // 2. Ajouter le submit dans le tableau submit
+        assignment.submit.push(submit);
+
+        // 3. Sauvegarder l'assignment modifié
+        await assignment.save();
+
+        res.status(201).json({ message: "Submit ajouté à l'assignment", assignment });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Erreur lors de l'ajout du submit" });
+    }
 });
 
 

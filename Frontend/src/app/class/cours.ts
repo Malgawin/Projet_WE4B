@@ -83,14 +83,12 @@ export class Assignment{
 
 export class Submit{
     constructor(
-        public _id : number,
         public userId : number,
-        public fileId : number,
+        public fileId : string,
         public grade : number | null = null,
         public comment : string | null = null,
         public state : string,
     ) {
-        this._id = _id;
         this.userId = userId;
         this.fileId = fileId;
         this.grade = grade;

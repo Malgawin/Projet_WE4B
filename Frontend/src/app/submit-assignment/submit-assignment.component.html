@@ -38,7 +38,7 @@
     <div class="container container-form">
         <form [formGroup]="assignForm" (ngSubmit)="submitForm()">
             <div class="container">
-                <input type="file" formControlName="file" class="form-control" aria-describedby="passwordHelpBlock">
+                <input type="file" (change)="onFileChange($event)" formControlName="file" class="form-control" aria-describedby="passwordHelpBlock">
             </div>
             <div class="container container-button">
                 <button type='submit' class="btn btn-primary btn-lg" [disabled]='!assignForm.valid'>Valider</button>

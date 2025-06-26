@@ -13,7 +13,7 @@ router.post('/upload/image', upload.single('image'), (req, res) => {
 
   // si pas d'image envoyer on renvoie une erreur 400
   if (!req.file) return res.status(400).send('pas d image envoyer');
-  
+
   //creation d'un bucket GridFS pour stocker les images
   const bucket = new GridFSBucket(mongoose.connection.db, { bucketName: 'images' });
   

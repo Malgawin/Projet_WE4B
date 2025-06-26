@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const submitSchema = new mongoose.Schema({ // schema pour les messages dans un forum
 
   userId: { type: Number, required: true},
-  fileId: { type: Number, required: true },
+  fileId: { type: String, required: true },
   grade: { type: Number },
   comment: { type: String }, // commentaire de l'enseignant sur la note
   state: { type: String, required: true }, // état de la soumission (ex : en attente, corrigé, etc.)
@@ -30,4 +30,7 @@ const assignmentsSchema = new mongoose.Schema({ // schema pour les forums
 });
 
 
-module.exports = mongoose.model('Assignment', assignmentsSchema); // export du modele
+module.exports = {
+  Assignment : mongoose.model('Assignment', assignmentsSchema), // export du modele
+  Submit : mongoose.model('Submit', submitSchema)
+ } 
