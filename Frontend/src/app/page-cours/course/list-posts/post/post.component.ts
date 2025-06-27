@@ -16,6 +16,7 @@ export class PostComponent implements OnInit {
   @Input() post!: Post;
   courseId!: number;
   userId!: number;
+  
   checkedPosts: number[] = []; // tableau pour stocker les IDs des posts checké
   
   constructor( private journalLogsService: JournalLogsService, private route: ActivatedRoute, private userAuthService: UserAuthService) { }

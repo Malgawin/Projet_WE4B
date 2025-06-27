@@ -20,14 +20,19 @@ export class ForumCoursComponent implements OnInit {
   selectedCoursId: number = 0; // ID du cours sélectionné 
   nouveauTitre: string = ''; // Titre du nouveau forum à ajouter
    
+  idLogin!: number; // id utilisateur conecté
+  roles: string[] = [];
+
+  userNames: { [key: number]: string } = {}; //dictionnaire pour stocker les noms des utilisateurs par ID
+  
+  
   constructor(private forumService: ForumService, private activatedroute: ActivatedRoute, private usersService: UsersService, private journalLogsService: JournalLogsService, private userAuthService: UserAuthService) {}
 
-  idLogin!: number; // id utilisateur conecté
-  userNames: { [key: number]: string } = {}; //dictionnaire pour stocker les noms des utilisateurs par ID
   
   ngOnInit(): void {
 
     this.idLogin = this.userAuthService.user?.id;
+    this.roles = this.userAuthService.roles;
 
       // Récupération de l'ID du cours depuis l'URL
     const coursId = Number(this.activatedroute.parent?.snapshot.paramMap.get('id') || '0');
@@ -114,6 +119,8 @@ export class ForumCoursComponent implements OnInit {
     }
   }
 
-  
+  canDeleteForum(): boolean {
+    return this.roles.includes('prof') || this.roles.includes('admin');
+  }
 }
   

@@ -12,7 +12,7 @@
                     <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Forum' }" (click)="selectForum()">
                         Forum
                     </h2>
-                    <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Parametres' }" (click)="selectParametres()">
+                    <h2 *ngIf="showParametres()" [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Parametres' }" (click)="selectParametres()">
                         Parametres
                     </h2>
                 </div>

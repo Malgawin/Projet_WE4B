@@ -34,10 +34,9 @@ const routes: Routes = [
                   { path : '', redirectTo: 'course', pathMatch: 'full'},
                   { path : 'course', component: CourseComponent},
                   { path : 'participants', component: ParticipantsCoursComponent},
-                  { path : 'parametres', component: ParametresCoursComponent },
+                  { path : 'parametres', component: ParametresCoursComponent, canActivate: [AuthGuard],  data: { roles: ['prof', 'admin'] }}, 
                   { path : 'forum' , component: ForumCoursComponent },
-                  { path : 'participants/:id/details', component: ParticipantsDetailsComponent},
-
+                  { path : 'participants/:id/details', component: ParticipantsDetailsComponent, canActivate: [AuthGuard],  data: { roles: ['prof', 'admin'] }}, 
               ]
   },
   { path : 'creation-cours/:id', component: PostCreationComponent , canActivate: [AuthGuard]},

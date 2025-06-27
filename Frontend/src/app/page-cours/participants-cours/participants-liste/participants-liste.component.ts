@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Inscrit } from '../../../class/cours';
 import { Router, ActivatedRoute } from '@angular/router';
+import { UserAuthService } from 'src/app/services/user-auth.service';
 
 
 @Component({
@@ -20,8 +21,10 @@ export class ParticipantsListeComponent implements OnInit {
   @Input() filterRole = '';
   @Input() filterSearch = '';
 
+  @Input() roles: string[] = [];
+
   
-  constructor(private router: Router, private activatedroute: ActivatedRoute) {}
+  constructor(private router: Router, private activatedroute: ActivatedRoute, private userAuthService: UserAuthService) {}
 
   ngOnInit(): void { }
 
@@ -72,8 +75,12 @@ export class ParticipantsListeComponent implements OnInit {
     }
   }
 
+  
+
   // Methode pour afficher les détails d'un participant
   clickParticipant(inscrit: any): void {
-    this.router.navigate(['../participants', inscrit.id, 'details'], { relativeTo: this.activatedroute });
+    if (this.roles.includes('admin') || this.roles.includes('prof')){
+      this.router.navigate(['../participants', inscrit.id, 'details'], { relativeTo: this.activatedroute });
+    }
   }
 }

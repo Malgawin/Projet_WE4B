@@ -1,7 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Inscrit,Cours } from '../../class/cours';
 import { ActivatedRoute } from '@angular/router';
 import { CoursService } from 'src/app/services/cours.service';
+import { UserAuthService } from 'src/app/services/user-auth.service'; // Ajoute cet import
+
 
 
 
@@ -11,8 +13,9 @@ import { CoursService } from 'src/app/services/cours.service';
   styleUrls: ['./participants-cours.component.css']
 })
 export class ParticipantsCoursComponent implements OnInit {
+ 
+  roles: string[] = [];
 
-  
   cours!: Cours;
   
   selectedParticipant?: any; // utiliser pour savoir si on doit afficher les details du participant
@@ -47,5 +50,8 @@ export class ParticipantsCoursComponent implements OnInit {
     this.showWindowAdd = false;
   }
 
+  canAddParticipant(): boolean {
+    return this.roles.includes('admin') || this.roles.includes('prof');
+  }
 
 }

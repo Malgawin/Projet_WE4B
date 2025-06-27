@@ -16,12 +16,14 @@ export class PageCoursComponent implements OnInit {
 
   cours!: Cours; //recupere le cours selectione
   idLogin?: number; // id de l'utilisateur connecté
+  roles: string[] = [];
 
   constructor(private router: Router, private activatedroute: ActivatedRoute, private coursService: CoursService, private journalLogsService: JournalLogsService, private userAuthService: UserAuthService) { }
 
   ngOnInit(): void {
 
     this.idLogin = this.userAuthService.user?.id;
+    this.roles = this.userAuthService.roles;
 
     // Récupération de l'ID du cours depuis l'URL
     const id = this.activatedroute.snapshot.paramMap.get('id') || '0';
@@ -74,5 +76,9 @@ export class PageCoursComponent implements OnInit {
   selectForum() {
     this.currentView = 'Forum'
     this.router.navigate(['/cours', this.cours.id ,'forum'])
+  }
+
+  showParametres(): boolean {
+    return this.roles.includes('admin') || this.roles.includes('prof');
   }
 }
