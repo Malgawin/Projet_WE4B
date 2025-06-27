@@ -22,9 +22,12 @@ export class ParticipantsCoursComponent implements OnInit {
   showWindowAdd: boolean = false; // pour afficher la fenetre d'ajout de participant
   filtre = { prenom: '', nom: '', role: '', search: '' }; // pour filtrer les participants
 
-  constructor( private activatedroute: ActivatedRoute, private coursService: CoursService) { }
+  constructor( private activatedroute: ActivatedRoute, private coursService: CoursService, private userAuthService: UserAuthService) { }
 
   ngOnInit(): void {
+
+    this.roles = this.userAuthService.roles;
+    
     // Récupération de l'id du cours depuis l'URL
     const id = this.activatedroute.parent?.snapshot.paramMap.get('id');
 

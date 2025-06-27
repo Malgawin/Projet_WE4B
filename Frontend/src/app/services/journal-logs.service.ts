@@ -23,4 +23,16 @@ export class JournalLogsService {
     return this.http.patch(`${this.apiUrl}/${userId}/course/${courseId}`, data);
   }
 
+  //methode pour update les logs de l'utilisateur au momement de la connexion (log creer si non existant)
+  updateLogin(userId: number): Observable<UserLog> {
+    return this.http.patch<UserLog>(`${this.apiUrl}/${userId}`, {
+      $inc: { loginCount: 1 },
+      lastLogin: new Date()
+    });
+  }
+
+  //metohde pour mettre a jour les logs de l'utilisateur au momment de la deconnexion
+  updateLogout(userId: number) {
+    return this.http.patch(`${this.apiUrl}/${userId}/logout`, {});
+  }
 }

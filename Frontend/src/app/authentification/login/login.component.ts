@@ -53,7 +53,10 @@ export class LoginComponent {
           this.usersService.getUserByUid(firebaseUid).subscribe({
             next: userFromDb => {
               this.userAuthService.setUser({ ...userFromDb, roles });
-              this.router.navigate(['/tableau-de-bord']);
+              this.journalLogsService.updateLogin(userFromDb.id).subscribe({
+                next: () => this.router.navigate(['/tableau-de-bord']),
+                error: () => this.router.navigate(['/tableau-de-bord'])
+              });
             },
             error: err => {
               console.error('Erreur récupération user SQL :', err);
