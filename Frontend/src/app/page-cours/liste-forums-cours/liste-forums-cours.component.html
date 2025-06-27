@@ -55,6 +55,6 @@
 
 <div *ngIf="selectedForum" class="forum-conteneur">
   <button class="button-retour" (click)="backToList()">Retour</button>
-  <app-forum [forum]="selectedForum"></app-forum>
+  <app-forum [forum]="selectedForum" [idLogin]="idLogin"></app-forum>
 </div>
 

@@ -1,3 +1,3 @@
 <div class="container-cours-carte" [class.extended-view]="isExtended">
-    <app-carte-cours *ngFor="let item of cours" [cours]="item" [isExtended]="isExtended" (refreshRequested)="reloadLists()"></app-carte-cours>
-</div>
+    <ng-container *ngIf="userId !== undefined"><app-carte-cours *ngFor="let item of cours" [cours]="item" [isExtended]="isExtended" [idLogin]="userId" (refreshRequested)="reloadLists()"></app-carte-cours></ng-container>
+ </div>

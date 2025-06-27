@@ -3,6 +3,8 @@ import { Post } from 'src/app/class/cours';
 import { JournalLogsService } from 'src/app/services/journal-logs.service';
 import { ActivatedRoute } from '@angular/router';
 import { CourseLog } from 'src/app/class/journal_logs';
+import { UserAuthService } from 'src/app/services/user-auth.service';
+
 
 @Component({
   selector: 'app-post',
@@ -13,12 +15,15 @@ export class PostComponent implements OnInit {
 
   @Input() post!: Post;
   courseId!: number;
-  userId: number = 40;
+  userId!: number;
   checkedPosts: number[] = []; // tableau pour stocker les IDs des posts checké
   
-  constructor( private journalLogsService: JournalLogsService, private route: ActivatedRoute) { }
+  constructor( private journalLogsService: JournalLogsService, private route: ActivatedRoute, private userAuthService: UserAuthService) { }
 
   ngOnInit(): void {
+
+    this.userId = this.userAuthService.user?.id;
+
     this.courseId = Number(this.route.parent?.snapshot.paramMap.get('id')); // Récupération de l'ID du cours depuis les paramètres de la route
 
     //recuperation des log de l'user connecté pour initialiser la liste des posts validés

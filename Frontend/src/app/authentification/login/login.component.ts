@@ -50,14 +50,17 @@ export class LoginComponent {
 
       this.usersService.getUserRoles(firebaseUid).subscribe({
         next: (roles) => {
-          console.log('Rôles récupérés :', roles);
-          this.userAuthService.setUser({ uid: firebaseUid, roles });
-          this.router.navigate(['/tableau-de-bord']);
-        },
-        error: (err) => {
-          console.error('Erreur récupération rôles :', err);
-          alert('Erreur lors de la récupération des rôles.');
-        }
+          this.usersService.getUserByUid(firebaseUid).subscribe({
+            next: userFromDb => {
+              this.userAuthService.setUser({ ...userFromDb, roles });
+              this.router.navigate(['/tableau-de-bord']);
+            },
+            error: err => {
+              console.error('Erreur récupération user SQL :', err);
+              alert('Erreur lors de la récupération de l\'utilisateur.');
+            }
+        });
+      }
       });
 
     } catch (error: any) {

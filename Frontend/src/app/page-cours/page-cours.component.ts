@@ -4,6 +4,7 @@ import { CoursService } from '../services/cours.service';
 import { Cours, Inscrit } from '../class/cours';
 import { Router } from '@angular/router';
 import { JournalLogsService } from '../services/journal-logs.service';
+import { UserAuthService } from '../services/user-auth.service';
 
 
 @Component({
@@ -14,11 +15,14 @@ import { JournalLogsService } from '../services/journal-logs.service';
 export class PageCoursComponent implements OnInit {
 
   cours!: Cours; //recupere le cours selectione
-  idLogin: number = 40; // id a changer avec le vrai
+  idLogin?: number; // id de l'utilisateur connecté
 
-  constructor(private router: Router, private activatedroute: ActivatedRoute, private coursService: CoursService, private journalLogsService: JournalLogsService) { }
+  constructor(private router: Router, private activatedroute: ActivatedRoute, private coursService: CoursService, private journalLogsService: JournalLogsService, private userAuthService: UserAuthService) { }
 
   ngOnInit(): void {
+
+    this.idLogin = this.userAuthService.user?.id;
+
     // Récupération de l'ID du cours depuis l'URL
     const id = this.activatedroute.snapshot.paramMap.get('id') || '0';
     
@@ -32,6 +36,10 @@ export class PageCoursComponent implements OnInit {
         });
       
         // ajout du log de l'utilisateur pour indiquer qu'il a vu le cours
+        if (!this.idLogin) {
+          console.error("L'utilisateur n'est pas connecté.");
+          return;
+        }
         this.journalLogsService.updateCourseLog(
             this.idLogin,
             this.cours.id,

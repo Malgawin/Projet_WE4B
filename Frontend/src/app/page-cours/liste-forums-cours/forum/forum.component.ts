@@ -14,7 +14,7 @@ import { Forum } from '../../../class/forum'
 export class ForumComponent implements OnInit {
 
   nouveauMessage: string = ''; // nouveau message à envoyer
-  idLogin: number = 40; // id temporaire
+  @Input() idLogin!: number; // id de l'utilisateur connecté
 
 
   @Input() forum!: Forum; //recupere le forum selectioner dans le parent

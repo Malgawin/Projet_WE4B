@@ -39,7 +39,7 @@ export class ParticipantsCoursComponent implements OnInit {
 
 
   get inscrits(): Inscrit[] {
-    return this.cours.inscrits || [];
+    return this.cours && this.cours.inscrits ? this.cours.inscrits : [];
   }
 
   //methode pour fermer la fenetre d'ajout de participant
