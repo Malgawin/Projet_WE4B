@@ -25,19 +25,30 @@ Matthieu DIEBOLT, Pierre GUEROUT, Joshua PLOUZENNEC, Mateo CHARTIER, Dave JONATH
 
 Avant de lancer le projet, assurez-vous d’avoir installé les outils suivants sur votre machine :
 
-- **XAMPP** : pour disposer facilement de **PHP**, **MySQL** et **Apache**  
-  👉 Téléchargeable sur : https://www.apachefriends.org/index.html  
-  Une fois XAMPP installé, vérifiez que les modules **Apache** et **MySQL** sont bien activés.
-
+- **Node.js** : environnement d’exécution JavaScript côté serveur (nécessaire pour le backend et Angular)  
+  👉 Téléchargeable sur : https://nodejs.org/fr/  
+  Après installation, vérifiez l’installation avec les commandes :
+  ```
+  node -v
+  ```
+  - **Angular CLI** : outil en ligne de commande pour gérer et lancer des projets Angular  
+  👉 Documentation et installation : https://angular.io/cli  
+  Installation via npm :
+  ```
+  npm install –g @angular/cli@13.3.3
+  ```
+  
 - **PostgreSQL** : système de gestion de base de données relationnelle  
   👉 Téléchargeable sur : https://www.postgresql.org/download/
 
 - **pgAdmin 4** : interface graphique pour gérer PostgreSQL  
   👉 Téléchargeable sur : https://www.pgadmin.org/download/
+  
+- **MongoDB** : base de données NoSQL orientée documents  
+  👉 Téléchargeable sur : https://www.mongodb.com/try/download/community  
+  Une fois MongoDB installé, assurez-vous que le service **MongoDB** est bien démarré.
 
-- **Symfony** : framework PHP utilisé pour ce projet  
-  👉 Télécharger depuis le site officiel : https://symfony.com/download  
-  Ce téléchargement installe également tout ce qu’il faut, y compris Composer si nécessaire.
+
 
 > 📝 *Remarque : un guide d’installation de PostgreSQL et pgAdmin, issu du TP3 de l’UE SI40, est disponible dans le dossier [`BDD`] du projet.
 
@@ -50,18 +61,22 @@ Voici les étapes à suivre pour installer et exécuter le projet en local.
 
 Clonez ce dépôt dans un répertoire de votre choix.
 
-### 2. Activer PostgreSQL dans PHP
+### 2. Installer les dépendances
 
-Sur XAMPP, dans la section actions, allez dans **Config > php.ini** pour le module Apache. 
+- Ouvrez un premier terminal dans le dossier `frontend` et lancez :
 
-Décommentez les lignes suivantes dans le fichier `php.ini` :
-```ini
-extension=intl
-extension=pdo_pgsql
-extension=pgsql
-```
-Ensuite, redémarrez le serveur Apache pour appliquer les changements.
+  ```
+  npm install
+  ```
 
+- Ouvrez un second terminal dans le dossier `backend` et lancez :
+
+  ```
+  npm install --force
+  ```
+
+
+### Récupération des bases de données : 
 ### 3. Créer un super utilisateur `admin` dans PostgreSQL via pgAdmin
 
 Pour créer un super utilisateur dans PostgreSQL via **pgAdmin**, suivez les étapes ci-dessous :
@@ -115,59 +130,90 @@ Une fois PostgreSQL et pgAdmin configurés, il est temps de télécharger la bas
    - Ouvrez la section **Schemas > public > Tables** : vous devriez voir les tables créées par le fichier SQL.
    - Si les tables sont présentes, cela signifie que l'importation a bien fonctionné.
 
-### 6. Configurer le fichier `.env` de Symfony
 
-Une fois la base de données importée, vous devez configurer Symfony pour qu’il puisse s’y connecter. Pour cela, il faut modifier le fichier `.env` à la racine du projet.
 
-#### 6.1 Ouvrir le fichier `.env`
+### 6. Configurer le fichier `poolPgSQL.js` dans le dossier **backend**
 
-- Accédez au dossier principal du projet Symfony.
-- Ouvrez le fichier `.env` avec un éditeur de texte (par exemple : VS Code).
+Une fois la base de données importée, vous devez configurer le pool du serveur pour qu’il puisse s’y connecter. Pour cela, il faut modifier le fichier `poolPgSQL.js` dans le backend.
 
-#### 6.2 Modifier la ligne de connexion à la base de données
 
-- Recherchez la ligne suivante :
+#### 6.3 Modifier les ligne de connexion à la base de données
 
-```env
-  DATABASE_URL="postgresql://admin:admin@127.0.0.1:5432/nom_de_votre_base?serverVersion=16&charset=utf8"
+- Recherchez les lignes suivantes :
+
 ```
-> Remplacez `nom_de_votre_base` par le nom exact de la base de données que vous avez créée dans pgAdmin.
-> Utilisez bien l'url : **postgresql**
-> `admin:admin` correspond à l'utilisateur PostgreSQL que vous avez créé précédemment.
+    user: 'admin',  // nom d'utilisateur postgresql
+    host: 'localhost', 
+    database: 'moodle_tr', //nom de la base de données
+    password: 'admin', // mdp de l'utilisateur postgresql
+    port: 5432, // port par défaut de postgresql
+```
+> Remplacez si nécessaire les informations conformément à votre utilisateur créé et à votre nom de base de données.
 
-- Enregistrez le fichier. Symfony est maintenant configuré pour se connecter à votre base de données PostgreSQL.
+- Enregistrez le fichier. Le serveur est maintenant configuré pour se connecter à votre base de données PostgreSQL.
 
-### 7. Lancer le projet Symfony
+
+### 7. MongoDB 
+
+## 7.1 Créer la base de données 
+
+Pour créer une base de données, il suffit de :
+
+- Lancez le shell MongoDB :
+  ```bash
+  mongosh
+  ```
+- Passez sur la base :
+  ```javascript
+  use projet_moodle
+  ```
+## 7.3 Importer des collections à partir de fichiers JSON
+
+Vous trouverez dans le dossier **BDD/mongodb** l’ensemble des collections à télécharger.
+Utilisez la commande `mongoimport` (disponible avec l'installation de MongoDB).
+
+### Syntaxe générale
+
+```bash
+mongoimport --db projet_moodle --collection <nom_collection> --file <nom_fichier.json> 
+```
+
+### Exemple
+
+Pour importer un fichier `forums.json` dans la collection `utilisateurs` :
+
+```bash
+mongoimport --db projet_moodle --collection forums --file utilisateurs.json
+```
+Faire cela pour l'ensemble des collections.
+
+Une fois l’ensemble des collections téléchargé,
+
+Pour vérifier que vous avez bien toutes les collections, lancez :
+
+```
+show collections 
+```
+
+Vous devriez avoir :
+![image](https://github.com/user-attachments/assets/fd8fa6b2-5932-4a83-b5ef-2863f07fe2b1)
+
+
+## 7.4 Vérifier le lien avec le serveur :
+
+Dans le dossier **backend**, allez dans le fichier `server.js` et trouvez la ligne suivante :
+
+```
+await mongoose.connect('mongodb://localhost:27017/projet_moodle');
+```
+
+Vérifiez que le nom correspond au nom de votre base de données.
+
+
+### 8. Lancer le projet 
 
 Une fois tout configuré, voici comment démarrer le projet en local.
 
-#### 7.1 Installer les dépendances du projet
-
-Dans le terminal, placez-vous dans le dossier du projet (là où se trouve `composer.json`), puis exécutez :
-
-```bash
-composer install
-```
-
-Cela va installer toutes les dépendances nécessaires à l’exécution du projet.
-
-#### 7.2 Démarrer le serveur Symfony
-
-Toujours dans le dossier du projet, lancez le serveur de développement Symfony :
-
-```bash
-symfony serve -d
-```
-
-### 7.3 Accéder à l’application
-
-Ouvrez votre navigateur à l’adresse suivante :
-
-```bash
-http://127.0.0.1:8000
-```
-
-Vous devriez voir s’afficher l’interface de l’application Moodle simplifiée. 🎉
 
 ------
 
