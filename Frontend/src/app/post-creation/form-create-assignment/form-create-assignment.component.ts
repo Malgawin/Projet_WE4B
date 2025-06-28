@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Assignment } from 'src/app/class/cours';
 import { AssignmentService } from 'src/app/services/assignment.service';
+import { UserAuthService } from 'src/app/services/user-auth.service';
 import { checkDate } from 'src/app/validators/validator-check-date';
 
 @Component({
@@ -25,6 +26,7 @@ export class FormCreateAssignmentComponent implements OnInit {
     private service : AssignmentService,
     private route: ActivatedRoute,
     private router: Router,
+    private userAuthService : UserAuthService
   ) { }
 
   ngOnInit(): void {
@@ -40,7 +42,7 @@ export class FormCreateAssignmentComponent implements OnInit {
       messages: this.assignForm.value.message!,
       publishDate: this.assignForm.value.publishDate!,
       deadline: this.assignForm.value.deadline!,
-      author_id: 77, // Assuming a static author ID for now
+      author_id: this.userAuthService.user?.id, // Assuming a static author ID for now
       sort_order: 11 // Assuming a static sort order for now
     }
     console.log('Devoir :', assignment);

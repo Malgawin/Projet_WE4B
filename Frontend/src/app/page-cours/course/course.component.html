@@ -1,4 +1,11 @@
 <div class="container-course">
     <app-list-posts></app-list-posts>
-    <button type="button" class="btn btn-secondary" (click)="addPost()">+</button>
+    <button
+        type="button"
+        class="btn btn-secondary"
+        *ngIf="userAuthService.hasRole('admin') || userAuthService.hasRole('prof')"
+        (click)="addPost()"
+        >
+        +
+    </button>
 </div>

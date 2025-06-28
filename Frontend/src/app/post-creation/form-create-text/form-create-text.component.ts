@@ -4,6 +4,7 @@ import { PostService } from '../../services/post.service';
 import { Post } from '../../class/cours';
 import { ActivatedRoute, Router } from '@angular/router';
 import { checkDate } from '../../validators/validator-check-date'; 
+import { UserAuthService } from 'src/app/services/user-auth.service';
 
 @Component({
   selector: 'app-form-create-text',
@@ -24,6 +25,7 @@ export class FormCreateTextComponent implements OnInit {
     private service : PostService,
     private route: ActivatedRoute,
     private router: Router,
+    private userAuthService : UserAuthService
   ) { }
 
   ngOnInit(): void {
@@ -38,7 +40,7 @@ export class FormCreateTextComponent implements OnInit {
       type: this.textForm.value.type!,
       message: this.textForm.value.message!,
       publish_date: this.textForm.value.publishDate!,
-      author_id: 77,
+      author_id: this.userAuthService.user?.id,
       files: null,    
       sort_order: 11
     }

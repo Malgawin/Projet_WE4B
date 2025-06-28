@@ -21,7 +21,7 @@
         </div>
         <div>
             Fichier :
-            <input type="file" formControlName="file" class="form-control" aria-describedby="passwordHelpBlock">
+            <input type="file" (change)="onFileChange($event)" formControlName="file" class="form-control" aria-describedby="passwordHelpBlock">
         </div>
         <div>
             Message :

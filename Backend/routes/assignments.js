@@ -99,4 +99,50 @@ router.put('/updateAllSubmits', async (req, res) => {
 });
 
 
+// Récupérer un submit par id d'utilisateur et id d'assignment
+router.get('/submit/:assignmentId/:userId', async (req, res) => {
+    const { assignmentId, userId } = req.params;
+    try {
+        const assignment = await Assignment.findById(assignmentId);
+        if (!assignment) {
+            return res.status(404).json({ error: "Assignment not found" });
+        }
+        // Cherche le submit correspondant à l'utilisateur
+        const submit = assignment.submit.find(s => String(s.userId) === String(userId));
+        res.json(submit);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Erreur lors de la récupération du submit" });
+    }
+});
+
+
+router.put('/updateFileId', async (req, res) => {
+    const { id_assignment, id_user, fileId } = req.body;
+
+    try {
+        const assignment = await Assignment.findById(id_assignment);
+        if (!assignment) {
+            return res.status(404).json({ error: "Assignment not found" });
+        }
+
+        // Trouver le submit à modifier
+        const submit = assignment.submit.find(s => String(s.userId) === String(id_user));
+        if (!submit) {
+            return res.status(404).json({ error: "Submit not found" });
+        }
+
+        // Modifier le fileId
+        submit.fileId = fileId;
+
+        await assignment.save();
+
+        res.status(200).json({ message: "fileId modifié avec succès", submit });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Erreur lors de la modification du fileId" });
+    }
+});
+
+
 module.exports = router;

@@ -20,11 +20,7 @@ export class PostService {
 
   //methode pour recuperer les posts d'une ue donné
   getPostsbyCourseId(id: number): Observable<Post[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/course_content/${id}`).pipe(
-      map(postsArray => postsArray.map(p => new Post(
-        p.id, p.title, p.type, p.message, p.publish_date
-      )))
-    );
+    return this.http.get<Post[]>(`${this.apiUrl}/course_content/${id}`);
   }
 
   

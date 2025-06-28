@@ -40,17 +40,15 @@ const routes: Routes = [
                   { path : 'participants/:id/details', component: ParticipantsDetailsComponent, canActivate: [AuthGuard],  data: { roles: ['prof', 'admin'] }}, 
               ]
   },
-  { path : 'creation-cours/:id', component: PostCreationComponent , canActivate: [AuthGuard]},
+  { path : 'creation-cours/:id', component: PostCreationComponent , canActivate: [AuthGuard], data: { roles: ['prof', 'admin']}},
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) , canActivate: [AuthGuard], data: { roles: ['admin']}}, // exemple de roles mais vous pouvez aussi mettre data: { roles: ['etudiant', 'prof'] } pour authoriser les 2
   { path: '', redirectTo: '', pathMatch: 'full' },
   { path : 'login', component: LoginComponent },
   { path : 'register', component: RegisterComponent },
   { path : 'change-password', component: ChangePasswordComponent },
-  { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent},
-  { path : 'travaux-rendus/:id_assignment', component: WorkSubmitedComponent}
+  { path : 'travaux-rendus/:id_assignment', component: WorkSubmitedComponent, canActivate: [AuthGuard], data: { roles: ['prof', 'admin']}},
   
-  { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent},
-  { path : 'soumission-devoir/:id', component: SubmitAssignmentComponent},
+  { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent, canActivate: [AuthGuard], data: { roles: ['etudiant']}},
   { path : 'user-test', component: UserTestComponent },
   { path : 'unauthorized', component: UnauthorizedComponent}
 

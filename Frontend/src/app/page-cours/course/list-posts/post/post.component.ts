@@ -4,6 +4,7 @@ import { JournalLogsService } from 'src/app/services/journal-logs.service';
 import { ActivatedRoute } from '@angular/router';
 import { CourseLog } from 'src/app/class/journal_logs';
 import { UserAuthService } from 'src/app/services/user-auth.service';
+import { FilesService } from 'src/app/services/files.service';
 
 
 @Component({
@@ -19,7 +20,12 @@ export class PostComponent implements OnInit {
   
   checkedPosts: number[] = []; // tableau pour stocker les IDs des posts checké
   
-  constructor( private journalLogsService: JournalLogsService, private route: ActivatedRoute, private userAuthService: UserAuthService) { }
+  constructor( 
+    private journalLogsService: JournalLogsService, 
+    private route: ActivatedRoute, 
+    private userAuthService: UserAuthService,
+    public filesService: FilesService
+  ) { }
 
   ngOnInit(): void {
 

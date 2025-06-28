@@ -52,7 +52,6 @@ import { UserTestComponent } from './user-test/user-test.component';
 import { UnauthorizedComponent } from './authentification/unauthorized/unauthorized.component';
 import { WorkSubmitedComponent } from './work-submited/work-submited.component';
 import { ListSubmitsComponent } from './work-submited/list-submits/list-submits.component';
-import { SubmitComponent } from './work-submited/list-submits/submit/submit.component';
 
 
 
@@ -97,8 +96,7 @@ import { SubmitComponent } from './work-submited/list-submits/submit/submit.comp
       UnauthorizedComponent,
       SubmitAssignmentComponent,
       WorkSubmitedComponent,
-      ListSubmitsComponent,
-      SubmitComponent
+      ListSubmitsComponent
 
 
     ],

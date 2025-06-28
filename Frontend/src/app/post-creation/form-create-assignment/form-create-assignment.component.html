@@ -5,27 +5,44 @@
     <form [formGroup]="assignForm" (ngSubmit)="submitForm()">
         <div>
             Titre :
-            <input type="text" formControlName="title" class="form-control" aria-describedby="passwordHelpBlock">
+            <input type="text" formControlName="title" class="form-control" (blur)="assignForm.get('title')?.markAsTouched()">
+            <div *ngIf="assignForm.get('title')?.invalid && (assignForm.get('title')?.dirty || assignForm.get('title')?.touched)">
+                <div *ngIf="assignForm.get('title')?.errors?.['required']" style="color:red;">Le titre est obligatoire</div>
+            </div>
         </div>
         <div>
             Date de publication :
-            <input type="datetime-local" formControlName="publishDate" class="form-control" aria-describedby="passwordHelpBlock">
+            <input type="datetime-local" formControlName="publishDate" class="form-control" (blur)="assignForm.get('publishDate')?.markAsTouched()">
+            <div *ngIf="assignForm.get('publishDate')?.invalid && (assignForm.get('publishDate')?.dirty || assignForm.get('publishDate')?.touched)">
+                <div *ngIf="assignForm.get('publishDate')?.errors?.['required']" style="color:red;">Date de publication obligatoire</div>
+                <div *ngIf="assignForm.get('publishDate')?.errors?.['checkDate']" style="color:red;">La date doit se trouver dans le futur</div>
+            </div>
         </div>
         <div>
             Date de rendu :
-            <input type="datetime-local" formControlName="deadline" class="form-control" aria-describedby="passwordHelpBlock">
+            <input type="datetime-local" formControlName="deadline" class="form-control" (blur)="assignForm.get('deadline')?.markAsTouched()">
+            <div *ngIf="assignForm.get('deadline')?.invalid && (assignForm.get('deadline')?.dirty || assignForm.get('deadline')?.touched)">
+                <div *ngIf="assignForm.get('deadline')?.errors?.['required']" style="color:red;">Date de rendu obligatoire</div>
+            </div>
         </div>
         <div>
             Type de message :
-            <select type="text" formControlName="type" class="form-control" aria-describedby="passwordHelpBlock">
+            <select formControlName="type" class="form-control" (blur)="assignForm.get('type')?.markAsTouched()">
+                <option value="">Sélectionner un type</option>
                 <option value="important">Important</option>
                 <option value="annonce">Annonce</option>
                 <option value="info">Information</option>
             </select>
+            <div *ngIf="assignForm.get('type')?.invalid && (assignForm.get('type')?.dirty || assignForm.get('type')?.touched)">
+                <div *ngIf="assignForm.get('type')?.errors?.['required']" style="color:red;">Le type est obligatoire</div>
+            </div>
         </div>
         <div>
             Message :
-            <textarea type="textarea" formControlName="message" class="form-control" aria-describedby="passwordHelpBlock"></textarea>  
+            <textarea formControlName="message" class="form-control" (blur)="assignForm.get('message')?.markAsTouched()"></textarea>
+            <div *ngIf="assignForm.get('message')?.invalid && (assignForm.get('message')?.dirty || assignForm.get('message')?.touched)">
+                <div *ngIf="assignForm.get('message')?.errors?.['required']" style="color:red;">Le message est obligatoire</div>
+            </div>
         </div>
         <div class="container-button-form">
             <button type='submit' [disabled]='!assignForm.valid'>Valider</button>

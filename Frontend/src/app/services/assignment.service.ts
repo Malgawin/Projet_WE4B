@@ -37,5 +37,11 @@ export class AssignmentService {
       return this.http.put(`${this.apiUrl}/updateAllSubmits`, { id_assignment, submits });
   }
   
-  
+  getSubmitByAssignmentAndUser(assignmentId: string | null, userId: number): Observable<Submit> {
+    return this.http.get<Submit>(`${this.apiUrl}/submit/${assignmentId}/${userId}`);
+  }
+
+  updateSubmitFileId(id_assignment: string | null, id_user: number, fileId: string): Observable<any> {
+    return this.http.put(`${this.apiUrl}/updateFileId`, { id_assignment, id_user, fileId });
+  }
 }

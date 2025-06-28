@@ -3,6 +3,9 @@
     <h3>{{ post.title }}</h3>
     <p>{{ post.message | date:'dd/MM/yyyy HH:mm'}}</p>
     <p class="date">{{post.publish_date}}</p>
+    <a *ngIf="post.files" [href]="filesService.getPdf(post.files)" target="_blank">
+        Télécharger le PDF
+    </a>
 </div>
 <ng-template #importantBlock>
     <div class="container-important" *ngIf="this.post.type == 'important'; else infoBlock">
@@ -10,6 +13,9 @@
         <h3>{{ post.title }}</h3>
         <p>{{ post.message }}</p>
         <p class="date">{{post.publish_date | date:'dd/MM/yyyy HH:mm'}}</p>
+        <a *ngIf="post.files" [href]="filesService.getPdf(post.files)" target="_blank">
+            Télécharger le PDF
+        </a>
     </div>
 </ng-template>
 <ng-template #infoBlock>
@@ -18,5 +24,8 @@
         <h3>{{ post.title }}</h3>
         <p>{{ post.message }}</p>
         <p class="date">{{post.publish_date | date:'dd/MM/yyyy HH:mm'}}</p>
+        <a *ngIf="post.files" [href]="filesService.getPdf(post.files)" target="_blank">
+            Télécharger le PDF
+        </a>
     </div>
 </ng-template>

@@ -5,6 +5,7 @@ import { Assignment, Submit } from '../class/cours';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { checkFileExtension } from '../validators/validator-check-extension';
 import { FilesService } from '../services/files.service';
+import { UserAuthService } from '../services/user-auth.service';
 
 @Component({
   selector: 'app-submit-assignment',
@@ -17,19 +18,24 @@ export class SubmitAssignmentComponent implements OnInit {
   assignForm = new FormGroup({
       file: new FormControl('', [Validators.required, checkFileExtension]),
     })
+  public submit !: Submit
+  private userId: number =  this.userAuthService.user?.id
+  private assignementId: string |null = this.route.snapshot.paramMap.get('id_assignment')
 
   constructor(
     private assign_service: AssignmentService,
     private files_service: FilesService,
     private route: ActivatedRoute,
     private router: Router,
+    private userAuthService : UserAuthService
   ) { }
 
   ngOnInit(): void {
-    const assignId = this.route.snapshot.paramMap.get('id_assignment');
-    this.assign_service.getAssignementsById(assignId).subscribe(result => {
+    this.assign_service.getAssignementsById(this.assignementId).subscribe(result => {
         this.assignment = result;
       });
+    this.assign_service.getSubmitByAssignmentAndUser(this.assignementId, this.userId).subscribe(submit => {this.submit = submit})
+    
   }
 
   onFileChange(event: Event): void {
@@ -46,22 +52,30 @@ export class SubmitAssignmentComponent implements OnInit {
     const file = this.assignForm.get('file')!.value;
     if (file) {
       let id_course : number = Number(this.route.snapshot.paramMap.get('id_course'));
-      let id_assignment : string | null = this.route.snapshot.paramMap.get('id_assignment');
       let fileId: string;
       this.files_service.uploadPdf(file).subscribe(result => {
         fileId = result; // Récupère l'ID du fichier PDF uploadé
-        
-        let submit : Submit = {
-        userId: 0,
-        fileId : fileId,
-        grade: null,
-        comment: null,
-        state: "En attente"
-        }
-        console.log('ID assignment :', id_assignment);
-        this.assign_service.addSubmit({submit, id_assignment}).subscribe(result => {
-        console.log('Résultat de addAssignment :', result);
-        });
+          if (!this.submit){
+            console.log('pas de submit : ', this.submit)
+            let newSubmit : Submit = {
+            userId: this.userId,
+            fileId : fileId,
+            grade: null,
+            comment: null,
+            state: "En attente"
+            }
+            console.log('ID assignment :', this.assignementId);
+            this.assign_service.addSubmit({submit: newSubmit, id_assignment: this.assignementId}).subscribe(result => {
+            console.log('Résultat de addAssignment :', result);
+            });
+          }
+          else{
+            console.log('y a un submit : ', this.submit)
+            this.assign_service.updateSubmitFileId(this.assignementId, this.userId, fileId).subscribe(result => {
+            console.log('fileId modifié !', result);
+            });
+          }
+                
       });
       
       

@@ -2,6 +2,11 @@
     <h3>{{ assignment.title }}</h3>
     <p>{{ assignment.messages }}</p>
     <p class="date">{{assignment.publishDate | date:'dd/MM/yyyy HH:mm'}}</p>
-    <button class="btn btn-primary" (click)="uploadFile()">Ajouter un travail</button>
-    <button class="btn btn-primary" (click)="getSubmit()">Rendu</button>
+    <button class="btn btn-primary" (click)="uploadFile()" *ngIf="userAuthService.hasRole('etudiant')">
+        Ajouter un travail
+    </button>
+    <!-- Bouton visible pour admin et prof -->
+    <button class="btn btn-primary" (click)="getSubmit()" *ngIf="userAuthService.hasRole('admin') || userAuthService.hasRole('prof')">
+        Rendu
+    </button>
 </div>
