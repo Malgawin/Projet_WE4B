@@ -25,9 +25,7 @@ export class ModalDisplayRegisteredComponent implements OnInit {
   }
 
   handleEvent(regId: number) {
-    if (confirm("Voulez-vous vraiment désinscrire cet utilisateur ?")){
-      this.registered = this.registered.filter(reg => reg.id !== regId);
-    }
+    this.registered = this.registered.filter(reg => reg.id !== regId);
   }
 
   private convertInscritToUser(data: Inscrit[]) {

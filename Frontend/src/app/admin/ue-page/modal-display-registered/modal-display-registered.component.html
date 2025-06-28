@@ -22,7 +22,8 @@
             <app-registered-list-element
               *ngFor="let reg of registered"
               [registered]="reg"
-              (delete)="handleEvent($event)">
+              (delete)="handleEvent($event)"
+              [courseId]="courseId">
             </app-registered-list-element>
           </ul>
         </ng-template>
