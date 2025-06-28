@@ -17,6 +17,7 @@ import { AuthGuard } from './auth.guard';
 import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
 import { UserTestComponent } from './user-test/user-test.component';
 import { UnauthorizedComponent } from './authentification/unauthorized/unauthorized.component';
+import { WorkSubmitedComponent } from './work-submited/work-submited.component';
 
 const routes: Routes = [
   { path : 'tableau-de-bord', component: TableauDeBordComponent, canActivate: [AuthGuard], children :
@@ -45,6 +46,9 @@ const routes: Routes = [
   { path : 'login', component: LoginComponent },
   { path : 'register', component: RegisterComponent },
   { path : 'change-password', component: ChangePasswordComponent },
+  { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent},
+  { path : 'travaux-rendus/:id_assignment', component: WorkSubmitedComponent}
+  
   { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent},
   { path : 'soumission-devoir/:id', component: SubmitAssignmentComponent},
   { path : 'user-test', component: UserTestComponent },

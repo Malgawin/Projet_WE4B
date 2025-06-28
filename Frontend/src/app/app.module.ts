@@ -50,6 +50,10 @@ import { AssignmentComponent } from './page-cours/course/list-posts/assignment/a
 import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
 import { UserTestComponent } from './user-test/user-test.component';
 import { UnauthorizedComponent } from './authentification/unauthorized/unauthorized.component';
+import { WorkSubmitedComponent } from './work-submited/work-submited.component';
+import { ListSubmitsComponent } from './work-submited/list-submits/list-submits.component';
+import { SubmitComponent } from './work-submited/list-submits/submit/submit.component';
+
 
 
   @NgModule({
@@ -90,7 +94,11 @@ import { UnauthorizedComponent } from './authentification/unauthorized/unauthori
       AssignmentComponent,
       SubmitAssignmentComponent,
       UserTestComponent,
-      UnauthorizedComponent
+      UnauthorizedComponent,
+      SubmitAssignmentComponent,
+      WorkSubmitedComponent,
+      ListSubmitsComponent,
+      SubmitComponent
 
 
     ],

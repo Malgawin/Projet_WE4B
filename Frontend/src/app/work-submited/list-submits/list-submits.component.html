@@ -1,0 +1,38 @@
+<div class="col">
+    <div *ngFor="let submitVar of SubmitArray" class="row">
+        <app-submit [submit]="submitVar"></app-submit>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Note</th>
+        <th scope="col">Commentaire</th>
+        <th scope="col">Fichier</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let submit of SubmitArray">
+            <td>nom</td>
+            <td>prenom</td>
+            <td>
+                <input type="number" [(ngModel)]="submit.grade" placeholder="{{submit.grade}}"/>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="submit.comment" placeholder="{{submit.comment}}" />
+            </td>
+            <td>
+                <a *ngIf="submit.fileId" [href]="filesService.getPdf(submit.fileId)" target="_blank">
+                Télécharger le PDF
+                </a>
+                <span *ngIf="!submit.fileId">Aucun fichier</span>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    <button class="btn btn-success" (click)="valider()">Valider toutes les modifications</button>
+</div>

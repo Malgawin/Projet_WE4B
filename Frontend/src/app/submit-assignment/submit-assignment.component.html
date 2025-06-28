@@ -4,14 +4,14 @@
     </div>
     <div  class="container container-date">
         <p>
-            <strong>Ouvert le :</strong> {{ assignment.publishDate | date:'dd/MM/yyyy HH:mm'}}
+            <strong>Ouvert le : </strong> {{ assignment.publishDate | date:'dd/MM/yyyy HH:mm'}}
             <br>
-            <strong>A rendre avant le :</strong>{{ assignment.deadline | date:'dd/MM/yyyy HH:mm'}}
+            <strong>A rendre avant le : </strong>{{ assignment.deadline | date:'dd/MM/yyyy HH:mm'}}
         </p>
         
     </div>
     <div class="container container-state">
-        <h3 >Statut de remise</h3>
+        <h3 >Travaux rendus</h3>
         <div class="container container-table">
             <table class="table table-striped table-hover table-bordered">
                 <tbody>

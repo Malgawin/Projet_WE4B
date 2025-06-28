@@ -24,5 +24,9 @@ export class AssignmentComponent implements OnInit {
     const id_course : number = Number(this.route.parent?.snapshot.paramMap.get('id'));
     this.router.navigate(['soumission-devoir/', id_course, this.assignment._id])
   }
+  
+  getSubmit(){
+    this.router.navigate(['travaux-rendus/', this.assignment._id]);
+  }
 
 }

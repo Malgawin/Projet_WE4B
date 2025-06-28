@@ -71,5 +71,32 @@ router.get('/assignment/:assignId', async (req, res) => {
     res.json(assignment);
 });
 
+router.get('/submit/:assignId', async (req, res) => {
+    const assignId = req.params.assignId;
+    const assignment = await Assignment.findById( assignId );
+    res.json(assignment.submit);
+});
+
+router.put('/updateAllSubmits', async (req, res) => {
+    const { id_assignment, submits } = req.body;
+
+    try {
+        const assignment = await Assignment.findById(id_assignment);
+        if (!assignment) {
+            return res.status(404).json({ error: "Assignment not found" });
+        }
+
+        // Remplace tous les submits par ceux reçus
+        assignment.submit = submits;
+
+        await assignment.save();
+
+        res.status(200).json({ message: "Tous les submits ont été mis à jour", assignment });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Erreur lors de la mise à jour des submits" });
+    }
+});
+
 
 module.exports = router;
