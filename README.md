@@ -18,6 +18,15 @@ Matthieu DIEBOLT, Pierre GUEROUT, Joshua PLOUZENNEC, Mateo CHARTIER, Dave JONATH
 - **Apache** (via XAMPP ou équivalent)
 - **HTML / CSS / TypeScript**
 
+Voici le modèle à 3 niveaux que nous utilisons :  
+
+![image](https://github.com/user-attachments/assets/4129cb82-ec46-45fc-8da7-8b8dc06d8413)
+
+Voici l'architecture de nos base de données : 
+
+![image](https://github.com/user-attachments/assets/8e888948-b123-436f-8fde-30b04fad2382)
+
+
 ------
 ## ⚙️ Installation
 
@@ -334,7 +343,7 @@ Vous trouverez dans le répertoire mongo_analytics différentes requêtes MongoD
   
 ##### :pushpin: Fonctionnalités clés
 * Gestion des utilisateurs et des Cours
-* Authentification sécurisée
+* Authentification sécurisée ( avec FireBase ) 
 * Rôles dynamiques (admin, prof, étudiant)
 * Création de posts texte et posts depot
 * Feed d’activité récente ( feed des nouveau posts ajouter dans les ue ou l'utilisateur est inscrit) 
