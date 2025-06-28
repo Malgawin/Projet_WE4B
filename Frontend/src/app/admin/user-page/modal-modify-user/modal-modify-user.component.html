@@ -24,6 +24,25 @@
             <input id="name" type="text" class="form-control" name="name" [(ngModel)]="formData.name" required />
           </div>
 
+          <!-- Rôles -->
+          <div class="mb-3">
+            <label class="form-label">Rôle</label>
+            <div *ngFor="let role of roles" class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                [value]="role.id"
+                name="role"
+                [(ngModel)]="selectedRole"
+                [id]="'role-' + role.id"
+                required
+              />
+              <label class="form-check-label" [for]="'role-' + role.id">
+                {{ role.label }}
+              </label>
+            </div>
+          </div>
+
         </div>
 
         <div class="modal-footer">

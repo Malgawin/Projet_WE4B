@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import {Cours} from "../../../class/cours";
+import {CoursService} from "../../../services/cours.service";
 
 @Component({
   selector: 'app-modal-register',
@@ -11,23 +12,22 @@ export class ModalRegisterComponent implements AfterViewInit {
   @ViewChild('registerModal') registerModal!: ElementRef;
 
   @Input() alreadySelected: Cours[] = [];
+
   @Output() emitSelection = new EventEmitter<Cours[]>();
 
   searchTerm = '';
-  ues: Cours[] = [
-    new Cours(0, "AAA", "bbb", "oe", "ddd"),
-    new Cours(1, "bbb", "fff", "oe", "ddd"),
-    new Cours(2, "AbbAA", "bbb", "oe", "ddd"),
-    new Cours(3, "aaee", "iii", "oe", "ddd"),
-    new Cours(4, "zzz", "opo", "oe", "ddd"),
-    new Cours(5, "kkk", "rop", "oe", "ddd"),
-    new Cours(6, "jjj", "zze", "oe", "ddd")
-  ];
+  ues: Cours[] = [];
   selectedUe: Cours[] = [];
 
-  constructor() {}
+  constructor(private courseService: CoursService) {
+  }
 
   ngAfterViewInit(): void {
+    this.courseService.getCours().subscribe({
+      next: (courses)=> this.ues = courses,
+      error: (err)=> console.error("Erreur lors du chargement des cours", err)
+    })
+
     const modalEl = this.registerModal.nativeElement;
 
     modalEl.addEventListener('shown.bs.modal', () => {

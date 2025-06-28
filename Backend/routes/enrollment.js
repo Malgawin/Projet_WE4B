@@ -13,7 +13,7 @@ router.post('/add', async (req, res) => {
     }
     catch (err) {
         console.error(err);
-        return res.status(500).json({ error: 'Erreur lors de l inscription'});
+        return res.status(500).json({ error: 'Erreur lors de l\'inscription'});
     }
 });
 

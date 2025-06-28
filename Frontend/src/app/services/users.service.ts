@@ -39,9 +39,14 @@ export class UsersService {
       .pipe(map(response => response.roles));
   }
 
+  getUserRolesByNormalID(id: number): Observable<number[]> {
+    return this.http.get<{ roles: number[] }>(`${this.apiUrl}/roles/${id}`)
+      .pipe(map(response => response.roles));
+  }
+
   createUser(newId: number, data: UserFormData): Observable<any>{
     return this.http.post(`${this.apiUrl}/create`, {
-      id: "",
+      id: newId.toString(),
       name: data.name,
       email: data.email,
       password: "",
@@ -67,4 +72,13 @@ export class UsersService {
     return this.http.get<any>(`${this.apiUrl}/by-uid/${uid}`);
   }
 
+  setUserRoles(userId: number, roleIds: number[]): Observable<any> {
+    return this.http.post(`${this.apiUrl}/role/set/${userId}`, {
+      roleIds
+    });
+  }
+
+  linkFirebaseUid(userId: number, uid: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/link-firebase/${userId}`, { uid });
+  }
 }
