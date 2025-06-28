@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Post } from '../../class/cours';
 import { PostService } from '../../services/post.service';
@@ -23,6 +23,8 @@ export class FormCreateRepositoryComponent implements OnInit {
       message: new FormControl('', Validators.required),
 
     })
+
+  @Input() idLogin!: number;
 
   constructor(
     private service : PostService,

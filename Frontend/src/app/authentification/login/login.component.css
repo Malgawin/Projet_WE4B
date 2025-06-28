@@ -44,7 +44,6 @@ body {
     border: 0.075rem solid #f5c6cb;
     margin-bottom: 1.125rem;
     font-size: 0.84rem;
-    display: none;
 }
 
 .error-message {
@@ -55,7 +54,6 @@ body {
     border: 0.075rem solid #f5c6cb;
     margin-bottom: 1.125rem;
     font-size: 0.84rem;
-    display: none;
 }
 
 .login-container txt{
@@ -134,4 +132,18 @@ body {
     border: none;
     cursor: pointer;
     font-size: 18px;
+}
+
+.invalid-input {
+  border-color: #dc3545;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid #f5c6cb;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
 }
