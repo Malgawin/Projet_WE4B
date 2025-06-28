@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { typePost } from '../class/cours';
+import { UserAuthService } from '../services/user-auth.service';
+
 
 @Component({
   selector: 'app-post-creation',
@@ -9,10 +11,12 @@ import { typePost } from '../class/cours';
 export class PostCreationComponent implements OnInit {
 
   public postType : number = 0;
+  idLogin!: number;
 
-  constructor() { }
+  constructor(private userAuthService: UserAuthService) { }
 
   ngOnInit(): void {
+    this.idLogin = this.userAuthService.user?.id;
   }
 
   isTextCreation(): void {

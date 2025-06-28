@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../class/cours';
@@ -20,6 +20,8 @@ export class FormCreateTextComponent implements OnInit {
 
   })
 
+  @Input() idLogin!: number;
+
   constructor(
     private service : PostService,
     private route: ActivatedRoute,
@@ -38,7 +40,7 @@ export class FormCreateTextComponent implements OnInit {
       type: this.textForm.value.type!,
       message: this.textForm.value.message!,
       publish_date: this.textForm.value.publishDate!,
-      author_id: 77,
+      author_id: this.idLogin,
       files: null,    
       sort_order: 11
     }

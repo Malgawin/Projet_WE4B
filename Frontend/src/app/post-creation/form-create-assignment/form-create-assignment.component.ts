@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Assignment } from 'src/app/class/cours';
@@ -20,6 +20,8 @@ export class FormCreateAssignmentComponent implements OnInit {
   deadline : new FormControl('', [Validators.required, checkDate]),
 
   })
+ 
+  @Input() idLogin!: number;
 
   constructor(
     private service : AssignmentService,
@@ -40,7 +42,7 @@ export class FormCreateAssignmentComponent implements OnInit {
       messages: this.assignForm.value.message!,
       publishDate: this.assignForm.value.publishDate!,
       deadline: this.assignForm.value.deadline!,
-      author_id: 77, // Assuming a static author ID for now
+      author_id: this.idLogin,
       sort_order: 11 // Assuming a static sort order for now
     }
     console.log('Devoir :', assignment);

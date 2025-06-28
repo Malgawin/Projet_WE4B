@@ -5,16 +5,16 @@
          <button class="btn btn-info" type="button" (click)="isAssignCreation()">Devoir</button>
     </div>
     <div class="container-form" *ngIf="this.postType == 0; else repoBlock">
-        <app-form-create-text></app-form-create-text>
+        <app-form-create-text [idLogin]="idLogin"></app-form-create-text>
     </div>
     <ng-template #repoBlock>
         <div *ngIf="this.postType == 1; else assignBlock" class="container-form">
-            <app-form-create-repository></app-form-create-repository>
+            <app-form-create-repository [idLogin]="idLogin"></app-form-create-repository>
         </div>
     </ng-template>
     <ng-template #assignBlock>
         <div class="container-form">
-            <app-form-create-assignment></app-form-create-assignment>
+            <app-form-create-assignment [idLogin]="idLogin"></app-form-create-assignment>
         </div>
     </ng-template>
 </div>
