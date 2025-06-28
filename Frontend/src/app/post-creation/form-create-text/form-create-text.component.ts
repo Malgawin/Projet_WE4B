@@ -55,6 +55,23 @@ export class FormCreateTextComponent implements OnInit {
 
   }
 
+
+  get publishDate () {
+    return this.textForm.get('publishDate');
+  }
+
+  get title () {
+    return this.textForm.get('title');
+  }
+
+  get type () {
+    return this.textForm.get('type');
+  }
+
+  get message () {
+    return this.textForm.get('message');
+  }
+
 } 
 
 

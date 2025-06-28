@@ -54,4 +54,25 @@ export class FormCreateAssignmentComponent implements OnInit {
     this.router.navigate(['cours/', id_course])
   }
 
+  get deadline () {
+    return this.assignForm.get('deadline');
+  }
+
+  get publishDate () {
+    return this.assignForm.get('publishDate');
+  }
+
+  get title () {
+    return this.assignForm.get('title');
+  }
+
+  get type () {
+    return this.assignForm.get('type');
+  }
+
+  get message () {
+    return this.assignForm.get('message');
+  }
+
+
 }

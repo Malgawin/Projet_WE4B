@@ -6,10 +6,17 @@
         <div>
             Titre :
             <input type="text" formControlName="title" class="form-control" aria-describedby="passwordHelpBlock">
+            <div class="error-message" *ngIf="title?.errors && (title?.dirty || title?.touched)">
+                <div *ngIf="title?.errors?.['required']">Le titre est obligatoire</div>
+            </div>
         </div>
         <div>
             Date de publication :
             <input type="datetime-local" formControlName="publishDate" class="form-control" aria-describedby="passwordHelpBlock">
+            <div class="error-message" *ngIf="publishDate?.errors && (publishDate?.dirty || publishDate?.touched)">
+                <div *ngIf="publishDate?.errors?.['required']">Date de rendu obligatoire</div>
+                <div *ngIf="publishDate?.errors?.['checkDate']">La date doit être dans le future</div>  
+            </div>
         </div>
         <div>
             Type de message :
@@ -18,14 +25,24 @@
                 <option value="annonce">Annonce</option>
                 <option value="info">Information</option>
             </select>
+            <div class="error-message" *ngIf="type?.errors && (type?.dirty || type?.touched)">
+                <div *ngIf="type?.errors?.['required']" >Le type est obligatoire</div>
+            </div>
         </div>
         <div>
             Fichier :
             <input type="file" (change)="onFileChange($event)" formControlName="file" class="form-control" aria-describedby="passwordHelpBlock">
+            <div *ngIf="file?.errors && (file?.dirty || file?.touched)">
+                <div class="error-message" *ngIf="file?.errors?.['required']">Le fichier est obligatoire</div>
+                <div class="error-message" *ngIf="file?.errors?.['checkFileExtension']">Le fichier doit être un pdf</div>
+            </div>
         </div>
         <div>
             Message :
-            <textarea type="textarea" formControlName="message" class="form-control" aria-describedby="passwordHelpBlock"></textarea>  
+            <textarea type="textarea" formControlName="message" class="form-control" aria-describedby="passwordHelpBlock"></textarea>
+            <div *ngIf="message?.errors && (message?.dirty || message?.touched)">
+                <div class="error-message" *ngIf="message?.errors?.['required']">Le message est obligatoire</div>
+            </div>  
         </div>
         <div class="container-button-form">
             <button type='submit' [disabled]='!repoForm.valid'>Valider</button>

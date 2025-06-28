@@ -6,23 +6,25 @@
         <div>
             Titre :
             <input type="text" formControlName="title" class="form-control" (blur)="assignForm.get('title')?.markAsTouched()">
-            <div *ngIf="assignForm.get('title')?.invalid && (assignForm.get('title')?.dirty || assignForm.get('title')?.touched)">
-                <div *ngIf="assignForm.get('title')?.errors?.['required']" style="color:red;">Le titre est obligatoire</div>
+            <div class="error-message" *ngIf="title?.errors && (title?.dirty || title?.touched)">
+                <div *ngIf="title?.errors?.['required']">Le titre est obligatoire</div>
             </div>
         </div>
         <div>
             Date de publication :
             <input type="datetime-local" formControlName="publishDate" class="form-control" (blur)="assignForm.get('publishDate')?.markAsTouched()">
-            <div *ngIf="assignForm.get('publishDate')?.invalid && (assignForm.get('publishDate')?.dirty || assignForm.get('publishDate')?.touched)">
-                <div *ngIf="assignForm.get('publishDate')?.errors?.['required']" style="color:red;">Date de publication obligatoire</div>
-                <div *ngIf="assignForm.get('publishDate')?.errors?.['checkDate']" style="color:red;">La date doit se trouver dans le futur</div>
+           <div class="error-message" *ngIf="publishDate?.errors && (publishDate?.dirty || publishDate?.touched)">
+                <div *ngIf="publishDate?.errors?.['required']">Date de rendu obligatoire</div>
+                <div *ngIf="publishDate?.errors?.['checkDate']">La date doit être dans le future</div>  
             </div>
         </div>
         <div>
             Date de rendu :
             <input type="datetime-local" formControlName="deadline" class="form-control" (blur)="assignForm.get('deadline')?.markAsTouched()">
-            <div *ngIf="assignForm.get('deadline')?.invalid && (assignForm.get('deadline')?.dirty || assignForm.get('deadline')?.touched)">
-                <div *ngIf="assignForm.get('deadline')?.errors?.['required']" style="color:red;">Date de rendu obligatoire</div>
+            <div class="error-message" *ngIf="deadline?.errors && (deadline?.dirty || deadline?.touched)">
+                <div *ngIf="deadline?.errors?.['required']">Date de rendu obligatoire</div>
+                <div *ngIf="deadline?.errors?.['checkDate']">La date doit être dans le future</div>               
+                
             </div>
         </div>
         <div>
@@ -33,15 +35,15 @@
                 <option value="annonce">Annonce</option>
                 <option value="info">Information</option>
             </select>
-            <div *ngIf="assignForm.get('type')?.invalid && (assignForm.get('type')?.dirty || assignForm.get('type')?.touched)">
-                <div *ngIf="assignForm.get('type')?.errors?.['required']" style="color:red;">Le type est obligatoire</div>
+            <div class="error-message" *ngIf="type?.errors && (type?.dirty || type?.touched)">
+                <div *ngIf="type?.errors?.['required']" >Le type est obligatoire</div>
             </div>
         </div>
         <div>
             Message :
             <textarea formControlName="message" class="form-control" (blur)="assignForm.get('message')?.markAsTouched()"></textarea>
-            <div *ngIf="assignForm.get('message')?.invalid && (assignForm.get('message')?.dirty || assignForm.get('message')?.touched)">
-                <div *ngIf="assignForm.get('message')?.errors?.['required']" style="color:red;">Le message est obligatoire</div>
+            <div *ngIf="message?.errors && (message?.dirty || message?.touched)">
+                <div class="error-message" *ngIf="message?.errors?.['required']">Le message est obligatoire</div>
             </div>
         </div>
         <div class="container-button-form">

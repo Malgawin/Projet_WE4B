@@ -74,4 +74,24 @@ export class FormCreateRepositoryComponent implements OnInit {
     }
   }
 
+  get file () {
+    return this.repoForm.get('file');
+  }
+
+  get publishDate () {
+    return this.repoForm.get('publishDate');
+  }
+
+  get title () {
+    return this.repoForm.get('title');
+  }
+
+  get type () {
+    return this.repoForm.get('type');
+  }
+
+  get message () {
+    return this.repoForm.get('message');
+  }
+
 }
