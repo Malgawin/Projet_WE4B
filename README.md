@@ -31,11 +31,17 @@ Avant de lancer le projet, assurez-vous d’avoir installé les outils suivants 
   ```
   node -v
   ```
-  - **Angular CLI** : outil en ligne de commande pour gérer et lancer des projets Angular  
+  
+- **Angular CLI** : outil en ligne de commande pour gérer et lancer des projets Angular  
   👉 Documentation et installation : https://angular.io/cli  
   Installation via npm :
   ```
   npm install –g @angular/cli@13.3.3
+  ```
+  Après installation, vérifiez l’installation avec les commandes :
+  ```
+  ng --version
+  
   ```
   
 - **PostgreSQL** : système de gestion de base de données relationnelle  
@@ -209,10 +215,32 @@ await mongoose.connect('mongodb://localhost:27017/projet_moodle');
 
 Vérifiez que le nom correspond au nom de votre base de données.
 
+### 8. Firebase
 
-### 8. Lancer le projet 
+Il n'est pas nécessaire de télécharger ou de créer un lien manuellement avec Firebase, car la connexion se fait automatiquement. Firebase étant une base de données en ligne, tout est déjà configuré pour permettre la connexion à distance.
 
-Une fois tout configuré, voici comment démarrer le projet en local.
+Pour visualiser les données Firebase, écrivez un mail à pierre.guerrout@utbm.fr pour qu’il vous donne l’accès.
+
+### 9. Lancer le projet 
+
+Une fois tout configuré, voici comment démarrer le projet en local :
+
+Dans un premier terminal, placez-vous dans le dossier **backend** et lancez :
+
+```
+node server.js
+```
+
+Si la connexion aux différentes bases est réussie, vous devriez voir :
+![image](https://github.com/user-attachments/assets/6c36ab17-7ce4-4221-b6e7-bf302ec6619a)
+
+Dans un second terminal, placez-vous dans le dossier **frontend** et lancez :
+
+```
+ng serve
+```
+
+Si tout est bon, l’application Angular devrait démarrer et être accessible à l’adresse indiquée dans le terminal (par défaut : [http://localhost:4200](http://localhost:4200)).
 
 
 ------
