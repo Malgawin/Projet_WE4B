@@ -189,7 +189,7 @@ mongoimport --db projet_moodle --collection <nom_collection> --file <nom_fichier
 Pour importer un fichier `forums.json` dans la collection `utilisateurs` :
 
 ```bash
-mongoimport --db projet_moodle --collection forums --file utilisateurs.json
+mongoimport --db projet_moodle --collection forums --file forums.json
 ```
 Faire cela pour l'ensemble des collections.
 
