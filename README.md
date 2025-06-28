@@ -186,11 +186,12 @@ Pour créer une base de données, il suffit de :
 
 Vous trouverez dans le dossier **BDD/mongodb** l’ensemble des collections à télécharger.
 Utilisez la commande `mongoimport` (disponible avec l'installation de MongoDB).
+Placez-vous dans le dossier où se situent les fichiers JSON à importer et ouvrez un **terminal classique**, puis faites :
 
 ### Syntaxe générale
 
 ```bash
-mongoimport --db projet_moodle --collection <nom_collection> --file <nom_fichier.json> 
+mongoimport --db projet_moodle --collection <nom_collection> --file <nom_fichier.json> --jsonArray
 ```
 
 ### Exemple
@@ -198,8 +199,10 @@ mongoimport --db projet_moodle --collection <nom_collection> --file <nom_fichier
 Pour importer un fichier `forums.json` dans la collection `utilisateurs` :
 
 ```bash
-mongoimport --db projet_moodle --collection forums --file forums.json
+mongoimport --db projet_moodle --collection forums --file projet_moodle.forums.json --jsonArray
 ```
+Atention : si votre treminal ce situe dans un autre fichier penser à ajouter le chemin devant le fichier json à importer.
+
 Faire cela pour l'ensemble des collections.
 
 Une fois l’ensemble des collections téléchargé,
