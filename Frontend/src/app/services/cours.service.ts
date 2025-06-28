@@ -6,8 +6,6 @@ import { Cours, Inscrit } from '../class/cours';
 import {UeFormData} from "../admin/ue-page/ue-page.component";
 
 
-
-
 @Injectable({
   providedIn: 'root'
 })

@@ -13,7 +13,21 @@ router.post('/add', async (req, res) => {
     }
     catch (err) {
         console.error(err);
-        return res.status(500).json({ error: 'Erreur lors de l inscription'});
+        return res.status(500).json({ error: 'Erreur lors de l\'inscription'});
+    }
+});
+
+//Delete all enrollment for a given user
+router.delete('/deleteAll/:id', async (req, res) => {
+
+    const id = req.params.id;
+
+    try {
+        await pool.query('DELETE FROM enrollment WHERE users_id = $1', [id]);
+    }
+    catch (err) {
+        console.error(err);
+        return res.status(500).json({ error: 'Erreur lors de la suppression'});
     }
 });
 
@@ -31,7 +45,20 @@ router.get('/user/:id/cours', async (req, res) => {
   }
 });
 
+//Delete an enrollment for a given user id and a given ue id
+router.delete('/deleteOne/:userId/:courseId', async (req, res) => {
 
+    const userId = req.params.userId;
+    const courseId = req.params.courseId;
+
+    try {
+        await pool.query('DELETE FROM enrollment WHERE users_id = $1 AND ue_id = $2', [userId, courseId]);
+    }
+    catch (err) {
+        console.error(err);
+        return res.status(500).json({ error: 'Erreur lors de la suppression'});
+    }
+});
 
 // PUT /pin : inverse le statut de is_pinned d'une ue pour un utilisateur si la route est utiliser  
 router.put('/pin', async (req, res) => {

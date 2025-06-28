@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {User} from "../../class/user";
 import {Cours} from "../../class/cours";
 import {UsersService} from "../../services/users.service";
+import {EnrollmentService} from "../../services/enrollment.service";
+import {Auth, createUserWithEmailAndPassword} from "@angular/fire/auth";
+import {Router} from "@angular/router";
 
 export interface UserFormData {
   name: string;
   familyName: string;
   email: string;
+  roles: number[];
   ues: Cours[];
 }
 
@@ -19,7 +23,12 @@ export class UserPageComponent implements OnInit {
 
   users: User[] = [];
 
-  constructor(private userService: UsersService) { }
+  constructor(
+    private userService: UsersService,
+    private enrollmentService: EnrollmentService,
+    private auth: Auth,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.userService.getAllUsers().subscribe({
@@ -29,17 +38,71 @@ export class UserPageComponent implements OnInit {
   }
 
   handleUserCreated(data: UserFormData) {
-    const newId = this.users.length > 0 ? Math.max(...this.users.map(u => u.id)) + 1 : 0;
-    this.userService.createUser(newId, data).subscribe({
-      error:(err)=>console.error("Erreur de création d'utilisateur", err)
+    const randomPassword = this.generatePassword();
+
+    //Create the user in postgres
+    this.userService.createUser(0, data).subscribe({
+      next: (newUser) => {
+        const newId = newUser.id;
+
+        //Create in firebase
+        createUserWithEmailAndPassword(this.auth, data.email, randomPassword)
+          .then((userCredential) => {
+            const firebaseUser = userCredential.user;
+
+            //Update db with firebase id
+            this.userService.linkFirebaseUid(newId, firebaseUser.uid).subscribe({
+              next: () => {
+                console.log(`User ${newId} linked with Firebase UID ${firebaseUser.uid}`);
+              },
+              error: (err) => console.error("Erreur de liaison Firebase UID:", err)
+            });
+
+            //Assign roles
+            this.userService.setUserRoles(newId, data.roles).subscribe({
+              error: (err) => console.error("Erreur lors de l'attribution des roles", err)
+            });
+
+            //Enroll to courses
+            data.ues.forEach(ue => {
+              this.enrollmentService.enrollUserToCourse(newId, ue.id).subscribe({
+                error: (err) => console.error("Erreur inscription UE:", err)
+              });
+            });
+
+            //Update local list
+            this.users.push(new User(newId, data.name, data.familyName, data.email));
+          })
+          .catch((error) => {
+            console.error("Erreur Firebase:", error);
+            alert(error.message);
+          });
+      },
+      error: (err) => console.error("Erreur création en BDD:", err)
     });
-    this.users.push(new User(newId, data.name, data.familyName, data.email));
   }
+
 
   handleUserModified(id:number, data: UserFormData){
     this.userService.updateUser(id, data).subscribe({
       error: (err) => console.error("Erreur lors de la modification de l'utilisateur d'id: " + id.toString(), err)
+    });
+
+    //Roles
+    this.userService.setUserRoles(id, data.roles).subscribe({
+      error: (err) => console.error("Erreur lors de la modification des roles", err)
+    });
+
+    //First, delete all enrollments to get rid of doubles
+    this.enrollmentService.deleteAll(id).subscribe({
+      error: (err) => console.error("Erreur lors de la suppression des cours pour l'utilisateur " + id.toString(), err)
     })
+    //Then enroll
+    data.ues.forEach(ue => {
+      this.enrollmentService.enrollUserToCourse(id, ue.id).subscribe({
+        error: (err) => console.error("Erreur inscription UE:", err)
+      });
+    });
   }
 
   handleUserDeleted(userId: number){
@@ -51,4 +114,49 @@ export class UserPageComponent implements OnInit {
     }
   }
 
+  private generatePassword(length = 6) {
+    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let password = "";
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * charset.length);
+      password += charset[randomIndex];
+    }
+    return password;
+  }
+
+  onRegisterSubmit(data: UserFormData) {
+    const email = data.email;
+    const password = this.generatePassword();
+
+    if (email && password) {
+      createUserWithEmailAndPassword(this.auth, email, password)
+        .then((userCredential) => {
+          const firebaseUser = userCredential.user;
+
+          const userToInsert = {
+            id: firebaseUser.uid,
+            name: data.name,
+            family_name: data.familyName,
+            email: firebaseUser.email || 'vide',
+            password: '',
+            birth_date: '2000-01-01', //TODO birthdate
+            icon: '[default]' //TODO
+          };
+
+          this.userService.createUserFromFirebase(userToInsert).subscribe({
+            next: () => {
+              console.log('Utilisateur ajouté à la base de données.');
+              this.router.navigate(['tableau-de-bord']);
+            },
+            error: (err) => {
+              console.error('Erreur lors de l\'ajout en base de données :', err);
+              alert('Erreur lors de l\'ajout dans la base de données.');
+            }
+          });
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    }
+  }
 }

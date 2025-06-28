@@ -25,15 +25,39 @@
             <input id="email" type="email" class="form-control" name="email" [(ngModel)]="formData.email" required />
           </div>
 
+          <!-- Rôles -->
+          <div class="mb-3">
+            <label class="form-label">Rôle</label>
+            <div *ngFor="let role of roles" class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                [value]="role.id"
+                name="role"
+                [(ngModel)]="selectedRole"
+                [id]="'role-' + role.id"
+                required
+              />
+              <label class="form-check-label" [for]="'role-' + role.id">
+                {{ role.label }}
+              </label>
+            </div>
+          </div>
+
           <!-- Inscription aux UE -->
           <button
             type="button"
             class="btn btn-sm btn-dark"
-            (click)="openNestedModal()">
+            (click)="openNestedModal()"
+            [disabled]="selectedRole == 'admin'">
             &plus; Inscrire
           </button>
 
-          <app-modal-register (emitSelection)="registerToUe($event)" [alreadySelected]="formData.ues"></app-modal-register>
+          <app-modal-register
+            (emitSelection)="registerToUe($event)"
+            [alreadySelected]="formData.ues"
+            [modalId]="'create'">
+          </app-modal-register>
 
           <div class="container p-2 m-2 bg-light">
             <div *ngIf="formData.ues.length === 0; else elseBlock">

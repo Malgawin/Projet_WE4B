@@ -1,7 +1,7 @@
-<div class="container-cours">
+<div *ngIf="cours" class="container-cours">
         <div class="container-cours-top">
             <div class = "container-cours-titre">
-                <h1 >{{ cours.name }}</h1>
+                <h1>{{ cours.name }}</h1>
                 <div class="container-cours-sous-titre">
                     <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Cours' }" (click)="selectCours()">
                         Cours
