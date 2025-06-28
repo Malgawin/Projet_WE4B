@@ -117,12 +117,12 @@ Pour créer un super utilisateur dans PostgreSQL via **pgAdmin**, suivez les ét
 
 ### 5. Télécharger et importer la base de données dans Symfony
 
-Une fois PostgreSQL et pgAdmin configurés, il est temps de télécharger la base de données du projet et de l'importer dans votre installation Symfony. Voici comment procéder :
+Une fois PostgreSQL et pgAdmin configurés, il est temps de télécharger la base de données du projet et de l'importer dans votre backend. Voici comment procéder :
 
 #### 5.1 Télécharger la base de données
 
 1. **Accédez au dossier BDD** :
-   - Dans le projet, un fichier Backup contenant la structure et les données de la base de données devrait être disponible dans le dossier **`BDD`**.
+   - Dans le projet, un fichier .backup contenant la structure et les données de la base de données devrait être disponible dans le dossier **`BDD`**.
    - Téléchargez ou copiez ce fichier Backup sur votre machine si nécessaire.
    - Il n'y aura pas besoin de faire de migrations via Symfony, puisque notre base utilise des triggers : on a exporté toute la base et pas seulement les données.
 
