@@ -27,9 +27,12 @@ Connecté à PgSql
 - Page de création/modification de posts (pour les profs)
 - Page des inscrits à une UE (consultation et filtrables)
 - Page de gestion de compte (modification du profil)
+- Page de soumission de devoir (pour les élèves)
+- Page de visualisation des devoirs rendus (pour les profs)
   
 ##### :compass: Navigation avec les routes Angular & Authguards
-//Mettez votre partie
+- Création de modèle pour les devoirs et les soumissions de devoir
+- Création de routes pour récupérer les devoirs et les soumissions de devoir en fonction en fonction des élèves, des cours, des devoirs
   
 ##### :pushpin: Fonctionnalités clés
 * Gestion des utilisateurs et des Cours
@@ -47,3 +50,7 @@ Connecté à PgSql
   - Décomposition en composant Angular
   - La zone admin est un module, permettant d'organiser plus clairement le projet
   - Un routage personnel de la zone d'administration est également présent pour la clareté
+* **Gestion des devoirs** :
+  - Création des postes devoirs
+  - Possibilité de soumettre un devoir, d'y voir sa note et un commentaire laisser par le professeur
+  - Visualisation des devoirs soumis par les élèves avec la possibilité d'ajouter une note et un commentaire
