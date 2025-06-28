@@ -1,0 +1,30 @@
+.container-work-submited{
+    
+    background-color: #FFFFFF;
+    margin-top: 2vh;
+    width: 95%;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border : 1px solid #c9c9c9;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    max-width: none;
+  }
+
+.container-title{
+    margin-left: 0em;
+    margin-top: 1em;
+}
+
+.container-title h1{
+    font-weight: bold;
+}
+
+.container-date{
+    margin-left: 1em;
+    margin-top: 1em;
+}

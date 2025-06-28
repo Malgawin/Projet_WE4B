@@ -1,1 +1,17 @@
-<p>work-submited works!</p>
+<div class="container container-work-submited">
+    <div class="container container-title">
+        <h1>{{ assignment.title }}</h1>
+    </div>
+    <div class="container container-date">
+        <p>
+            <strong>Ouvert le : </strong> {{ assignment.publishDate | date:'dd/MM/yyyy HH:mm'}}
+            <br>
+            <strong>A rendre avant le : </strong>{{ assignment.deadline | date:'dd/MM/yyyy HH:mm'}}
+        </p>
+    </div>
+    <div class="container">
+        <app-list-submits></app-list-submits>
+    </div>
+        
+</div>
+    

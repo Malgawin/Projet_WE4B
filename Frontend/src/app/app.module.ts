@@ -47,6 +47,8 @@ import { FormCreateAssignmentComponent } from './post-creation/form-create-assig
 import { AssignmentComponent } from './page-cours/course/list-posts/assignment/assignment.component';
 import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
 import { WorkSubmitedComponent } from './work-submited/work-submited.component';
+import { ListSubmitsComponent } from './work-submited/list-submits/list-submits.component';
+import { SubmitComponent } from './work-submited/list-submits/submit/submit.component';
 
 
 
@@ -87,7 +89,9 @@ import { WorkSubmitedComponent } from './work-submited/work-submited.component';
       FormCreateAssignmentComponent,
       AssignmentComponent,
       SubmitAssignmentComponent,
-      WorkSubmitedComponent
+      WorkSubmitedComponent,
+      ListSubmitsComponent,
+      SubmitComponent
 
 
     ],
