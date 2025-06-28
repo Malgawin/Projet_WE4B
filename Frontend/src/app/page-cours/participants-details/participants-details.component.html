@@ -2,27 +2,16 @@
     <div class="bouton-container">
         <button (click)="return()">Retour</button>
     </div>
-    
-
-
     <h2>Details Participants</h2>
-
     <hr>
-
-    <app-info-general [inscrit]="inscrit"></app-info-general>
-    
-
-    <hr>
-
-    <app-activite-general [userLog]="userLog"></app-activite-general>
-   
-    <hr>
-    
-    <app-activite-cours [courseLog]="courseLog"></app-activite-cours>
-
-    <hr>
-
-    <app-journal-activite-cours [courseLog]="courseLog"></app-journal-activite-cours>
-
+    <ng-container *ngIf="inscrit">
+      <app-info-general [inscrit]="inscrit"></app-info-general>
+      <hr>
+      <app-activite-general [userLog]="userLog"></app-activite-general>
+      <hr>
+      <app-activite-cours [courseLog]="courseLog"></app-activite-cours>
+      <hr>
+      <app-journal-activite-cours [courseLog]="courseLog"></app-journal-activite-cours>
+    </ng-container>
 </div>
 

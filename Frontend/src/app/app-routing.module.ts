@@ -47,7 +47,7 @@ const routes: Routes = [
   { path : 'register', component: RegisterComponent },
   { path : 'change-password', component: ChangePasswordComponent },
   { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent},
-  { path : 'travaux-rendus/:id_assignment', component: WorkSubmitedComponent}
+  { path : 'travaux-rendus/:id_assignment', component: WorkSubmitedComponent},
   
   { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent},
   { path : 'soumission-devoir/:id', component: SubmitAssignmentComponent},
