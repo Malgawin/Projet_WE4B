@@ -93,7 +93,16 @@ export class UserPageComponent implements OnInit {
       error: (err) => console.error("Erreur lors de la modification des roles", err)
     });
 
-    //TODO : ues
+    //First, delete all enrollments to get rid of doubles
+    this.enrollmentService.deleteAll(id).subscribe({
+      error: (err) => console.error("Erreur lors de la suppression des cours pour l'utilisateur " + id.toString(), err)
+    })
+    //Then enroll
+    data.ues.forEach(ue => {
+      this.enrollmentService.enrollUserToCourse(id, ue.id).subscribe({
+        error: (err) => console.error("Erreur inscription UE:", err)
+      });
+    });
   }
 
   handleUserDeleted(userId: number){

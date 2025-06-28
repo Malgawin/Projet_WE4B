@@ -35,9 +35,9 @@ const routes: Routes = [
                   { path : '', redirectTo: 'course', pathMatch: 'full'},
                   { path : 'course', component: CourseComponent},
                   { path : 'participants', component: ParticipantsCoursComponent},
-                  { path : 'parametres', component: ParametresCoursComponent, canActivate: [AuthGuard],  data: { roles: ['prof', 'admin'] }}, 
+                  { path : 'parametres', component: ParametresCoursComponent, canActivate: [AuthGuard],  data: { roles: ['prof', 'admin'] }},
                   { path : 'forum' , component: ForumCoursComponent },
-                  { path : 'participants/:id/details', component: ParticipantsDetailsComponent, canActivate: [AuthGuard],  data: { roles: ['prof', 'admin'] }}, 
+                  { path : 'participants/:id/details', component: ParticipantsDetailsComponent, canActivate: [AuthGuard],  data: { roles: ['prof', 'admin'] }},
               ]
   },
   { path : 'creation-cours/:id', component: PostCreationComponent , canActivate: [AuthGuard]},
@@ -47,8 +47,8 @@ const routes: Routes = [
   { path : 'register', component: RegisterComponent },
   { path : 'change-password', component: ChangePasswordComponent },
   { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent},
-  { path : 'travaux-rendus/:id_assignment', component: WorkSubmitedComponent}
-  
+  { path : 'travaux-rendus/:id_assignment', component: WorkSubmitedComponent},
+
   { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent},
   { path : 'soumission-devoir/:id', component: SubmitAssignmentComponent},
   { path : 'user-test', component: UserTestComponent },

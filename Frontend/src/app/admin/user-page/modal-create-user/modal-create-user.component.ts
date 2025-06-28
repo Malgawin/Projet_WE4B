@@ -31,7 +31,7 @@ export class ModalCreateUserComponent {
   registerModal!: Modal;
 
   ngAfterViewInit() {
-    const modalEl = document.getElementById('registerToUeModal');
+    const modalEl = document.getElementById('registerToUeModal_create');
     if (modalEl) {
       this.registerModal = new Modal(modalEl);
     }
