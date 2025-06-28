@@ -251,13 +251,46 @@ Si tout est bon, l’application Angular devrait démarrer et être accessible �
 
 Pour tester l'aplication 3 utilisateur de demonstration sont précreer pour pouvoir ce login avec leur compte : 
 ```
-mail : student@utbm.fr mdp : 123456
-mail : admin@utbm.fr   mdp : 123456
-mail : prof@utbm.fr    mdp : 123456
+mail : etudiant@utbm.fr mdp : azerty
+mail : admin@utbm.fr   mdp : azerty
+mail : prof@utbm.fr    mdp : azerty
 ```
-De plus une UE **`test`** qui est completer avec des inscrits et des posts est disponible. 
+De plus une UE **`exemple`** qui est completer avec pas mal de données. Les autres ue sont egalement disponible mais peuvent manquer de donnés pour une demonstration optimal.  
+L’ensemble des utilisateurs est également disponible, mais il manque aussi des données pour une démonstration optimale.
+
+Voici la liste de l’ensemble des utilisateurs disponibles :
+```
+Prof : 
+alice.martin@example.com mdp : azerty
+julien.dupont@example.com mdp : azerty
+emma.lefevre@example.com mdp : azerty
+lucas.laurent@example.com mdp : azerty
+clara.moreau@example.com mdp : azerty
+hugo.simon@example.com mdp : azerty
+lea.michel@example.com mdp : azerty
+
+Etudiant : 
+gabriel.thomas@example.com mdp : azerty
+camille.petit@example.com mdp : azerty
+nathan.robert@example.com mdp : azerty
+chloe.richard@example.com mdp : azerty
+enzo.dubois@example.com mdp : azerty
+manon.roux@example.com mdp : azerty
+mathis.vincent@example.com mdp : azerty
+jade.lefebvre@example.com mdp : azerty
+ethan.morel@example.com mdp : azerty
+louise.girard@example.com mdp : azerty
+```
+Il est également possible de créer vos propres utilisateurs en vous connectant en tant qu’Admin dans l’onglet Administration, section Utilisateur > Créer.
+
+Dans cette section, vous pourrez également inscrire l’utilisateur aux UE que vous souhaitez.
+
+Attention, il vous faut utiliser une véritable adresse mail pour pouvoir, par la suite, changer le mot de passe.
+
+Cette façon de créer un utilisateur suit la méthode utilisée par les platformes pedagogique classique ou pour les comptes élèves : c’est l’administrateur qui crée le compte, puis le mot de passe est changé par l’utilisateur final.
 
 ------
+
 
 ## 🔐 Rôles utilisateurs
 
