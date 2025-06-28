@@ -303,44 +303,55 @@ Cette façon de créer un utilisateur suit la méthode utilisée par les platfor
 ## 🧭 Navigation principale
 
 ### 🔎 Pages principales
+### Que contient le projet ?
 
-- **Page de login** (authentification obligatoire)
-- **Page d’administration** (catalogue et gestion utilisateurs et UE)
-- **Page de choix des UE** (accessible après login, affichage carte ou liste, affichage activité)
-- **Page de contenu UE** (posts visibles)
-- **Page de création/modification de posts** (pour les profs)
-- **Page des inscrits à une UE** (consultation et filtrables)
-- **Page de gestion de compte** (modification du profil)
+##### :mag_right: Pages principales
+- Page de login (authentification obligatoire)
+- Page d’administration (catalogue et gestion utilisateurs et UE)
+- Page de choix des UE (accessible après login, affichage **carte** ou **liste**, affichage activité)
+- Page de contenu UE (posts visibles)
+- Page de création/modification de posts (pour les profs)
+- Page des inscrits à une UE (consultation et filtrables)
+- Page de soumission de devoir (pour les élèves)
+- Page de visualisation des devoirs rendus (pour les profs)
+- Page des visualistion de forums d'un cours
+- Page d'echange de message dans un forums
+- Page de details des logs des participant ( pour les profs (accesible en cliquant sur un participants dans la liste de participants))
+- Page de modification de l'image de l'ue (pour les profs) 
+  
+##### :compass: Navigation avec les routes Angular & Authguards
+- Création de modèle pour les devoirs et les soumissions de devoir
+- Création de routes pour récupérer les devoirs et les soumissions de devoir en fonction en fonction des élèves, des cours, des devoirs
+  
+##### :pushpin: Fonctionnalités clés
+* Gestion des utilisateurs et des Cours
+* Authentification sécurisée
+* Rôles dynamiques (admin, prof, étudiant)
+* Création de posts texte et posts depot
+* Feed d’activité récente ( feed des nouveau posts ajouter dans les ue ou l'utilisateur est inscrit) 
+* Affichage distinct selon type de post
+* Interface responsive grâce à Angular & Bootstrap
+* **Administration du site** :
+  - Accessibilité à la page *uniquement* si autorisé
+  - Création, Modification, Suppression de Cours et Utilisateur
+  - Lors de l'inscription aux cours, possibilité de rechercher parmi ceux existants
+  - Interface *user-friendly* rendue possible facilement grâce aux Services Angular
+  - Décomposition en composant Angular
+  - La zone admin est un module, permettant d'organiser plus clairement le projet
+  - Un routage personnel de la zone d'administration est également présent pour la clareté
+* **Gestion des devoirs** :
+  - Création des postes devoirs
+  - Possibilité de soumettre un devoir, d'y voir sa note et un commentaire laisser par le professeur
+  - Visualisation des devoirs soumis par les élèves avec la possibilité d'ajouter une note et un commentaire
+* **gestion des logs** :
+  - creation de logs 
+  - affichage des logs
+  - gestion de la progression des cours
+* **gestion de droit sur les forums**
+  - seulement les prof ou admin peuvent suprimer un forum
+  - seul l'auteur du message ou un profeseur/admin peut suprimer les messages
+    
 
----
-
-### 📌 Fonctionnalités clés
-
-- Gestion des utilisateurs et des UE
-- Authentification sécurisée
-- Rôles dynamiques (admin, prof, étudiant)
-- Création de **posts texte** et **posts depot**
-- **Suppression AJAX** avec confirmation
-- Feed d’**activité récente** par utilisateur
-- Affichage distinct selon type de post
-- Interface responsive grâce aux **CSS/HTML**
-- Création Modification et Suppression d'Utilisateur et d'UE pour l'administrateur
-- Upload d'image depuis l'ordinateur vers le site (icon profil, affichage ue) 
-
----
-
-### 🎯 Fonctionnalités "Nice to Have"
-
-- Épinglage des UE et carte tournable pour obtenir description de l'UE
-- Réorganisation manuelle des posts
-- Interface dynamique (AJAX/JS) pour les formulaires de modification et création de posts
-- Interface administrateur avec des fenêtres modales, créant une dynamique de page agréable
-- Affichage des inscrits pour une UE donnée.
-- Chargement progressif du feed d’actualité via AJAX
-- Filtre page inscrits (JS)
-- Modification des posts depuis l'UE
-- Affichage des posts suivant la date de publication pour les étudiants (Planification de publications possible pour les professeurs.)
-
----
-
-En cas de problème ou informations manquantes, vous pouvez contactez matthieu.diebolt@utbm.fr.
+Et bien plus... 
+    
+En cas de problème ou informations manquantes, vous pouvez contactez matthieu.diebolt@utbm.fr, pierre.guerout@utbm.fr, joshua.plouzennec@utbm.fr, mateo.chartier@utbm.fr
