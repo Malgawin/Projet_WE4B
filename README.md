@@ -300,6 +300,15 @@ Cette façon de créer un utilisateur suit la méthode utilisée par les platfor
 
 ------
 
+
+## Analyses des données : 
+
+Vous trouverez dans le répertoire mongo_analytics différentes requêtes MongoDB ainsi qu’une description pour effectuer des recherches analytiques sur les données MongoDB 
+
+
+------
+
+
 ## 🧭 Navigation principale
 
 ### 🔎 Pages principales
@@ -372,6 +381,19 @@ Et bien plus...
 
 ![image](https://github.com/user-attachments/assets/b22b215c-6112-40bb-9938-a1223a68f8a7)
 
+![image](https://github.com/user-attachments/assets/50f21579-251c-4d91-ad03-8bf3615d7f6a)
+
+Devoir : 
+
+![image](https://github.com/user-attachments/assets/32705995-b3a0-4fe1-8079-200862f9d0a9)
+
+![image](https://github.com/user-attachments/assets/bae3ab0e-a04c-4055-94e4-0bd456d04098)
+
+![image](https://github.com/user-attachments/assets/22756a65-df3e-45fe-a239-1faaaf5e4beb)
+
+![image](https://github.com/user-attachments/assets/7e46b557-58ed-451d-b878-fa3653829301)
+
+
 ### Page participants : 
 
 ![image](https://github.com/user-attachments/assets/61dff0bf-92d2-4e8a-b9f4-c3c3f4278807)
@@ -392,15 +414,7 @@ page logs ( acesible en tant que prof) :
 
 ![image](https://github.com/user-attachments/assets/2917df8c-b061-40d0-ae14-eebee94de22b)
 
-Devoir : 
 
-![image](https://github.com/user-attachments/assets/32705995-b3a0-4fe1-8079-200862f9d0a9)
-
-![image](https://github.com/user-attachments/assets/bae3ab0e-a04c-4055-94e4-0bd456d04098)
-
-![image](https://github.com/user-attachments/assets/22756a65-df3e-45fe-a239-1faaaf5e4beb)
-
-![image](https://github.com/user-attachments/assets/7e46b557-58ed-451d-b878-fa3653829301)
 
 
 ### Page parametre de cours : 
