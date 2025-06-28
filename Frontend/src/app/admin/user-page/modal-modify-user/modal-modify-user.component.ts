@@ -3,6 +3,8 @@ import {Modal} from "bootstrap";
 import {UserFormData} from "../user-page.component";
 import {User} from "../../../class/user";
 import {UsersService} from "../../../services/users.service";
+import {EnrollmentService} from "../../../services/enrollment.service";
+import {Cours} from "../../../class/cours";
 
 @Component({
   selector: 'app-modal-modify-user',
@@ -10,6 +12,8 @@ import {UsersService} from "../../../services/users.service";
   styleUrls: ['./modal-modify-user.component.css']
 })
 export class ModalModifyUserComponent implements OnInit {
+
+  registerModal!: Modal;
 
   @Input() user! : User;
   @Output() modify = new EventEmitter<UserFormData>();
@@ -30,7 +34,17 @@ export class ModalModifyUserComponent implements OnInit {
     ues: []
   }
 
-  constructor(private userService: UsersService) { }
+  ngAfterViewInit() {
+    const modalEl = document.getElementById('registerToUeModal_modify_' + this.user.id.toString());
+    if (modalEl) {
+      this.registerModal = new Modal(modalEl);
+    }
+  }
+
+  constructor(
+    private userService: UsersService,
+    private enrollmentService: EnrollmentService
+  ) { }
 
   ngOnInit(): void {
     this.formData = {
@@ -38,7 +52,7 @@ export class ModalModifyUserComponent implements OnInit {
       familyName: this.user.familyName,
       email: this.user.mail,
       roles: [],
-      ues: [] //Todo
+      ues: []
     };
 
     //Roles
@@ -61,6 +75,20 @@ export class ModalModifyUserComponent implements OnInit {
     } else {
       this.selectedRole = "teacher-admin";
     }
+
+    //UEs
+    this.enrollmentService.getAllCourseByUser(this.user.id).subscribe({
+      next: (rows) => {
+        this.formData.ues = rows.map((row: any) => new Cours(
+          row.id,
+          row.code,
+          row.name,
+          row.description,
+          ""
+        ));
+      },
+      error: (err) => console.error("Erreur lors de la récupération des cours de l'utilisateur " + this.user.id.toString(), err)
+    })
   }
 
   updateUserDynamically(){
@@ -94,8 +122,24 @@ export class ModalModifyUserComponent implements OnInit {
       familyName: this.user.familyName,
       email: this.user.mail,
       roles: [],
-      ues: [] //Todo
+      ues: []
     }
   }
 
+  openNestedModal() {
+    this.registerModal?.show();
+  }
+
+  onNestedModalSelection(ues: Cours[]) {
+    this.formData.ues = ues;
+  }
+
+  onDeleteUE(ueId: number) {
+    if (confirm("Etes-vous sûr de vouloir désinscrire l'utilisateur de ce cours ?")){
+      this.formData.ues = this.formData.ues.filter(ue => ue.id !== ueId);
+      this.enrollmentService.deleteOne(this.user.id, ueId).subscribe({
+        error: (err) => console.error("Erreur lors de la suppression du cours " + ueId.toString(), err)
+      })
+    }
+  }
 }

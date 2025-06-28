@@ -51,6 +51,12 @@ export class ParticipantsCoursComponent implements OnInit {
   //methode pour fermer la fenetre d'ajout de participant
   closeWindowAdd() {
     this.showWindowAdd = false;
+    // Recharge la liste des inscrits
+    if (this.cours) {
+      this.coursService.getInscrits(this.cours.id).subscribe(inscrits => {
+        this.cours.inscrits = inscrits;
+      });
+    }
   }
 
   canAddParticipant(): boolean {

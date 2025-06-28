@@ -44,7 +44,6 @@
             </div>
           </div>
 
-
           <!-- Inscription aux UE -->
           <button
             type="button"
@@ -54,7 +53,11 @@
             &plus; Inscrire
           </button>
 
-          <app-modal-register (emitSelection)="registerToUe($event)" [alreadySelected]="formData.ues"></app-modal-register>
+          <app-modal-register
+            (emitSelection)="registerToUe($event)"
+            [alreadySelected]="formData.ues"
+            [modalId]="'create'">
+          </app-modal-register>
 
           <div class="container p-2 m-2 bg-light">
             <div *ngIf="formData.ues.length === 0; else elseBlock">

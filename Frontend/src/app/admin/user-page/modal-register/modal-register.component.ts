@@ -12,6 +12,7 @@ export class ModalRegisterComponent implements AfterViewInit {
   @ViewChild('registerModal') registerModal!: ElementRef;
 
   @Input() alreadySelected: Cours[] = [];
+  @Input() modalId!: string;
 
   @Output() emitSelection = new EventEmitter<Cours[]>();
 

@@ -23,4 +23,12 @@ export class EnrollmentService {
       ue_id: courseId
     })
   }
+
+  deleteAll(userId: number): Observable<any>{
+    return this.http.delete(`${this.apiUrl}/deleteAll/${userId}`);
+  }
+
+  deleteOne(userId: number, courseId:number): Observable<any>{
+    return this.http.delete(`${this.apiUrl}/deleteOne/${userId}/${courseId}`);
+  }
 }

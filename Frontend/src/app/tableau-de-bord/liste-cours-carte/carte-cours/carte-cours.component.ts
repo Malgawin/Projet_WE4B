@@ -31,6 +31,11 @@ export class CarteCoursComponent implements OnInit {
   pourcentageProgesion: number = 0; // Pourcentage de progression
   
   @Input() idLogin!: number;  // en antendant login 
+  @Input() roles: string[] = [];
+
+  get isAdmin(): boolean {
+    return this.roles.includes('admin');
+  }
 
   constructor(private filesService: FilesService, private postService: PostService, private coursService: CoursService, private router: Router, private journalService: JournalLogsService,) { }
 
