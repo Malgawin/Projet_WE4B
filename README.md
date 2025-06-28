@@ -353,5 +353,68 @@ Cette façon de créer un utilisateur suit la méthode utilisée par les platfor
     
 
 Et bien plus... 
-    
+
+## Screen du projet : 
+
+### Login : 
+
+![image](https://github.com/user-attachments/assets/07e45f9d-fba8-48d1-a1e2-0f63c9fb8945)
+
+###Tableau de bord : 
+
+![image](https://github.com/user-attachments/assets/0f8b74f7-66d1-4e95-b597-1b258222002c)
+
+![image](https://github.com/user-attachments/assets/541e935e-2fc9-426a-a590-2f7a5295fd9b)
+
+### Page cours :
+
+![image](https://github.com/user-attachments/assets/b22b215c-6112-40bb-9938-a1223a68f8a7)
+
+### Page participants : 
+
+![image](https://github.com/user-attachments/assets/61dff0bf-92d2-4e8a-b9f4-c3c3f4278807)
+
+page logs ( acesible en tant que prof) : 
+
+![image](https://github.com/user-attachments/assets/b686f7b1-e4a4-456d-9820-b24a518b39e3)
+
+![image](https://github.com/user-attachments/assets/f6e4b035-b786-479c-b951-58f7e3dd77c8)
+
+![image](https://github.com/user-attachments/assets/c5d08244-333c-434d-9158-d565eb762a70)
+
+
+
+### Page forum : 
+
+![image](https://github.com/user-attachments/assets/d4da35c8-6ca8-4190-981b-8225eed981f9)
+
+![image](https://github.com/user-attachments/assets/2917df8c-b061-40d0-ae14-eebee94de22b)
+
+Devoir : 
+
+![image](https://github.com/user-attachments/assets/32705995-b3a0-4fe1-8079-200862f9d0a9)
+
+![image](https://github.com/user-attachments/assets/bae3ab0e-a04c-4055-94e4-0bd456d04098)
+
+![image](https://github.com/user-attachments/assets/22756a65-df3e-45fe-a239-1faaaf5e4beb)
+
+![image](https://github.com/user-attachments/assets/7e46b557-58ed-451d-b878-fa3653829301)
+
+
+### Page parametre de cours : 
+
+![image](https://github.com/user-attachments/assets/dd2abecd-bf40-4028-a06c-79d4ccc9fd22)
+
+### Page admin : 
+
+![image](https://github.com/user-attachments/assets/e4745af1-3015-49e5-ad5d-1069275741c6)
+
+![image](https://github.com/user-attachments/assets/d6d3fb9c-f6d1-4e95-8455-388608b35fd5)
+
+![image](https://github.com/user-attachments/assets/ca788495-ac3c-4e9e-a096-3027791b5c5c)
+
+![image](https://github.com/user-attachments/assets/56e70185-7731-4269-a9c3-ed209c127ddc)
+
+Et bien plus à decouvrir en telechargent le projet 
+
 En cas de problème ou informations manquantes, vous pouvez contactez matthieu.diebolt@utbm.fr, pierre.guerout@utbm.fr, joshua.plouzennec@utbm.fr, mateo.chartier@utbm.fr
