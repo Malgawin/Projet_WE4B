@@ -19,8 +19,10 @@ export class LoginComponent {
 
   showPassword: boolean = false;
   loginError: string = '';
+
   constructor(
-    private auth: Auth, private router: Router,
+    private auth: Auth, 
+    private router: Router,
     private journalLogsService: JournalLogsService,
     private usersService: UsersService,
     private userAuthService: UserAuthService) {}
@@ -38,10 +40,12 @@ export class LoginComponent {
   }
 
   async onLoginSubmit() {
-  if (this.loginForm.invalid) return;
+    if (this.loginForm.invalid) return;
 
     const email = this.loginForm.value.email!;
     const password = this.loginForm.value.password!;
+
+    this.loginError = '';  // clear old errors
 
     try {
       const userCredential = await signInWithEmailAndPassword(this.auth, email, password);
@@ -60,15 +64,27 @@ export class LoginComponent {
             },
             error: err => {
               console.error('Erreur récupération user SQL :', err);
-              alert('Erreur lors de la récupération de l\'utilisateur.');
+              this.loginError = 'Erreur lors de la récupération de votre compte.';
             }
-        });
-      }
+          });
+        },
+        error: err => {
+          console.error('Erreur récupération des rôles :', err);
+          this.loginError = 'Erreur lors de la récupération des rôles.';
+        }
       });
-
-    } catch (error: any) {
-      alert(error.message || 'Échec de la connexion');
+    } catch (error: any) {      
+      if (error?.code === "auth/invalid-login-credentia") {
+        this.loginError = 'Email ou mot de passe incorrect.';
+      } else if (error?.code === 'auth/user-not-found') {
+        this.loginError = 'Compte introuvable.';
+      } else if (error?.code === 'auth/wrong-password') {
+        this.loginError = 'Mot de passe incorrect.';
+      } else {
+        this.loginError = 'Erreur de connexion : ' + (error.message || 'inconnue');
+      }
     }
   }
 
+  
 }
