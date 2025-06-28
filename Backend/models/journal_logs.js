@@ -4,14 +4,13 @@ const mongoose = require('mongoose');
 
 const activitySchema = new mongoose.Schema({ //schema pour les activités des utilisateurs
 
-  type: { type: String, required: true }, // action realiser ex : forum-message , forum-message-delete , create-forum , view 
+  type: { type: String, required: true }, // action realiser ex : forum-message , forum-message-delete , create-forum , view , check post
   date: { type: Date, required: true },
   forumId: { type: mongoose.Schema.Types.ObjectId, ref: 'forum', required: false }, // pour les forums
   messageId: { type: mongoose.Schema.Types.ObjectId, ref: 'message', required: false }, // pour les messages dans les forums
   postId: { type: Number, required: false } // pour les posts checké
 
 });
-
 
 
 const courseUserLogs = new mongoose.Schema({

@@ -32,6 +32,5 @@ export class ListPostsComponent implements OnInit {
         this.AssignmentArray = result;
       });
     }
-    // this.cours.nbPostsTotal = this.PostArray.length; // ###### a adatper et changer d'endroit si necesaire pour la progression stocker dans cours le nombre de posts total
   }
 }

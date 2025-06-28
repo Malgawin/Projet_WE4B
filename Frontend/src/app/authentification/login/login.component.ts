@@ -3,6 +3,8 @@ import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { signInWithEmailAndPassword, Auth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { JournalLogsService } from '../../services/journal-logs.service';
+import { UsersService } from 'src/app/services/users.service';
+import { UserAuthService } from 'src/app/services/user-auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +19,11 @@ export class LoginComponent {
 
   showPassword: boolean = false;
   loginError: string = '';
-  constructor(private auth: Auth, private router: Router, private journalLogsService: JournalLogsService) {}
+  constructor(
+    private auth: Auth, private router: Router,
+    private journalLogsService: JournalLogsService,
+    private usersService: UsersService,
+    private userAuthService: UserAuthService) {}
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
@@ -32,18 +38,37 @@ export class LoginComponent {
   }
 
   async onLoginSubmit() {
-    if (this.loginForm.invalid) return;
+  if (this.loginForm.invalid) return;
 
     const email = this.loginForm.value.email!;
     const password = this.loginForm.value.password!;
 
     try {
       const userCredential = await signInWithEmailAndPassword(this.auth, email, password);
-      console.log('User logged in:', userCredential.user);
+      const firebaseUid = userCredential.user.uid;
+      console.log('User logged in:', firebaseUid);
 
-      this.router.navigate(['tableau-de-bord']);
+      this.usersService.getUserRoles(firebaseUid).subscribe({
+        next: (roles) => {
+          this.usersService.getUserByUid(firebaseUid).subscribe({
+            next: userFromDb => {
+              this.userAuthService.setUser({ ...userFromDb, roles });
+              this.journalLogsService.updateLogin(userFromDb.id).subscribe({
+                next: () => this.router.navigate(['/tableau-de-bord']),
+                error: () => this.router.navigate(['/tableau-de-bord'])
+              });
+            },
+            error: err => {
+              console.error('Erreur récupération user SQL :', err);
+              alert('Erreur lors de la récupération de l\'utilisateur.');
+            }
+        });
+      }
+      });
+
     } catch (error: any) {
-      alert(error.message || 'Login failed');
+      alert(error.message || 'Échec de la connexion');
     }
   }
+
 }

@@ -11,6 +11,8 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 
 
+
+
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormCreateTextComponent } from './post-creation/form-create-text/form-create-text.component';
 import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component';
@@ -46,6 +48,8 @@ import { DateToPhrasePipe } from './pipes/date-to-phrase.pipe';
 import { FormCreateAssignmentComponent } from './post-creation/form-create-assignment/form-create-assignment.component';
 import { AssignmentComponent } from './page-cours/course/list-posts/assignment/assignment.component';
 import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
+import { UserTestComponent } from './user-test/user-test.component';
+import { UnauthorizedComponent } from './authentification/unauthorized/unauthorized.component';
 import { WorkSubmitedComponent } from './work-submited/work-submited.component';
 import { ListSubmitsComponent } from './work-submited/list-submits/list-submits.component';
 import { SubmitComponent } from './work-submited/list-submits/submit/submit.component';
@@ -89,6 +93,9 @@ import { SubmitComponent } from './work-submited/list-submits/submit/submit.comp
       FormCreateAssignmentComponent,
       AssignmentComponent,
       SubmitAssignmentComponent,
+      UserTestComponent,
+      UnauthorizedComponent,
+      SubmitAssignmentComponent,
       WorkSubmitedComponent,
       ListSubmitsComponent,
       SubmitComponent
@@ -104,7 +111,6 @@ import { SubmitComponent } from './work-submited/list-submits/submit/submit.comp
       UserPageModule,
       provideFirebaseApp(() => initializeApp(environment.firebase)),
       provideAuth(() => getAuth())
-
     ],
     providers: [],
     bootstrap: [AppComponent]

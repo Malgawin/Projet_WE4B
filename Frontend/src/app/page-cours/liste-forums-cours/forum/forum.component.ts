@@ -14,8 +14,8 @@ import { Forum } from '../../../class/forum'
 export class ForumComponent implements OnInit {
 
   nouveauMessage: string = ''; // nouveau message à envoyer
-  idLogin: number = 40; // id temporaire
-
+  @Input() idLogin!: number; // id de l'utilisateur connecté
+  @Input() roles: string[] = [];
 
   @Input() forum!: Forum; //recupere le forum selectioner dans le parent
 
@@ -97,8 +97,8 @@ export class ForumComponent implements OnInit {
       }
   }
 
-  // Méthode pour vérifier si l'utilisateur peut supprimer un message, si il c'est son message
+  // Méthode pour vérifier si l'utilisateur peut supprimer un message, si il c'est son message ou que c'est un prof ou admin 
   canDelete(authorId: string | number | undefined): boolean {
-    return Number(authorId) === this.idLogin;
+    return ( this.roles.includes('admin') || this.roles.includes('prof') || Number(authorId) === this.idLogin );
   }
 }

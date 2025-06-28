@@ -9,6 +9,7 @@ import { PostService } from 'src/app/services/post.service';
 
 
 
+
 @Component({
   selector: 'app-carte-cours',
   templateUrl: './carte-cours.component.html',
@@ -29,7 +30,7 @@ export class CarteCoursComponent implements OnInit {
   progresionObjectif: number = 0; // Objectif de progression (nombre de posts total dans le cours)
   pourcentageProgesion: number = 0; // Pourcentage de progression
   
-  idLogin: number = 40;  // en antendant login 
+  @Input() idLogin!: number;  // en antendant login 
 
   constructor(private filesService: FilesService, private postService: PostService, private coursService: CoursService, private router: Router, private journalService: JournalLogsService,) { }
 

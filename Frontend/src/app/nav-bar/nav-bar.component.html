@@ -12,10 +12,13 @@
         <a class="nav-link" routerLink="/tableau-de-bord">Mes Cours</a>
       </div>
 
-      <div class="navbar-nav">
+      <div class="navbar-nav" *ngIf="userAuthService.hasRole('admin')">
         <a class="nav-link" routerLink="/admin">Administration</a>
       </div>
 
+      <div class="navbar-nav">
+        <a class="nav-link" (click)="logout()" style="cursor: pointer;">Déconnexion</a>
+      </div>
     </div>
   </div>
 </nav>

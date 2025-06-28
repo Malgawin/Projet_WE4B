@@ -2,6 +2,28 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../poolPgSQL');
 
+router.get('/roles/:firebaseUid', async (req, res) => {
+  const { firebaseUid } = req.params;
+  console.log('Requête pour UID :', firebaseUid);
+  
+  try {
+    const query = `
+      SELECT r.type
+      FROM users u
+      JOIN user_roles ur ON u.id = ur.users_id
+      JOIN roles r ON ur.roles_id = r.id
+      WHERE u.id_firebase = $1;
+    `;
+    const values = [firebaseUid];
+    const { rows } = await pool.query(query, values);
+    const roles = rows.map(r => r.type);
+
+    res.json({ roles });
+  } catch (err) {
+    console.error('Erreur récupération des rôles :', err);
+    res.status(500).json({ error: 'Erreur serveur' });
+  }
+});
 
 // Get all users
 router.get('/', async (req, res) => {
@@ -91,5 +113,27 @@ router.post('/create', async (req, res) => {
         res.status(500).json({ error: 'Erreur lors de la création de l\'utilisateur' });
     }
 });
+
+
+router.get('/by-uid/:uid', async (req, res) => {
+  const uid = req.params.uid;
+
+  console.log('Requête pour UID :', uid);
+
+  try {
+    const result = await pool.query('SELECT * FROM users WHERE id_firebase = $1', [uid]);
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ message: 'Utilisateur non trouvé' });
+    }
+
+    res.json(result.rows[0]);
+  } catch (error) {
+    console.error('Erreur SQL:', error);
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
+
+
 
 module.exports = router;

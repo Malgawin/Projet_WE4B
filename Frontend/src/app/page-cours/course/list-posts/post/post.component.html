@@ -1,5 +1,6 @@
 <div class="container-annonce" *ngIf="this.post.type == 'annonce'; else importantBlock">
-    <button (click)="checkPost()" [disabled]="isChecked()" [ngClass]="{'btn-check-false': isChecked(), 'btn-check-true': !isChecked()}">{{ isChecked() ? 'Deja validé' : 'Marquer comme validé' }}</button><h3>{{ post.title }}</h3>
+    <button  (click)="checkPost()" [disabled]="isChecked()" [ngClass]="{'btn-check-false': isChecked(), 'btn-check-true': !isChecked()}">{{ isChecked() ? 'Deja validé' : 'Marquer comme validé' }}</button>
+    <h3>{{ post.title }}</h3>
     <p>{{ post.message | date:'dd/MM/yyyy HH:mm'}}</p>
     <p class="date">{{post.publish_date}}</p>
 </div>

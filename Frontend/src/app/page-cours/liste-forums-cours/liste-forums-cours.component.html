@@ -6,7 +6,7 @@
         <th>Auteur</th>
         <th>Dernier message</th>
         <th>Nombre de messages</th>
-        <th>Supprimer</th>
+        <th *ngIf="canDeleteForum()" >Supprimer</th>
       </tr>
     </thead>
     <tbody>
@@ -27,7 +27,7 @@
           </small>
         </td>
         <td>{{ forum.messages.length }}</td>
-        <td>
+        <td *ngIf="canDeleteForum()">
           <button class="btn-delete-forum" (click)="dltForum(forum._id); $event.stopPropagation()">X</button>
         </td>
       </tr>
@@ -55,6 +55,6 @@
 
 <div *ngIf="selectedForum" class="forum-conteneur">
   <button class="button-retour" (click)="backToList()">Retour</button>
-  <app-forum [forum]="selectedForum"></app-forum>
+  <app-forum [forum]="selectedForum" [idLogin]="idLogin" [roles]="roles"></app-forum>
 </div>
 

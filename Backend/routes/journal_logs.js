@@ -27,19 +27,41 @@ router.get('/:userId', async (req, res) => {
 });
 
 
-// patch pourt mettre a jour seulement cetrains champs du log d'un utilisateur
+// patch pourt mettre a jour les champs de connexion du log d'un utilisateur
 router.patch('/:userId', async (req, res) => { 
   try {
+    //recuperation de l'id de l'utilisateur
     const userId = parseInt(req.params.userId);
+    //recupere dans le corps de la requete les champs a maj
     const update = req.body;
-    // maj les log de l'utilisateur avec les champs envoyés dans le body et on renvoie le log mis a jour
-    const log = await Log.findOneAndUpdate({ userId }, update, { new: true }); // new: true pour renvoyer le log mis a jour
+
+    // maj les log de l'utilisateur avec les champs du corps de la requete
+    const log = await Log.findOneAndUpdate(
+      { userId }, 
+      update, 
+      { new: true, upsert: true }
+    );
+    
     res.json(log);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
+// pathc pour mettre à jour la date de déconnexion de l'utilisateur
+router.patch('/:userId/logout', async (req, res) => {
+  try {
+    const userId = parseInt(req.params.userId);
+    const log = await Log.findOneAndUpdate(
+      { userId },
+      { lastLogout: new Date() },
+      { new: true, upsert: true }
+    );
+    res.json(log);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 // patch qui maj ou crée le log d'activité pour un cours donné d'un utilisateur donne
 router.patch('/:userId/course/:courseId', async (req, res) => {

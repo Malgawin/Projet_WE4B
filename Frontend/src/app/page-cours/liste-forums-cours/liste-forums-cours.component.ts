@@ -4,6 +4,7 @@ import { ForumService } from '../../services/forum.service';
 import { UsersService } from '../../services/users.service';
 import { JournalLogsService } from '../../services/journal-logs.service';
 import { Forum } from '../../class/forum'
+import { UserAuthService } from '../../services/user-auth.service';
 
 
 
@@ -19,19 +20,27 @@ export class ForumCoursComponent implements OnInit {
   selectedCoursId: number = 0; // ID du cours sélectionné 
   nouveauTitre: string = ''; // Titre du nouveau forum à ajouter
    
-  constructor(private forumService: ForumService, private activatedroute: ActivatedRoute, private usersService: UsersService, private journalLogsService: JournalLogsService) {}
+  idLogin!: number; // id utilisateur conecté
+  roles: string[] = [];
 
-  idLogin: number = 40; // id temporaire
   userNames: { [key: number]: string } = {}; //dictionnaire pour stocker les noms des utilisateurs par ID
   
-  ngOnInit(): void {
-      // Récupération de l'ID du cours depuis l'URL
-      const coursId = Number(this.activatedroute.parent?.snapshot.paramMap.get('id') || '0');
-      
-      if (coursId){
+  
+  constructor(private forumService: ForumService, private activatedroute: ActivatedRoute, private usersService: UsersService, private journalLogsService: JournalLogsService, private userAuthService: UserAuthService) {}
 
-        this.selectedCoursId = coursId;
-        // Récupération des forums du cours via son id
+  
+  ngOnInit(): void {
+
+    this.idLogin = this.userAuthService.user?.id;
+    this.roles = this.userAuthService.roles;
+
+      // Récupération de l'ID du cours depuis l'URL
+    const coursId = Number(this.activatedroute.parent?.snapshot.paramMap.get('id') || '0');
+      
+    if (coursId){
+
+      this.selectedCoursId = coursId;
+      // Récupération des forums du cours via son id
         this.forumService.getForumsByCours(coursId).subscribe(forum => {
           this.forums = forum
           //récupération des id des auteur des forums
@@ -110,6 +119,8 @@ export class ForumCoursComponent implements OnInit {
     }
   }
 
-  
+  canDeleteForum(): boolean {
+    return this.roles.includes('prof') || this.roles.includes('admin');
+  }
 }
   

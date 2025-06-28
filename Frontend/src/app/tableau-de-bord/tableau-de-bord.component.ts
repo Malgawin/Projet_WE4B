@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TableauDeBordComponent implements OnInit {
 
-  userId: number = 40; // id users log 
+ 
 
   currentView: string = 'Carte'; // gere la vu soit en carte soit en carte entendue
   menuOpen: boolean = false; //gere l'affichage ou non du menu deroulant
@@ -18,7 +18,7 @@ export class TableauDeBordComponent implements OnInit {
   constructor(private router: Router, private acrivatedroute: ActivatedRoute) { }
 
   ngOnInit(): void {
-
+    
   }
 
   

@@ -15,6 +15,8 @@ import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.compon
 import { ChangePasswordComponent } from './authentification/change-password/change-password.component';
 import { AuthGuard } from './auth.guard';
 import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
+import { UserTestComponent } from './user-test/user-test.component';
+import { UnauthorizedComponent } from './authentification/unauthorized/unauthorized.component';
 import { WorkSubmitedComponent } from './work-submited/work-submited.component';
 
 const routes: Routes = [
@@ -33,14 +35,13 @@ const routes: Routes = [
                   { path : '', redirectTo: 'course', pathMatch: 'full'},
                   { path : 'course', component: CourseComponent},
                   { path : 'participants', component: ParticipantsCoursComponent},
-                  { path : 'parametres', component: ParametresCoursComponent },
+                  { path : 'parametres', component: ParametresCoursComponent, canActivate: [AuthGuard],  data: { roles: ['prof', 'admin'] }}, 
                   { path : 'forum' , component: ForumCoursComponent },
-                  { path : 'participants/:id/details', component: ParticipantsDetailsComponent},
-
+                  { path : 'participants/:id/details', component: ParticipantsDetailsComponent, canActivate: [AuthGuard],  data: { roles: ['prof', 'admin'] }}, 
               ]
   },
   { path : 'creation-cours/:id', component: PostCreationComponent , canActivate: [AuthGuard]},
-  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) , canActivate: [AuthGuard]},
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) , canActivate: [AuthGuard], data: { roles: ['admin']}}, // exemple de roles mais vous pouvez aussi mettre data: { roles: ['etudiant', 'prof'] } pour authoriser les 2
   { path: '', redirectTo: '', pathMatch: 'full' },
   { path : 'login', component: LoginComponent },
   { path : 'register', component: RegisterComponent },
@@ -48,6 +49,12 @@ const routes: Routes = [
   { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent},
   { path : 'travaux-rendus/:id_assignment', component: WorkSubmitedComponent}
   
+  { path : 'soumission-devoir/:id_course/:id_assignment', component: SubmitAssignmentComponent},
+  { path : 'soumission-devoir/:id', component: SubmitAssignmentComponent},
+  { path : 'user-test', component: UserTestComponent },
+  { path : 'unauthorized', component: UnauthorizedComponent}
+
+
 
 ];
 
