@@ -202,6 +202,7 @@ show collections
 ```
 
 Vous devriez avoir :
+
 ![image](https://github.com/user-attachments/assets/fd8fa6b2-5932-4a83-b5ef-2863f07fe2b1)
 
 
@@ -232,6 +233,7 @@ node server.js
 ```
 
 Si la connexion aux différentes bases est réussie, vous devriez voir :
+
 ![image](https://github.com/user-attachments/assets/6c36ab17-7ce4-4221-b6e7-bf302ec6619a)
 
 Dans un second terminal, placez-vous dans le dossier **frontend** et lancez :
