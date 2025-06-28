@@ -42,7 +42,7 @@ const routes: Routes = [
   },
   { path : 'creation-cours/:id', component: PostCreationComponent , canActivate: [AuthGuard], data: { roles: ['prof', 'admin']}},
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) , canActivate: [AuthGuard], data: { roles: ['admin']}}, // exemple de roles mais vous pouvez aussi mettre data: { roles: ['etudiant', 'prof'] } pour authoriser les 2
-  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path : 'login', component: LoginComponent },
   { path : 'register', component: RegisterComponent },
   { path : 'change-password', component: ChangePasswordComponent },

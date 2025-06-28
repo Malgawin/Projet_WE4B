@@ -1,0 +1,617 @@
+[{
+  "_id": {
+    "$oid": "6860144bf913b4a3f781447d"
+  },
+  "coursId": 21,
+  "title": "Technologie",
+  "authorId": 98,
+  "createdAt": {
+    "$date": "2025-06-28T16:11:55.661Z"
+  },
+  "messages": [
+    {
+      "content": "Quel futur pour l’intelligence artificielle dans nos vies ?",
+      "authorId": 98,
+      "createdAt": {
+        "$date": "2025-06-28T16:12:02.165Z"
+      },
+      "_id": {
+        "$oid": "68601452f913b4a3f78144c2"
+      }
+    },
+    {
+      "content": "Je pense que l’IA va profondément transformer notre quotidien, notamment dans le domaine de la santé et de l’éducation. On pourra avoir des diagnostics médicaux plus précis et un apprentissage personnalisé grâce à des assistants intelligents. Qu’en pensez-vous ?\n\n",
+      "authorId": 100,
+      "createdAt": {
+        "$date": "2025-06-28T16:16:51.975Z"
+      },
+      "_id": {
+        "$oid": "68601573f913b4a3f7817a77"
+      }
+    },
+    {
+      "content": "Je suis d’accord, mais il faut rester prudent. L’IA peut aussi poser des risques importants, comme la perte d’emplois à grande échelle et des questions éthiques sur la prise de décision automatisée. Comment garantir que les machines restent sous contrôle humain ?",
+      "authorId": 101,
+      "createdAt": {
+        "$date": "2025-06-28T16:18:53.001Z"
+      },
+      "_id": {
+        "$oid": "686015edf913b4a3f7817de0"
+      }
+    },
+    {
+      "content": "Personnellement, je vois l’IA comme une opportunité pour repousser les limites de la science et résoudre des problèmes complexes, comme le changement climatique. Les algorithmes pourront optimiser la consommation d’énergie ou modéliser des scénarios plus efficaces. C’est un vrai levier d’innovation.",
+      "authorId": 104,
+      "createdAt": {
+        "$date": "2025-06-28T16:25:02.191Z"
+      },
+      "_id": {
+        "$oid": "6860175ef913b4a3f7819a48"
+      }
+    },
+    {
+      "content": "Je reste sceptique sur l’IA. Trop de gens misent sur une technologie qui pourrait devenir incontrôlable. Sans régulation stricte, on risque une surveillance massive, une perte de vie privée, voire une manipulation de masse. Le futur ne sera pas forcément rose.\n\n",
+      "authorId": 106,
+      "createdAt": {
+        "$date": "2025-06-28T16:26:49.206Z"
+      },
+      "_id": {
+        "$oid": "686017c9f913b4a3f7819fbd"
+      }
+    },
+    {
+      "content": "Pour moi, c’est surtout une question de gouvernance. Si on met en place des règles claires, la recherche éthique et la transparence, l’IA peut vraiment améliorer la qualité de vie sans sacrifier la liberté individuelle. On voit déjà des exemples positifs, comme les assistants vocaux qui simplifient notre vie.\n\n",
+      "authorId": 109,
+      "createdAt": {
+        "$date": "2025-06-28T16:31:46.042Z"
+      },
+      "_id": {
+        "$oid": "686018f2f913b4a3f781bebe"
+      }
+    },
+    {
+      "content": "Je ne suis pas d’accord. La programmation fonctionnelle (PF) offre une meilleure gestion des effets de bord grâce à l’immuabilité des données. Cela rend le code plus prévisible et facile à tester.\n\n",
+      "authorId": 99,
+      "createdAt": {
+        "$date": "2025-06-28T16:55:40.615Z"
+      },
+      "_id": {
+        "$oid": "68601e8cf913b4a3f78316a2"
+      }
+    }
+  ],
+  "__v": 9
+},
+{
+  "_id": {
+    "$oid": "6860147af913b4a3f78149f5"
+  },
+  "coursId": 8,
+  "title": "Sécurité informatique",
+  "authorId": 98,
+  "createdAt": {
+    "$date": "2025-06-28T16:12:42.180Z"
+  },
+  "messages": [
+    {
+      "content": "Comment se protéger efficacement contre le phishing ?",
+      "authorId": 98,
+      "createdAt": {
+        "$date": "2025-06-28T16:12:46.992Z"
+      },
+      "_id": {
+        "$oid": "6860147ef913b4a3f7814a3d"
+      }
+    }
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "68601488f913b4a3f7814e9a"
+  },
+  "coursId": 17,
+  "title": "Matériel & Hardware",
+  "authorId": 98,
+  "createdAt": {
+    "$date": "2025-06-28T16:12:56.971Z"
+  },
+  "messages": [
+    {
+      "content": "PC ou Mac : quel choix pour un développeur en 2025 ?",
+      "authorId": 98,
+      "createdAt": {
+        "$date": "2025-06-28T16:13:01.929Z"
+      },
+      "_id": {
+        "$oid": "6860148df913b4a3f7814ee5"
+      }
+    },
+    {
+      "content": "PC pour moi ",
+      "authorId": 103,
+      "createdAt": {
+        "$date": "2025-06-28T16:21:39.654Z"
+      },
+      "_id": {
+        "$oid": "68601693f913b4a3f7818f6b"
+      }
+    },
+    {
+      "content": "MAc pour moi ",
+      "authorId": 107,
+      "createdAt": {
+        "$date": "2025-06-28T16:28:29.263Z"
+      },
+      "_id": {
+        "$oid": "6860182df913b4a3f781a6f3"
+      }
+    }
+  ],
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "68601496f913b4a3f7815298"
+  },
+  "coursId": 11,
+  "title": "Réseaux & Cloud",
+  "authorId": 98,
+  "createdAt": {
+    "$date": "2025-06-28T16:13:10.212Z"
+  },
+  "messages": [
+    {
+      "content": "Quelles solutions pour assurer la haute disponibilité en entreprise ?",
+      "authorId": 98,
+      "createdAt": {
+        "$date": "2025-06-28T16:13:15.778Z"
+      },
+      "_id": {
+        "$oid": "6860149bf913b4a3f78152e6"
+      }
+    },
+    {
+      "content": "je sais pas dsl ",
+      "authorId": 107,
+      "createdAt": {
+        "$date": "2025-06-28T16:28:16.277Z"
+      },
+      "_id": {
+        "$oid": "68601820f913b4a3f781a58c"
+      }
+    }
+  ],
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "686014aaf913b4a3f781570b"
+  },
+  "coursId": 15,
+  "title": "Systèmes d’exploitation",
+  "authorId": 98,
+  "createdAt": {
+    "$date": "2025-06-28T16:13:30.248Z"
+  },
+  "messages": [
+    {
+      "content": "Linux vs Windows vs MacOS : quel OS choisir pour le développement ?",
+      "authorId": 98,
+      "createdAt": {
+        "$date": "2025-06-28T16:13:39.455Z"
+      },
+      "_id": {
+        "$oid": "686014b3f913b4a3f781575c"
+      }
+    }
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "686014c3f913b4a3f7815fb6"
+  },
+  "coursId": 9,
+  "title": "DevOps & Méthodologies",
+  "authorId": 98,
+  "createdAt": {
+    "$date": "2025-06-28T16:13:55.295Z"
+  },
+  "messages": [
+    {
+      "content": "Introduction au DevOps : quels bénéfices pour les équipes ?\n\n",
+      "authorId": 98,
+      "createdAt": {
+        "$date": "2025-06-28T16:14:01.316Z"
+      },
+      "_id": {
+        "$oid": "686014c9f913b4a3f781600b"
+      }
+    }
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "686014d9f913b4a3f781682b"
+  },
+  "coursId": 10,
+  "title": "Intelligence Artificielle & Data Science",
+  "authorId": 98,
+  "createdAt": {
+    "$date": "2025-06-28T16:14:17.024Z"
+  },
+  "messages": [
+    {
+      "content": "Comment débuter en machine learning sans connaissances avancées ?",
+      "authorId": 98,
+      "createdAt": {
+        "$date": "2025-06-28T16:14:22.200Z"
+      },
+      "_id": {
+        "$oid": "686014def913b4a3f7816884"
+      }
+    }
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "686014ecf913b4a3f7816d43"
+  },
+  "coursId": 1,
+  "title": "Systèmes d’exploitation",
+  "authorId": 98,
+  "createdAt": {
+    "$date": "2025-06-28T16:14:36.210Z"
+  },
+  "messages": [
+    {
+      "content": "Comment se protéger efficacement contre le phishing ?",
+      "authorId": 98,
+      "createdAt": {
+        "$date": "2025-06-28T16:14:54.770Z"
+      },
+      "_id": {
+        "$oid": "686014fef913b4a3f7816d9f"
+      }
+    },
+    {
+      "content": "instaler un anti virus \n",
+      "authorId": 103,
+      "createdAt": {
+        "$date": "2025-06-28T16:22:00.255Z"
+      },
+      "_id": {
+        "$oid": "686016a8f913b4a3f78190e8"
+      }
+    }
+  ],
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "68601549f913b4a3f7817a43"
+  },
+  "coursId": 21,
+  "title": "Programmation avancée",
+  "authorId": 100,
+  "createdAt": {
+    "$date": "2025-06-28T16:16:09.984Z"
+  },
+  "messages": [
+    {
+      "content": "Fonctionnelles vs Orienté Objet : quel paradigme privilégier ?",
+      "authorId": 100,
+      "createdAt": {
+        "$date": "2025-06-28T16:16:16.937Z"
+      },
+      "_id": {
+        "$oid": "68601550f913b4a3f7817a5c"
+      }
+    },
+    {
+      "content": "Pour moi, la programmation orientée objet (POO) reste la base pour structurer des projets complexes. Elle permet de modéliser clairement des entités avec leurs attributs et comportements, ce qui facilite la maintenance.\n\n",
+      "authorId": 101,
+      "createdAt": {
+        "$date": "2025-06-28T16:19:02.627Z"
+      },
+      "_id": {
+        "$oid": "686015f6f913b4a3f7817df9"
+      }
+    },
+    {
+      "content": "Je ne suis pas d’accord. La programmation fonctionnelle (PF) offre une meilleure gestion des effets de bord grâce à l’immuabilité des données. Cela rend le code plus prévisible et facile à tester.\n\n",
+      "authorId": 102,
+      "createdAt": {
+        "$date": "2025-06-28T16:20:54.379Z"
+      },
+      "_id": {
+        "$oid": "68601666f913b4a3f7818e6f"
+      }
+    },
+    {
+      "content": "Personnellement, je mixe les deux paradigmes selon le besoin. Parfois la POO est très pratique pour la conception, mais j’aime utiliser des fonctions pures quand je peux pour limiter les bugs.\n\n",
+      "authorId": 107,
+      "createdAt": {
+        "$date": "2025-06-28T16:28:46.591Z"
+      },
+      "_id": {
+        "$oid": "6860183ef913b4a3f781a8cb"
+      }
+    },
+    {
+      "content": "Je trouve que la POO est plus intuitive pour la majorité des développeurs, surtout ceux qui débutent. La PF demande souvent de repenser sa façon de programmer, ce qui peut être déroutant.\n\n",
+      "authorId": 108,
+      "createdAt": {
+        "$date": "2025-06-28T16:30:11.141Z"
+      },
+      "_id": {
+        "$oid": "68601893f913b4a3f781b77b"
+      }
+    },
+    {
+      "content": "C’est vrai, mais la PF est idéale dans les systèmes distribués et parallèles, grâce à l’absence d’état mutable. Cela simplifie la gestion de la concurrence, un vrai plus pour les applications modernes.\n\n",
+      "authorId": 109,
+      "createdAt": {
+        "$date": "2025-06-28T16:31:29.954Z"
+      },
+      "_id": {
+        "$oid": "686018e1f913b4a3f781bea7"
+      }
+    },
+    {
+      "content": "Le choix dépend aussi du contexte projet. Pour une application métier complexe avec beaucoup d’objets métiers, la POO est souvent préférable. Pour des calculs intensifs ou des flux de données, la PF apporte beaucoup.\n\n",
+      "authorId": 99,
+      "createdAt": {
+        "$date": "2025-06-28T16:56:18.143Z"
+      },
+      "_id": {
+        "$oid": "68601eb2f913b4a3f78316d1"
+      }
+    },
+    {
+      "content": "Je débute et je trouve les deux paradigmes difficiles. Quel serait un bon point de départ pour apprendre efficacement ?\n\n",
+      "authorId": 104,
+      "createdAt": {
+        "$date": "2025-06-28T16:56:44.137Z"
+      },
+      "_id": {
+        "$oid": "68601eccf913b4a3f7831a87"
+      }
+    },
+    {
+      "content": "Je conseille de commencer par la POO car elle est souvent enseignée en premier et utilisée dans beaucoup d’applications. Ensuite, découvrir la programmation fonctionnelle permettra d’élargir son horizon et écrire du code plus robuste.\n\n",
+      "authorId": 105,
+      "createdAt": {
+        "$date": "2025-06-28T16:57:10.259Z"
+      },
+      "_id": {
+        "$oid": "68601ee6f913b4a3f7831c34"
+      }
+    }
+  ],
+  "__v": 9
+},
+{
+  "_id": {
+    "$oid": "686015a7f913b4a3f7817b64"
+  },
+  "coursId": 3,
+  "title": "exercie 5",
+  "authorId": 101,
+  "createdAt": {
+    "$date": "2025-06-28T16:17:43.502Z"
+  },
+  "messages": [
+    {
+      "content": "Comment realiser l'exercie 5a ? ",
+      "authorId": 101,
+      "createdAt": {
+        "$date": "2025-06-28T16:18:01.428Z"
+      },
+      "_id": {
+        "$oid": "686015b9f913b4a3f7817b7d"
+      }
+    },
+    {
+      "content": "je sais pas dsl ",
+      "authorId": 104,
+      "createdAt": {
+        "$date": "2025-06-28T16:24:41.039Z"
+      },
+      "_id": {
+        "$oid": "68601749f913b4a3f7819898"
+      }
+    }
+  ],
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "686015c3f913b4a3f7817be8"
+  },
+  "coursId": 19,
+  "title": "Développement web & mobil",
+  "authorId": 101,
+  "createdAt": {
+    "$date": "2025-06-28T16:18:11.161Z"
+  },
+  "messages": [
+    {
+      "content": "Jamstack : révolution ou simple mode ?",
+      "authorId": 101,
+      "createdAt": {
+        "$date": "2025-06-28T16:18:16.588Z"
+      },
+      "_id": {
+        "$oid": "686015c8f913b4a3f7817bf6"
+      }
+    },
+    {
+      "content": "simple mode ",
+      "authorId": 108,
+      "createdAt": {
+        "$date": "2025-06-28T16:29:27.764Z"
+      },
+      "_id": {
+        "$oid": "68601867f913b4a3f781af48"
+      }
+    }
+  ],
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "686015d0f913b4a3f7817c95"
+  },
+  "coursId": 5,
+  "title": "Systèmes & Administration",
+  "authorId": 101,
+  "createdAt": {
+    "$date": "2025-06-28T16:18:24.003Z"
+  },
+  "messages": [
+    {
+      "content": "Comment assurer la haute disponibilité d’un serveur web ?\n\n",
+      "authorId": 101,
+      "createdAt": {
+        "$date": "2025-06-28T16:18:28.737Z"
+      },
+      "_id": {
+        "$oid": "686015d4f913b4a3f7817ca7"
+      }
+    }
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6860162ff913b4a3f78188c2"
+  },
+  "coursId": 6,
+  "title": "exercie 6 page 9",
+  "authorId": 102,
+  "createdAt": {
+    "$date": "2025-06-28T16:19:59.008Z"
+  },
+  "messages": [
+    {
+      "content": "qqun peut m'aider ? ",
+      "authorId": 102,
+      "createdAt": {
+        "$date": "2025-06-28T16:20:06.876Z"
+      },
+      "_id": {
+        "$oid": "68601636f913b4a3f78188db"
+      }
+    }
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "68601642f913b4a3f7818a31"
+  },
+  "coursId": 2,
+  "title": "algorthitme tris bulle",
+  "authorId": 102,
+  "createdAt": {
+    "$date": "2025-06-28T16:20:18.981Z"
+  },
+  "messages": [
+    {
+      "content": "quellqu'un connais cette algo ? \n",
+      "authorId": 102,
+      "createdAt": {
+        "$date": "2025-06-28T16:20:30.767Z"
+      },
+      "_id": {
+        "$oid": "6860164ef913b4a3f7818a4e"
+      }
+    },
+    {
+      "content": "oui ",
+      "authorId": 108,
+      "createdAt": {
+        "$date": "2025-06-28T16:29:36.129Z"
+      },
+      "_id": {
+        "$oid": "68601870f913b4a3f781b0c4"
+      }
+    },
+    {
+      "content": "Moi, je ne connais pas. Quelqu’un peut m’expliquer ?",
+      "authorId": 99,
+      "createdAt": {
+        "$date": "2025-06-28T19:38:15.915Z"
+      },
+      "_id": {
+        "$oid": "686044a778362573daa1f384"
+      }
+    }
+  ],
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "68601733f913b4a3f781973d"
+  },
+  "coursId": 16,
+  "title": "big data",
+  "authorId": 104,
+  "createdAt": {
+    "$date": "2025-06-28T16:24:19.487Z"
+  },
+  "messages": [
+    {
+      "content": "c'est quoi un big data ? ",
+      "authorId": 104,
+      "createdAt": {
+        "$date": "2025-06-28T16:24:29.284Z"
+      },
+      "_id": {
+        "$oid": "6860173df913b4a3f7819756"
+      }
+    }
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "68601879f913b4a3f781b296"
+  },
+  "coursId": 13,
+  "title": "projet numero 6",
+  "authorId": 108,
+  "createdAt": {
+    "$date": "2025-06-28T16:29:45.722Z"
+  },
+  "messages": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686018cbf913b4a3f781bd34"
+  },
+  "coursId": 7,
+  "title": "bdd",
+  "authorId": 109,
+  "createdAt": {
+    "$date": "2025-06-28T16:31:07.741Z"
+  },
+  "messages": [
+    {
+      "content": "c'est quoi pgadmin ? ",
+      "authorId": 109,
+      "createdAt": {
+        "$date": "2025-06-28T16:31:15.052Z"
+      },
+      "_id": {
+        "$oid": "686018d3f913b4a3f781bd3d"
+      }
+    }
+  ],
+  "__v": 1
+}]

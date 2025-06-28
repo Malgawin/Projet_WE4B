@@ -1,0 +1,7931 @@
+[{
+  "_id": {
+    "$oid": "685feab9a1f249475c61e5c2"
+  },
+  "userId": 88,
+  "loginCount": 2,
+  "courses": [
+    {
+      "courseId": 8,
+      "lastViewed": {
+        "$date": "2025-06-28T13:14:37.003Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:14:37.003Z"
+          },
+          "_id": {
+            "$oid": "685feabda1f249475c61e5db"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feabda1f249475c61e5da"
+      }
+    },
+    {
+      "courseId": 13,
+      "lastViewed": {
+        "$date": "2025-06-28T13:14:53.593Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:14:53.593Z"
+          },
+          "_id": {
+            "$oid": "685feacda1f249475c61e62f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feacda1f249475c61e62e"
+      }
+    },
+    {
+      "courseId": 14,
+      "lastViewed": {
+        "$date": "2025-06-28T13:15:03.884Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:15:03.884Z"
+          },
+          "_id": {
+            "$oid": "685fead7a1f249475c61e6b7"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685fead7a1f249475c61e6b6"
+      }
+    },
+    {
+      "courseId": 16,
+      "lastViewed": {
+        "$date": "2025-06-28T13:15:13.366Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:15:13.366Z"
+          },
+          "_id": {
+            "$oid": "685feae1a1f249475c61e76c"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feae1a1f249475c61e76b"
+      }
+    },
+    {
+      "courseId": 18,
+      "lastViewed": {
+        "$date": "2025-06-28T13:15:23.031Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:15:23.031Z"
+          },
+          "_id": {
+            "$oid": "685feaeba1f249475c61e838"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feaeba1f249475c61e837"
+      }
+    },
+    {
+      "courseId": 19,
+      "lastViewed": {
+        "$date": "2025-06-28T13:15:33.853Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:15:33.853Z"
+          },
+          "_id": {
+            "$oid": "685feaf5a1f249475c61e930"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feaf5a1f249475c61e92f"
+      }
+    },
+    {
+      "courseId": 20,
+      "lastViewed": {
+        "$date": "2025-06-28T13:15:43.641Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:15:43.641Z"
+          },
+          "_id": {
+            "$oid": "685feaffa1f249475c61ea55"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feaffa1f249475c61ea54"
+      }
+    },
+    {
+      "courseId": 2,
+      "lastViewed": {
+        "$date": "2025-06-28T13:15:57.749Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:15:57.749Z"
+          },
+          "_id": {
+            "$oid": "685feb0da1f249475c61ebd2"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb0da1f249475c61ebd1"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T13:25:12.859Z"
+      },
+      "viewsCount": 8,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:16:07.032Z"
+          },
+          "_id": {
+            "$oid": "685feb17a1f249475c61ed4e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:16:30.155Z"
+          },
+          "_id": {
+            "$oid": "685feb2ea1f249475c61f41f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:17:23.249Z"
+          },
+          "_id": {
+            "$oid": "685feb63a1f249475c6208ce"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:17:36.938Z"
+          },
+          "_id": {
+            "$oid": "685feb70a1f249475c6211af"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:18:01.140Z"
+          },
+          "_id": {
+            "$oid": "685feb89a1f249475c622099"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:23:46.229Z"
+          },
+          "_id": {
+            "$oid": "685fece2a1f249475c623d9c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:25:08.339Z"
+          },
+          "_id": {
+            "$oid": "685fed34a1f249475c62486a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:25:12.858Z"
+          },
+          "_id": {
+            "$oid": "685fed38a1f249475c624f67"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb17a1f249475c61ed4d"
+      }
+    },
+    {
+      "courseId": 9,
+      "lastViewed": {
+        "$date": "2025-06-28T13:16:10.168Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:16:10.168Z"
+          },
+          "_id": {
+            "$oid": "685feb1aa1f249475c61f024"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb1aa1f249475c61f023"
+      }
+    },
+    {
+      "courseId": 7,
+      "lastViewed": {
+        "$date": "2025-06-28T13:16:17.684Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:16:17.684Z"
+          },
+          "_id": {
+            "$oid": "685feb21a1f249475c61f220"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb21a1f249475c61f21f"
+      }
+    },
+    {
+      "courseId": 12,
+      "lastViewed": {
+        "$date": "2025-06-28T13:16:32.080Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:16:32.080Z"
+          },
+          "_id": {
+            "$oid": "685feb30a1f249475c61f7b3"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb30a1f249475c61f7b2"
+      }
+    },
+    {
+      "courseId": 11,
+      "lastViewed": {
+        "$date": "2025-06-28T13:16:38.753Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:16:38.753Z"
+          },
+          "_id": {
+            "$oid": "685feb36a1f249475c61f9f5"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb36a1f249475c61f9f4"
+      }
+    },
+    {
+      "courseId": 17,
+      "lastViewed": {
+        "$date": "2025-06-28T13:16:46.367Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:16:46.367Z"
+          },
+          "_id": {
+            "$oid": "685feb3ea1f249475c61fc9b"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb3ea1f249475c61fc9a"
+      }
+    },
+    {
+      "courseId": 6,
+      "lastViewed": {
+        "$date": "2025-06-28T13:16:56.696Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:16:56.696Z"
+          },
+          "_id": {
+            "$oid": "685feb48a1f249475c61ff71"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb48a1f249475c61ff70"
+      }
+    },
+    {
+      "courseId": 10,
+      "lastViewed": {
+        "$date": "2025-06-28T13:17:06.369Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:17:06.369Z"
+          },
+          "_id": {
+            "$oid": "685feb52a1f249475c620237"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb52a1f249475c620236"
+      }
+    },
+    {
+      "courseId": 3,
+      "lastViewed": {
+        "$date": "2025-06-28T13:17:15.302Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:17:15.302Z"
+          },
+          "_id": {
+            "$oid": "685feb5ba1f249475c6205b1"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb5ba1f249475c6205b0"
+      }
+    },
+    {
+      "courseId": 4,
+      "lastViewed": {
+        "$date": "2025-06-28T13:17:26.349Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:17:26.349Z"
+          },
+          "_id": {
+            "$oid": "685feb66a1f249475c620e50"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb66a1f249475c620e4f"
+      }
+    },
+    {
+      "courseId": 1,
+      "lastViewed": {
+        "$date": "2025-06-28T13:17:39.525Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:17:39.525Z"
+          },
+          "_id": {
+            "$oid": "685feb73a1f249475c6217a3"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb73a1f249475c6217a2"
+      }
+    },
+    {
+      "courseId": 15,
+      "lastViewed": {
+        "$date": "2025-06-28T13:17:49.620Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T13:17:49.620Z"
+          },
+          "_id": {
+            "$oid": "685feb7da1f249475c621bc4"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685feb7da1f249475c621bc3"
+      }
+    }
+  ],
+  "__v": 27,
+  "lastLogin": {
+    "$date": "2025-06-28T13:24:06.117Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ff170931f91818c45d1f9"
+  },
+  "userId": 90,
+  "__v": 110,
+  "courses": [
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T14:52:41.973Z"
+      },
+      "viewsCount": 11,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:03:39.417Z"
+          },
+          "_id": {
+            "$oid": "685ff63ba1f249475c6256a2"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:03:58.760Z"
+          },
+          "_id": {
+            "$oid": "685ff64ea1f249475c6256e9"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:04:13.947Z"
+          },
+          "_id": {
+            "$oid": "685ff65da1f249475c625744"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:04:40.939Z"
+          },
+          "_id": {
+            "$oid": "685ff678a1f249475c6257b5"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:05:25.621Z"
+          },
+          "_id": {
+            "$oid": "685ff6a5a1f249475c625843"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:06:16.028Z"
+          },
+          "_id": {
+            "$oid": "685ff6d8a1f249475c625974"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:06:48.374Z"
+          },
+          "_id": {
+            "$oid": "685ff6f85dc09311c7fd63d2"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:17:39.532Z"
+          },
+          "_id": {
+            "$oid": "685ff9835dc09311c7fd712a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:30:53.196Z"
+          },
+          "_id": {
+            "$oid": "685ffc9d5dc09311c7fdd708"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:50:26.567Z"
+          },
+          "_id": {
+            "$oid": "686001325dc09311c7fe1c34"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:52:41.972Z"
+          },
+          "_id": {
+            "$oid": "686001b9a9db65969d51d25f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff63ba1f249475c6256a1"
+      }
+    },
+    {
+      "courseId": 5,
+      "lastViewed": {
+        "$date": "2025-06-28T16:39:48.234Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:13:50.748Z"
+          },
+          "_id": {
+            "$oid": "685ff89e5dc09311c7fd64a6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:53:01.249Z"
+          },
+          "_id": {
+            "$oid": "686001cda9db65969d51d8bf"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:55:04.454Z"
+          },
+          "_id": {
+            "$oid": "68600248a9db65969d51df7f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:04:11.718Z"
+          },
+          "_id": {
+            "$oid": "6860046ba9db65969d52bbca"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:37:54.053Z"
+          },
+          "_id": {
+            "$oid": "68601a62f913b4a3f781cc1f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:39:48.234Z"
+          },
+          "_id": {
+            "$oid": "68601ad4f913b4a3f781e192"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff89e5dc09311c7fd64a5"
+      }
+    },
+    {
+      "courseId": 8,
+      "lastViewed": {
+        "$date": "2025-06-28T16:39:51.113Z"
+      },
+      "viewsCount": 8,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:15:32.398Z"
+          },
+          "_id": {
+            "$oid": "685ff9045dc09311c7fd659d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:17:47.013Z"
+          },
+          "_id": {
+            "$oid": "685ff98b5dc09311c7fd7354"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:38:35.832Z"
+          },
+          "_id": {
+            "$oid": "685ffe6b5dc09311c7fdf26f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:52:38.156Z"
+          },
+          "_id": {
+            "$oid": "686001b6a9db65969d51c786"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:55:08.185Z"
+          },
+          "_id": {
+            "$oid": "6860024ca9db65969d51e60b"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:55:45.465Z"
+          },
+          "_id": {
+            "$oid": "68600271a9db65969d51f3b0"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:37:56.916Z"
+          },
+          "_id": {
+            "$oid": "68601a64f913b4a3f781d6cc"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:39:51.112Z"
+          },
+          "_id": {
+            "$oid": "68601ad7f913b4a3f781ec74"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9045dc09311c7fd659c"
+      }
+    },
+    {
+      "courseId": 9,
+      "lastViewed": {
+        "$date": "2025-06-28T16:42:12.364Z"
+      },
+      "viewsCount": 5,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:15:53.237Z"
+          },
+          "_id": {
+            "$oid": "685ff9195dc09311c7fd66c0"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:19:14.155Z"
+          },
+          "_id": {
+            "$oid": "685ff9e25dc09311c7fd8a47"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:59:18.585Z"
+          },
+          "_id": {
+            "$oid": "68600346a9db65969d5244e6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:42:02.419Z"
+          },
+          "_id": {
+            "$oid": "68601b5af913b4a3f7828997"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:42:12.363Z"
+          },
+          "_id": {
+            "$oid": "68601b64f913b4a3f782a189"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9195dc09311c7fd66bf"
+      }
+    },
+    {
+      "courseId": 11,
+      "lastViewed": {
+        "$date": "2025-06-28T16:42:23.894Z"
+      },
+      "viewsCount": 4,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:16:08.226Z"
+          },
+          "_id": {
+            "$oid": "685ff9285dc09311c7fd680f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:38:56.211Z"
+          },
+          "_id": {
+            "$oid": "685ffe805dc09311c7fe03bd"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:00:18.034Z"
+          },
+          "_id": {
+            "$oid": "68600382a9db65969d525d1b"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:42:23.894Z"
+          },
+          "_id": {
+            "$oid": "68601b6ff913b4a3f782c630"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9285dc09311c7fd680e"
+      }
+    },
+    {
+      "courseId": 10,
+      "lastViewed": {
+        "$date": "2025-06-28T15:00:29.316Z"
+      },
+      "viewsCount": 5,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:16:30.165Z"
+          },
+          "_id": {
+            "$oid": "685ff93e5dc09311c7fd698a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:20:44.165Z"
+          },
+          "_id": {
+            "$oid": "685ffa3c5dc09311c7fdaead"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:21:14.427Z"
+          },
+          "_id": {
+            "$oid": "685ffa5a5dc09311c7fdb861"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:31:04.700Z"
+          },
+          "_id": {
+            "$oid": "685ffca85dc09311c7fddc4a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:00:29.315Z"
+          },
+          "_id": {
+            "$oid": "6860038da9db65969d52651c"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff93e5dc09311c7fd6989"
+      }
+    },
+    {
+      "courseId": 1,
+      "lastViewed": {
+        "$date": "2025-06-28T15:00:55.700Z"
+      },
+      "viewsCount": 7,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:16:41.341Z"
+          },
+          "_id": {
+            "$oid": "685ff9495dc09311c7fd6b30"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:17:31.495Z"
+          },
+          "_id": {
+            "$oid": "685ff97b5dc09311c7fd6f18"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:20:18.033Z"
+          },
+          "_id": {
+            "$oid": "685ffa225dc09311c7fda17d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:31:15.101Z"
+          },
+          "_id": {
+            "$oid": "685ffcb35dc09311c7fde1a1"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:38:27.106Z"
+          },
+          "_id": {
+            "$oid": "685ffe635dc09311c7fdecd6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:39:05.349Z"
+          },
+          "_id": {
+            "$oid": "685ffe895dc09311c7fe09ae"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:00:55.700Z"
+          },
+          "_id": {
+            "$oid": "686003a7a9db65969d526d92"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9495dc09311c7fd6b2f"
+      }
+    },
+    {
+      "courseId": 15,
+      "lastViewed": {
+        "$date": "2025-06-28T15:01:04.796Z"
+      },
+      "viewsCount": 4,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:17:20.975Z"
+          },
+          "_id": {
+            "$oid": "685ff9705dc09311c7fd6d1a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:20:10.669Z"
+          },
+          "_id": {
+            "$oid": "685ffa1a5dc09311c7fd9d59"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:38:17.147Z"
+          },
+          "_id": {
+            "$oid": "685ffe595dc09311c7fde751"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:01:04.796Z"
+          },
+          "_id": {
+            "$oid": "686003b0a9db65969d5275be"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9705dc09311c7fd6d19"
+      }
+    },
+    {
+      "courseId": 13,
+      "lastViewed": {
+        "$date": "2025-06-28T19:56:04.262Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:17:56.798Z"
+          },
+          "_id": {
+            "$oid": "685ff9945dc09311c7fd7595"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:55:23.511Z"
+          },
+          "_id": {
+            "$oid": "6860025ba9db65969d51ecab"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:55:49.282Z"
+          },
+          "_id": {
+            "$oid": "68600275a9db65969d51fa7e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:39:53.294Z"
+          },
+          "_id": {
+            "$oid": "68601ad9f913b4a3f781f697"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:40:44.696Z"
+          },
+          "_id": {
+            "$oid": "68601b0cf913b4a3f78201ac"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:56:04.261Z"
+          },
+          "_id": {
+            "$oid": "686048d478362573daa22774"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9945dc09311c7fd7594"
+      }
+    },
+    {
+      "courseId": 14,
+      "lastViewed": {
+        "$date": "2025-06-28T16:40:48.777Z"
+      },
+      "viewsCount": 4,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:18:03.566Z"
+          },
+          "_id": {
+            "$oid": "685ff99b5dc09311c7fd7800"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:55:58.809Z"
+          },
+          "_id": {
+            "$oid": "6860027ea9db65969d520160"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:56:24.758Z"
+          },
+          "_id": {
+            "$oid": "68600298a9db65969d5208aa"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:40:48.777Z"
+          },
+          "_id": {
+            "$oid": "68601b10f913b4a3f7820c6d"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff99b5dc09311c7fd77ff"
+      }
+    },
+    {
+      "courseId": 16,
+      "lastViewed": {
+        "$date": "2025-06-28T16:41:11.552Z"
+      },
+      "viewsCount": 7,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:18:11.650Z"
+          },
+          "_id": {
+            "$oid": "685ff9a35dc09311c7fd7a98"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:56:39.017Z"
+          },
+          "_id": {
+            "$oid": "686002a7a9db65969d520fb9"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:56:58.993Z"
+          },
+          "_id": {
+            "$oid": "686002baa9db65969d521732"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:58:02.014Z"
+          },
+          "_id": {
+            "$oid": "686002faa9db65969d522614"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:40:51.684Z"
+          },
+          "_id": {
+            "$oid": "68601b13f913b4a3f78217b6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:41:00.421Z"
+          },
+          "_id": {
+            "$oid": "68601b1cf913b4a3f78222af"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:41:11.552Z"
+          },
+          "_id": {
+            "$oid": "68601b27f913b4a3f7824491"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9a35dc09311c7fd7a97"
+      }
+    },
+    {
+      "courseId": 18,
+      "lastViewed": {
+        "$date": "2025-06-28T16:41:14.154Z"
+      },
+      "viewsCount": 4,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:18:24.429Z"
+          },
+          "_id": {
+            "$oid": "685ff9b05dc09311c7fd7d5d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:57:19.289Z"
+          },
+          "_id": {
+            "$oid": "686002cfa9db65969d521e6e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:41:03.679Z"
+          },
+          "_id": {
+            "$oid": "68601b1ff913b4a3f7822dbb"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:41:14.154Z"
+          },
+          "_id": {
+            "$oid": "68601b2af913b4a3f7824fe8"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9b05dc09311c7fd7d5c"
+      }
+    },
+    {
+      "courseId": 19,
+      "lastViewed": {
+        "$date": "2025-06-28T19:55:26.713Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:18:45.971Z"
+          },
+          "_id": {
+            "$oid": "685ff9c55dc09311c7fd8070"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:38:44.459Z"
+          },
+          "_id": {
+            "$oid": "685ffe745dc09311c7fdf81e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:58:08.325Z"
+          },
+          "_id": {
+            "$oid": "68600300a9db65969d522d7b"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:41:06.501Z"
+          },
+          "_id": {
+            "$oid": "68601b22f913b4a3f78238e0"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:41:17.087Z"
+          },
+          "_id": {
+            "$oid": "68601b2df913b4a3f7825b58"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:55:26.713Z"
+          },
+          "_id": {
+            "$oid": "686048ae78362573daa21a3c"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9c55dc09311c7fd806f"
+      }
+    },
+    {
+      "courseId": 20,
+      "lastViewed": {
+        "$date": "2025-06-28T16:42:15.707Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:18:54.638Z"
+          },
+          "_id": {
+            "$oid": "685ff9ce5dc09311c7fd838c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:19:25.567Z"
+          },
+          "_id": {
+            "$oid": "685ff9ed5dc09311c7fd8dd0"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:58:42.003Z"
+          },
+          "_id": {
+            "$oid": "68600322a9db65969d52354e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:41:20.147Z"
+          },
+          "_id": {
+            "$oid": "68601b30f913b4a3f7826757"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:41:55.506Z"
+          },
+          "_id": {
+            "$oid": "68601b53f913b4a3f78272f9"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:42:15.706Z"
+          },
+          "_id": {
+            "$oid": "68601b67f913b4a3f782ae24"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9ce5dc09311c7fd838b"
+      }
+    },
+    {
+      "courseId": 2,
+      "lastViewed": {
+        "$date": "2025-06-28T16:42:08.927Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:19:05.380Z"
+          },
+          "_id": {
+            "$oid": "685ff9d95dc09311c7fd86d5"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:19:42.240Z"
+          },
+          "_id": {
+            "$oid": "685ff9fe5dc09311c7fd953b"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:38:48.158Z"
+          },
+          "_id": {
+            "$oid": "685ffe785dc09311c7fdfde3"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:58:56.080Z"
+          },
+          "_id": {
+            "$oid": "68600330a9db65969d523ce3"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:41:58.418Z"
+          },
+          "_id": {
+            "$oid": "68601b56f913b4a3f7827e3c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:42:08.927Z"
+          },
+          "_id": {
+            "$oid": "68601b60f913b4a3f78295fe"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9d95dc09311c7fd86d4"
+      }
+    },
+    {
+      "courseId": 7,
+      "lastViewed": {
+        "$date": "2025-06-28T14:59:45.979Z"
+      },
+      "viewsCount": 3,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:19:31.030Z"
+          },
+          "_id": {
+            "$oid": "685ff9f35dc09311c7fd9170"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:39:14.331Z"
+          },
+          "_id": {
+            "$oid": "685ffe925dc09311c7fe0fb6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:59:45.979Z"
+          },
+          "_id": {
+            "$oid": "68600361a9db65969d524cff"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ff9f35dc09311c7fd916f"
+      }
+    },
+    {
+      "courseId": 12,
+      "lastViewed": {
+        "$date": "2025-06-28T16:42:31.063Z"
+      },
+      "viewsCount": 4,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:19:46.864Z"
+          },
+          "_id": {
+            "$oid": "685ffa025dc09311c7fd991d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:59:56.199Z"
+          },
+          "_id": {
+            "$oid": "6860036ca9db65969d5254d4"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:42:19.435Z"
+          },
+          "_id": {
+            "$oid": "68601b6bf913b4a3f782b9df"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:42:31.063Z"
+          },
+          "_id": {
+            "$oid": "68601b77f913b4a3f782e09d"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ffa025dc09311c7fd991c"
+      }
+    },
+    {
+      "courseId": 4,
+      "lastViewed": {
+        "$date": "2025-06-28T15:03:54.370Z"
+      },
+      "viewsCount": 4,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:20:25.343Z"
+          },
+          "_id": {
+            "$oid": "685ffa295dc09311c7fda5b7"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:02:32.916Z"
+          },
+          "_id": {
+            "$oid": "68600408a9db65969d529810"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:03:24.633Z"
+          },
+          "_id": {
+            "$oid": "6860043ca9db65969d52a9c0"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:03:54.370Z"
+          },
+          "_id": {
+            "$oid": "6860045aa9db65969d52b2ed"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ffa295dc09311c7fda5b6"
+      }
+    },
+    {
+      "courseId": 3,
+      "lastViewed": {
+        "$date": "2025-06-28T15:01:35.004Z"
+      },
+      "viewsCount": 3,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:20:34.336Z"
+          },
+          "_id": {
+            "$oid": "685ffa325dc09311c7fdaa1c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:21:20.065Z"
+          },
+          "_id": {
+            "$oid": "685ffa605dc09311c7fdbd4a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:01:35.004Z"
+          },
+          "_id": {
+            "$oid": "686003cfa9db65969d527e62"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ffa325dc09311c7fdaa1b"
+      }
+    },
+    {
+      "courseId": 6,
+      "lastViewed": {
+        "$date": "2025-06-28T15:03:07.147Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:20:53.185Z"
+          },
+          "_id": {
+            "$oid": "685ffa455dc09311c7fdb355"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:03:07.146Z"
+          },
+          "_id": {
+            "$oid": "6860042ba9db65969d52a110"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ffa455dc09311c7fdb354"
+      }
+    },
+    {
+      "courseId": 17,
+      "lastViewed": {
+        "$date": "2025-06-28T20:11:06.339Z"
+      },
+      "viewsCount": 5,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:22:47.294Z"
+          },
+          "_id": {
+            "$oid": "685ffab75dc09311c7fdc249"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:01:46.730Z"
+          },
+          "_id": {
+            "$oid": "686003daa9db65969d5286ba"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:02:19.757Z"
+          },
+          "_id": {
+            "$oid": "686003fba9db65969d528f8c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:42:27.026Z"
+          },
+          "_id": {
+            "$oid": "68601b73f913b4a3f782d29a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T20:11:06.338Z"
+          },
+          "_id": {
+            "$oid": "68604c5a78362573daa23548"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ffab75dc09311c7fdc248"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T20:10:42.739Z"
+  },
+  "loginCount": 33,
+  "lastLogout": {
+    "$date": "2025-06-28T20:14:30.465Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ff57b931f91818c45d1fa"
+  },
+  "userId": 91,
+  "__v": 31,
+  "courses": [
+    {
+      "courseId": 5,
+      "lastViewed": {
+        "$date": "2025-06-28T15:34:09.522Z"
+      },
+      "viewsCount": 17,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:07:15.737Z"
+          },
+          "_id": {
+            "$oid": "68600523a9db65969d52c4c3"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:07:45.729Z"
+          },
+          "_id": {
+            "$oid": "68600541a9db65969d52c4c9"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:07:49.291Z"
+          },
+          "_id": {
+            "$oid": "68600545a9db65969d52c4dd"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:08:00.069Z"
+          },
+          "_id": {
+            "$oid": "68600550a9db65969d52c4f4"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:08:28.344Z"
+          },
+          "_id": {
+            "$oid": "6860056ca9db65969d52c4fe"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:08:31.176Z"
+          },
+          "_id": {
+            "$oid": "6860056fa9db65969d52c51e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:08:37.264Z"
+          },
+          "_id": {
+            "$oid": "68600575a9db65969d52c542"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:08:58.761Z"
+          },
+          "_id": {
+            "$oid": "6860058aa9db65969d52c5cf"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:09:18.760Z"
+          },
+          "_id": {
+            "$oid": "6860059ea9db65969d52c5df"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:09:23.593Z"
+          },
+          "_id": {
+            "$oid": "686005a3a9db65969d52c61c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:10:12.013Z"
+          },
+          "_id": {
+            "$oid": "686005d4f4a856d36a40de1d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:10:23.782Z"
+          },
+          "_id": {
+            "$oid": "686005dff4a856d36a40de30"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:32:46.565Z"
+          },
+          "_id": {
+            "$oid": "68600b1ef913b4a3f78105db"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:33:02.880Z"
+          },
+          "_id": {
+            "$oid": "68600b2ef913b4a3f78105ef"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:33:29.888Z"
+          },
+          "_id": {
+            "$oid": "68600b49f913b4a3f781061a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:33:54.760Z"
+          },
+          "_id": {
+            "$oid": "68600b62f913b4a3f7810659"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:34:09.522Z"
+          },
+          "_id": {
+            "$oid": "68600b71f913b4a3f78106af"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600523a9db65969d52c4c2"
+      }
+    },
+    {
+      "courseId": 8,
+      "lastViewed": {
+        "$date": "2025-06-28T15:39:58.444Z"
+      },
+      "viewsCount": 7,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:08:42.477Z"
+          },
+          "_id": {
+            "$oid": "6860057aa9db65969d52c56a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:08:56.675Z"
+          },
+          "_id": {
+            "$oid": "68600588a9db65969d52c59c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:34:18.433Z"
+          },
+          "_id": {
+            "$oid": "68600b7af913b4a3f78107a6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:35:11.246Z"
+          },
+          "_id": {
+            "$oid": "68600baff913b4a3f78107c1"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:35:33.790Z"
+          },
+          "_id": {
+            "$oid": "68600bc5f913b4a3f78107f4"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:37:08.104Z"
+          },
+          "_id": {
+            "$oid": "68600c24f913b4a3f7810842"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:39:58.444Z"
+          },
+          "_id": {
+            "$oid": "68600ccef913b4a3f7810cf5"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860057aa9db65969d52c569"
+      }
+    },
+    {
+      "courseId": 6,
+      "lastViewed": {
+        "$date": "2025-06-28T15:39:55.453Z"
+      },
+      "viewsCount": 7,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:38:02.422Z"
+          },
+          "_id": {
+            "$oid": "68600c5af913b4a3f781099a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:38:31.648Z"
+          },
+          "_id": {
+            "$oid": "68600c77f913b4a3f78109b9"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:38:49.063Z"
+          },
+          "_id": {
+            "$oid": "68600c89f913b4a3f78109f6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:39:19.467Z"
+          },
+          "_id": {
+            "$oid": "68600ca7f913b4a3f7810a54"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:39:28.475Z"
+          },
+          "_id": {
+            "$oid": "68600cb0f913b4a3f7810ab6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:39:51.638Z"
+          },
+          "_id": {
+            "$oid": "68600cc7f913b4a3f7810b19"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:39:55.453Z"
+          },
+          "_id": {
+            "$oid": "68600ccbf913b4a3f7810c04"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600c5af913b4a3f7810999"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T15:32:45.330Z"
+  },
+  "loginCount": 3,
+  "lastLogout": {
+    "$date": "2025-06-28T15:40:03.228Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ffae8931f91818c45d1fb"
+  },
+  "userId": 98,
+  "__v": 91,
+  "courses": [
+    {
+      "courseId": 17,
+      "lastViewed": {
+        "$date": "2025-06-28T16:14:58.473Z"
+      },
+      "viewsCount": 8,
+      "progressCount": 4,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        125,
+        124,
+        127,
+        126
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T14:23:43.947Z"
+          },
+          "_id": {
+            "$oid": "685ffaef5dc09311c7fdd159"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:20:31.406Z"
+          },
+          "_id": {
+            "$oid": "6860083fef57915de87e85b2"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:20:43.636Z"
+          },
+          "_id": {
+            "$oid": "6860084bef57915de87e85bd"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:21:58.586Z"
+          },
+          "_id": {
+            "$oid": "68600896ef57915de87e861a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:09:26.080Z"
+          },
+          "_id": {
+            "$oid": "686013b6f913b4a3f781248c"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:27.100Z"
+          },
+          "postId": 125,
+          "_id": {
+            "$oid": "686013b7f913b4a3f781254b"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:27.658Z"
+          },
+          "postId": 124,
+          "_id": {
+            "$oid": "686013b7f913b4a3f7812569"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:29.887Z"
+          },
+          "postId": 127,
+          "_id": {
+            "$oid": "686013b9f913b4a3f7812588"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:30.446Z"
+          },
+          "postId": 126,
+          "_id": {
+            "$oid": "686013baf913b4a3f78125a8"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:09:38.534Z"
+          },
+          "_id": {
+            "$oid": "686013c2f913b4a3f78128fa"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:12:49.207Z"
+          },
+          "_id": {
+            "$oid": "68601481f913b4a3f7814cf2"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:12:56.983Z"
+          },
+          "forumId": {
+            "$oid": "68601488f913b4a3f7814e9a"
+          },
+          "_id": {
+            "$oid": "68601488f913b4a3f7814ee2"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:13:01.939Z"
+          },
+          "forumId": {
+            "$oid": "68601488f913b4a3f7814e9a"
+          },
+          "messageId": {
+            "$oid": "6860148df913b4a3f7814ee5"
+          },
+          "_id": {
+            "$oid": "6860148df913b4a3f7814f2e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:14:58.472Z"
+          },
+          "_id": {
+            "$oid": "68601502f913b4a3f781711f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "685ffaef5dc09311c7fdd158"
+      }
+    },
+    {
+      "courseId": 15,
+      "lastViewed": {
+        "$date": "2025-06-28T16:13:24.723Z"
+      },
+      "viewsCount": 7,
+      "progressCount": 2,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        157,
+        156
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:13:38.359Z"
+          },
+          "_id": {
+            "$oid": "686006a28020bf8b7f804c8c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:13:48.757Z"
+          },
+          "_id": {
+            "$oid": "686006ac8020bf8b7f804c94"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:14:09.204Z"
+          },
+          "_id": {
+            "$oid": "686006c1ef57915de87e8569"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:29:00.102Z"
+          },
+          "_id": {
+            "$oid": "68600a3cf913b4a3f7810490"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:29:07.849Z"
+          },
+          "_id": {
+            "$oid": "68600a43f913b4a3f781049e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:09:20.344Z"
+          },
+          "_id": {
+            "$oid": "686013b0f913b4a3f781230a"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:21.554Z"
+          },
+          "postId": 157,
+          "_id": {
+            "$oid": "686013b1f913b4a3f7812384"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:22.071Z"
+          },
+          "postId": 156,
+          "_id": {
+            "$oid": "686013b2f913b4a3f781239f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:13:24.722Z"
+          },
+          "_id": {
+            "$oid": "686014a4f913b4a3f78155d8"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:13:30.261Z"
+          },
+          "forumId": {
+            "$oid": "686014aaf913b4a3f781570b"
+          },
+          "_id": {
+            "$oid": "686014aaf913b4a3f7815759"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:13:39.465Z"
+          },
+          "forumId": {
+            "$oid": "686014aaf913b4a3f781570b"
+          },
+          "messageId": {
+            "$oid": "686014b3f913b4a3f781575c"
+          },
+          "_id": {
+            "$oid": "686014b3f913b4a3f78157ab"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686006a28020bf8b7f804c8b"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T19:40:12.704Z"
+      },
+      "viewsCount": 22,
+      "progressCount": 4,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        159,
+        160,
+        163,
+        165
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:03:47.191Z"
+          },
+          "_id": {
+            "$oid": "68601263f913b4a3f7811ded"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:04:05.916Z"
+          },
+          "_id": {
+            "$oid": "68601275f913b4a3f7811dfe"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:04:24.831Z"
+          },
+          "_id": {
+            "$oid": "68601288f913b4a3f7811e1f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:04:39.607Z"
+          },
+          "_id": {
+            "$oid": "68601297f913b4a3f7811e42"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:07:23.876Z"
+          },
+          "_id": {
+            "$oid": "6860133bf913b4a3f7811eac"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:07:35.485Z"
+          },
+          "_id": {
+            "$oid": "68601347f913b4a3f7811ef7"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:07:48.970Z"
+          },
+          "_id": {
+            "$oid": "68601354f913b4a3f7811f58"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:08:12.482Z"
+          },
+          "_id": {
+            "$oid": "6860136cf913b4a3f7811fd6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:08:29.944Z"
+          },
+          "_id": {
+            "$oid": "6860137df913b4a3f7812057"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:08:47.320Z"
+          },
+          "_id": {
+            "$oid": "6860138ff913b4a3f78120f4"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:09:40.704Z"
+          },
+          "_id": {
+            "$oid": "686013c4f913b4a3f7812b28"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:41.814Z"
+          },
+          "postId": 159,
+          "_id": {
+            "$oid": "686013c5f913b4a3f7812c5a"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:42.611Z"
+          },
+          "postId": 160,
+          "_id": {
+            "$oid": "686013c6f913b4a3f7812c83"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:44.169Z"
+          },
+          "postId": 163,
+          "_id": {
+            "$oid": "686013c8f913b4a3f7812cad"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:45.261Z"
+          },
+          "postId": 165,
+          "_id": {
+            "$oid": "686013c9f913b4a3f7812cd8"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:10:44.333Z"
+          },
+          "_id": {
+            "$oid": "68601404f913b4a3f78131a7"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:11:45.569Z"
+          },
+          "_id": {
+            "$oid": "68601441f913b4a3f78142ba"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:11:55.673Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "_id": {
+            "$oid": "6860144bf913b4a3f78144bf"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:12:02.177Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "68601452f913b4a3f78144c2"
+          },
+          "_id": {
+            "$oid": "68601452f913b4a3f7814505"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:49:41.746Z"
+          },
+          "_id": {
+            "$oid": "68601d25f913b4a3f782f949"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:51:15.836Z"
+          },
+          "_id": {
+            "$oid": "68601d83f913b4a3f782fc29"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:51:47.783Z"
+          },
+          "_id": {
+            "$oid": "68601da3f913b4a3f7830250"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:57:31.641Z"
+          },
+          "_id": {
+            "$oid": "68601efbf913b4a3f7832004"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:59:11.462Z"
+          },
+          "_id": {
+            "$oid": "68601f5ff913b4a3f7832707"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:59:50.829Z"
+          },
+          "_id": {
+            "$oid": "68601f86f913b4a3f7832d8f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:34:13.004Z"
+          },
+          "_id": {
+            "$oid": "686043b578362573daa1df9a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:35:54.730Z"
+          },
+          "_id": {
+            "$oid": "6860441a78362573daa1eb3b"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:40:12.704Z"
+          },
+          "_id": {
+            "$oid": "6860451c78362573daa1f7b2"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601263f913b4a3f7811dec"
+      }
+    },
+    {
+      "courseId": 1,
+      "lastViewed": {
+        "$date": "2025-06-28T19:44:39.530Z"
+      },
+      "viewsCount": 3,
+      "progressCount": 3,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        148,
+        149,
+        150
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:09:33.360Z"
+          },
+          "_id": {
+            "$oid": "686013bdf913b4a3f78126c3"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:34.405Z"
+          },
+          "postId": 148,
+          "_id": {
+            "$oid": "686013bef913b4a3f781276a"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:34.832Z"
+          },
+          "postId": 149,
+          "_id": {
+            "$oid": "686013bef913b4a3f781278e"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:09:35.708Z"
+          },
+          "postId": 150,
+          "_id": {
+            "$oid": "686013bff913b4a3f78127b3"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:14:25.588Z"
+          },
+          "_id": {
+            "$oid": "686014e1f913b4a3f7816be4"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:14:36.221Z"
+          },
+          "forumId": {
+            "$oid": "686014ecf913b4a3f7816d43"
+          },
+          "_id": {
+            "$oid": "686014ecf913b4a3f7816d9c"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:14:54.780Z"
+          },
+          "forumId": {
+            "$oid": "686014ecf913b4a3f7816d43"
+          },
+          "messageId": {
+            "$oid": "686014fef913b4a3f7816d9f"
+          },
+          "_id": {
+            "$oid": "686014fef913b4a3f7816df9"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:44:39.530Z"
+          },
+          "_id": {
+            "$oid": "6860462778362573daa2022a"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686013bdf913b4a3f78126c2"
+      }
+    },
+    {
+      "courseId": 11,
+      "lastViewed": {
+        "$date": "2025-06-28T16:13:06.719Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 2,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        168,
+        167
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:09:49.428Z"
+          },
+          "_id": {
+            "$oid": "686013cdf913b4a3f7812e56"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:10:08.546Z"
+          },
+          "_id": {
+            "$oid": "686013e0f913b4a3f7812e86"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:10:22.618Z"
+          },
+          "_id": {
+            "$oid": "686013eef913b4a3f7812ee3"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:10:38.738Z"
+          },
+          "_id": {
+            "$oid": "686013fef913b4a3f7812f70"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:10:48.407Z"
+          },
+          "_id": {
+            "$oid": "68601408f913b4a3f781362a"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:10:49.475Z"
+          },
+          "postId": 168,
+          "_id": {
+            "$oid": "68601409f913b4a3f78136f0"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:10:50.006Z"
+          },
+          "postId": 167,
+          "_id": {
+            "$oid": "6860140af913b4a3f7813724"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:13:06.718Z"
+          },
+          "_id": {
+            "$oid": "68601492f913b4a3f78151b9"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:13:10.220Z"
+          },
+          "forumId": {
+            "$oid": "68601496f913b4a3f7815298"
+          },
+          "_id": {
+            "$oid": "68601496f913b4a3f78152e3"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:13:15.788Z"
+          },
+          "forumId": {
+            "$oid": "68601496f913b4a3f7815298"
+          },
+          "messageId": {
+            "$oid": "6860149bf913b4a3f78152e6"
+          },
+          "_id": {
+            "$oid": "6860149bf913b4a3f7815332"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686013cdf913b4a3f7812e55"
+      }
+    },
+    {
+      "courseId": 10,
+      "lastViewed": {
+        "$date": "2025-06-28T16:14:08.724Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 1,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        152
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:10:53.533Z"
+          },
+          "_id": {
+            "$oid": "6860140df913b4a3f78138f3"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:10:54.283Z"
+          },
+          "postId": 152,
+          "_id": {
+            "$oid": "6860140ef913b4a3f78139c9"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:14:08.724Z"
+          },
+          "_id": {
+            "$oid": "686014d0f913b4a3f781672c"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:14:17.034Z"
+          },
+          "forumId": {
+            "$oid": "686014d9f913b4a3f781682b"
+          },
+          "_id": {
+            "$oid": "686014d9f913b4a3f7816881"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:14:22.211Z"
+          },
+          "forumId": {
+            "$oid": "686014d9f913b4a3f781682b"
+          },
+          "messageId": {
+            "$oid": "686014def913b4a3f7816884"
+          },
+          "_id": {
+            "$oid": "686014def913b4a3f78168db"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860140df913b4a3f78138f2"
+      }
+    },
+    {
+      "courseId": 8,
+      "lastViewed": {
+        "$date": "2025-06-28T16:14:05.024Z"
+      },
+      "viewsCount": 3,
+      "progressCount": 1,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        98
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:10:57.838Z"
+          },
+          "_id": {
+            "$oid": "68601411f913b4a3f7813bb3"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:10:59.056Z"
+          },
+          "postId": 98,
+          "_id": {
+            "$oid": "68601413f913b4a3f7813c95"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:12:15.717Z"
+          },
+          "_id": {
+            "$oid": "6860145ff913b4a3f7814929"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:12:42.192Z"
+          },
+          "forumId": {
+            "$oid": "6860147af913b4a3f78149f5"
+          },
+          "_id": {
+            "$oid": "6860147af913b4a3f7814a3a"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:12:47.003Z"
+          },
+          "forumId": {
+            "$oid": "6860147af913b4a3f78149f5"
+          },
+          "messageId": {
+            "$oid": "6860147ef913b4a3f7814a3d"
+          },
+          "_id": {
+            "$oid": "6860147ff913b4a3f7814a83"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:14:05.023Z"
+          },
+          "_id": {
+            "$oid": "686014cdf913b4a3f7816343"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601411f913b4a3f7813bb2"
+      }
+    },
+    {
+      "courseId": 9,
+      "lastViewed": {
+        "$date": "2025-06-28T16:13:52.353Z"
+      },
+      "viewsCount": 3,
+      "progressCount": 4,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        132,
+        133,
+        134,
+        135
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:11:01.070Z"
+          },
+          "_id": {
+            "$oid": "68601415f913b4a3f7813e9a"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:11:01.837Z"
+          },
+          "postId": 132,
+          "_id": {
+            "$oid": "68601415f913b4a3f7813fc3"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:11:02.868Z"
+          },
+          "postId": 133,
+          "_id": {
+            "$oid": "68601416f913b4a3f7814001"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:11:03.690Z"
+          },
+          "postId": 134,
+          "_id": {
+            "$oid": "68601417f913b4a3f7814040"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:11:04.223Z"
+          },
+          "postId": 135,
+          "_id": {
+            "$oid": "68601418f913b4a3f7814080"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:13:43.137Z"
+          },
+          "_id": {
+            "$oid": "686014b7f913b4a3f7815a6c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:13:52.353Z"
+          },
+          "_id": {
+            "$oid": "686014c0f913b4a3f7815e72"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:13:55.303Z"
+          },
+          "forumId": {
+            "$oid": "686014c3f913b4a3f7815fb6"
+          },
+          "_id": {
+            "$oid": "686014c3f913b4a3f7816008"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:14:01.324Z"
+          },
+          "forumId": {
+            "$oid": "686014c3f913b4a3f7815fb6"
+          },
+          "messageId": {
+            "$oid": "686014c9f913b4a3f781600b"
+          },
+          "_id": {
+            "$oid": "686014c9f913b4a3f781605e"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601415f913b4a3f7813e99"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T19:40:09.625Z"
+  },
+  "loginCount": 12,
+  "lastLogout": {
+    "$date": "2025-06-28T19:47:33.659Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ffe0e931f91818c45d1fc"
+  },
+  "userId": 99,
+  "__v": 36,
+  "courses": [
+    {
+      "courseId": 7,
+      "lastViewed": {
+        "$date": "2025-06-28T16:54:32.208Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 3,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        138,
+        140,
+        141
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:37:23.639Z"
+          },
+          "_id": {
+            "$oid": "68601a43f913b4a3f781c27d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:54:32.208Z"
+          },
+          "_id": {
+            "$oid": "68601e48f913b4a3f7830dce"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:32.933Z"
+          },
+          "postId": 138,
+          "_id": {
+            "$oid": "68601e48f913b4a3f7830e12"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:34.553Z"
+          },
+          "postId": 140,
+          "_id": {
+            "$oid": "68601e4af913b4a3f7830e20"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:36.544Z"
+          },
+          "postId": 141,
+          "_id": {
+            "$oid": "68601e4cf913b4a3f7830e2f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601a43f913b4a3f781c27c"
+      }
+    },
+    {
+      "courseId": 15,
+      "lastViewed": {
+        "$date": "2025-06-28T16:54:24.333Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 2,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        156,
+        157
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:54:24.333Z"
+          },
+          "_id": {
+            "$oid": "68601e40f913b4a3f7830cee"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:25.455Z"
+          },
+          "postId": 156,
+          "_id": {
+            "$oid": "68601e41f913b4a3f7830d09"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:26.401Z"
+          },
+          "postId": 157,
+          "_id": {
+            "$oid": "68601e42f913b4a3f7830d11"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601e40f913b4a3f7830ced"
+      }
+    },
+    {
+      "courseId": 2,
+      "lastViewed": {
+        "$date": "2025-06-28T19:37:08.518Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 1,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        136
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:54:28.813Z"
+          },
+          "_id": {
+            "$oid": "68601e44f913b4a3f7830d54"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:29.593Z"
+          },
+          "postId": 136,
+          "_id": {
+            "$oid": "68601e45f913b4a3f7830d71"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:37:08.518Z"
+          },
+          "_id": {
+            "$oid": "6860446478362573daa1f328"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T19:38:15.938Z"
+          },
+          "forumId": {
+            "$oid": "68601642f913b4a3f7818a31"
+          },
+          "messageId": {
+            "$oid": "686044a778362573daa1f384"
+          },
+          "_id": {
+            "$oid": "686044a778362573daa1f3b0"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601e44f913b4a3f7830d53"
+      }
+    },
+    {
+      "courseId": 8,
+      "lastViewed": {
+        "$date": "2025-06-28T16:54:39.451Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 2,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        97,
+        96
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:54:39.451Z"
+          },
+          "_id": {
+            "$oid": "68601e4ff913b4a3f7830eb1"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:40.892Z"
+          },
+          "postId": 97,
+          "_id": {
+            "$oid": "68601e50f913b4a3f7830ee3"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:42.713Z"
+          },
+          "postId": 96,
+          "_id": {
+            "$oid": "68601e52f913b4a3f7830ef6"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601e4ff913b4a3f7830eb0"
+      }
+    },
+    {
+      "courseId": 10,
+      "lastViewed": {
+        "$date": "2025-06-28T16:54:44.567Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        152
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:54:44.567Z"
+          },
+          "_id": {
+            "$oid": "68601e54f913b4a3f7830f9c"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:45.401Z"
+          },
+          "postId": 152,
+          "_id": {
+            "$oid": "68601e55f913b4a3f7830fee"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601e54f913b4a3f7830f9b"
+      }
+    },
+    {
+      "courseId": 11,
+      "lastViewed": {
+        "$date": "2025-06-28T19:52:48.313Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 2,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        167,
+        168
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:54:47.220Z"
+          },
+          "_id": {
+            "$oid": "68601e57f913b4a3f78310af"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:47.919Z"
+          },
+          "postId": 167,
+          "_id": {
+            "$oid": "68601e57f913b4a3f783110d"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:49.081Z"
+          },
+          "postId": 168,
+          "_id": {
+            "$oid": "68601e59f913b4a3f7831127"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:52:48.312Z"
+          },
+          "_id": {
+            "$oid": "6860481078362573daa208ee"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601e57f913b4a3f78310ae"
+      }
+    },
+    {
+      "courseId": 1,
+      "lastViewed": {
+        "$date": "2025-06-28T16:54:50.978Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        147
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:54:50.978Z"
+          },
+          "_id": {
+            "$oid": "68601e5af913b4a3f783120c"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:51.709Z"
+          },
+          "postId": 147,
+          "_id": {
+            "$oid": "68601e5bf913b4a3f7831295"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601e5af913b4a3f783120b"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T19:54:11.488Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 5,
+      "forumMsgCount": 2,
+      "checkedPosts": [
+        159,
+        160,
+        162,
+        164,
+        163
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:54:55.845Z"
+          },
+          "_id": {
+            "$oid": "68601e5ff913b4a3f7831395"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:56.661Z"
+          },
+          "postId": 159,
+          "_id": {
+            "$oid": "68601e60f913b4a3f78314a9"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:57.304Z"
+          },
+          "postId": 160,
+          "_id": {
+            "$oid": "68601e61f913b4a3f78314ca"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:54:58.234Z"
+          },
+          "postId": 162,
+          "_id": {
+            "$oid": "68601e62f913b4a3f78314ec"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:55:03.402Z"
+          },
+          "postId": 164,
+          "_id": {
+            "$oid": "68601e67f913b4a3f783150f"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:55:04.007Z"
+          },
+          "postId": 163,
+          "_id": {
+            "$oid": "68601e68f913b4a3f7831533"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:55:17.101Z"
+          },
+          "_id": {
+            "$oid": "68601e75f913b4a3f7831567"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:55:40.627Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "68601e8cf913b4a3f78316a2"
+          },
+          "_id": {
+            "$oid": "68601e8cf913b4a3f78316c8"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:56:18.154Z"
+          },
+          "forumId": {
+            "$oid": "68601549f913b4a3f7817a43"
+          },
+          "messageId": {
+            "$oid": "68601eb2f913b4a3f78316d1"
+          },
+          "_id": {
+            "$oid": "68601eb2f913b4a3f78316f8"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:18:34.481Z"
+          },
+          "_id": {
+            "$oid": "6860400a78362573daa1d912"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:34:56.802Z"
+          },
+          "_id": {
+            "$oid": "686043e078362573daa1e4ba"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:36:48.922Z"
+          },
+          "_id": {
+            "$oid": "6860445078362573daa1f056"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T19:54:11.488Z"
+          },
+          "_id": {
+            "$oid": "6860486378362573daa20b8f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601e5ff913b4a3f7831394"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T19:52:40.065Z"
+  },
+  "loginCount": 8,
+  "lastLogout": {
+    "$date": "2025-06-28T19:55:02.180Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68600580a9db65969d52c56e"
+  },
+  "userId": 106,
+  "loginCount": 2,
+  "courses": [
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T16:27:35.954Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 2,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        159,
+        164
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:26:39.136Z"
+          },
+          "_id": {
+            "$oid": "686017bff913b4a3f7819f93"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:26:40.136Z"
+          },
+          "postId": 159,
+          "_id": {
+            "$oid": "686017c0f913b4a3f7819fae"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:26:49.215Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "686017c9f913b4a3f7819fbd"
+          },
+          "_id": {
+            "$oid": "686017c9f913b4a3f7819fc3"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:26:53.924Z"
+          },
+          "postId": 164,
+          "_id": {
+            "$oid": "686017cdf913b4a3f7819fef"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:26:56.315Z"
+          },
+          "_id": {
+            "$oid": "686017d0f913b4a3f781a034"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:26:58.577Z"
+          },
+          "_id": {
+            "$oid": "686017d2f913b4a3f781a0b6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:27:08.427Z"
+          },
+          "_id": {
+            "$oid": "686017dcf913b4a3f781a0fe"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:27:15.469Z"
+          },
+          "_id": {
+            "$oid": "686017e3f913b4a3f781a150"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:27:35.954Z"
+          },
+          "_id": {
+            "$oid": "686017f7f913b4a3f781a2f7"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686017bff913b4a3f7819f92"
+      }
+    },
+    {
+      "courseId": 20,
+      "lastViewed": {
+        "$date": "2025-06-28T16:27:31.572Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 2,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        129,
+        131
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:27:31.572Z"
+          },
+          "_id": {
+            "$oid": "686017f3f913b4a3f781a217"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:27:32.206Z"
+          },
+          "postId": 129,
+          "_id": {
+            "$oid": "686017f4f913b4a3f781a249"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:27:33.479Z"
+          },
+          "postId": 131,
+          "_id": {
+            "$oid": "686017f5f913b4a3f781a258"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686017f3f913b4a3f781a216"
+      }
+    }
+  ],
+  "__v": 12,
+  "lastLogin": {
+    "$date": "2025-06-28T16:26:38.240Z"
+  },
+  "lastLogout": {
+    "$date": "2025-06-28T16:27:39.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68600cde931f91818c45d1fd"
+  },
+  "userId": 92,
+  "__v": 17,
+  "courses": [
+    {
+      "courseId": 3,
+      "lastViewed": {
+        "$date": "2025-06-28T15:41:40.908Z"
+      },
+      "viewsCount": 5,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:40:37.072Z"
+          },
+          "_id": {
+            "$oid": "68600cf5f913b4a3f7810df4"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:40:49.595Z"
+          },
+          "_id": {
+            "$oid": "68600d01f913b4a3f7810dfa"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:41:09.385Z"
+          },
+          "_id": {
+            "$oid": "68600d15f913b4a3f7810e15"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:41:22.953Z"
+          },
+          "_id": {
+            "$oid": "68600d22f913b4a3f7810e21"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:41:40.908Z"
+          },
+          "_id": {
+            "$oid": "68600d34f913b4a3f7810e31"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600cf5f913b4a3f7810df3"
+      }
+    },
+    {
+      "courseId": 14,
+      "lastViewed": {
+        "$date": "2025-06-28T15:43:10.866Z"
+      },
+      "viewsCount": 5,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:41:46.200Z"
+          },
+          "_id": {
+            "$oid": "68600d3af913b4a3f7810e6d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:42:07.267Z"
+          },
+          "_id": {
+            "$oid": "68600d4ff913b4a3f7810e79"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:42:39.953Z"
+          },
+          "_id": {
+            "$oid": "68600d6ff913b4a3f7810e9b"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:42:53.948Z"
+          },
+          "_id": {
+            "$oid": "68600d7df913b4a3f7810ebf"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:43:10.865Z"
+          },
+          "_id": {
+            "$oid": "68600d8ef913b4a3f7810ef2"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600d3af913b4a3f7810e6c"
+      }
+    },
+    {
+      "courseId": 13,
+      "lastViewed": {
+        "$date": "2025-06-28T15:45:05.712Z"
+      },
+      "viewsCount": 5,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:43:17.749Z"
+          },
+          "_id": {
+            "$oid": "68600d95f913b4a3f7810f6b"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:43:42.754Z"
+          },
+          "_id": {
+            "$oid": "68600daef913b4a3f7810f7e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:43:58.401Z"
+          },
+          "_id": {
+            "$oid": "68600dbef913b4a3f7810fa1"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:44:11.140Z"
+          },
+          "_id": {
+            "$oid": "68600dcbf913b4a3f7810fd7"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:45:05.712Z"
+          },
+          "_id": {
+            "$oid": "68600e01f913b4a3f7811022"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600d95f913b4a3f7810f6a"
+      }
+    },
+    {
+      "courseId": 6,
+      "lastViewed": {
+        "$date": "2025-06-28T15:45:54.759Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:45:14.126Z"
+          },
+          "_id": {
+            "$oid": "68600e0af913b4a3f781111f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:45:54.758Z"
+          },
+          "_id": {
+            "$oid": "68600e32f913b4a3f7811176"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600e0af913b4a3f781111e"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T15:40:14.406Z"
+  },
+  "loginCount": 1,
+  "lastLogout": {
+    "$date": "2025-06-28T15:46:02.651Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68600e44931f91818c45d1fe"
+  },
+  "userId": 93,
+  "__v": 14,
+  "courses": [
+    {
+      "courseId": 16,
+      "lastViewed": {
+        "$date": "2025-06-28T16:44:30.989Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:46:13.753Z"
+          },
+          "_id": {
+            "$oid": "68600e45f913b4a3f7811244"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:46:59.162Z"
+          },
+          "_id": {
+            "$oid": "68600e73f913b4a3f781124a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:47:13.867Z"
+          },
+          "_id": {
+            "$oid": "68600e81f913b4a3f7811255"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:47:33.543Z"
+          },
+          "_id": {
+            "$oid": "68600e95f913b4a3f7811267"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:48:11.230Z"
+          },
+          "_id": {
+            "$oid": "68600ebbf913b4a3f7811284"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:44:30.988Z"
+          },
+          "_id": {
+            "$oid": "68601beef913b4a3f782ed69"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600e45f913b4a3f7811243"
+      }
+    },
+    {
+      "courseId": 18,
+      "lastViewed": {
+        "$date": "2025-06-28T16:45:17.605Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 2,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        118,
+        119
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:48:17.215Z"
+          },
+          "_id": {
+            "$oid": "68600ec1f913b4a3f78112b3"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:48:50.414Z"
+          },
+          "_id": {
+            "$oid": "68600ee2f913b4a3f78112bf"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:49:04.700Z"
+          },
+          "_id": {
+            "$oid": "68600ef0f913b4a3f78112d6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:49:17.448Z"
+          },
+          "_id": {
+            "$oid": "68600efdf913b4a3f78112fa"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:44:36.477Z"
+          },
+          "_id": {
+            "$oid": "68601bf4f913b4a3f782edba"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:44:37.684Z"
+          },
+          "postId": 118,
+          "_id": {
+            "$oid": "68601bf5f913b4a3f782edf4"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:44:38.236Z"
+          },
+          "postId": 119,
+          "_id": {
+            "$oid": "68601bf6f913b4a3f782ee05"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:45:17.605Z"
+          },
+          "_id": {
+            "$oid": "68601c1df913b4a3f782ee19"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600ec1f913b4a3f78112b2"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:44:29.172Z"
+  },
+  "loginCount": 2,
+  "lastLogout": {
+    "$date": "2025-06-28T16:46:29.562Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68600f0a931f91818c45d1ff"
+  },
+  "userId": 94,
+  "__v": 26,
+  "courses": [
+    {
+      "courseId": 19,
+      "lastViewed": {
+        "$date": "2025-06-28T15:50:41.829Z"
+      },
+      "viewsCount": 5,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:49:32.165Z"
+          },
+          "_id": {
+            "$oid": "68600f0cf913b4a3f781134c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:50:00.802Z"
+          },
+          "_id": {
+            "$oid": "68600f28f913b4a3f7811352"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:50:13.132Z"
+          },
+          "_id": {
+            "$oid": "68600f35f913b4a3f781135d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:50:23.370Z"
+          },
+          "_id": {
+            "$oid": "68600f3ff913b4a3f781136f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:50:41.829Z"
+          },
+          "_id": {
+            "$oid": "68600f51f913b4a3f7811384"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600f0cf913b4a3f781134b"
+      }
+    },
+    {
+      "courseId": 17,
+      "lastViewed": {
+        "$date": "2025-06-28T16:49:04.639Z"
+      },
+      "viewsCount": 8,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:50:45.684Z"
+          },
+          "_id": {
+            "$oid": "68600f55f913b4a3f78113c7"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:51:11.466Z"
+          },
+          "_id": {
+            "$oid": "68600f6ff913b4a3f78113d3"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:51:23.576Z"
+          },
+          "_id": {
+            "$oid": "68600f7bf913b4a3f78113ea"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:51:34.118Z"
+          },
+          "_id": {
+            "$oid": "68600f86f913b4a3f781140e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:51:46.568Z"
+          },
+          "_id": {
+            "$oid": "68600f92f913b4a3f7811441"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:52:00.761Z"
+          },
+          "_id": {
+            "$oid": "68600fa0f913b4a3f7811485"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:47:49.617Z"
+          },
+          "_id": {
+            "$oid": "68601cb5f913b4a3f782f0e9"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:49:04.639Z"
+          },
+          "_id": {
+            "$oid": "68601d00f913b4a3f782f1b9"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600f55f913b4a3f78113c6"
+      }
+    },
+    {
+      "courseId": 20,
+      "lastViewed": {
+        "$date": "2025-06-28T15:53:24.109Z"
+      },
+      "viewsCount": 4,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:52:06.638Z"
+          },
+          "_id": {
+            "$oid": "68600fa6f913b4a3f7811515"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:52:27.196Z"
+          },
+          "_id": {
+            "$oid": "68600fbbf913b4a3f7811528"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:52:42.116Z"
+          },
+          "_id": {
+            "$oid": "68600fcaf913b4a3f781154d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:53:24.109Z"
+          },
+          "_id": {
+            "$oid": "68600ff4f913b4a3f7811586"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600fa6f913b4a3f7811514"
+      }
+    },
+    {
+      "courseId": 9,
+      "lastViewed": {
+        "$date": "2025-06-28T16:49:09.191Z"
+      },
+      "viewsCount": 8,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        132
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:53:30.126Z"
+          },
+          "_id": {
+            "$oid": "68600ffaf913b4a3f7811622"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:53:51.261Z"
+          },
+          "_id": {
+            "$oid": "6860100ff913b4a3f781163a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:54:05.219Z"
+          },
+          "_id": {
+            "$oid": "6860101df913b4a3f7811669"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:54:20.987Z"
+          },
+          "_id": {
+            "$oid": "6860102cf913b4a3f78116b1"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:54:35.607Z"
+          },
+          "_id": {
+            "$oid": "6860103bf913b4a3f7811714"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:46:40.972Z"
+          },
+          "_id": {
+            "$oid": "68601c70f913b4a3f782ef2a"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:46:41.927Z"
+          },
+          "postId": 132,
+          "_id": {
+            "$oid": "68601c71f913b4a3f782efae"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:47:41.054Z"
+          },
+          "_id": {
+            "$oid": "68601cadf913b4a3f782efce"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:49:09.191Z"
+          },
+          "_id": {
+            "$oid": "68601d05f913b4a3f782f323"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68600ffaf913b4a3f7811621"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:46:39.692Z"
+  },
+  "loginCount": 2,
+  "lastLogout": {
+    "$date": "2025-06-28T16:49:11.653Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68601048931f91818c45d200"
+  },
+  "userId": 95,
+  "__v": 18,
+  "courses": [
+    {
+      "courseId": 2,
+      "lastViewed": {
+        "$date": "2025-06-28T16:49:27.893Z"
+      },
+      "viewsCount": 5,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:54:49.794Z"
+          },
+          "_id": {
+            "$oid": "68601049f913b4a3f78117fe"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:55:12.702Z"
+          },
+          "_id": {
+            "$oid": "68601060f913b4a3f7811804"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:55:26.988Z"
+          },
+          "_id": {
+            "$oid": "6860106ef913b4a3f781180f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:55:54.384Z"
+          },
+          "_id": {
+            "$oid": "6860108af913b4a3f7811822"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:49:27.892Z"
+          },
+          "_id": {
+            "$oid": "68601d17f913b4a3f782f581"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601049f913b4a3f78117fd"
+      }
+    },
+    {
+      "courseId": 7,
+      "lastViewed": {
+        "$date": "2025-06-28T16:49:21.281Z"
+      },
+      "viewsCount": 10,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:55:59.986Z"
+          },
+          "_id": {
+            "$oid": "6860108ff913b4a3f781184b"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:56:29.385Z"
+          },
+          "_id": {
+            "$oid": "686010adf913b4a3f7811856"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:56:40.580Z"
+          },
+          "_id": {
+            "$oid": "686010b8f913b4a3f781186b"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:56:52.944Z"
+          },
+          "_id": {
+            "$oid": "686010c4f913b4a3f781188c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:57:08.512Z"
+          },
+          "_id": {
+            "$oid": "686010d4f913b4a3f78118bb"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:32:12.272Z"
+          },
+          "_id": {
+            "$oid": "6860190cf913b4a3f781bfe5"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:33:06.454Z"
+          },
+          "_id": {
+            "$oid": "68601942f913b4a3f781c03d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:34:11.682Z"
+          },
+          "_id": {
+            "$oid": "68601983f913b4a3f781c0f3"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:35:03.552Z"
+          },
+          "_id": {
+            "$oid": "686019b7f913b4a3f781c16a"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:49:21.281Z"
+          },
+          "_id": {
+            "$oid": "68601d11f913b4a3f782f4c1"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860108ff913b4a3f781184a"
+      }
+    },
+    {
+      "courseId": 4,
+      "lastViewed": {
+        "$date": "2025-06-28T16:23:22.309Z"
+      },
+      "viewsCount": 3,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:22:52.674Z"
+          },
+          "_id": {
+            "$oid": "686016dcf913b4a3f7819390"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:23:10.953Z"
+          },
+          "_id": {
+            "$oid": "686016eef913b4a3f78193a1"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:23:22.309Z"
+          },
+          "_id": {
+            "$oid": "686016faf913b4a3f78193c2"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686016dcf913b4a3f781938f"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:49:20.276Z"
+  },
+  "loginCount": 6,
+  "lastLogout": {
+    "$date": "2025-06-28T16:49:30.176Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "686010eb931f91818c45d201"
+  },
+  "userId": 96,
+  "__v": 13,
+  "courses": [
+    {
+      "courseId": 3,
+      "lastViewed": {
+        "$date": "2025-06-28T15:57:56.763Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:57:31.994Z"
+          },
+          "_id": {
+            "$oid": "686010ebf913b4a3f7811924"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:57:56.762Z"
+          },
+          "_id": {
+            "$oid": "68601104f913b4a3f7811933"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686010ebf913b4a3f7811923"
+      }
+    },
+    {
+      "courseId": 12,
+      "lastViewed": {
+        "$date": "2025-06-28T15:58:53.477Z"
+      },
+      "viewsCount": 5,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:57:58.969Z"
+          },
+          "_id": {
+            "$oid": "68601106f913b4a3f7811957"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:58:16.270Z"
+          },
+          "_id": {
+            "$oid": "68601118f913b4a3f7811960"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:58:26.790Z"
+          },
+          "_id": {
+            "$oid": "68601122f913b4a3f7811971"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:58:40.640Z"
+          },
+          "_id": {
+            "$oid": "68601130f913b4a3f781198c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:58:53.477Z"
+          },
+          "_id": {
+            "$oid": "6860113df913b4a3f78119b3"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601106f913b4a3f7811956"
+      }
+    },
+    {
+      "courseId": 1,
+      "lastViewed": {
+        "$date": "2025-06-28T16:00:47.239Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:58:56.413Z"
+          },
+          "_id": {
+            "$oid": "68601140f913b4a3f7811a07"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:59:22.676Z"
+          },
+          "_id": {
+            "$oid": "6860115af913b4a3f7811a16"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:59:35.928Z"
+          },
+          "_id": {
+            "$oid": "68601167f913b4a3f7811a33"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T15:59:51.153Z"
+          },
+          "_id": {
+            "$oid": "68601177f913b4a3f7811a60"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:00:03.769Z"
+          },
+          "_id": {
+            "$oid": "68601183f913b4a3f7811a9f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:00:47.239Z"
+          },
+          "_id": {
+            "$oid": "686011aff913b4a3f7811af4"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601140f913b4a3f7811a06"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T15:57:31.071Z"
+  },
+  "loginCount": 1,
+  "lastLogout": {
+    "$date": "2025-06-28T16:00:52.385Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "686011bd931f91818c45d202"
+  },
+  "userId": 97,
+  "__v": 11,
+  "courses": [
+    {
+      "courseId": 17,
+      "lastViewed": {
+        "$date": "2025-06-28T16:01:33.214Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:01:02.606Z"
+          },
+          "_id": {
+            "$oid": "686011bef913b4a3f7811b85"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:01:33.214Z"
+          },
+          "_id": {
+            "$oid": "686011ddf913b4a3f7811b9a"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686011bef913b4a3f7811b84"
+      }
+    },
+    {
+      "courseId": 10,
+      "lastViewed": {
+        "$date": "2025-06-28T16:02:15.691Z"
+      },
+      "viewsCount": 4,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:01:35.301Z"
+          },
+          "_id": {
+            "$oid": "686011dff913b4a3f7811bc6"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:01:52.048Z"
+          },
+          "_id": {
+            "$oid": "686011f0f913b4a3f7811bcf"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:02:02.609Z"
+          },
+          "_id": {
+            "$oid": "686011faf913b4a3f7811be0"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:02:15.691Z"
+          },
+          "_id": {
+            "$oid": "68601207f913b4a3f7811bfb"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686011dff913b4a3f7811bc5"
+      }
+    },
+    {
+      "courseId": 15,
+      "lastViewed": {
+        "$date": "2025-06-28T16:03:23.026Z"
+      },
+      "viewsCount": 5,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:02:17.891Z"
+          },
+          "_id": {
+            "$oid": "68601209f913b4a3f7811c3e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:02:40.150Z"
+          },
+          "_id": {
+            "$oid": "68601220f913b4a3f7811c4c"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:02:52.562Z"
+          },
+          "_id": {
+            "$oid": "6860122cf913b4a3f7811c67"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:03:06.973Z"
+          },
+          "_id": {
+            "$oid": "6860123af913b4a3f7811c91"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:03:23.025Z"
+          },
+          "_id": {
+            "$oid": "6860124bf913b4a3f7811ccc"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601209f913b4a3f7811c3d"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:01:01.597Z"
+  },
+  "loginCount": 1,
+  "lastLogout": {
+    "$date": "2025-06-28T16:03:42.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6860151b931f91818c45d203"
+  },
+  "userId": 100,
+  "__v": 17,
+  "courses": [
+    {
+      "courseId": 6,
+      "lastViewed": {
+        "$date": "2025-06-28T16:15:25.671Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 2,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        99,
+        113
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:15:25.671Z"
+          },
+          "_id": {
+            "$oid": "6860151df913b4a3f7817672"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:15:26.462Z"
+          },
+          "postId": 99,
+          "_id": {
+            "$oid": "6860151ef913b4a3f7817683"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:15:27.492Z"
+          },
+          "postId": 113,
+          "_id": {
+            "$oid": "6860151ff913b4a3f7817689"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860151df913b4a3f7817671"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T16:15:52.726Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 3,
+      "forumMsgCount": 2,
+      "checkedPosts": [
+        160,
+        159,
+        165
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:15:29.617Z"
+          },
+          "_id": {
+            "$oid": "68601521f913b4a3f78176ab"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:15:30.857Z"
+          },
+          "postId": 160,
+          "_id": {
+            "$oid": "68601522f913b4a3f78176e5"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:15:31.391Z"
+          },
+          "postId": 159,
+          "_id": {
+            "$oid": "68601523f913b4a3f78176ef"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:15:32.709Z"
+          },
+          "postId": 165,
+          "_id": {
+            "$oid": "68601524f913b4a3f78176fa"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:15:52.725Z"
+          },
+          "_id": {
+            "$oid": "68601538f913b4a3f78179b3"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:16:09.995Z"
+          },
+          "forumId": {
+            "$oid": "68601549f913b4a3f7817a43"
+          },
+          "_id": {
+            "$oid": "68601549f913b4a3f7817a59"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:16:16.946Z"
+          },
+          "forumId": {
+            "$oid": "68601549f913b4a3f7817a43"
+          },
+          "messageId": {
+            "$oid": "68601550f913b4a3f7817a5c"
+          },
+          "_id": {
+            "$oid": "68601550f913b4a3f7817a73"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:16:51.986Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "68601573f913b4a3f7817a77"
+          },
+          "_id": {
+            "$oid": "68601573f913b4a3f7817a8f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601521f913b4a3f78176aa"
+      }
+    },
+    {
+      "courseId": 18,
+      "lastViewed": {
+        "$date": "2025-06-28T16:15:34.565Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        117
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:15:34.565Z"
+          },
+          "_id": {
+            "$oid": "68601526f913b4a3f781773a"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:15:35.491Z"
+          },
+          "postId": 117,
+          "_id": {
+            "$oid": "68601527f913b4a3f781776c"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601526f913b4a3f7817739"
+      }
+    },
+    {
+      "courseId": 13,
+      "lastViewed": {
+        "$date": "2025-06-28T16:15:37.388Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        109
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:15:37.388Z"
+          },
+          "_id": {
+            "$oid": "68601529f913b4a3f78177be"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:15:38.644Z"
+          },
+          "postId": 109,
+          "_id": {
+            "$oid": "6860152af913b4a3f781780b"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601529f913b4a3f78177bd"
+      }
+    },
+    {
+      "courseId": 12,
+      "lastViewed": {
+        "$date": "2025-06-28T16:15:40.940Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        143
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:15:40.940Z"
+          },
+          "_id": {
+            "$oid": "6860152cf913b4a3f781786f"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:15:41.937Z"
+          },
+          "postId": 143,
+          "_id": {
+            "$oid": "6860152df913b4a3f78178b9"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860152cf913b4a3f781786e"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:15:51.308Z"
+  },
+  "loginCount": 2,
+  "lastLogout": {
+    "$date": "2025-06-28T16:17:20.058Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6860159a931f91818c45d204"
+  },
+  "userId": 101,
+  "__v": 20,
+  "courses": [
+    {
+      "courseId": 3,
+      "lastViewed": {
+        "$date": "2025-06-28T16:17:30.406Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 1,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:17:30.406Z"
+          },
+          "_id": {
+            "$oid": "6860159af913b4a3f7817b54"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:17:43.513Z"
+          },
+          "forumId": {
+            "$oid": "686015a7f913b4a3f7817b64"
+          },
+          "_id": {
+            "$oid": "686015a7f913b4a3f7817b69"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:17:47.509Z"
+          },
+          "forumId": {
+            "$oid": "686015a7f913b4a3f7817b64"
+          },
+          "messageId": {
+            "$oid": "686015abf913b4a3f7817b6c"
+          },
+          "_id": {
+            "$oid": "686015abf913b4a3f7817b72"
+          }
+        },
+        {
+          "type": "forum-message-delete",
+          "date": {
+            "$date": "2025-06-28T16:17:49.572Z"
+          },
+          "forumId": {
+            "$oid": "686015a7f913b4a3f7817b64"
+          },
+          "messageId": {
+            "$oid": "686015abf913b4a3f7817b6c"
+          },
+          "_id": {
+            "$oid": "686015adf913b4a3f7817b7a"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:18:01.436Z"
+          },
+          "forumId": {
+            "$oid": "686015a7f913b4a3f7817b64"
+          },
+          "messageId": {
+            "$oid": "686015b9f913b4a3f7817b7d"
+          },
+          "_id": {
+            "$oid": "686015b9f913b4a3f7817b85"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860159af913b4a3f7817b53"
+      }
+    },
+    {
+      "courseId": 19,
+      "lastViewed": {
+        "$date": "2025-06-28T16:19:15.139Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 0,
+      "forumMsgCount": 1,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:18:03.445Z"
+          },
+          "_id": {
+            "$oid": "686015bbf913b4a3f7817bc1"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:18:11.170Z"
+          },
+          "forumId": {
+            "$oid": "686015c3f913b4a3f7817be8"
+          },
+          "_id": {
+            "$oid": "686015c3f913b4a3f7817bf3"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:18:16.599Z"
+          },
+          "forumId": {
+            "$oid": "686015c3f913b4a3f7817be8"
+          },
+          "messageId": {
+            "$oid": "686015c8f913b4a3f7817bf6"
+          },
+          "_id": {
+            "$oid": "686015c8f913b4a3f7817c02"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:19:15.139Z"
+          },
+          "_id": {
+            "$oid": "68601603f913b4a3f781813c"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686015bbf913b4a3f7817bc0"
+      }
+    },
+    {
+      "courseId": 5,
+      "lastViewed": {
+        "$date": "2025-06-28T16:18:19.078Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 1,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:18:19.078Z"
+          },
+          "_id": {
+            "$oid": "686015cbf913b4a3f7817c5e"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:18:24.010Z"
+          },
+          "forumId": {
+            "$oid": "686015d0f913b4a3f7817c95"
+          },
+          "_id": {
+            "$oid": "686015d0f913b4a3f7817ca4"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:18:28.745Z"
+          },
+          "forumId": {
+            "$oid": "686015d0f913b4a3f7817c95"
+          },
+          "messageId": {
+            "$oid": "686015d4f913b4a3f7817ca7"
+          },
+          "_id": {
+            "$oid": "686015d4f913b4a3f7817cb7"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686015cbf913b4a3f7817c5d"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T16:19:17.924Z"
+      },
+      "viewsCount": 4,
+      "progressCount": 0,
+      "forumMsgCount": 2,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:18:31.896Z"
+          },
+          "_id": {
+            "$oid": "686015d7f913b4a3f7817d33"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:18:49.034Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "686015e9f913b4a3f7817db3"
+          },
+          "_id": {
+            "$oid": "686015e9f913b4a3f7817dc6"
+          }
+        },
+        {
+          "type": "forum-message-delete",
+          "date": {
+            "$date": "2025-06-28T16:18:51.569Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "686015e9f913b4a3f7817db3"
+          },
+          "_id": {
+            "$oid": "686015ebf913b4a3f7817ddb"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:18:53.008Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "686015edf913b4a3f7817de0"
+          },
+          "_id": {
+            "$oid": "686015edf913b4a3f7817df5"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:19:02.637Z"
+          },
+          "forumId": {
+            "$oid": "68601549f913b4a3f7817a43"
+          },
+          "messageId": {
+            "$oid": "686015f6f913b4a3f7817df9"
+          },
+          "_id": {
+            "$oid": "686015f6f913b4a3f7817e0f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:19:10.828Z"
+          },
+          "_id": {
+            "$oid": "686015fef913b4a3f7817f4e"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:19:16.545Z"
+          },
+          "_id": {
+            "$oid": "68601604f913b4a3f7818253"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:19:17.924Z"
+          },
+          "_id": {
+            "$oid": "68601605f913b4a3f78183be"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686015d7f913b4a3f7817d32"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:17:30.153Z"
+  },
+  "loginCount": 1,
+  "lastLogout": {
+    "$date": "2025-06-28T16:19:19.325Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68601612931f91818c45d205"
+  },
+  "userId": 102,
+  "__v": 23,
+  "courses": [
+    {
+      "courseId": 17,
+      "lastViewed": {
+        "$date": "2025-06-28T16:19:33.333Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 2,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        124,
+        127
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:19:33.333Z"
+          },
+          "_id": {
+            "$oid": "68601615f913b4a3f7818546"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:19:34.104Z"
+          },
+          "postId": 124,
+          "_id": {
+            "$oid": "68601616f913b4a3f781855d"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:19:35.120Z"
+          },
+          "postId": 127,
+          "_id": {
+            "$oid": "68601617f913b4a3f7818563"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601615f913b4a3f7818545"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T16:20:36.898Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 3,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        159,
+        162,
+        165
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:19:37.011Z"
+          },
+          "_id": {
+            "$oid": "68601619f913b4a3f78185a3"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:19:37.786Z"
+          },
+          "postId": 159,
+          "_id": {
+            "$oid": "68601619f913b4a3f78185dd"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:19:38.700Z"
+          },
+          "postId": 162,
+          "_id": {
+            "$oid": "6860161af913b4a3f78185e7"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:19:40.102Z"
+          },
+          "postId": 165,
+          "_id": {
+            "$oid": "6860161cf913b4a3f78185f2"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:20:36.898Z"
+          },
+          "_id": {
+            "$oid": "68601654f913b4a3f7818d92"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:20:54.387Z"
+          },
+          "forumId": {
+            "$oid": "68601549f913b4a3f7817a43"
+          },
+          "messageId": {
+            "$oid": "68601666f913b4a3f7818e6f"
+          },
+          "_id": {
+            "$oid": "68601666f913b4a3f7818e8f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601619f913b4a3f78185a2"
+      }
+    },
+    {
+      "courseId": 14,
+      "lastViewed": {
+        "$date": "2025-06-28T16:19:43.010Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        105
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:19:43.010Z"
+          },
+          "_id": {
+            "$oid": "6860161ff913b4a3f781866e"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:19:43.606Z"
+          },
+          "postId": 105,
+          "_id": {
+            "$oid": "6860161ff913b4a3f78186ac"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860161ff913b4a3f781866d"
+      }
+    },
+    {
+      "courseId": 20,
+      "lastViewed": {
+        "$date": "2025-06-28T16:19:45.603Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        129
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:19:45.603Z"
+          },
+          "_id": {
+            "$oid": "68601621f913b4a3f781874c"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:19:46.271Z"
+          },
+          "postId": 129,
+          "_id": {
+            "$oid": "68601622f913b4a3f781878a"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601621f913b4a3f781874b"
+      }
+    },
+    {
+      "courseId": 6,
+      "lastViewed": {
+        "$date": "2025-06-28T16:19:48.423Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 2,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        99,
+        100
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:19:48.423Z"
+          },
+          "_id": {
+            "$oid": "68601624f913b4a3f781884e"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:19:49.200Z"
+          },
+          "postId": 99,
+          "_id": {
+            "$oid": "68601625f913b4a3f78188aa"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:19:50.402Z"
+          },
+          "postId": 100,
+          "_id": {
+            "$oid": "68601626f913b4a3f78188bf"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:19:59.019Z"
+          },
+          "forumId": {
+            "$oid": "6860162ff913b4a3f78188c2"
+          },
+          "_id": {
+            "$oid": "6860162ff913b4a3f78188d8"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:20:06.889Z"
+          },
+          "forumId": {
+            "$oid": "6860162ff913b4a3f78188c2"
+          },
+          "messageId": {
+            "$oid": "68601636f913b4a3f78188db"
+          },
+          "_id": {
+            "$oid": "68601636f913b4a3f78188f2"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601624f913b4a3f781884d"
+      }
+    },
+    {
+      "courseId": 2,
+      "lastViewed": {
+        "$date": "2025-06-28T16:20:09.197Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 1,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:20:09.197Z"
+          },
+          "_id": {
+            "$oid": "68601639f913b4a3f78189fe"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:20:18.990Z"
+          },
+          "forumId": {
+            "$oid": "68601642f913b4a3f7818a31"
+          },
+          "_id": {
+            "$oid": "68601642f913b4a3f7818a4b"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:20:30.779Z"
+          },
+          "forumId": {
+            "$oid": "68601642f913b4a3f7818a31"
+          },
+          "messageId": {
+            "$oid": "6860164ef913b4a3f7818a4e"
+          },
+          "_id": {
+            "$oid": "6860164ef913b4a3f7818a69"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601639f913b4a3f78189fd"
+      }
+    },
+    {
+      "courseId": 5,
+      "lastViewed": {
+        "$date": "2025-06-28T16:20:34.290Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        92
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:20:34.290Z"
+          },
+          "_id": {
+            "$oid": "68601652f913b4a3f7818ba5"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:20:35.000Z"
+          },
+          "postId": 92,
+          "_id": {
+            "$oid": "68601653f913b4a3f7818c33"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601652f913b4a3f7818ba4"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:19:30.293Z"
+  },
+  "loginCount": 1,
+  "lastLogout": {
+    "$date": "2025-06-28T16:20:58.246Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68601674931f91818c45d206"
+  },
+  "userId": 103,
+  "__v": 12,
+  "courses": [
+    {
+      "courseId": 18,
+      "lastViewed": {
+        "$date": "2025-06-28T16:21:26.754Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        117
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:21:26.754Z"
+          },
+          "_id": {
+            "$oid": "68601686f913b4a3f7818eea"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:21:27.476Z"
+          },
+          "postId": 117,
+          "_id": {
+            "$oid": "68601687f913b4a3f7818ef8"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601686f913b4a3f7818ee9"
+      }
+    },
+    {
+      "courseId": 17,
+      "lastViewed": {
+        "$date": "2025-06-28T16:21:42.117Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 2,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        124,
+        127
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:21:29.317Z"
+          },
+          "_id": {
+            "$oid": "68601689f913b4a3f7818f2f"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:21:30.174Z"
+          },
+          "postId": 124,
+          "_id": {
+            "$oid": "6860168af913b4a3f7818f5c"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:21:31.801Z"
+          },
+          "postId": 127,
+          "_id": {
+            "$oid": "6860168bf913b4a3f7818f65"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:21:39.662Z"
+          },
+          "forumId": {
+            "$oid": "68601488f913b4a3f7814e9a"
+          },
+          "messageId": {
+            "$oid": "68601693f913b4a3f7818f6b"
+          },
+          "_id": {
+            "$oid": "68601693f913b4a3f7818f75"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:21:42.117Z"
+          },
+          "_id": {
+            "$oid": "68601696f913b4a3f7818fed"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601689f913b4a3f7818f2e"
+      }
+    },
+    {
+      "courseId": 1,
+      "lastViewed": {
+        "$date": "2025-06-28T16:21:48.415Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 1,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:21:48.415Z"
+          },
+          "_id": {
+            "$oid": "6860169cf913b4a3f78190b1"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:22:00.265Z"
+          },
+          "forumId": {
+            "$oid": "686014ecf913b4a3f7816d43"
+          },
+          "messageId": {
+            "$oid": "686016a8f913b4a3f78190e8"
+          },
+          "_id": {
+            "$oid": "686016a8f913b4a3f78190f6"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860169cf913b4a3f78190b0"
+      }
+    },
+    {
+      "courseId": 4,
+      "lastViewed": {
+        "$date": "2025-06-28T16:22:40.969Z"
+      },
+      "viewsCount": 3,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:22:03.186Z"
+          },
+          "_id": {
+            "$oid": "686016abf913b4a3f78191a3"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:22:18.059Z"
+          },
+          "_id": {
+            "$oid": "686016baf913b4a3f781926b"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:22:40.968Z"
+          },
+          "_id": {
+            "$oid": "686016d0f913b4a3f781933f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686016abf913b4a3f78191a2"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:21:25.568Z"
+  },
+  "loginCount": 4,
+  "lastLogout": {
+    "$date": "2025-06-28T16:22:48.244Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68601708931f91818c45d207"
+  },
+  "userId": 104,
+  "__v": 25,
+  "courses": [
+    {
+      "courseId": 3,
+      "lastViewed": {
+        "$date": "2025-06-28T16:24:32.982Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 3,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        102,
+        104,
+        142
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:23:51.222Z"
+          },
+          "_id": {
+            "$oid": "68601717f913b4a3f7819444"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:23:52.010Z"
+          },
+          "postId": 102,
+          "_id": {
+            "$oid": "68601718f913b4a3f7819455"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:23:53.048Z"
+          },
+          "postId": 104,
+          "_id": {
+            "$oid": "68601719f913b4a3f781945b"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:23:54.375Z"
+          },
+          "postId": 142,
+          "_id": {
+            "$oid": "6860171af913b4a3f7819462"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:24:32.982Z"
+          },
+          "_id": {
+            "$oid": "68601740f913b4a3f7819836"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:24:41.048Z"
+          },
+          "forumId": {
+            "$oid": "686015a7f913b4a3f7817b64"
+          },
+          "messageId": {
+            "$oid": "68601749f913b4a3f7819898"
+          },
+          "_id": {
+            "$oid": "68601749f913b4a3f78198b1"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601717f913b4a3f7819443"
+      }
+    },
+    {
+      "courseId": 15,
+      "lastViewed": {
+        "$date": "2025-06-28T16:24:01.903Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        155
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:24:01.903Z"
+          },
+          "_id": {
+            "$oid": "68601721f913b4a3f78194a8"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:24:02.596Z"
+          },
+          "postId": 155,
+          "_id": {
+            "$oid": "68601722f913b4a3f78194d2"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601721f913b4a3f78194a7"
+      }
+    },
+    {
+      "courseId": 4,
+      "lastViewed": {
+        "$date": "2025-06-28T16:24:04.554Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        170
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:24:04.554Z"
+          },
+          "_id": {
+            "$oid": "68601724f913b4a3f7819527"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:24:05.548Z"
+          },
+          "postId": 170,
+          "_id": {
+            "$oid": "68601725f913b4a3f781954a"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601724f913b4a3f7819526"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T16:56:37.635Z"
+      },
+      "viewsCount": 6,
+      "progressCount": 3,
+      "forumMsgCount": 2,
+      "checkedPosts": [
+        159,
+        160,
+        162
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:24:07.397Z"
+          },
+          "_id": {
+            "$oid": "68601727f913b4a3f78195ba"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:24:08.114Z"
+          },
+          "postId": 159,
+          "_id": {
+            "$oid": "68601728f913b4a3f781962c"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:24:09.228Z"
+          },
+          "postId": 160,
+          "_id": {
+            "$oid": "68601729f913b4a3f781963d"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:24:09.773Z"
+          },
+          "postId": 162,
+          "_id": {
+            "$oid": "68601729f913b4a3f781964f"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:24:43.783Z"
+          },
+          "_id": {
+            "$oid": "6860174bf913b4a3f781998c"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:25:02.199Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "6860175ef913b4a3f7819a48"
+          },
+          "_id": {
+            "$oid": "6860175ef913b4a3f7819a63"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:25:15.472Z"
+          },
+          "_id": {
+            "$oid": "6860176bf913b4a3f7819b3d"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:51:57.908Z"
+          },
+          "_id": {
+            "$oid": "68601dadf913b4a3f78306ae"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:52:56.052Z"
+          },
+          "_id": {
+            "$oid": "68601de8f913b4a3f78307b9"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:56:37.635Z"
+          },
+          "_id": {
+            "$oid": "68601ec5f913b4a3f7831979"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:56:44.150Z"
+          },
+          "forumId": {
+            "$oid": "68601549f913b4a3f7817a43"
+          },
+          "messageId": {
+            "$oid": "68601eccf913b4a3f7831a87"
+          },
+          "_id": {
+            "$oid": "68601eccf913b4a3f7831aa7"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601727f913b4a3f78195b9"
+      }
+    },
+    {
+      "courseId": 16,
+      "lastViewed": {
+        "$date": "2025-06-28T16:24:13.162Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        114
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:24:13.162Z"
+          },
+          "_id": {
+            "$oid": "6860172df913b4a3f78196ec"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:24:13.849Z"
+          },
+          "postId": 114,
+          "_id": {
+            "$oid": "6860172df913b4a3f781973a"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:24:19.497Z"
+          },
+          "forumId": {
+            "$oid": "68601733f913b4a3f781973d"
+          },
+          "_id": {
+            "$oid": "68601733f913b4a3f7819753"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:24:29.294Z"
+          },
+          "forumId": {
+            "$oid": "68601733f913b4a3f781973d"
+          },
+          "messageId": {
+            "$oid": "6860173df913b4a3f7819756"
+          },
+          "_id": {
+            "$oid": "6860173df913b4a3f781976d"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860172df913b4a3f78196eb"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:56:32.984Z"
+  },
+  "loginCount": 6,
+  "lastLogout": {
+    "$date": "2025-06-28T16:56:54.464Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68601792931f91818c45d208"
+  },
+  "userId": 105,
+  "__v": 16,
+  "courses": [
+    {
+      "courseId": 5,
+      "lastViewed": {
+        "$date": "2025-06-28T16:25:56.827Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 2,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        92,
+        95
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:25:56.827Z"
+          },
+          "_id": {
+            "$oid": "68601794f913b4a3f7819d1b"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:25:57.366Z"
+          },
+          "postId": 92,
+          "_id": {
+            "$oid": "68601795f913b4a3f7819d2c"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:25:59.917Z"
+          },
+          "postId": 95,
+          "_id": {
+            "$oid": "68601797f913b4a3f7819d32"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601794f913b4a3f7819d1a"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T16:57:02.855Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 4,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        160,
+        162,
+        164,
+        166
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:26:06.714Z"
+          },
+          "_id": {
+            "$oid": "6860179ef913b4a3f7819d68"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:26:09.111Z"
+          },
+          "postId": 160,
+          "_id": {
+            "$oid": "686017a1f913b4a3f7819da3"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:26:09.661Z"
+          },
+          "postId": 162,
+          "_id": {
+            "$oid": "686017a1f913b4a3f7819dad"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:26:10.669Z"
+          },
+          "postId": 164,
+          "_id": {
+            "$oid": "686017a2f913b4a3f7819db8"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:26:11.637Z"
+          },
+          "postId": 166,
+          "_id": {
+            "$oid": "686017a3f913b4a3f7819dc4"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:26:17.155Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "686017a9f913b4a3f7819dd3"
+          },
+          "_id": {
+            "$oid": "686017a9f913b4a3f7819de0"
+          }
+        },
+        {
+          "type": "forum-message-delete",
+          "date": {
+            "$date": "2025-06-28T16:26:18.874Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "686017a9f913b4a3f7819dd3"
+          },
+          "_id": {
+            "$oid": "686017aaf913b4a3f7819def"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:57:02.854Z"
+          },
+          "_id": {
+            "$oid": "68601edef913b4a3f7831b74"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:57:10.272Z"
+          },
+          "forumId": {
+            "$oid": "68601549f913b4a3f7817a43"
+          },
+          "messageId": {
+            "$oid": "68601ee6f913b4a3f7831c34"
+          },
+          "_id": {
+            "$oid": "68601ee6f913b4a3f7831c4a"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860179ef913b4a3f7819d67"
+      }
+    },
+    {
+      "courseId": 19,
+      "lastViewed": {
+        "$date": "2025-06-28T16:26:20.452Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        120
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:26:20.452Z"
+          },
+          "_id": {
+            "$oid": "686017acf913b4a3f7819e5b"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:26:21.170Z"
+          },
+          "postId": 120,
+          "_id": {
+            "$oid": "686017adf913b4a3f7819ea8"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686017acf913b4a3f7819e5a"
+      }
+    },
+    {
+      "courseId": 4,
+      "lastViewed": {
+        "$date": "2025-06-28T16:26:23.057Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        170
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:26:23.057Z"
+          },
+          "_id": {
+            "$oid": "686017aff913b4a3f7819f2c"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:26:23.828Z"
+          },
+          "postId": 170,
+          "_id": {
+            "$oid": "686017aff913b4a3f7819f64"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686017aff913b4a3f7819f2b"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:56:58.394Z"
+  },
+  "loginCount": 3,
+  "lastLogout": {
+    "$date": "2025-06-28T16:57:12.953Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68601803931f91818c45d209"
+  },
+  "userId": 107,
+  "__v": 14,
+  "courses": [
+    {
+      "courseId": 12,
+      "lastViewed": {
+        "$date": "2025-06-28T16:27:49.341Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        143
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:27:49.341Z"
+          },
+          "_id": {
+            "$oid": "68601805f913b4a3f781a386"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:27:50.189Z"
+          },
+          "postId": 143,
+          "_id": {
+            "$oid": "68601806f913b4a3f781a394"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601805f913b4a3f781a385"
+      }
+    },
+    {
+      "courseId": 17,
+      "lastViewed": {
+        "$date": "2025-06-28T16:28:18.718Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 1,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        124
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:27:56.070Z"
+          },
+          "_id": {
+            "$oid": "6860180cf913b4a3f781a3e8"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:28:18.718Z"
+          },
+          "_id": {
+            "$oid": "68601822f913b4a3f781a687"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:28:20.114Z"
+          },
+          "postId": 124,
+          "_id": {
+            "$oid": "68601824f913b4a3f781a6eb"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:28:29.275Z"
+          },
+          "forumId": {
+            "$oid": "68601488f913b4a3f7814e9a"
+          },
+          "messageId": {
+            "$oid": "6860182df913b4a3f781a6f3"
+          },
+          "_id": {
+            "$oid": "6860182df913b4a3f781a704"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860180cf913b4a3f781a3e7"
+      }
+    },
+    {
+      "courseId": 7,
+      "lastViewed": {
+        "$date": "2025-06-28T16:28:03.382Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        138
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:28:03.382Z"
+          },
+          "_id": {
+            "$oid": "68601813f913b4a3f781a488"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:28:04.052Z"
+          },
+          "postId": 138,
+          "_id": {
+            "$oid": "68601814f913b4a3f781a4b2"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601813f913b4a3f781a487"
+      }
+    },
+    {
+      "courseId": 11,
+      "lastViewed": {
+        "$date": "2025-06-28T16:28:05.956Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        167
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:28:05.956Z"
+          },
+          "_id": {
+            "$oid": "68601815f913b4a3f781a558"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:28:06.665Z"
+          },
+          "postId": 167,
+          "_id": {
+            "$oid": "68601816f913b4a3f781a586"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:28:16.290Z"
+          },
+          "forumId": {
+            "$oid": "68601496f913b4a3f7815298"
+          },
+          "messageId": {
+            "$oid": "68601820f913b4a3f781a58c"
+          },
+          "_id": {
+            "$oid": "68601820f913b4a3f781a59a"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601815f913b4a3f781a557"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T16:28:31.919Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        159
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:28:31.919Z"
+          },
+          "_id": {
+            "$oid": "6860182ff913b4a3f781a828"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:28:32.610Z"
+          },
+          "postId": 159,
+          "_id": {
+            "$oid": "68601830f913b4a3f781a8bc"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:28:46.603Z"
+          },
+          "forumId": {
+            "$oid": "68601549f913b4a3f7817a43"
+          },
+          "messageId": {
+            "$oid": "6860183ef913b4a3f781a8cb"
+          },
+          "_id": {
+            "$oid": "6860183ef913b4a3f781a8e0"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860182ff913b4a3f781a827"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:28:02.034Z"
+  },
+  "loginCount": 3,
+  "lastLogout": {
+    "$date": "2025-06-28T16:28:52.853Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68601848931f91818c45d20a"
+  },
+  "userId": 108,
+  "__v": 21,
+  "courses": [
+    {
+      "courseId": 7,
+      "lastViewed": {
+        "$date": "2025-06-28T16:28:57.681Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        138
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:28:57.681Z"
+          },
+          "_id": {
+            "$oid": "68601849f913b4a3f781aa61"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:28:58.417Z"
+          },
+          "postId": 138,
+          "_id": {
+            "$oid": "6860184af913b4a3f781aa72"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601849f913b4a3f781aa60"
+      }
+    },
+    {
+      "courseId": 18,
+      "lastViewed": {
+        "$date": "2025-06-28T16:29:06.419Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        117
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:29:06.419Z"
+          },
+          "_id": {
+            "$oid": "68601852f913b4a3f781ab22"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:29:08.045Z"
+          },
+          "postId": 117,
+          "_id": {
+            "$oid": "68601854f913b4a3f781ab3c"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601852f913b4a3f781ab21"
+      }
+    },
+    {
+      "courseId": 14,
+      "lastViewed": {
+        "$date": "2025-06-28T16:29:10.074Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        105
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:29:10.074Z"
+          },
+          "_id": {
+            "$oid": "68601856f913b4a3f781abcc"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:29:10.634Z"
+          },
+          "postId": 105,
+          "_id": {
+            "$oid": "68601856f913b4a3f781abfb"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601856f913b4a3f781abcb"
+      }
+    },
+    {
+      "courseId": 2,
+      "lastViewed": {
+        "$date": "2025-06-28T16:29:29.443Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 1,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        136
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:29:11.931Z"
+          },
+          "_id": {
+            "$oid": "68601857f913b4a3f781acc7"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:29:12.750Z"
+          },
+          "postId": 136,
+          "_id": {
+            "$oid": "68601858f913b4a3f781aced"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:29:29.443Z"
+          },
+          "_id": {
+            "$oid": "68601869f913b4a3f781b09c"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:29:36.140Z"
+          },
+          "forumId": {
+            "$oid": "68601642f913b4a3f7818a31"
+          },
+          "messageId": {
+            "$oid": "68601870f913b4a3f781b0c4"
+          },
+          "_id": {
+            "$oid": "68601870f913b4a3f781b0d7"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601857f913b4a3f781acc6"
+      }
+    },
+    {
+      "courseId": 19,
+      "lastViewed": {
+        "$date": "2025-06-28T16:29:18.831Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 1,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:29:18.831Z"
+          },
+          "_id": {
+            "$oid": "6860185ef913b4a3f781af06"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:29:27.771Z"
+          },
+          "forumId": {
+            "$oid": "686015c3f913b4a3f7817be8"
+          },
+          "messageId": {
+            "$oid": "68601867f913b4a3f781af48"
+          },
+          "_id": {
+            "$oid": "68601867f913b4a3f781af59"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860185ef913b4a3f781af05"
+      }
+    },
+    {
+      "courseId": 13,
+      "lastViewed": {
+        "$date": "2025-06-28T16:29:38.559Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 0,
+      "forumMsgCount": 0,
+      "checkedPosts": [],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:29:38.559Z"
+          },
+          "_id": {
+            "$oid": "68601872f913b4a3f781b243"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:29:45.731Z"
+          },
+          "forumId": {
+            "$oid": "68601879f913b4a3f781b296"
+          },
+          "_id": {
+            "$oid": "68601879f913b4a3f781b2ac"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601872f913b4a3f781b242"
+      }
+    },
+    {
+      "courseId": 20,
+      "lastViewed": {
+        "$date": "2025-06-28T16:29:56.511Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        131
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:29:56.511Z"
+          },
+          "_id": {
+            "$oid": "68601884f913b4a3f781b454"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:29:58.756Z"
+          },
+          "postId": 131,
+          "_id": {
+            "$oid": "68601886f913b4a3f781b4b2"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601884f913b4a3f781b453"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T16:30:13.495Z"
+      },
+      "viewsCount": 2,
+      "progressCount": 2,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        159,
+        164
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:30:04.084Z"
+          },
+          "_id": {
+            "$oid": "6860188cf913b4a3f781b696"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:30:04.726Z"
+          },
+          "postId": 159,
+          "_id": {
+            "$oid": "6860188cf913b4a3f781b76a"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:30:11.149Z"
+          },
+          "forumId": {
+            "$oid": "68601549f913b4a3f7817a43"
+          },
+          "messageId": {
+            "$oid": "68601893f913b4a3f781b77b"
+          },
+          "_id": {
+            "$oid": "68601893f913b4a3f781b798"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:30:13.495Z"
+          },
+          "_id": {
+            "$oid": "68601895f913b4a3f781b9cb"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:30:15.132Z"
+          },
+          "postId": 164,
+          "_id": {
+            "$oid": "68601897f913b4a3f781bab7"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6860188cf913b4a3f781b695"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:29:17.847Z"
+  },
+  "loginCount": 4,
+  "lastLogout": {
+    "$date": "2025-06-28T16:30:22.342Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "686018c6931f91818c45d20b"
+  },
+  "userId": 109,
+  "__v": 15,
+  "courses": [
+    {
+      "courseId": 7,
+      "lastViewed": {
+        "$date": "2025-06-28T16:31:02.325Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 1,
+      "checkedPosts": [
+        138
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:31:02.325Z"
+          },
+          "_id": {
+            "$oid": "686018c6f913b4a3f781bd1f"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:31:03.688Z"
+          },
+          "postId": 138,
+          "_id": {
+            "$oid": "686018c7f913b4a3f781bd31"
+          }
+        },
+        {
+          "type": "create-forum",
+          "date": {
+            "$date": "2025-06-28T16:31:07.751Z"
+          },
+          "forumId": {
+            "$oid": "686018cbf913b4a3f781bd34"
+          },
+          "_id": {
+            "$oid": "686018cbf913b4a3f781bd3a"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:31:15.062Z"
+          },
+          "forumId": {
+            "$oid": "686018cbf913b4a3f781bd34"
+          },
+          "messageId": {
+            "$oid": "686018d3f913b4a3f781bd3d"
+          },
+          "_id": {
+            "$oid": "686018d3f913b4a3f781bd44"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686018c6f913b4a3f781bd1e"
+      }
+    },
+    {
+      "courseId": 5,
+      "lastViewed": {
+        "$date": "2025-06-28T16:31:17.182Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        92
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:31:17.182Z"
+          },
+          "_id": {
+            "$oid": "686018d5f913b4a3f781bd90"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:31:18.151Z"
+          },
+          "postId": 92,
+          "_id": {
+            "$oid": "686018d6f913b4a3f781bdba"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686018d5f913b4a3f781bd8f"
+      }
+    },
+    {
+      "courseId": 21,
+      "lastViewed": {
+        "$date": "2025-06-28T16:54:00.831Z"
+      },
+      "viewsCount": 3,
+      "progressCount": 2,
+      "forumMsgCount": 2,
+      "checkedPosts": [
+        160,
+        162
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:31:20.067Z"
+          },
+          "_id": {
+            "$oid": "686018d8f913b4a3f781be2a"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:31:22.110Z"
+          },
+          "postId": 160,
+          "_id": {
+            "$oid": "686018daf913b4a3f781be86"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:31:22.519Z"
+          },
+          "postId": 162,
+          "_id": {
+            "$oid": "686018daf913b4a3f781be94"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:31:29.962Z"
+          },
+          "forumId": {
+            "$oid": "68601549f913b4a3f7817a43"
+          },
+          "messageId": {
+            "$oid": "686018e1f913b4a3f781bea7"
+          },
+          "_id": {
+            "$oid": "686018e1f913b4a3f781beb6"
+          }
+        },
+        {
+          "type": "forum-message",
+          "date": {
+            "$date": "2025-06-28T16:31:46.050Z"
+          },
+          "forumId": {
+            "$oid": "6860144bf913b4a3f781447d"
+          },
+          "messageId": {
+            "$oid": "686018f2f913b4a3f781bebe"
+          },
+          "_id": {
+            "$oid": "686018f2f913b4a3f781bece"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:53:21.020Z"
+          },
+          "_id": {
+            "$oid": "68601e01f913b4a3f7830aa9"
+          }
+        },
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:54:00.831Z"
+          },
+          "_id": {
+            "$oid": "68601e28f913b4a3f7830c13"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "686018d8f913b4a3f781be29"
+      }
+    },
+    {
+      "courseId": 13,
+      "lastViewed": {
+        "$date": "2025-06-28T16:53:18.455Z"
+      },
+      "viewsCount": 1,
+      "progressCount": 1,
+      "forumMsgCount": 0,
+      "checkedPosts": [
+        109
+      ],
+      "activity": [
+        {
+          "type": "view",
+          "date": {
+            "$date": "2025-06-28T16:53:18.455Z"
+          },
+          "_id": {
+            "$oid": "68601dfef913b4a3f7830988"
+          }
+        },
+        {
+          "type": "check-post",
+          "date": {
+            "$date": "2025-06-28T16:53:19.102Z"
+          },
+          "postId": 109,
+          "_id": {
+            "$oid": "68601dfff913b4a3f78309ce"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68601dfef913b4a3f7830987"
+      }
+    }
+  ],
+  "lastLogin": {
+    "$date": "2025-06-28T16:53:15.892Z"
+  },
+  "loginCount": 2,
+  "lastLogout": {
+    "$date": "2025-06-28T16:54:06.131Z"
+  }
+}]

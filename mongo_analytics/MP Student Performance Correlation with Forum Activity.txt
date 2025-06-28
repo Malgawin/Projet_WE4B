@@ -1,0 +1,55 @@
+// Map function
+var mapFunction = function() {
+  this.submit.forEach(function(submission) {
+    emit(
+      submission.userId,
+      {
+        grades: [submission.grade],
+        forumActivity: 0 // Will be updated in finalize
+      }
+    );
+  });
+};
+
+// Reduce function
+var reduceFunction = function(userId, values) {
+  var result = { grades: [], forumActivity: 0 };
+  
+  values.forEach(function(value) {
+    result.grades = result.grades.concat(value.grades);
+    result.forumActivity += value.forumActivity;
+  });
+  
+  return result;
+};
+
+// Finalize function to add forum activity data
+var finalizeFunction = function(userId, reducedValue) {
+  // Get forum activity count for this user from UserLogs
+  var userLog = db.UserLogs.findOne({ userId: userId });
+  if (userLog) {
+    reducedValue.forumActivity = userLog.courses.reduce(function(sum, course) {
+      return sum + (course.forumMsgCount || 0);
+    }, 0);
+  }
+  
+  // Calculate average grade
+  reducedValue.avgGrade = Array.avg(reducedValue.grades.filter(function(g) { return g != null; }));
+  
+  return reducedValue;
+};
+
+// Execute MapReduce
+db.Assignment.mapReduce(
+  mapFunction,
+  reduceFunction,
+  {
+    out: "student_performance_correlation",
+    finalize: finalizeFunction,
+    query: { "submit.grade": { $exists: true } }
+  }
+);
+
+// Query results for analysis
+db.student_performance_correlation.find({ "value.avgGrade": { $exists: true } })
+  .sort({ "value.avgGrade": -1 });

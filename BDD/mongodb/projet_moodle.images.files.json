@@ -1,0 +1,252 @@
+[{
+  "_id": {
+    "$oid": "685feab4a1f249475c61e5bf"
+  },
+  "length": 8407,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:14:28.816Z"
+  },
+  "filename": "poo.png",
+  "contentType": "image/png"
+},
+{
+  "_id": {
+    "$oid": "685feac7a1f249475c61e5e9"
+  },
+  "length": 85640,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:14:47.509Z"
+  },
+  "filename": "reseaux.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685fead3a1f249475c61e645"
+  },
+  "length": 20808,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:14:59.446Z"
+  },
+  "filename": "projet_tutore.png",
+  "contentType": "image/png"
+},
+{
+  "_id": {
+    "$oid": "685feadca1f249475c61e6ce"
+  },
+  "length": 12352,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:15:08.864Z"
+  },
+  "filename": "mobile.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feae5a1f249475c61e76e"
+  },
+  "length": 35506,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:15:17.923Z"
+  },
+  "filename": "bigdata.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feaf1a1f249475c61e83a"
+  },
+  "length": 76118,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:15:29.379Z"
+  },
+  "filename": "devops.png",
+  "contentType": "image/png"
+},
+{
+  "_id": {
+    "$oid": "685feafba1f249475c61e932"
+  },
+  "length": 455045,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:15:39.472Z"
+  },
+  "filename": "analyse_donnees.png",
+  "contentType": "image/png"
+},
+{
+  "_id": {
+    "$oid": "685feb04a1f249475c61ea84"
+  },
+  "length": 10757,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:15:48.854Z"
+  },
+  "filename": "robotique.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb11a1f249475c61ebd4"
+  },
+  "length": 71685,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:16:01.596Z"
+  },
+  "filename": "algorithme.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb1ea1f249475c61f04e"
+  },
+  "length": 56922,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:16:14.667Z"
+  },
+  "filename": "web.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb28a1f249475c61f222"
+  },
+  "length": 95741,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:16:24.967Z"
+  },
+  "filename": "bdd.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb33a1f249475c61f7b5"
+  },
+  "length": 96975,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:16:35.869Z"
+  },
+  "filename": "maths_discret.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb3aa1f249475c61fa2f"
+  },
+  "length": 48106,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:16:42.496Z"
+  },
+  "filename": "ia.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb44a1f249475c61fcd9"
+  },
+  "length": 9850,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:16:52.466Z"
+  },
+  "filename": "cloud.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb4ea1f249475c61ff73"
+  },
+  "length": 80645,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:17:02.605Z"
+  },
+  "filename": "systeme.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb57a1f249475c6202c1"
+  },
+  "length": 26315,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:17:11.631Z"
+  },
+  "filename": "securitÃ©.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb5fa1f249475c6205b3"
+  },
+  "length": 105759,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:17:19.791Z"
+  },
+  "filename": "architecture.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb6da1f249475c620e52"
+  },
+  "length": 45017,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:17:33.035Z"
+  },
+  "filename": "structure_donne.jpeg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb78a1f249475c621823"
+  },
+  "length": 418255,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:17:44.475Z"
+  },
+  "filename": "programation_c.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685feb84a1f249475c621cce"
+  },
+  "length": 146471,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:17:56.701Z"
+  },
+  "filename": "ui_ux.jpg",
+  "contentType": "image/jpeg"
+},
+{
+  "_id": {
+    "$oid": "685fece7a1f249475c62407f"
+  },
+  "length": 29054,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T13:23:51.999Z"
+  },
+  "filename": "example.jpg",
+  "contentType": "image/jpeg"
+}]

@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "6860176bf913b4a3f7819b1d"
+  },
+  "length": 107926,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T16:25:15.382Z"
+  },
+  "filename": "Projet SI40_WE4B.pdf",
+  "contentType": "application/pdf"
+},
+{
+  "_id": {
+    "$oid": "686017dcf913b4a3f781a0f3"
+  },
+  "length": 13195,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T16:27:08.411Z"
+  },
+  "filename": "robotique.pdf",
+  "contentType": "application/pdf"
+},
+{
+  "_id": {
+    "$oid": "686019b7f913b4a3f781c155"
+  },
+  "length": 239085,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T16:35:03.468Z"
+  },
+  "filename": "Projet WE4B P25.pdf",
+  "contentType": "application/pdf"
+},
+{
+  "_id": {
+    "$oid": "68601c1df913b4a3f782ee07"
+  },
+  "length": 107926,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T16:45:17.415Z"
+  },
+  "filename": "Projet SI40_WE4B.pdf",
+  "contentType": "application/pdf"
+},
+{
+  "_id": {
+    "$oid": "68601cacf913b4a3f782efb0"
+  },
+  "length": 107926,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T16:47:40.961Z"
+  },
+  "filename": "Projet SI40_WE4B.pdf",
+  "contentType": "application/pdf"
+},
+{
+  "_id": {
+    "$oid": "68601d00f913b4a3f782f199"
+  },
+  "length": 15566,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T16:49:04.515Z"
+  },
+  "filename": "cours cloud .pdf",
+  "contentType": "application/pdf"
+},
+{
+  "_id": {
+    "$oid": "68601d83f913b4a3f782fbcb"
+  },
+  "length": 16549,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T16:51:15.706Z"
+  },
+  "filename": "courspdf.pdf",
+  "contentType": "application/pdf"
+},
+{
+  "_id": {
+    "$oid": "68601de7f913b4a3f7830795"
+  },
+  "length": 16226,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T16:52:55.933Z"
+  },
+  "filename": "reponse ex .pdf",
+  "contentType": "application/pdf"
+},
+{
+  "_id": {
+    "$oid": "68601e28f913b4a3f7830bf3"
+  },
+  "length": 16226,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T16:54:00.750Z"
+  },
+  "filename": "reponse ex 5linux.pdf",
+  "contentType": "application/pdf"
+},
+{
+  "_id": {
+    "$oid": "68601e75f913b4a3f783153a"
+  },
+  "length": 16226,
+  "chunkSize": 261120,
+  "uploadDate": {
+    "$date": "2025-06-28T16:55:17.023Z"
+  },
+  "filename": "reponse ex  linux.pdf",
+  "contentType": "application/pdf"
+}]

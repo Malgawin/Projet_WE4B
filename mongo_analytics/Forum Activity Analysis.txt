@@ -1,0 +1,22 @@
+// Most active forums by message count
+db.Forum.aggregate([
+  {
+    $project: {
+      title: 1,
+      coursId: 1,
+      messageCount: { $size: "$messages" }
+    }
+  },
+  { $sort: { messageCount: -1 } },
+  { $limit: 10 }
+]);
+
+// Message count per course
+db.Forum.aggregate([
+  { $group: { 
+    _id: "$coursId", 
+    totalMessages: { $sum: { $size: "$messages" } },
+    forumCount: { $sum: 1 }
+  }},
+  { $sort: { totalMessages: -1 } }
+]);

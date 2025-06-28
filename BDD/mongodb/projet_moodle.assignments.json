@@ -1,0 +1,146 @@
+[{
+  "_id": {
+    "$oid": "68600ca7f913b4a3f7810a34"
+  },
+  "coursId": 6,
+  "title": "Exercice : Droits Linux",
+  "authorId": 91,
+  "publishDate": {
+    "$date": "2025-06-29T15:39:00.000Z"
+  },
+  "deadline": {
+    "$date": "2025-07-03T15:43:00.000Z"
+  },
+  "type": "important",
+  "sort_order": 11,
+  "messages": "Sur un système Linux, affiche les permissions d’un fichier avec ls -l. Explique les droits utilisateur, groupe et autres.\n\n",
+  "submit": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68600ebbf913b4a3f781127b"
+  },
+  "coursId": 16,
+  "title": " Exercice : MapReduce",
+  "authorId": 93,
+  "publishDate": {
+    "$date": "2025-06-28T15:50:00.000Z"
+  },
+  "deadline": {
+    "$date": "2025-07-06T15:53:00.000Z"
+  },
+  "type": "important",
+  "sort_order": 11,
+  "messages": "Écris un pseudo-algorithme pour compter le nombre d’occurrences de chaque mot dans un corpus de textes avec le modèle MapReduce.",
+  "submit": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6860108af913b4a3f781181b"
+  },
+  "coursId": 2,
+  "title": " Exercice : Palindrome",
+  "authorId": 95,
+  "publishDate": {
+    "$date": "2025-06-28T15:56:00.000Z"
+  },
+  "deadline": {
+    "$date": "2025-07-06T15:57:00.000Z"
+  },
+  "type": "annonce",
+  "sort_order": 11,
+  "messages": "Écrire un algorithme pour vérifier si une chaîne de caractères est un palindrome en utilisant une pile.\n\n",
+  "submit": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686011aff913b4a3f7811ae1"
+  },
+  "coursId": 1,
+  "title": "Exercice : Gestion d’erreurs",
+  "authorId": 96,
+  "publishDate": {
+    "$date": "2025-06-28T16:01:00.000Z"
+  },
+  "deadline": {
+    "$date": "2025-07-06T16:00:00.000Z"
+  },
+  "type": "info",
+  "sort_order": 11,
+  "messages": "rendre l'exercice sur : l'utilisation de codes de retour ou errno pour gérer et diagnostiquer les erreurs",
+  "submit": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6860136cf913b4a3f7811fbf"
+  },
+  "coursId": 21,
+  "title": "Exercice : Droits Linux",
+  "authorId": 98,
+  "publishDate": {
+    "$date": "2025-06-28T16:09:00.000Z"
+  },
+  "deadline": {
+    "$date": "2025-07-06T16:11:00.000Z"
+  },
+  "type": "annonce",
+  "sort_order": 11,
+  "messages": "Sur un système Linux, affiche les permissions d’un fichier avec ls -l. Explique les droits utilisateur, groupe et autres.",
+  "submit": [
+    {
+      "userId": 103,
+      "fileId": "6860176bf913b4a3f7819b1d",
+      "grade": 10,
+      "comment": "tres bien",
+      "state": "En attente",
+      "_id": {
+        "$oid": "6860176bf913b4a3f7819b20"
+      }
+    },
+    {
+      "userId": 102,
+      "fileId": "686017dcf913b4a3f781a0f3",
+      "grade": 7,
+      "comment": "pas mal ",
+      "state": "En attente",
+      "_id": {
+        "$oid": "686017dcf913b4a3f781a102"
+      }
+    },
+    {
+      "userId": 104,
+      "fileId": "68601de7f913b4a3f7830795",
+      "grade": 7,
+      "comment": "super ",
+      "state": "En attente",
+      "_id": {
+        "$oid": "68601de7f913b4a3f783079a"
+      }
+    },
+    {
+      "userId": 109,
+      "fileId": "68601e28f913b4a3f7830bf3",
+      "grade": 8,
+      "comment": "ok",
+      "state": "En attente",
+      "_id": {
+        "$oid": "68601e28f913b4a3f7830bf9"
+      }
+    },
+    {
+      "userId": 99,
+      "fileId": "68601e75f913b4a3f783153a",
+      "grade": null,
+      "comment": null,
+      "state": "En attente",
+      "_id": {
+        "$oid": "68601e75f913b4a3f7831541"
+      }
+    }
+  ],
+  "__v": 10
+}]

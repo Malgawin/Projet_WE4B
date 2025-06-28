@@ -1,0 +1,32 @@
+db.Assignment.aggregate([
+  {
+    $project: {
+      title: 1,
+      coursId: 1,
+      totalStudents: { $size: "$submit" },
+      completedStudents: {
+        $size: {
+          $filter: {
+            input: "$submit",
+            as: "sub",
+            cond: { $ne: ["$$sub.state", "en attente"] }
+          }
+        }
+      }
+    }
+  },
+  {
+    $project: {
+      title: 1,
+      coursId: 1,
+      completionRate: {
+        $cond: [
+          { $eq: ["$totalStudents", 0] },
+          0,
+          { $divide: ["$completedStudents", "$totalStudents"] }
+        ]
+      }
+    }
+  },
+  { $sort: { completionRate: -1 } }
+]);
