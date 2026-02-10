@@ -1,5 +1,7 @@
 # Moodle Simplifié - Projet WE4B
 
+Projet dans la branche DEV 
+
 ## 📝 Présentation
 
 Ce projet est une version simplifiée de Moodle développée dans le cadre de l'UE WE4B en collaboration avec l'UE SI40 durant le 2ème semestre d'école d'ingénieur à l'UTBM. L'objectif est de fournir un espace en ligne permettant aux administrateurs de gérer les utilisateurs et les UE, aux professeurs de poster des contenus pédagogiques, et aux étudiants de consulter ces contenus.
