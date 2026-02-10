@@ -1,0 +1,61 @@
+// Map function - process activity logs per course
+var mapFunction = function() {
+  this.courses.forEach(function(course) {
+    var activities = course.activity || [];
+    var activityTypes = {};
+    
+    activities.forEach(function(act) {
+      activityTypes[act.type] = (activityTypes[act.type] || 0) + 1;
+    });
+    
+    emit(course.courseId, {
+      views: course.viewsCount || 0,
+      forumMessages: course.forumMsgCount || 0,
+      activityTypes: activityTypes,
+      userCount: 1
+    });
+  });
+};
+
+// Reduce function
+var reduceFunction = function(courseId, values) {
+  var result = {
+    views: 0,
+    forumMessages: 0,
+    activityTypes: {},
+    userCount: 0
+  };
+  
+  values.forEach(function(value) {
+    result.views += value.views;
+    result.forumMessages += value.forumMessages;
+    result.userCount += value.userCount;
+    
+    // Merge activity type counts
+    for (var type in value.activityTypes) {
+      result.activityTypes[type] = (result.activityTypes[type] || 0) + value.activityTypes[type];
+    }
+  });
+  
+  return result;
+};
+
+// Finalize function to calculate averages
+var finalizeFunction = function(courseId, reducedValue) {
+  reducedValue.avgViewsPerUser = reducedValue.views / reducedValue.userCount;
+  reducedValue.avgForumMessagesPerUser = reducedValue.forumMessages / reducedValue.userCount;
+  return reducedValue;
+};
+
+// Execute MapReduce
+db.UserLogs.mapReduce(
+  mapFunction,
+  reduceFunction,
+  {
+    out: "course_engagement_analysis",
+    finalize: finalizeFunction
+  }
+);
+
+// Query results
+db.course_engagement_analysis.find().sort({ "value.views": -1 });

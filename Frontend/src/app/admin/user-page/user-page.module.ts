@@ -1,0 +1,29 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserListElementComponent } from './user-list-element/user-list-element.component';
+import { UserPageComponent } from './user-page.component';
+import { UserPageRoutingModule } from './user-page-routing.module';
+import { ModalCreateUserComponent } from './modal-create-user/modal-create-user.component';
+import { FormsModule } from '@angular/forms';
+import { ModalModifyUserComponent } from './modal-modify-user/modal-modify-user.component';
+import { ModalRegisterComponent } from './modal-register/modal-register.component';
+import {HttpClientModule} from "@angular/common/http";
+
+@NgModule({
+  declarations: [
+    UserListComponent,
+    UserListElementComponent,
+    UserPageComponent,
+    ModalCreateUserComponent,
+    ModalModifyUserComponent,
+    ModalRegisterComponent
+  ],
+  imports: [
+    CommonModule,
+    UserPageRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ]
+})
+export class UserPageModule { }

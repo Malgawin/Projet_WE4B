@@ -1,0 +1,28 @@
+
+    <div class=" container container-cours">
+        <div class="container-cours-top">
+            <div class = "container-cours-titre">
+                <h1 >Mes Cours</h1>
+                <h4 >Vue d’ensemble des cours</h4>
+            </div>
+
+            <div class="container-cours-btn">
+                    <div class="deroulant-box">
+                             <button class="btn-deroulant" (click)="showMenu()">
+                                {{ currentView }} ▼
+                            </button>
+                            <div class="menu-deroulant" [class.show]="menuOpen">
+                                <a (click)="selectView('Carte')">Carte</a>
+                                <a (click)="selectView('Liste')">Liste</a>
+                                <a (click)="selectView('Activité')">Activité</a>
+                            </div>
+                    </div>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="router-outlet">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>

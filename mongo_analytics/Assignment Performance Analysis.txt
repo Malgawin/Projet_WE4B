@@ -1,0 +1,30 @@
+// Average grades per assignment
+db.Assignment.aggregate([
+  { $unwind: "$submit" },
+  { $match: { "submit.grade": { $exists: true } } },
+  { 
+    $group: {
+      _id: "$_id",
+      title: { $first: "$title" },
+      coursId: { $first: "$coursId" },
+      avgGrade: { $avg: "$submit.grade" },
+      submissionCount: { $sum: 1 }
+    }
+  },
+  { $sort: { avgGrade: -1 } }
+]);
+
+// Late submissions count
+db.Assignment.aggregate([
+  { $unwind: "$submit" },
+  {
+    $project: {
+      title: 1,
+      deadline: 1,
+      submissionDate: "$submit.submittedAt", // Assuming this field exists
+      isLate: { $gt: ["$submit.submittedAt", "$deadline"] }
+    }
+  },
+  { $match: { isLate: true } },
+  { $group: { _id: "$title", lateCount: { $sum: 1 } } }
+]);

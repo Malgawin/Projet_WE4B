@@ -1,0 +1,35 @@
+<div class="container login-container">
+  <img src="https://moodle.utbm.fr/pluginfile.php/1/theme_boost_union/logo/0x200/1748358793/225px-UTBM_Logo.jpg" alt="Logo UTBM">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+    <!-- Email -->
+    <div class="form-group">
+      <input formControlName="email" type="email" placeholder="Email" [class.invalid-input]="email?.invalid && (email?.touched || email?.dirty)">
+      <div class="error-message" *ngIf="email?.errors && (email?.touched || email?.dirty)">
+        <span *ngIf="email?.errors?.['required']">Email requis.</span>
+        <span *ngIf="email?.errors?.['email']">Format d'email invalide.</span>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group password-container">
+      <input [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="Mot de passe" [class.invalid-input]="password?.invalid && (password?.touched || password?.dirty)">
+      <button type="button" class="show_password" (click)="togglePasswordVisibility()">
+        {{ showPassword ? '👁' : '🗨' }}
+      </button>
+      <div class="error-message" *ngIf="password?.errors && (password?.touched || password?.dirty)">
+        <span *ngIf="password?.errors?.['required']">Mot de passe requis.</span>
+      </div>
+    </div>
+
+    <!-- Auth error from backend -->
+    <div *ngIf="loginError" class="error-message">
+      {{ loginError }}
+    </div>
+
+    <!-- Submit -->
+    <button class="btn" type="submit" [disabled]="loginForm.invalid">Connexion</button>
+  </form>
+
+  <a routerLink="/change-password">Mot de passe oublié ?</a>
+</div>

@@ -1,0 +1,23 @@
+db.UserLogs.aggregate([
+  { $unwind: "$courses" },
+  { $unwind: "$courses.activity" },
+  {
+    $project: {
+      userId: 1,
+      activityType: "$courses.activity.type",
+      date: "$courses.activity.date",
+      hour: { $hour: "$courses.activity.date" }
+    }
+  },
+  {
+    $group: {
+      _id: {
+        userId: "$userId",
+        date: { $dateToString: { format: "%Y-%m-%d", date: "$date" } }
+      },
+      activityCount: { $sum: 1 },
+      activityTypes: { $addToSet: "$activityType" }
+    }
+  },
+  { $sort: { "_id.date": 1, activityCount: -1 } }
+]);

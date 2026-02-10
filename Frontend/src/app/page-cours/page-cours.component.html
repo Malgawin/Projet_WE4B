@@ -1,0 +1,27 @@
+<div *ngIf="cours" class="container-cours">
+        <div class="container-cours-top">
+            <div class = "container-cours-titre">
+                <h1>{{ cours.name }}</h1>
+                <div class="container-cours-sous-titre">
+                    <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Cours' }" (click)="selectCours()">
+                        Cours
+                    </h2>
+                     <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Participants' }" (click)="selectParticipants()">
+                        Participants
+                    </h2>
+                    <h2 [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Forum' }" (click)="selectForum()">
+                        Forum
+                    </h2>
+                    <h2 *ngIf="showParametres()" [ngClass]="{ 'container-cours-sous-titre-selected': currentView === 'Parametres' }" (click)="selectParametres()">
+                        Parametres
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+        
+</div>

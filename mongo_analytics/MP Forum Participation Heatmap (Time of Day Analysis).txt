@@ -1,0 +1,25 @@
+// Map function
+var mapFunction = function() {
+  this.messages.forEach(function(message) {
+    var hour = new Date(message.createdAt).getHours();
+    emit(hour, 1);
+  });
+};
+
+// Reduce function
+var reduceFunction = function(key, values) {
+  return Array.sum(values);
+};
+
+// Execute MapReduce
+db.Forum.mapReduce(
+  mapFunction,
+  reduceFunction,
+  {
+    out: "forum_activity_by_hour",
+    query: { "messages.0": { $exists: true } }
+  }
+);
+
+// Query results
+db.forum_activity_by_hour.find().sort({ _id: 1 });

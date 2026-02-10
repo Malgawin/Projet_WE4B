@@ -1,0 +1,21 @@
+<div class="carte-cours" [class.carte-cours-extended]="isExtended">
+  <div class="carte-cours-inner" [class.flipped]="flipped">
+    <div (click)="toCours()" class="carte-cours-front">
+      <button *ngIf="!isAdmin" class="bouton-etoile" (click)="pinCours($event)"><span class="etoile" [class.pinned]="cours.isPinned">&#9733;</span></button>
+      <button class="bouton-rotation" (click)="turnCard(); $event.stopPropagation()">↺</button>
+      <img [src]="getImageUrl()" alt="Image du cours">
+      <h3>{{ cours.name }}</h3>
+      <div class="progression-container" *ngIf="progresionObjectif !== -1">
+        <div class="progression-barre" [style.width.%]="pourcentageProgesion">
+          <p>Progresion : {{ pourcentageProgesion }} %</p>
+        </div>
+      </div>
+      <p class="nombre-inscrits">{{ cours.inscrits.length }} inscrits</p>
+    </div>
+    <div class="carte-cours-back">
+      <button class="bouton-rotation" (click)="turnCard(); $event.stopPropagation()">↺</button>
+      <h3>{{ cours.code }}</h3>
+      <p>{{ cours.description }}</p>
+    </div>
+  </div>
+</div>

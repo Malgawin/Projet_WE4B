@@ -1,0 +1,22 @@
+<div class="window-ajt-etudiant-content">
+    <button class="close-btn" (click)="close.emit()">X</button>
+
+    <app-filtre-search [search]="search"  (searchChange)="search = $event">
+    </app-filtre-search>
+
+    <div class="liste-users">
+        <div *ngFor="let user of UsersFiltres">
+            <div class="ligne-user" (click)="!isInscrit(user.id) && selectUser(user.id)" [ngClass]="{'selected': selectedUsers.includes(user.id), 'disabled': isInscrit(user.id)}">
+                <span>{{ user.name }}</span>
+                <p>|</p>
+                <span>{{ user.familyName }}</span>
+                <p>|</p>
+                <span class="mail">{{ user.mail }}</span>
+            </div>
+        </div>
+    </div>
+
+    <span>{{ selectedUsersName }}</span>
+
+    <button class="ajt-btn" (click)="addSelectedUsers()">Ajouter</button>
+</div>

@@ -1,0 +1,11 @@
+<button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#createUserModal">
+  Créer
+</button>
+
+<app-modal-create-user (userCreated)="handleUserCreated($event)"></app-modal-create-user>
+
+<app-user-list
+  [users]="users"
+  (modify)="handleUserModified($event[0], $event[1])"
+  (delete)="handleUserDeleted($event)">
+</app-user-list>

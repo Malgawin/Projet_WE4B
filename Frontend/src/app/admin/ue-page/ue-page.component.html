@@ -1,0 +1,13 @@
+<button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#createUeModal">
+  Créer
+</button>
+
+<app-modal-create-ue (ueCreated)="handleUeCreated($event)"></app-modal-create-ue>
+
+<div class="row">
+  <app-ue-list
+    [ues]="ues"
+    (deleteCours)="handleUeDeleted($event)"
+    (modifyCours)="handleUeModified($event[0], $event[1])">
+  </app-ue-list>
+</div>
